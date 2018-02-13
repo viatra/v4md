@@ -26,7 +26,7 @@ pipeline {
 
 	post {
 		always {
-			sh 'rm v4md.zip'
+			sh 'rm -f v4md.zip'
 			zip archive: true, dir: 'com.incquerylabs.v4md/target/plugin-release', glob: '', zipFile: 'v4md.zip'
 		}
 	}
