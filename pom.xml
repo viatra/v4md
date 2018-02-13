@@ -71,12 +71,12 @@
 	</pluginRepositories>
 	<distributionManagement>
         <repository>
-            <id>build.incquerylabs.com/nexus</id>
+            <id>build.incquerylabs.com</id>
             <name>Massif Project Repository - Releases</name>
             <url>${v4md.deploy.release}</url>
         </repository>
         <snapshotRepository>
-            <id>build.incquerylabs.com/nexus</id>
+            <id>build.incquerylabs.com</id>
             <name>Massif Project Repository - Snapshots</name>
             <url>${v4md.deploy.snapshot}</url>
         </snapshotRepository>
