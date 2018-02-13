@@ -1,0 +1,342 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.incquerylabs.v4md</groupId>
+		<artifactId>v4md.parent</artifactId>
+		<version>2.0.0-SNAPSHOT</version>
+	</parent>
+
+
+	<artifactId>com.incquerylabs.v4md</artifactId>
+	<packaging>jar</packaging>
+
+	<name>V4MD</name>
+
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+	    <resources>
+	      <resource>
+	        <directory>resources</directory>
+	      </resource>
+	    </resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy</id>
+						<phase>install</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<!-- VIATRA Runtime-->
+
+								<artifactItem>
+									<groupId>org.eclipse.viatra</groupId>
+									<artifactId>org.eclipse.viatra.query.runtime</artifactId>
+									<version>${viatra.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${release.lib.dir}</outputDirectory>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.eclipse.viatra</groupId>
+									<artifactId>org.eclipse.viatra.query.runtime.rete</artifactId>
+									<version>${viatra.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${release.lib.dir}</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.eclipse.viatra</groupId>
+									<artifactId>org.eclipse.viatra.query.runtime.rete.recipes</artifactId>
+									<version>${viatra.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${release.lib.dir}</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.eclipse.viatra</groupId>
+									<artifactId>org.eclipse.viatra.query.runtime.matchers</artifactId>
+									<version>${viatra.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${release.lib.dir}</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.eclipse.viatra</groupId>
+									<artifactId>org.eclipse.viatra.query.runtime.base</artifactId>
+									<version>${viatra.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${release.lib.dir}</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.eclipse.viatra</groupId>
+									<artifactId>org.eclipse.viatra.query.runtime.base.itc</artifactId>
+									<version>${viatra.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${release.lib.dir}</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.eclipse.viatra</groupId>
+									<artifactId>org.eclipse.viatra.query.runtime.localsearch</artifactId>
+									<version>${viatra.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${release.lib.dir}</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.eclipse.viatra</groupId>
+									<artifactId>org.eclipse.viatra.transformation.evm</artifactId>
+									<version>${viatra.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${release.lib.dir}</outputDirectory>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.eclipse.viatra</groupId>
+									<artifactId>org.eclipse.viatra.transformation.runtime.emf</artifactId>
+									<version>${viatra.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${release.lib.dir}</outputDirectory>
+								</artifactItem>
+								
+								<!-- VIATRA Transformation Debugger Runtime -->
+								<artifactItem>
+									<groupId>org.eclipse.viatra</groupId>
+									<artifactId>org.eclipse.viatra.transformation.runtime.debug</artifactId>
+									<version>${viatra.incub.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${release.lib.dir}</outputDirectory>
+								</artifactItem>
+								
+								<artifactItem>
+									<groupId>org.eclipse.viatra</groupId>
+									<artifactId>org.eclipse.viatra.transformation.runtime.transformationtrace</artifactId>
+									<version>${viatra.incub.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${release.lib.dir}</outputDirectory>
+								</artifactItem>
+								
+								<!-- Eclipse Collections -->
+								<artifactItem>
+									<groupId>org.eclipse.collections</groupId>
+									<artifactId>eclipse-collections</artifactId>
+									<version>9.0.0</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${release.lib.dir}</outputDirectory>
+								</artifactItem>
+								
+								<artifactItem>
+									<groupId>org.eclipse.collections</groupId>
+									<artifactId>eclipse-collections-api</artifactId>
+									<version>9.0.0</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${release.lib.dir}</outputDirectory>
+								</artifactItem>
+								
+								<!-- com.google.* -->
+								<artifactItem>
+									<groupId>com.google.guava</groupId>
+									<artifactId>guava</artifactId>
+									<version>18.0</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${release.lib.dir}</outputDirectory>
+								</artifactItem>
+								
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>install</phase>
+						<configuration>
+							<tasks>
+								<copy
+									file="${project.build.directory}/${project.artifactId}-${project.version}.${project.packaging}"
+									tofile="${release.output.dir}/${project.artifactId}.jar"
+									overwrite="true" />
+								<copy file="${project.basedir}/plugin.xml" todir="${release.output.dir}"
+									overwrite="true" />
+								<copy file="${project.basedir}/../LICENSE" tofile="${release.base.dir}/files/EULA_V4MD.txt" 
+									overwrite="true" />
+								<copy file="${project.basedir}/${descriptor.xml}" todir="${release.base.dir}/"
+									overwrite="true" />
+							</tasks>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+	
+		<!-- EMF -->
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>org.eclipse.emf.ecore</artifactId>
+			<version>${emf.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>org.eclipse.emf.common</artifactId>
+			<version>${emf.version}</version>
+		</dependency>
+		
+		
+		<!-- VIATRA -->
+		
+		<dependency>
+			<groupId>org.eclipse.viatra</groupId>
+			<artifactId>viatra-query-runtime</artifactId>
+			<version>${viatra.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.viatra</groupId>
+			<artifactId>viatra-transformation-runtime</artifactId>
+			<version>${viatra.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.viatra</groupId>
+			<artifactId>viatra-transformation-debugger-runtime</artifactId>
+			<version>${viatra.incub.version}</version>
+		</dependency>
+		
+		<!-- MagicDraw 19.0 -->
+		
+		<dependency>
+			<groupId>com.nomagic</groupId>
+			<artifactId>magicdraw.uml2</artifactId>
+			<version>2.5.1</version>
+			<scope>system</scope>
+			<systemPath>${md.home}/lib/bundles/com.nomagic.magicdraw.uml2_2.5.1.201711281514.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>md_api</groupId>
+			<artifactId>md_api</artifactId>
+			<version>17.0.5</version>
+			<scope>system</scope>
+			<systemPath>${md.home}/lib/md_api.jar</systemPath>
+		</dependency>
+		
+		<dependency>
+			<groupId>md_common_api</groupId>
+			<artifactId>md_common_api</artifactId>
+			<version>17.0.5</version>
+			<scope>system</scope>
+			<systemPath>${md.home}/lib/md_common_api.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>md</groupId>
+			<artifactId>md</artifactId>
+			<version>17.0.5</version>
+			<scope>system</scope>
+			<systemPath>${md.home}/lib/md.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>com.nomagic</groupId>
+			<artifactId>magicdraw.foundation</artifactId>
+			<version>2.0.0</version>
+			<scope>system</scope>
+			<systemPath>${md.home}/lib/bundles/com.nomagic.magicdraw.foundation_2.0.0.201711281514.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>com.nomagic</groupId>
+			<artifactId>magicdraw.core</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${md.home}/lib/bundles/com.nomagic.magicdraw.core_1.0.0.201711281514.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>com.nomagic</groupId>
+			<artifactId>magicdraw.diagram</artifactId>
+			<version>18.1.0</version>
+			<scope>system</scope>
+			<systemPath>${md.home}/lib/bundles/com.nomagic.magicdraw.core.diagram_18.1.0.201711281514.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>jmi</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${md.home}/lib/bundles/javax.jmi_1.0.0.201711281514/javax_jmi-1_0-fr.jar</systemPath>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.bidib.com.jidesoft</groupId>
+		    <artifactId>jide-action</artifactId>
+		    <version>3.6.9</version>
+		    <scope>system</scope>
+			<systemPath>${md.home}/lib/jide-action.jar</systemPath>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.bidib.com.jidesoft</groupId>
+		    <artifactId>jide-common</artifactId>
+		    <version>3.6.9</version>
+		    <scope>system</scope>
+			<systemPath>${md.home}/lib/jide-common.jar</systemPath>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.bidib.com.jidesoft</groupId>
+		    <artifactId>jide-dock</artifactId>
+		    <version>3.6.9</version>
+		    <scope>system</scope>
+			<systemPath>${md.home}/lib/jide-dock.jar</systemPath>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.bidib.com.jidesoft</groupId>
+		    <artifactId>jide-grids</artifactId>
+		    <version>3.6.9</version>
+		    <scope>system</scope>
+			<systemPath>${md.home}/lib/jide-grids.jar</systemPath>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.magicdraw.application</groupId>
+			<artifactId>com.nomagic.ci.binary_17.0.5</artifactId>
+			<version>17.0.5</version>
+			<scope>system</scope>
+			<systemPath>${md.home}/lib/bundles/com.nomagic.ci.binary_17.0.5.v20171128-1504.jar</systemPath>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.magicdraw.application</groupId>
+			<artifactId>com.nomagic.ci.services_17.0.5</artifactId>
+			<version>17.0.5</version>
+			<scope>system</scope>
+			<systemPath>${md.home}/lib/bundles/com.nomagic.ci.services_17.0.5.v20171128-1504.jar</systemPath>
+		</dependency>
+		
+	</dependencies>
+</project>

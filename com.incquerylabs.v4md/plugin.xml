@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin 
+	class="com.incquerylabs.v4md.V4MDPlugin" 
+	class-lookup="GlobalFirst" 
+	id="com.incquerylabs.v4md" 
+	name="V4MD" 
+	provider-name="IncQuery Labs Ltd." 
+	version="2.0.0 beta"
+	internalVersion="200001">
+	
+	<requires>
+	</requires>
+
+  <runtime>
+    <library name="lib/guava.jar"/>
+    	<library name="lib/eclipse-collections.jar"/>
+	<library name="lib/eclipse-collections-api.jar"/>
+	
+    <library name="lib/org.eclipse.viatra.query.runtime.base.itc.jar"/>
+    <library name="lib/org.eclipse.viatra.query.runtime.base.jar"/>
+    <library name="lib/org.eclipse.viatra.query.runtime.jar"/>
+    <library name="lib/org.eclipse.viatra.query.runtime.localsearch.jar"/>
+    <library name="lib/org.eclipse.viatra.query.runtime.matchers.jar"/>
+    <library name="lib/org.eclipse.viatra.query.runtime.rete.jar"/>
+    <library name="lib/org.eclipse.viatra.query.runtime.rete.recipes.jar"/>
+    <library name="lib/org.eclipse.viatra.transformation.evm.jar"/>
+    <library name="lib/org.eclipse.viatra.transformation.runtime.emf.jar"/>
+    
+    <library name="com.incquerylabs.v4md.jar"/>
+  </runtime>
+</plugin>

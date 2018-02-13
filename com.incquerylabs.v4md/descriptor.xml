@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<resourceDescriptor
+		   critical="false"
+		   date="2018-02-13"
+		   description="MagicDraw plug-in for incremental pattern matching and validation."
+		   id="15253"
+		   mdVersionMax="higher"
+		   mdVersionMin="18.5"
+		   name="V4MD"
+		   product="V4MD"
+		   homePage="https://github.com/viatra/v4md"
+		   
+		   type="Plugin">
+	<version
+		human="2.0.0 beta"
+		resource="2000010"
+		internal="200001" />
+	
+	<provider
+		 name="IncQuery Labs Ltd." />
+
+	<edition>Reader</edition>
+	
+	<edition>Standard</edition>
+	
+	<edition>Professional Java</edition>
+	
+	<edition>Professional C++</edition>
+	
+	<edition>Professional C#</edition>
+	
+	<edition>Architect</edition>
+	
+	<edition>Enterprise</edition>
+
+	<installation>
+		<file
+			from="EULA_V4MD.txt"
+			to="EULA_V4MD.txt"
+		/>
+		<file
+			from="plugins/com.incquerylabs.v4md/plugin.xml"
+			to="plugins/com.incquerylabs.v4md/plugin.xml"
+		/>
+		<file
+			from="plugins/com.incquerylabs.v4md/com.incquerylabs.v4md.jar"
+			to="plugins/com.incquerylabs.v4md/com.incquerylabs.v4md.jar"
+		/>
+		
+		<file
+			from="plugins/com.incquerylabs.v4md/lib/guava.jar"
+			to="plugins/com.incquerylabs.v4md/lib/guava.jar"
+		/>
+		
+		<file
+			from="plugins/com.incquerylabs.v4md/lib/eclipse-collections.jar"
+			to="plugins/com.incquerylabs.v4md/lib/eclipse-collections.jar"
+		/>
+		
+		<file
+			from="plugins/com.incquerylabs.v4md/lib/eclipse-collections-api.jar"
+			to="plugins/com.incquerylabs.v4md/lib/eclipse-collections-api.jar"
+		/>
+		
+		<file
+			from="plugins/com.incquerylabs.v4md/lib/log4j.jar"
+			to="plugins/com.incquerylabs.v4md/lib/log4j.jar"
+		/>
+		
+		<file
+			from="plugins/com.incquerylabs.v4md/lib/org.eclipse.viatra.query.runtime.base.itc.jar"
+			to="plugins/com.incquerylabs.v4md/lib/org.eclipse.viatra.query.runtime.base.itc.jar"
+		/>
+		
+		<file
+			from="plugins/com.incquerylabs.v4md/lib/org.eclipse.viatra.query.runtime.base.jar"
+			to="plugins/com.incquerylabs.v4md/lib/org.eclipse.viatra.query.runtime.base.jar"
+		/>
+		
+		<file
+			from="plugins/com.incquerylabs.v4md/lib/org.eclipse.viatra.query.runtime.jar"
+			to="plugins/com.incquerylabs.v4md/lib/org.eclipse.viatra.query.runtime.jar"
+		/>
+		
+		<file
+			from="plugins/com.incquerylabs.v4md/lib/org.eclipse.viatra.query.runtime.localsearch.jar"
+			to="plugins/com.incquerylabs.v4md/lib/org.eclipse.viatra.query.runtime.localsearch.jar"
+		/>
+		
+		<file
+			from="plugins/com.incquerylabs.v4md/lib/org.eclipse.viatra.query.runtime.matchers.jar"
+			to="plugins/com.incquerylabs.v4md/lib/org.eclipse.viatra.query.runtime.matchers.jar"
+		/>
+		
+		<file
+			from="plugins/com.incquerylabs.v4md/lib/org.eclipse.viatra.query.runtime.rete.jar"
+			to="plugins/com.incquerylabs.v4md/lib/org.eclipse.viatra.query.runtime.rete.jar"
+		/>
+		
+		<file
+			from="plugins/com.incquerylabs.v4md/lib/org.eclipse.viatra.query.runtime.rete.recipes.jar"
+			to="plugins/com.incquerylabs.v4md/lib/org.eclipse.viatra.query.runtime.rete.recipes.jar"
+		/>
+		
+		<file
+			from="plugins/com.incquerylabs.v4md/lib/org.eclipse.viatra.transformation.evm.jar"
+			to="plugins/com.incquerylabs.v4md/lib/org.eclipse.viatra.transformation.evm.jar"
+		/>
+		
+		<file
+			from="plugins/com.incquerylabs.v4md/lib/org.eclipse.viatra.transformation.runtime.debug.jar"
+			to="plugins/com.incquerylabs.v4md/lib/org.eclipse.viatra.transformation.runtime.debug.jar"
+		/>
+		
+		<file
+			from="plugins/com.incquerylabs.v4md/lib/org.eclipse.viatra.transformation.runtime.emf.jar"
+			to="plugins/com.incquerylabs.v4md/lib/org.eclipse.viatra.transformation.runtime.emf.jar"
+		/>
+		
+		<file
+			from="plugins/com.incquerylabs.v4md/lib/org.eclipse.viatra.transformation.runtime.transformationtrace.jar"
+			to="plugins/com.incquerylabs.v4md/lib/org.eclipse.viatra.transformation.runtime.transformationtrace.jar"
+		/>
+	</installation>
+</resourceDescriptor>
+
