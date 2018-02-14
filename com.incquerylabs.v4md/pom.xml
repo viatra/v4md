@@ -29,6 +29,7 @@
 		        <configuration>
           			<descriptors>
             				<descriptor>assembly/installer.xml</descriptor>
+            				<descriptor>assembly/no-install.xml</descriptor>
           			</descriptors>
         			</configuration>
         			<executions>

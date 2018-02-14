@@ -34,8 +34,7 @@ pipeline {
 
 	post {
 		always {
-			sh 'rm -f v4md.zip'
-			zip archive: true, dir: 'com.incquerylabs.v4md/target/plugin-release', glob: '', zipFile: 'v4md.zip'
+			archiveArtifacts artifacts: 'com.incquerylabs.v4md/target/*.zip', onlyIfSuccessful: true
 		}
 	}
 }
