@@ -24,169 +24,22 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>copy</id>
-						<phase>install</phase>
-						<goals>
-							<goal>copy</goal>
-						</goals>
-						<configuration>
-							<artifactItems>
-								<!-- VIATRA Runtime-->
-
-								<artifactItem>
-									<groupId>org.eclipse.viatra</groupId>
-									<artifactId>org.eclipse.viatra.query.runtime</artifactId>
-									<version>${viatra.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${release.lib.dir}</outputDirectory>
-								</artifactItem>
-
-								<artifactItem>
-									<groupId>org.eclipse.viatra</groupId>
-									<artifactId>org.eclipse.viatra.query.runtime.rete</artifactId>
-									<version>${viatra.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${release.lib.dir}</outputDirectory>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.eclipse.viatra</groupId>
-									<artifactId>org.eclipse.viatra.query.runtime.rete.recipes</artifactId>
-									<version>${viatra.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${release.lib.dir}</outputDirectory>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.eclipse.viatra</groupId>
-									<artifactId>org.eclipse.viatra.query.runtime.matchers</artifactId>
-									<version>${viatra.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${release.lib.dir}</outputDirectory>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.eclipse.viatra</groupId>
-									<artifactId>org.eclipse.viatra.query.runtime.base</artifactId>
-									<version>${viatra.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${release.lib.dir}</outputDirectory>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.eclipse.viatra</groupId>
-									<artifactId>org.eclipse.viatra.query.runtime.base.itc</artifactId>
-									<version>${viatra.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${release.lib.dir}</outputDirectory>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.eclipse.viatra</groupId>
-									<artifactId>org.eclipse.viatra.query.runtime.localsearch</artifactId>
-									<version>${viatra.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${release.lib.dir}</outputDirectory>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.eclipse.viatra</groupId>
-									<artifactId>org.eclipse.viatra.transformation.evm</artifactId>
-									<version>${viatra.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${release.lib.dir}</outputDirectory>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.eclipse.viatra</groupId>
-									<artifactId>org.eclipse.viatra.transformation.runtime.emf</artifactId>
-									<version>${viatra.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${release.lib.dir}</outputDirectory>
-								</artifactItem>
-								
-								<!-- VIATRA Transformation Debugger Runtime -->
-								<artifactItem>
-									<groupId>org.eclipse.viatra</groupId>
-									<artifactId>org.eclipse.viatra.transformation.runtime.debug</artifactId>
-									<version>${viatra.incub.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${release.lib.dir}</outputDirectory>
-								</artifactItem>
-								
-								<artifactItem>
-									<groupId>org.eclipse.viatra</groupId>
-									<artifactId>org.eclipse.viatra.transformation.runtime.transformationtrace</artifactId>
-									<version>${viatra.incub.version}</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${release.lib.dir}</outputDirectory>
-								</artifactItem>
-								
-								<!-- Eclipse Collections -->
-								<artifactItem>
-									<groupId>org.eclipse.collections</groupId>
-									<artifactId>eclipse-collections</artifactId>
-									<version>9.0.0</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${release.lib.dir}</outputDirectory>
-								</artifactItem>
-								
-								<artifactItem>
-									<groupId>org.eclipse.collections</groupId>
-									<artifactId>eclipse-collections-api</artifactId>
-									<version>9.0.0</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${release.lib.dir}</outputDirectory>
-								</artifactItem>
-								
-								<!-- com.google.* -->
-								<artifactItem>
-									<groupId>com.google.guava</groupId>
-									<artifactId>guava</artifactId>
-									<version>18.0</version>
-									<type>jar</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${release.lib.dir}</outputDirectory>
-								</artifactItem>
-								
-							</artifactItems>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<artifactId>maven-antrun-plugin</artifactId>
-				<executions>
-					<execution>
-						<phase>install</phase>
-						<configuration>
-							<tasks>
-								<copy
-									file="${project.build.directory}/${project.artifactId}-${project.version}.${project.packaging}"
-									tofile="${release.output.dir}/${project.artifactId}.jar"
-									overwrite="true" />
-								<copy file="${project.basedir}/plugin.xml" todir="${release.output.dir}"
-									overwrite="true" />
-								<copy file="${project.basedir}/../LICENSE" tofile="${release.base.dir}/files/EULA_V4MD.txt" 
-									overwrite="true" />
-								<copy file="${project.basedir}/${descriptor.xml}" todir="${release.base.dir}/"
-									overwrite="true" />
-							</tasks>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-				</executions>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>3.1.0</version>
+		        <configuration>
+          			<descriptors>
+            				<descriptor>assembly/installer.xml</descriptor>
+          			</descriptors>
+        			</configuration>
+        			<executions>
+        				<execution>
+        					<id>make-assembly</id>
+			            <phase>package</phase>
+			            <goals>
+			              <goal>single</goal>
+			            </goals>
+        				</execution>
+        			</executions>
 			</plugin>
 		</plugins>
 	</build>
