@@ -86,6 +86,7 @@
 			<version>2.5.1</version>
 			<scope>system</scope>
 			<systemPath>${md.home}/lib/bundles/com.nomagic.magicdraw.uml2_2.5.1.201711281514.jar</systemPath>
+			<optional>true</optional>
 		</dependency>
 
 		<dependency>
@@ -94,6 +95,7 @@
 			<version>17.0.5</version>
 			<scope>system</scope>
 			<systemPath>${md.home}/lib/md_api.jar</systemPath>
+			<optional>true</optional>
 		</dependency>
 		
 		<dependency>
@@ -102,6 +104,7 @@
 			<version>17.0.5</version>
 			<scope>system</scope>
 			<systemPath>${md.home}/lib/md_common_api.jar</systemPath>
+			<optional>true</optional>
 		</dependency>
 
 		<dependency>
@@ -110,6 +113,7 @@
 			<version>17.0.5</version>
 			<scope>system</scope>
 			<systemPath>${md.home}/lib/md.jar</systemPath>
+			<optional>true</optional>
 		</dependency>
 
 		<dependency>
@@ -118,6 +122,7 @@
 			<version>2.0.0</version>
 			<scope>system</scope>
 			<systemPath>${md.home}/lib/bundles/com.nomagic.magicdraw.foundation_2.0.0.201711281514.jar</systemPath>
+			<optional>true</optional>
 		</dependency>
 
 		<dependency>
@@ -126,6 +131,7 @@
 			<version>1.0.0</version>
 			<scope>system</scope>
 			<systemPath>${md.home}/lib/bundles/com.nomagic.magicdraw.core_1.0.0.201711281514.jar</systemPath>
+			<optional>true</optional>
 		</dependency>
 
 		<dependency>
@@ -134,6 +140,7 @@
 			<version>18.1.0</version>
 			<scope>system</scope>
 			<systemPath>${md.home}/lib/bundles/com.nomagic.magicdraw.core.diagram_18.1.0.201711281514.jar</systemPath>
+			<optional>true</optional>
 		</dependency>
 
 		<dependency>
@@ -142,6 +149,7 @@
 			<version>1.0</version>
 			<scope>system</scope>
 			<systemPath>${md.home}/lib/bundles/javax.jmi_1.0.0.201711281514/javax_jmi-1_0-fr.jar</systemPath>
+			<optional>true</optional>
 		</dependency>
 		
 		<dependency>
@@ -150,6 +158,7 @@
 		    <version>3.6.9</version>
 		    <scope>system</scope>
 			<systemPath>${md.home}/lib/jide-action.jar</systemPath>
+			<optional>true</optional>
 		</dependency>
 		
 		<dependency>
@@ -158,6 +167,7 @@
 		    <version>3.6.9</version>
 		    <scope>system</scope>
 			<systemPath>${md.home}/lib/jide-common.jar</systemPath>
+			<optional>true</optional>
 		</dependency>
 		
 		<dependency>
@@ -166,6 +176,7 @@
 		    <version>3.6.9</version>
 		    <scope>system</scope>
 			<systemPath>${md.home}/lib/jide-dock.jar</systemPath>
+			<optional>true</optional>
 		</dependency>
 		
 		<dependency>
@@ -174,6 +185,7 @@
 		    <version>3.6.9</version>
 		    <scope>system</scope>
 			<systemPath>${md.home}/lib/jide-grids.jar</systemPath>
+			<optional>true</optional>
 		</dependency>
 		
 		<dependency>
@@ -182,6 +194,7 @@
 			<version>17.0.5</version>
 			<scope>system</scope>
 			<systemPath>${md.home}/lib/bundles/com.nomagic.ci.binary_17.0.5.v20171128-1504.jar</systemPath>
+			<optional>true</optional>
 		</dependency>
 		
 		<dependency>
@@ -190,6 +203,7 @@
 			<version>17.0.5</version>
 			<scope>system</scope>
 			<systemPath>${md.home}/lib/bundles/com.nomagic.ci.services_17.0.5.v20171128-1504.jar</systemPath>
+			<optional>true</optional>
 		</dependency>
 		
 	</dependencies>
