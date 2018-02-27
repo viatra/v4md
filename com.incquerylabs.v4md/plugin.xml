@@ -26,6 +26,9 @@
     <library name="lib/org.eclipse.viatra.transformation.evm.jar"/>
     <library name="lib/org.eclipse.viatra.transformation.runtime.emf.jar"/>
     
+    <library name="lib/org.eclipse.xtend.lib.jar"/>
+    <library name="lib/org.eclipse.xtend.lib.macro.jar"/>
+    
     <library name="com.incquerylabs.v4md.jar"/>
   </runtime>
 </plugin>

@@ -78,6 +78,13 @@
 			<version>${viatra.incub.version}</version>
 		</dependency>
 		
+		<!-- Xtext lib -->
+		<dependency>
+			<groupId>org.eclipse.xtend</groupId>
+			<artifactId>org.eclipse.xtend.lib</artifactId>
+			<version>${xtend.version}</version>
+		</dependency>
+		
 		<!-- MagicDraw 19.0 -->
 		
 		<dependency>

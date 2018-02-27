@@ -68,6 +68,16 @@
 		/>
 		
 		<file
+			from="plugins/com.incquerylabs.incquery.magicdraw/lib/org.eclipse.xtend.lib.jar"
+			to="plugins/com.incquerylabs.incquery.magicdraw/lib/org.eclipse.xtend.lib.jar"
+		/>
+		
+		<file
+			from="plugins/com.incquerylabs.v4md/lib/org.eclipse.xtend.lib.macro.jar"
+			to="plugins/com.incquerylabs.v4md/lib/org.eclipse.xtend.lib.macro.jar"
+		/>
+		
+		<file
 			from="plugins/com.incquerylabs.v4md/lib/org.eclipse.viatra.query.runtime.base.itc.jar"
 			to="plugins/com.incquerylabs.v4md/lib/org.eclipse.viatra.query.runtime.base.itc.jar"
 		/>
