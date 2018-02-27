@@ -21,6 +21,11 @@
 			    <include>org.eclipse.xtext:org.eclipse.xtext.xbase.lib:*:*</include>
       			<include>org.eclipse.xtend:org.eclipse.xtend.lib.macro:*:*</include>
       		</includes>
+      		<excludes>
+      			<exclude>org.eclipse.viatra:viatra-query-runtime:*:*</exclude>
+      			<exclude>org.eclipse.viatra:viatra-transformation-runtime:*:*</exclude>
+      			<exclude>org.eclipse.viatra:viatra-transformation-debugger-runtime:*:*</exclude>
+      		</excludes>
       		<outputDirectory>files/plugins/com.incquerylabs.v4md/lib</outputDirectory>
       		<outputFileNameMapping>${artifact.artifactId}.${artifact.extension}</outputFileNameMapping>
       	</dependencySet>
