@@ -19,7 +19,7 @@
       			<include>org.eclipse.collections:*:*:*</include>
       			<include>com.google.guava:guava:*:*</include>
 			    <include>org.eclipse.xtext:org.eclipse.xtext.xbase.lib:*:*</include>
-      			<include>org.eclipse.xtext:org.eclipse.xtend.lib.macro:*:*</include>
+      			<include>org.eclipse.xtend:org.eclipse.xtend.lib.macro:*:*</include>
       		</includes>
       		<outputDirectory>files/plugins/com.incquerylabs.v4md/lib</outputDirectory>
       		<outputFileNameMapping>${artifact.artifactId}.${artifact.extension}</outputFileNameMapping>
