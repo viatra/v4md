@@ -68,8 +68,8 @@
 		/>
 		
 		<file
-			from="plugins/com.incquerylabs.incquery.magicdraw/lib/org.eclipse.xtext.xbase.lib.jar"
-			to="plugins/com.incquerylabs.incquery.magicdraw/lib/org.eclipse.xtext.xbase.lib.jar"
+			from="plugins/com.incquerylabs.incquery.v4md/lib/org.eclipse.xtext.xbase.lib.jar"
+			to="plugins/com.incquerylabs.incquery.v4md/lib/org.eclipse.xtext.xbase.lib.jar"
 		/>
 		
 		<file
