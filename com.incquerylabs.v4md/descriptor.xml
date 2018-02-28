@@ -5,7 +5,7 @@
 		   description="MagicDraw plug-in for incremental pattern matching and validation."
 		   id="15253"
 		   mdVersionMax="higher"
-		   mdVersionMin="18.5"
+		   mdVersionMin="18.0"
 		   name="V4MD"
 		   product="V4MD"
 		   homePage="https://github.com/viatra/v4md"
