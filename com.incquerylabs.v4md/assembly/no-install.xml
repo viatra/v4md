@@ -42,6 +42,11 @@
         	  <outputDirectory>plugins/com.incquerylabs.v4md</outputDirectory>
         	  <destName>${project.artifactId}.${project.packaging}</destName>
         </file>
+        <file>
+        	  <source>${project.basedir}/descriptor.xml</source>
+        	  <outputDirectory>data/resourcemanager</outputDirectory>
+        	  <destName>V4MD_15253_descriptor.xml</destName>
+        </file>
       </files>
       <fileSets>
         <fileSet>
