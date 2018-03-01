@@ -45,7 +45,7 @@
         <file>
         	  <source>${project.basedir}/descriptor.xml</source>
         	  <outputDirectory>data/resourcemanager</outputDirectory>
-        	  <destName>V4MD_15253_descriptor.xml</destName>
+        	  <destName>V4MD_1720_descriptor.xml</destName>
         </file>
       </files>
       <fileSets>
