@@ -3,7 +3,10 @@ pipeline {
 	agent {
 		label 'magicdraw19'
 	} 
-
+	parameters {
+		string(name: 'RELEASE_VERSION', defaultValue: '', 
+			description: 'Set this parameter to a valid Maven version (e.g. 2.0.0.M3) to execute a set-version step before the build itself.')
+	}
 	// Keep only the last 5 builds
 	options {
 		buildDiscarder(logRotator(numToKeepStr: '5'))
@@ -14,7 +17,17 @@ pipeline {
 		jdk 'Oracle JDK 8' 
 	}
 
-	stages { 
+	stages {
+		stage('Setting Release Version') {
+			when {
+				expression {params.RELEASE_VERSION != ''}
+			} 
+			steps {
+				configFileProvider([configFile(fileId: 'default-maven-settings', variable: 'MAVEN_SETTINGS')]) {
+						sh "mvn versions:set -B -Dmd.home=${MD19_HOME} -s ${MAVEN_SETTINGS} -Dmaven.repo.local=${WORKSPACE}/.repository -DnewVersion=${params.RELEASE_VERSION}"	                          
+                 }
+			}
+		}	
 		stage('Build Plug-in') { 
 			steps {
 				configFileProvider([configFile(fileId: 'default-maven-settings', variable: 'MAVEN_SETTINGS')]) {
