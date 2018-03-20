@@ -12,9 +12,9 @@
 		   
 		   type="Plugin">
 	<version
-		human="2.0.0 M3"
-		resource="2000030"
-		internal="200003" />
+		human="2.0.0-SNAPSHOT"
+		resource="2000040"
+		internal="200004" />
 	
 	<provider
 		 name="IncQuery Labs Ltd." />
