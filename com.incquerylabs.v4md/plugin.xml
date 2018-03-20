@@ -5,8 +5,8 @@
 	id="com.incquerylabs.v4md" 
 	name="V4MD" 
 	provider-name="IncQuery Labs Ltd." 
-	version="2.0.0 beta"
-	internalVersion="200001">
+	version="2.0.0 M3"
+	internalVersion="200003">
 	
 	<requires>
 	</requires>
