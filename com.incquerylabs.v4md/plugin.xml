@@ -2,6 +2,7 @@
 <plugin 
 	class="com.incquerylabs.v4md.V4MDPlugin" 
 	class-lookup="GlobalFirst" 
+	ownClassloader="true"
 	id="com.incquerylabs.v4md" 
 	name="V4MD" 
 	provider-name="IncQuery Labs Ltd." 
