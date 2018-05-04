@@ -1,0 +1,243 @@
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.util.zip.ZipFile
+
+apply plugin: 'distribution'
+apply plugin: 'eclipse'
+apply plugin: 'java'
+apply plugin: 'java-library'
+apply plugin: 'maven-publish'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    ivy {
+        url 'http://download1.nomagic.com/'
+        layout 'pattern', {
+            artifact '/[module][revision]/[classifier].[ext]'
+        }
+    }
+    jcenter()
+    mavenCentral()
+    maven { url "https://repo.eclipse.org/content/groups/viatra/" }
+}
+
+ext.buildNumber = project.hasProperty('buildNumber') ? project.getProperty('buildNumber') : System.currentTimeSeconds()
+ext.timestamp = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH:mm").format(LocalDateTime.now())
+ext.release = viatraVersion.endsWith("-SNAPSHOT")
+ext.deployUrl = "${rootDir}/build/maven-repository"
+
+ext.deployUser = hasProperty('deployUser') ? deployUser : System.getenv('DEPLOY_USER')
+ext.deployPassword = hasProperty('deployPassword') ? deployPassword : System.getenv('DEPLOY_PASSWORD')
+
+//This is the part that is painful to maintain, as MD releases tend to move around these library jars
+ext.classpathLibraries = [
+        'lib/patch.jar',
+        'lib/md.jar',
+        'lib/md_api.jar',
+        'lib/md_common.jar',
+        'lib/md_common_api.jar',
+        'lib/md_common_test.jar',
+        'lib/tw_common.jar',
+        'lib/tw_common_api.jar',
+        'lib/launcher.jar',
+        'lib/activation.jar'
+]
+
+configurations {
+    pub
+    implementation.extendsFrom pub
+    preCompile
+}
+
+dependencies {
+    preCompile group: 'com.nomagic', name: 'magicdraw', version: '185sp3', classifier: 'MagicDraw_185_sp3_no_install', ext: 'zip'
+
+    def exclusions = {
+        exclude group: 'com.google.guava', module: 'guava'
+        exclude module: 'log4j'
+    }
+
+    pub group: 'org.eclipse.viatra', name: 'viatra-query-runtime', version: viatraVersion, exclusions
+    pub group: 'org.eclipse.viatra', name: 'viatra-transformation-runtime', version: viatraVersion, exclusions
+    pub group: 'org.eclipse.viatra', name: 'viatra-transformation-debugger-runtime', version: viatraIncubationVersion, exclusions
+    
+    // This ensures classpath load order to match the MagicDraw provided order and then includes extras needed for non-OpenAPI stuff.
+    implementation files(classpathLibraries.collect { 'build/dependency-cache/extracted/' + it })
+    implementation fileTree(dir: 'build/dependency-cache/extracted', include: ['lib/**/*.jar', 'plugins/**/*.jar'], exclude: ([classpathLibraries, ['plugins/com.nomagic.collaborator.publisher/**/*.jar', 'plugins/com.nomagic.magicdraw.emfuml2xmi*/**/*.jar']]).flatten())
+}
+
+task extractDependencies {
+
+    configurations.preCompile.resolvedConfiguration.resolvedArtifacts.each { artifact ->
+        inputs.file artifact.file
+        def zipFile = new ZipFile(artifact.file)
+        zipFile.entries().each { entry ->
+            if (!entry.isDirectory()) {
+                outputs.file 'build/dependency-cache/extracted/' + entry.getName()
+            }
+        }
+    }
+    doLast {
+        inputs.files.each { archive ->
+            copy {
+                from zipTree(archive)
+                into 'build/dependency-cache/extracted'
+            }
+        }
+        fileTree(dir: 'build/dependency-cache/extracted', include: '*.zip').each { archive ->
+            copy {
+                from zipTree(archive)
+                into 'build/dependency-cache/extracted'
+            }
+        }
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs 'src'
+        }
+        resources {
+            srcDirs 'resources'
+		}        
+    }
+}
+
+compileJava.dependsOn rootProject.extractDependencies
+
+javadoc {
+	enabled false
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+class PreDist extends DefaultTask {
+    String humanVersion
+    String internalVersion
+    String buildTimestamp
+
+    @TaskAction
+    void executeTask() {
+        project.copy {
+            from 'src/main/dist'
+            exclude 'template'
+            from 'src/main/dist/template'
+            exclude 'plugins'
+            from 'src/main/dist/template/plugins'
+            exclude '${project.name}'
+            into 'build/generated-dist'
+        }
+        project.copy {
+            from project.configurations.pub.resolvedConfiguration.resolvedArtifacts.file
+            from project.file("build/libs/com.incquerylabs.v4md-${humanVersion}.jar", PathValidation.FILE)
+            exclude "**/com.incquerylabs.v4md-${humanVersion}.jar"
+            into "build/generated-dist/plugins/${project.name}"
+        }
+        project.fileTree(dir: 'build/generated-dist', include: '**/*${project.name}*/**').each { file ->
+            file.renameTo(project.file(file.getAbsolutePath().replace('${project.name}', "${project.name}")))
+        }
+
+        String pluginLibraries = ''
+        project.fileTree(dir: "build/generated-dist/plugins/${project.name}", include: '**/*.jar').each { file ->
+            pluginLibraries += '\t\t<library name=\"' + file.absolutePath.replaceAll(~/.*build\/generated-dist\/plugins\/${project.name}\//, '') + '\"/>' + System.lineSeparator()
+        }
+        project.copy {
+            from "dist/template/plugins/${project.name}/plugin.xml"
+            filter { String line -> line.replace('<!-- START AUTO-GENERATED -->', '<!-- START AUTO-GENERATED -->' + System.lineSeparator() + System.lineSeparator() + pluginLibraries) }
+            filter { String line -> line.replace('${human.version}', humanVersion) }
+            filter { String line -> line.replace('${internal.version}', internalVersion) }
+            into "build/generated-dist/plugins/${project.name}"
+        }
+        project.copy {
+            from "../LICENSE"
+            into 'build/generated-dist'
+            rename {filename -> filename.replace("LICENSE", "EULA_V4MD.txt")}
+        }
+        String descriptorFiles = ''
+        project.fileTree(dir: 'build/generated-dist').each { file ->
+            String relativePath = file.absolutePath.replaceAll(/.*build\/generated-dist\//, '')
+            descriptorFiles += '\t\t<file from=\"' + relativePath + '\" to=\"' + relativePath + '\"/>' + System.lineSeparator()
+        }
+        project.copy {
+            from "dist/template/data/resourcemanager/MDR_Plugin_V4MD_1720_descriptor.xml"
+            filter { String line -> line.replace('<!-- START AUTO-GENERATED -->', '<!-- START AUTO-GENERATED -->' + System.lineSeparator() + System.lineSeparator() + descriptorFiles) }
+            filter { String line -> line.replace('${human.version}', humanVersion) }
+            filter { String line -> line.replace('${internal.version}', internalVersion) }
+            filter { String line -> line.replace('${build.timestamp}', buildTimestamp) }
+            into 'build/generated-dist/data/resourcemanager'
+        }
+    }
+}
+
+task preDist(type: PreDist) {
+	dependsOn jar
+
+    humanVersion = version
+    internalVersion = buildNumber
+    buildTimestamp = timestamp
+}
+
+distributions {
+    main {
+        contents {
+            exclude 'template'
+            from 'build/generated-dist'
+        }
+    }
+}
+
+distZip {
+    dependsOn preDist
+
+    includeEmptyDirs false
+    duplicatesStrategy DuplicatesStrategy.EXCLUDE
+    eachFile { file ->
+        file.setPath(path.substring(path.indexOf("/") + 1, path.length()))
+    }
+}
+
+tasks.withType(Tar) {
+    enabled = false
+}
+
+distTar {
+    enabled = false
+}
+
+publishing {
+    repositories {
+        maven {
+            url deployUrl
+            if (deployUser != null) {
+                credentials {
+                    username = deployUser
+                    password = deployPassword
+                }
+            }
+        }
+    }
+
+    publications {
+        mavenJava(MavenPublication) {
+            version "$viatraVersion"
+            from components.java
+
+            artifact distZip {
+
+                classifier "plugin"
+                extension "zip"
+
+            }
+        }
+    }
+}

@@ -20,31 +20,25 @@ pipeline {
 	}
 
 	stages {
-		stage('Setting Release Version') {
-			when {
-				expression {params.RELEASE_VERSION != ''}
-			} 
-			steps {
-				configFileProvider([configFile(fileId: 'default-maven-settings', variable: 'MAVEN_SETTINGS')]) {
-						sh "mvn versions:set -B -Dmd.home=${MD19_HOME} -s ${MAVEN_SETTINGS} -Dmaven.repo.local=${WORKSPACE}/.repository -DnewVersion=${params.RELEASE_VERSION}"	                          
-						sh "mvn versions:set-property -B -Dmd.home=${MD19_HOME} -s ${MAVEN_SETTINGS} -Dmaven.repo.local=${WORKSPACE}/.repository -Dproperty=viatra.version -DnewVersion=${params.RELEASE_VERSION}"	                          
-						sh "mvn versions:set-property -B -Dmd.home=${MD19_HOME} -s ${MAVEN_SETTINGS} -Dmaven.repo.local=${WORKSPACE}/.repository -Dproperty=viatra.incub.version -DnewVersion=${params.INCUBATION_VERSION}"	                          
-                 }
-			}
-		}	
 		stage('Build Plug-in') { 
 			steps {
-				configFileProvider([configFile(fileId: 'default-maven-settings', variable: 'MAVEN_SETTINGS')]) {
-					sh 'mvn clean install -B -Dmd.home=$MD19_HOME -s $MAVEN_SETTINGS -Dmaven.repo.local=$WORKSPACE/.repository'
-				}
+				if (params.RELEASE_VERSION != '') {
+					sh "com.incquerylabs.v4md/gradlew clean build -PviatraVersion=${params.RELEASE_VERSION} -PviatraIncubationVersion=${params.INCUBATION_VERSION}" 					                                  
+                } else {
+                    sh "com.incquerylabs.v4md/gradlew clean build"
+                }
 			}
 		}
 		stage('Maven Deploy') {
 			when {branch "master"} 
 			steps {
-				configFileProvider([configFile(fileId: 'default-maven-settings', variable: 'MAVEN_SETTINGS')]) {
-						sh 'mvn clean deploy  -B -Dmd.home=$MD19_HOME -s $MAVEN_SETTINGS -Dmaven.repo.local=$WORKSPACE/.repository'		                          
-                 }
+				withCredentials([usernamePassword(credentialsId: 'nexus-buildserver-deploy', passwordVariable: 'DEPLOY_PASSWORD', usernameVariable: 'DEPLOY_USER')]) {
+                    if (params.RELEASE_VERSION != '') {
+                    		sh "./gradlew publish -PdeployUrl='https://build.incquerylabs.com/nexus/repository/v4md-snapshots/' "                                  
+                    } else {
+                    		sh "./gradlew publish -PdeployUrl='https://build.incquerylabs.com/nexus/repository/v4md-releases/' "                                  
+                    }
+				}
 			}
 		}
 	}

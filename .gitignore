@@ -1,3 +1,5 @@
 *.mdzip.bak
 bin/
 target/
+build/
+.gradle
