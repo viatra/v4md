@@ -2,7 +2,7 @@
 <plugin 
 	class="com.incquerylabs.v4md.V4MDPlugin" 
 	class-lookup="GlobalFirst" 
-	ownClassloader="true"
+	ownClassloader="false"
 	id="com.incquerylabs.v4md" 
 	name="V4MD" 
 	provider-name="IncQuery Labs Ltd." 
@@ -14,7 +14,7 @@
 
   <runtime>
     <library name="lib/guava.jar"/>
-    	<library name="lib/eclipse-collections.jar"/>
+    <library name="lib/eclipse-collections.jar"/>
 	<library name="lib/eclipse-collections-api.jar"/>
 	
     <library name="lib/org.eclipse.viatra.query.runtime.base.itc.jar"/>
