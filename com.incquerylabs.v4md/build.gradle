@@ -136,6 +136,7 @@ class PreDist extends DefaultTask {
         project.copy {
             from project.configurations.pub.resolvedConfiguration.resolvedArtifacts.file
             from project.file("build/libs/com.incquerylabs.v4md-${humanVersion}.jar", PathValidation.FILE)
+            from project.jar
             exclude "**/com.incquerylabs.v4md-${humanVersion}.jar"
             into "build/generated-dist/plugins/${project.name}"
         }
