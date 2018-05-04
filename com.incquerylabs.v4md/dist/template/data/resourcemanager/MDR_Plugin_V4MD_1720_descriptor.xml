@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resourceDescriptor critical="false"
+                    date="${build.timestamp}"
+                    description="MagicDraw plug-in for incremental pattern matching and validation."
+                    id="1720"
+                    mdVersionMax="higher"
+                    mdVersionMin="18.0"
+                    name="V4MD"
+                    homePage="https://github.com/viatra/v4md"
+                    product="V4MD"
+                    type="Plugin">
+    <version human="${human.version}" resource="${internal.version}0" internal="${internal.version}"/>
+    <provider name="IncQuery Labs Ltd."/>
+    <edition>Reader</edition>
+    <edition>Community</edition>
+    <edition>Standard</edition>
+    <edition>Professional Java</edition>
+    <edition>Professional C++</edition>
+    <edition>Professional C#</edition>
+    <edition>Professional ArcStyler</edition>
+    <edition>Professional EFFS ArcStyler</edition>
+    <edition>OptimalJ</edition>
+    <edition>Professional</edition>
+    <edition>Architect</edition>
+    <edition>Enterprise</edition>
+    
+    <installation>
+        <!-- START AUTO-GENERATED -->
+        <!-- END AUTO-GENERATED -->
+    </installation>
+</resourceDescriptor>

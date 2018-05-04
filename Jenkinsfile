@@ -4,9 +4,9 @@ pipeline {
 		label 'magicdraw19'
 	} 
 	parameters {
-		string(name: 'RELEASE_VERSION', defaultValue: '', 
+		string(name: 'RELEASE_VERSION', defaultValue: '2.0.0-SNAPSHOT', 
 			description: 'Set this parameter to the VIATRA version this V4MD build should include (e.g. 2.0.0.M3) and set the project version version accordingly. Leave it empty to skip this step.')
-			string(name: 'INCUBATION_VERSION', defaultValue: '', 
+			string(name: 'INCUBATION_VERSION', defaultValue: '0.20.0-SNAPSHOT', 
 			description: 'Set this parameter to the corresponding incubation version of the related VIATRA release.')
 	}
 	// Keep only the last 5 builds
@@ -20,38 +20,36 @@ pipeline {
 	}
 
 	stages {
-		stage('Setting Release Version') {
-			when {
-				expression {params.RELEASE_VERSION != ''}
-			} 
-			steps {
-				configFileProvider([configFile(fileId: 'default-maven-settings', variable: 'MAVEN_SETTINGS')]) {
-						sh "mvn versions:set -B -Dmd.home=${MD19_HOME} -s ${MAVEN_SETTINGS} -Dmaven.repo.local=${WORKSPACE}/.repository -DnewVersion=${params.RELEASE_VERSION}"	                          
-						sh "mvn versions:set-property -B -Dmd.home=${MD19_HOME} -s ${MAVEN_SETTINGS} -Dmaven.repo.local=${WORKSPACE}/.repository -Dproperty=viatra.version -DnewVersion=${params.RELEASE_VERSION}"	                          
-						sh "mvn versions:set-property -B -Dmd.home=${MD19_HOME} -s ${MAVEN_SETTINGS} -Dmaven.repo.local=${WORKSPACE}/.repository -Dproperty=viatra.incub.version -DnewVersion=${params.INCUBATION_VERSION}"	                          
-                 }
-			}
-		}	
 		stage('Build Plug-in') { 
 			steps {
-				configFileProvider([configFile(fileId: 'default-maven-settings', variable: 'MAVEN_SETTINGS')]) {
-					sh 'mvn clean install -B -Dmd.home=$MD19_HOME -s $MAVEN_SETTINGS -Dmaven.repo.local=$WORKSPACE/.repository'
+				dir ('com.incquerylabs.v4md'){
+					sh "./gradlew clean build -PviatraVersion=${params.RELEASE_VERSION} -PviatraIncubationVersion=${params.INCUBATION_VERSION}" 					                                  
 				}
+
+
 			}
 		}
-		stage('Maven Deploy') {
+		stage('Deploy Plugin') {
 			when {branch "master"} 
 			steps {
-				configFileProvider([configFile(fileId: 'default-maven-settings', variable: 'MAVEN_SETTINGS')]) {
-						sh 'mvn clean deploy  -B -Dmd.home=$MD19_HOME -s $MAVEN_SETTINGS -Dmaven.repo.local=$WORKSPACE/.repository'		                          
-                 }
+				withCredentials([usernamePassword(credentialsId: 'nexus-buildserver-deploy', passwordVariable: 'DEPLOY_PASSWORD', usernameVariable: 'DEPLOY_USER')]) {
+					script{
+					    dir ('com.incquerylabs.v4md') {
+						    if (params.RELEASE_VERSION.endsWith('-SNAPSHOT')) {
+	                    		sh "./gradlew publish -PdeployUrl='https://build.incquerylabs.com/nexus/repository/v4md-snapshots/' "
+						    } else {			    
+	                    		sh "./gradlew publish -PdeployUrl='https://build.incquerylabs.com/nexus/repository/v4md-releases/' "
+	                    	}                          
+					    }
+					}
+				}
 			}
 		}
 	}
 
 	post {
 		always {
-			archiveArtifacts artifacts: 'com.incquerylabs.v4md/target/*.zip', onlyIfSuccessful: true
+			archiveArtifacts artifacts: 'com.incquerylabs.v4md/build/distributions/*.zip', onlyIfSuccessful: true
 		}
 	}
 }

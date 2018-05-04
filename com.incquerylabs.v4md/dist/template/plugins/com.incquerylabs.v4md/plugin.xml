@@ -1,0 +1,20 @@
+<plugin
+        class="com.incquerylabs.v4md.V4MDPlugin"
+       	class-lookup="GlobalFirst"
+		ownClassloader="false"
+		id="com.incquerylabs.v4md"
+		name="V4MD"
+		internalVersion="${internal.version}"
+		version="${human.version}"
+		provider-name="IncQuery Labs Ltd."
+        licenseId="IncQuery for MagicDraw">
+    
+	<requires>
+	</requires>
+    
+    <runtime>
+        <!-- START AUTO-GENERATED -->
+        <!-- END AUTO-GENERATED -->
+    </runtime>
+    
+</plugin>
