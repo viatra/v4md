@@ -22,22 +22,28 @@ pipeline {
 	stages {
 		stage('Build Plug-in') { 
 			steps {
-				if (params.RELEASE_VERSION != '') {
-					sh "com.incquerylabs.v4md/gradlew clean build -PviatraVersion=${params.RELEASE_VERSION} -PviatraIncubationVersion=${params.INCUBATION_VERSION}" 					                                  
-                } else {
-                    sh "com.incquerylabs.v4md/gradlew clean build"
-                }
+				script{
+					if (params.RELEASE_VERSION != '') {
+						sh "com.incquerylabs.v4md/gradlew clean build -PviatraVersion=${params.RELEASE_VERSION} -PviatraIncubationVersion=${params.INCUBATION_VERSION}" 					                                  
+	                } else {
+	                    sh "com.incquerylabs.v4md/gradlew clean build"
+	                }
+				}
+
 			}
 		}
 		stage('Maven Deploy') {
 			when {branch "master"} 
 			steps {
 				withCredentials([usernamePassword(credentialsId: 'nexus-buildserver-deploy', passwordVariable: 'DEPLOY_PASSWORD', usernameVariable: 'DEPLOY_USER')]) {
-                    if (params.RELEASE_VERSION != '') {
-                    		sh "./gradlew publish -PdeployUrl='https://build.incquerylabs.com/nexus/repository/v4md-snapshots/' "                                  
-                    } else {
-                    		sh "./gradlew publish -PdeployUrl='https://build.incquerylabs.com/nexus/repository/v4md-releases/' "                                  
-                    }
+					script{
+	                    if (params.RELEASE_VERSION != '') {
+	                    		sh "./gradlew publish -PdeployUrl='https://build.incquerylabs.com/nexus/repository/v4md-snapshots/' "                                  
+	                    } else {
+	                    		sh "./gradlew publish -PdeployUrl='https://build.incquerylabs.com/nexus/repository/v4md-releases/' "                                  
+	                    }
+					}
+
 				}
 			}
 		}
