@@ -22,7 +22,7 @@ pipeline {
 	stages {
 		stage('Build Plug-in') { 
 			steps {
-				dir (com.incquerylabs.v4md){
+				dir ('com.incquerylabs.v4md'){
 					sh "./gradlew clean build -PviatraVersion=${params.RELEASE_VERSION} -PviatraIncubationVersion=${params.INCUBATION_VERSION}" 					                                  
 				}
 
@@ -30,18 +30,16 @@ pipeline {
 			}
 		}
 		stage('Deploy Plugin') {
-			when {
-				branch "master"
-			} 
 			steps {
 				withCredentials([usernamePassword(credentialsId: 'nexus-buildserver-deploy', passwordVariable: 'DEPLOY_PASSWORD', usernameVariable: 'DEPLOY_USER')]) {
 					script{
-					    cd com.incquerylabs.v4md
-						if (params.RELEASE_VERSION == '') {
+					    dir ('com.incquerylabs.v4md') {
+						    if (params.RELEASE_VERSION.endsWith('-SNAPSHOT')) {
 	                    		sh "./gradlew publish -PdeployUrl='https://build.incquerylabs.com/nexus/repository/v4md-snapshots/' "
-						} else {			    
+						    } else {			    
 	                    		sh "./gradlew publish -PdeployUrl='https://build.incquerylabs.com/nexus/repository/v4md-releases/' "
-	                    	}                                  
+	                    	}                          
+					    }
 					}
 				}
 			}
@@ -50,7 +48,7 @@ pipeline {
 
 	post {
 		always {
-			archiveArtifacts artifacts: 'com.incquerylabs.v4md/target/*.zip', onlyIfSuccessful: true
+			archiveArtifacts artifacts: 'com.incquerylabs.v4md/build/distributions/*.zip', onlyIfSuccessful: true
 		}
 	}
 }
