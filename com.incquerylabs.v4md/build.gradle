@@ -26,13 +26,9 @@ repositories {
 ext.buildNumber = project.hasProperty('buildNumber') ? project.getProperty('buildNumber') : System.currentTimeSeconds()
 ext.timestamp = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH:mm").format(LocalDateTime.now())
 ext.release = viatraVersion.endsWith("-SNAPSHOT")
-ext.deployUrl = "${rootDir}/build/maven-repository"
-
 ext.deployUser = hasProperty('deployUser') ? deployUser : System.getenv('DEPLOY_USER')
 ext.deployPassword = hasProperty('deployPassword') ? deployPassword : System.getenv('DEPLOY_PASSWORD')
 
-viatraVersion=2.0.0-SNAPSHOT
-viatraIncubationVersion=0.20.0-SNAPSHOT
 
 //This is the part that is painful to maintain, as MD releases tend to move around these library jars
 ext.classpathLibraries = [
