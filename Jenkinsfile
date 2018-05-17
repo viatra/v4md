@@ -38,7 +38,7 @@ pipeline {
 						    if (params.RELEASE_VERSION.endsWith('-SNAPSHOT')) {
 	                    		sh "./gradlew publish -PdeployUrl='https://build.incquerylabs.com/nexus/repository/v4md-snapshots/' "
 						    } else {			    
-	                    		sh "./gradlew publish -PdeployUrl='https://build.incquerylabs.com/nexus/repository/v4md-releases/' "
+	                    		sh "./gradlew publish -PdeployUrl='https://build.incquerylabs.com/nexus/repository/v4md-releases/' -PviatraVersion=${params.RELEASE_VERSION} -PviatraIncubationVersion=${params.INCUBATION_VERSION}"
 	                    	}                          
 					    }
 					}
