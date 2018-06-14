@@ -6,7 +6,9 @@ pipeline {
 	parameters {
 		string(name: 'RELEASE_VERSION', defaultValue: '2.0.0-SNAPSHOT', 
 			description: 'Set this parameter to the VIATRA version this V4MD build should include (e.g. 2.0.0.M3) and set the project version version accordingly. Leave it empty to skip this step.')
-			string(name: 'INCUBATION_VERSION', defaultValue: '0.20.0-SNAPSHOT', 
+		string(name: 'INCUBATION_VERSION', defaultValue: '0.20.0-SNAPSHOT', 
+			description: 'Set this parameter to the corresponding incubation version of the related VIATRA release.')
+		string(name: 'BUILD_NUMBER', defaultValue: '200004', 
 			description: 'Set this parameter to the corresponding incubation version of the related VIATRA release.')
 	}
 	// Keep only the last 5 builds
@@ -23,7 +25,7 @@ pipeline {
 		stage('Build Plug-in') { 
 			steps {
 				dir ('com.incquerylabs.v4md'){
-					sh "./gradlew clean build -PviatraVersion=${params.RELEASE_VERSION} -PviatraIncubationVersion=${params.INCUBATION_VERSION}" 					                                  
+					sh "./gradlew clean build -Pversion=${params.RELEASE_VERSION} -PviatraVersion=${params.RELEASE_VERSION} -PviatraIncubationVersion=${params.INCUBATION_VERSION} -PbuildNumber=${params.BUILD_NUMBER}" 					                                  
 				}
 
 
@@ -38,7 +40,7 @@ pipeline {
 						    if (params.RELEASE_VERSION.endsWith('-SNAPSHOT')) {
 	                    		sh "./gradlew publish -PdeployUrl='https://build.incquerylabs.com/nexus/repository/v4md-snapshots/' "
 						    } else {			    
-	                    		sh "./gradlew publish -PdeployUrl='https://build.incquerylabs.com/nexus/repository/v4md-releases/' -PviatraVersion=${params.RELEASE_VERSION} -PviatraIncubationVersion=${params.INCUBATION_VERSION}"
+	                    		sh "./gradlew publish -PdeployUrl='https://build.incquerylabs.com/nexus/repository/v4md-releases/' -Pversion=${params.RELEASE_VERSION} -PviatraVersion=${params.RELEASE_VERSION} -PviatraIncubationVersion=${params.INCUBATION_VERSION} -PbuildNumber=${params.BUILD_NUMBER}"
 	                    	}                          
 					    }
 					}
