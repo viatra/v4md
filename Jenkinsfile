@@ -25,7 +25,7 @@ pipeline {
 		stage('Build Plug-in') { 
 			steps {
 				dir ('com.incquerylabs.v4md'){
-					sh "./gradlew clean build -Pversion=${params.RELEASE_VERSION} -PviatraVersion=${params.RELEASE_VERSION} -PviatraIncubationVersion=${params.INCUBATION_VERSION} -PbuildNumber=${params.BUILD_NUMBER}" 					                                  
+					sh "./gradlew -Pversion=${params.RELEASE_VERSION} -PviatraVersion=${params.RELEASE_VERSION} -PviatraIncubationVersion=${params.INCUBATION_VERSION} -PbuildNumber=${params.BUILD_NUMBER} clean build"
 				}
 
 
@@ -38,9 +38,9 @@ pipeline {
 					script{
 					    dir ('com.incquerylabs.v4md') {
 						    if (params.RELEASE_VERSION.endsWith('-SNAPSHOT')) {
-	                    		sh "./gradlew publish -PdeployUrl='https://build.incquerylabs.com/nexus/repository/v4md-snapshots/' "
+	                    		sh "./gradlew -PdeployUrl='https://build.incquerylabs.com/nexus/repository/v4md-snapshots/' publish"
 						    } else {			    
-	                    		sh "./gradlew publish -PdeployUrl='https://build.incquerylabs.com/nexus/repository/v4md-releases/' -Pversion=${params.RELEASE_VERSION} -PviatraVersion=${params.RELEASE_VERSION} -PviatraIncubationVersion=${params.INCUBATION_VERSION} -PbuildNumber=${params.BUILD_NUMBER}"
+	                    		sh "./gradlew -PdeployUrl='https://build.incquerylabs.com/nexus/repository/v4md-releases/' -Pversion=${params.RELEASE_VERSION} -PviatraVersion=${params.RELEASE_VERSION} -PviatraIncubationVersion=${params.INCUBATION_VERSION} -PbuildNumber=${params.BUILD_NUMBER} publish"
 	                    	}                          
 					    }
 					}
