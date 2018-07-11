@@ -4,6 +4,8 @@ import java.util.Optional;
 
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.viatra.query.runtime.api.AdvancedViatraQueryEngine;
 import org.eclipse.viatra.query.runtime.base.api.BaseIndexOptions;
 import org.eclipse.viatra.query.runtime.emf.EMFScope;
@@ -65,6 +67,13 @@ public class ViatraQueryAdapter extends AdapterImpl{
 						&& ((EReference) reference).isContainment() && reference.getName().contains("_from_"))
 				.withStrictNotificationMode(false);
 		
-		return AdvancedViatraQueryEngine.createUnmanagedEngine(new EMFScope(project.getModel(), options));
+		Optional<Resource> resource = Optional.of(project.getPrimaryModel().eResource());
+		
+		if(resource.isPresent()) {
+			return AdvancedViatraQueryEngine.createUnmanagedEngine(new EMFScope(resource.get().getResourceSet(), options));
+		}else {
+			//Fall back to the previous implementation
+			return AdvancedViatraQueryEngine.createUnmanagedEngine(new EMFScope(project.getModel(), options));
+		}
 	}
 }
