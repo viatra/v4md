@@ -4,13 +4,12 @@ import java.util.Optional;
 
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.viatra.query.runtime.api.AdvancedViatraQueryEngine;
 import org.eclipse.viatra.query.runtime.base.api.BaseIndexOptions;
 import org.eclipse.viatra.query.runtime.emf.EMFScope;
 import org.eclipse.viatra.query.runtime.exception.ViatraQueryException;
 
+import com.google.common.collect.Sets;
 import com.nomagic.magicdraw.core.Project;
 
 public class ViatraQueryAdapter extends AdapterImpl{
@@ -31,7 +30,7 @@ public class ViatraQueryAdapter extends AdapterImpl{
 	
 	public void dispose(){
 		engine.dispose();
-		project.getModel().eAdapters().remove(this);
+		project.getPrimaryModel().eAdapters().remove(this);
 	}
 	
 	public void wipeEngine(){
@@ -39,7 +38,7 @@ public class ViatraQueryAdapter extends AdapterImpl{
 	}
 	
 	public static Optional<ViatraQueryAdapter> getAdapter(Project project) {
-		return project.getModel().eAdapters().stream().filter(ViatraQueryAdapter.class::isInstance)
+		return project.getPrimaryModel().eAdapters().stream().filter(ViatraQueryAdapter.class::isInstance)
 				.map(ViatraQueryAdapter.class::cast).findAny();
 	}
 	
@@ -47,7 +46,7 @@ public class ViatraQueryAdapter extends AdapterImpl{
 		return getAdapter(project).orElseGet(() -> {
 					ViatraQueryAdapter adapter = null;
 					adapter = new ViatraQueryAdapter(createQueryEngine(project), project);
-					project.getModel().eAdapters().add(adapter);
+					project.getPrimaryModel().eAdapters().add(adapter);
 					return adapter;
 				});
 		
@@ -66,14 +65,7 @@ public class ViatraQueryAdapter extends AdapterImpl{
 				.withFeatureFilterConfiguration(reference -> reference instanceof EReference
 						&& ((EReference) reference).isContainment() && reference.getName().contains("_from_"))
 				.withStrictNotificationMode(false);
-		
-		Optional<Resource> resource = Optional.of(project.getPrimaryModel().eResource());
-		
-		if(resource.isPresent()) {
-			return AdvancedViatraQueryEngine.createUnmanagedEngine(new EMFScope(resource.get().getResourceSet(), options));
-		}else {
-			//Fall back to the previous implementation
-			return AdvancedViatraQueryEngine.createUnmanagedEngine(new EMFScope(project.getModel(), options));
-		}
+				
+		return AdvancedViatraQueryEngine.createUnmanagedEngine(new EMFScope(Sets.newHashSet(project.getModels()), options));
 	}
 }
