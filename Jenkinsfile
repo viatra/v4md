@@ -9,9 +9,9 @@ pipeline {
 		string(name: 'INCUBATION_VERSION', defaultValue: '0.20.1', 
 			description: 'Set this parameter to the corresponding incubation version of the related VIATRA release.')
 		string(name: 'PLUGIN_VERSION', defaultValue: '2.0.2-SNAPSHOT', 
-			description: 'Set this parameter to the corresponding incubation version of the related VIATRA release.')
+			description: 'Set this parameter to the desired V4MD version.')
 		string(name: 'BUILD_NUMBER', defaultValue: '202010', 
-			description: 'Set this parameter to the corresponding incubation version of the related VIATRA release.')
+			description: 'Set this parameter to the desired MD internal version.')
 	}
 	// Keep only the last 5 builds
 	options {
