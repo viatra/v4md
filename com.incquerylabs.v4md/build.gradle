@@ -228,7 +228,7 @@ publishing {
 
     publications {
         mavenJava(MavenPublication) {
-            version "$viatraVersion"
+            version "$version"
             from components.java
 
             artifact distZip {
