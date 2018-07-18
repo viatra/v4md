@@ -4,11 +4,13 @@ pipeline {
 		label 'magicdraw19'
 	} 
 	parameters {
-		string(name: 'RELEASE_VERSION', defaultValue: '2.0.1-SNAPSHOT', 
+		string(name: 'RELEASE_VERSION', defaultValue: '2.0.1', 
 			description: 'Set this parameter to the VIATRA version this V4MD build should include (e.g. 2.0.0.M3) and set the project version version accordingly. Leave it empty to skip this step.')
-		string(name: 'INCUBATION_VERSION', defaultValue: '0.20.1-SNAPSHOT', 
+		string(name: 'INCUBATION_VERSION', defaultValue: '0.20.1', 
 			description: 'Set this parameter to the corresponding incubation version of the related VIATRA release.')
-		string(name: 'BUILD_NUMBER', defaultValue: '201010', 
+		string(name: 'PLUGIN_VERSION', defaultValue: '2.0.2-SNAPSHOT', 
+			description: 'Set this parameter to the corresponding incubation version of the related VIATRA release.')
+		string(name: 'BUILD_NUMBER', defaultValue: '202010', 
 			description: 'Set this parameter to the corresponding incubation version of the related VIATRA release.')
 	}
 	// Keep only the last 5 builds
@@ -25,7 +27,7 @@ pipeline {
 		stage('Build Plug-in') { 
 			steps {
 				dir ('com.incquerylabs.v4md'){
-					sh "./gradlew -Pversion=${params.RELEASE_VERSION} -PviatraVersion=${params.RELEASE_VERSION} -PviatraIncubationVersion=${params.INCUBATION_VERSION} -PbuildNumber=${params.BUILD_NUMBER} clean build"
+					sh "./gradlew -Pversion=${params.PLUGIN_VERSION} -PviatraVersion=${params.RELEASE_VERSION} -PviatraIncubationVersion=${params.INCUBATION_VERSION} -PbuildNumber=${params.BUILD_NUMBER} clean build"
 				}
 
 
