@@ -18,8 +18,8 @@ import com.nomagic.magicdraw.core.Project;
 
 public class ViatraQueryAdapter extends AdapterImpl{
 	
-	protected final AdvancedViatraQueryEngine engine;
-	protected final Project project;
+	private AdvancedViatraQueryEngine engine;
+	private Project project;
 	
 
 
