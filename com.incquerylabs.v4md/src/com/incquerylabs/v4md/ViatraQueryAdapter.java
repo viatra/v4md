@@ -1,6 +1,7 @@
 package com.incquerylabs.v4md;
 
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -41,8 +42,8 @@ public class ViatraQueryAdapter extends AdapterImpl{
 		engine.wipe();
 	}
 	
-	public static Optional<ViatraQueryAdapter> getAdapter(Project project) throws RuntimeException {
-		if(project==null) throw new RuntimeException("ViatraQueryAdapter cannot be provided for a null Project");
+	public static Optional<ViatraQueryAdapter> getAdapter(Project project) {
+		Objects.requireNonNull(project, "ViatraQueryAdapter cannot be provided for a null Project");
 		return project.getPrimaryModel().eAdapters().stream().filter(ViatraQueryAdapter.class::isInstance)
 				.map(ViatraQueryAdapter.class::cast).findAny();
 	}
@@ -59,6 +60,7 @@ public class ViatraQueryAdapter extends AdapterImpl{
 					return adapter;
 				});
 	}
+	
 	public static ViatraQueryAdapter getOrCreateAdapter(Project project) {
 		return getOrCreateAdapter(project, new Notifier[0]);
 	}
