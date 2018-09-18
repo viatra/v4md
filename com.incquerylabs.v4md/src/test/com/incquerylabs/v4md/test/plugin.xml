@@ -1,12 +1,12 @@
 
 <plugin
-		id="test.com.incquerylabs.v4md.test.runner.ValidationTestPlugin"
+		id="com.incquerylabs.v4md.test.runner.ValidationTestPlugin"
 		name="V4MD Test Plugin"
 		version="18.5"
 		ownClassloader="false"
 		class-lookup="GlobalFirst"
 		provider-name="No Magic"
-		class="test.com.incquerylabs.v4md.test.runner.ValidationTestPlugin">
+		class="com.incquerylabs.v4md.test.runner.ValidationTestPlugin">
     
     
 

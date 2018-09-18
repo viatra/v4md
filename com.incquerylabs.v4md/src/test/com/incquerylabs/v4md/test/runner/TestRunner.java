@@ -1,4 +1,4 @@
-package test.com.incquerylabs.v4md.test.runner;
+package com.incquerylabs.v4md.test.runner;
 
 import org.apache.maven.plugin.surefire.StartupReportConfiguration;
 import org.apache.maven.plugin.surefire.report.DefaultReporterFactory;
@@ -9,9 +9,8 @@ import org.apache.maven.surefire.report.SimpleReportEntry;
 import org.junit.runner.Computer;
 import org.junit.runner.JUnitCore;
 
+import com.incquerylabs.v4md.test.AllTests;
 import com.nomagic.magicdraw.commandline.CommandLineAction;
-
-import test.com.incquerylabs.v4md.test.AllTests;
 
 
 

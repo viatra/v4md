@@ -1,4 +1,4 @@
-package test.com.incquerylabs.v4md.test.runner;
+package com.incquerylabs.v4md.test.runner;
 
 import com.nomagic.magicdraw.commandline.CommandLineActionManager;
 import com.nomagic.magicdraw.plugins.Plugin;

@@ -1,4 +1,4 @@
-package test.com.incquerylabs.v4md.test;
+package com.incquerylabs.v4md.test;
 
 import com.nomagic.magicdraw.tests.MagicDrawTestCase;
 

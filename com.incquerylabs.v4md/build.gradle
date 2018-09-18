@@ -110,13 +110,12 @@ tasks.withType(JavaCompile) {
 sourceSets {
     main {
         java {
-            srcDirs 'src'
-            exclude 'test/'
+            srcDirs 'src/main'
         }    
     }
     test {
     	java{
-    		srcDirs 'src/test'
+    		srcDirs = ['src/test', 'src-gen']
     	}
     }
 }
@@ -314,8 +313,8 @@ task testDist(type: PreDist) {
     humanVersion = version
     internalVersion = buildNumber
     buildTimestamp = timestamp
-    groupName = "test.com.incquerylabs.v4md.test"
-    pluginTemplate = "src/test/test/com/incquerylabs/v4md/test/plugin.xml"
+    groupName = "com.incquerylabs.v4md.test"
+    pluginTemplate = "src/test/com/incquerylabs/v4md/test/plugin.xml"
 	resolvedArtifacts = project.configurations.testCompile.resolvedConfiguration.resolvedArtifacts.file
 	outputArtifact = project.testJar
 }
@@ -331,7 +330,8 @@ configureTest.dependsOn installDist
 
 def testArgs = [
 	'-Dcom.nomagic.magicdraw.launcher=com.nomagic.magicdraw.commandline.CommandLineActionLauncher',
- 	'-Dcom.nomagic.magicdraw.commandline.action=test.com.incquerylabs.v4md.test.runner.TestRunner',
+ 	'-Dcom.nomagic.magicdraw.commandline.action=com.incquerylabs.v4md.test.runner.TestRunner',
+ 	'-Dtests.resources=../../src/test/data'
 ]
 
 def debugArgs = ['-Xdebug', '-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=9099', '-Dcom.sun.management.jmxremote.port=1099', '-Dcom.sun.management.jmxremote.authenticate=false', '-Dcom.sun.management.jmxremote.ssl=false']
