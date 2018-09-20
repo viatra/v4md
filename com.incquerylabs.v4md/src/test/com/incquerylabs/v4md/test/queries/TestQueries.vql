@@ -1,8 +1,0 @@
-package com.incquerylabs.v4md.test.queries
-
-import "http://www.nomagic.com/magicdraw/UML/2.5.0";
-
-pattern BlockNamedDummy(class: Class){
-	Class.appliedStereotypeInstance.classifier.name(class, "Block");
-	Class.name(class, "Dummy");
-} 

@@ -7,7 +7,6 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith(Suite.class)
 @SuiteClasses({
 	ExampleTestCase.class,
-	ExampleFailTest.class,
-	ExampleQuerieTest.class
+	ExampleFailTest.class
 })
 public class AllTests {}
