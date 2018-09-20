@@ -5,7 +5,6 @@
 
 package com.incquerylabs.v4md.snapshotmaker.ui;
 
-import com.incquerylabs.v4md.snapshotmaker.ui.action.ExampleAction;
 import com.incquerylabs.v4md.snapshotmaker.ui.action.MakeSnapshot;
 import com.nomagic.actions.AMConfigurator;
 import com.nomagic.actions.ActionsCategory;
@@ -15,9 +14,6 @@ import com.nomagic.magicdraw.actions.MDActionsCategory;
 public class SnapshotmakerMainMenuConfigurator implements AMConfigurator {
 
 	String SNAPSHOT_MAKER = "SnapshotMaker";
-	
-	final static String EXAMPLE_ID = "EXAMPLE";
-	final static String EXAMPLE_NAME = "Example";
 	
 	public SnapshotmakerMainMenuConfigurator() {
 	}
@@ -36,9 +32,7 @@ public class SnapshotmakerMainMenuConfigurator implements AMConfigurator {
 			manager.addCategory(category);
 		}
 		
-		
-		category.addAction(new ExampleAction(EXAMPLE_ID, EXAMPLE_NAME));
-		category.addAction(new MakeSnapshot("MAKE_SNAPSHOT", "MAKE_SNAPSHOT"));
+		category.addAction(new MakeSnapshot("MAKE_SNAPSHOT", "Make Snapshots"));
 	}
 
 	@Override
