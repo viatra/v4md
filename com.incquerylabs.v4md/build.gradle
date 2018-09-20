@@ -155,6 +155,7 @@ class PreDist extends DefaultTask {
     String groupName
     Set<File> resolvedArtifacts
     org.gradle.api.tasks.bundling.Jar outputArtifact
+    String distributionFolderName
 
     @TaskAction
     void executeTask() {
@@ -162,14 +163,14 @@ class PreDist extends DefaultTask {
         project.copy {
             from resolvedArtifacts
             from outputArtifact
-            into "build/generated-dist/plugins/${groupName}"
+            into "build/${distributionFolderName}/plugins/${groupName}"
         }
-        project.fileTree(dir: 'build/generated-dist', include: '**/*${groupName}*/**').each { file ->
+        project.fileTree(dir: "build/${distributionFolderName}", include: '**/*${groupName}*/**').each { file ->
             file.renameTo(project.file(file.getAbsolutePath().replace('${groupName}', "${groupName}")))
         }
 
         String pluginLibraries = ''
-        project.fileTree(dir: "build/generated-dist/plugins/${groupName}", include: '**/*.jar').each { file ->
+        project.fileTree(dir: "build/${distributionFolderName}/plugins/${groupName}", include: '**/*.jar').each { file ->
             pluginLibraries += '\t\t<library name=\"' + file.absolutePath.replaceAll(~/.*build\/generated-dist\/plugins\/${project.name}\//, '') + '\"/>' + System.lineSeparator()
         }
         project.copy {
@@ -177,7 +178,7 @@ class PreDist extends DefaultTask {
             filter { String line -> line.replace('<!-- START AUTO-GENERATED -->', '<!-- START AUTO-GENERATED -->' + System.lineSeparator() + System.lineSeparator() + pluginLibraries) }
             filter { String line -> line.replace('${human.version}', humanVersion) }
             filter { String line -> line.replace('${internal.version}', internalVersion) }
-            into "build/generated-dist/plugins/${groupName}"
+            into "build/${distributionFolderName}/plugins/${groupName}"
         } 
     }
 }
@@ -191,6 +192,7 @@ task preDist(type: PreDist) {
     pluginTemplate = "dist/template/plugins/${project.name}/plugin.xml"
     resolvedArtifacts = project.configurations.pub.resolvedConfiguration.resolvedArtifacts.file
     outputArtifact = project.jar
+    distributionFolderName = 'generated-dist'
     
     doFirst{
     	project.copy {
@@ -199,7 +201,7 @@ task preDist(type: PreDist) {
             from 'src/main/dist/template'
             exclude 'plugins'
             from 'src/main/dist/template/plugins'
-            exclude '${project.name}'
+            exclude '${groupName}'
             into 'build/generated-dist'
         }
         
@@ -333,16 +335,23 @@ task testDist(type: PreDist) {
     pluginTemplate = "src/test/com/incquerylabs/v4md/test/plugin.xml"
 	resolvedArtifacts = project.configurations.testCompile.resolvedConfiguration.resolvedArtifacts.file
 	outputArtifact = project.testJar
+	distributionFolderName = 'test-dist'
 }
-testDist.dependsOn testJar
-distZip.dependsOn testDist
 
-task configureTest {
+testDist.dependsOn testJar
+
+task installTest {
 	doLast {
-	    project.delete "build/install/plugins/${project.name}/settings" // to enable test settings to take effect
+        project.copy {
+            fileMode 0755
+            from 'build/dependency-cache/extracted'
+            from "build/test-dist"
+            into 'build/install'
+        }
 	}
 }
-configureTest.dependsOn installDist
+
+installTest.dependsOn testDist
 
 def testArgs = [
 	'-Dcom.nomagic.magicdraw.launcher=com.nomagic.magicdraw.commandline.CommandLineActionLauncher',
@@ -355,11 +364,11 @@ def debugArgs = ['-Xdebug', '-Xrunjdwp:transport=dt_socket,server=y,suspend=y,ad
 task runTest(type: JavaExec) {
 	jvmArgs += testArgs
 }
-runTest.dependsOn configureTest
+runTest.dependsOn installTest
 
 task debugTest(type: JavaExec) {
 	jvmArgs += testArgs
 	jvmArgs += debugArgs
 }
-debugTest.dependsOn configureTest
+debugTest.dependsOn installTest
 
