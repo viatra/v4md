@@ -54,6 +54,7 @@ pipeline {
 	post {
 		always {
 			archiveArtifacts artifacts: 'com.incquerylabs.v4md/build/distributions/*.zip', onlyIfSuccessful: true
+			junit testResults: 'com.incquerylabs.v4md/build/install/target/*.xml'
 		}
 	}
 }
