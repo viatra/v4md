@@ -1,0 +1,7 @@
+package com.incquerylabs.v4md.test.queries
+
+import "http://www.nomagic.com/magicdraw/UML/2.5"
+
+pattern ComponentsWithName(component: Component, name: java String){
+	Component.name(component, name);
+}

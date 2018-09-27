@@ -1,7 +1,0 @@
-package com.incquerylabs.v4md.snapshotmaker.queries
-
-import "http://www.nomagic.com/magicdraw/UML/2.5.0";
-
-pattern CompnoentsWithName(component : Component, name: java String) {
-	Component.name(component, name);
-}

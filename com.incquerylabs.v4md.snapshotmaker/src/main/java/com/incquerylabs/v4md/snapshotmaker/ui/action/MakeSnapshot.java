@@ -17,7 +17,7 @@ import org.eclipse.viatra.query.testing.snapshot.QuerySnapshot;
 import org.eclipse.viatra.query.testing.snapshot.SnapshotFactory;
 
 import com.incquerylabs.v4md.ViatraQueryAdapter;
-import com.incquerylabs.v4md.snapshotmaker.queries.UMLTestQueries;
+import com.incquerylabs.v4md.test.queries.UMLTestQueries;
 import com.nomagic.magicdraw.actions.MDAction;
 import com.nomagic.magicdraw.core.Application;
 import com.nomagic.magicdraw.core.Project;

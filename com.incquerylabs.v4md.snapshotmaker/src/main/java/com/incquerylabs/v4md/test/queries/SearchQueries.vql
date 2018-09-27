@@ -1,4 +1,4 @@
-package com.incquerylabs.v4md.snapshotmaker.queries
+package com.incquerylabs.v4md.test.queries
 
 import "http://www.nomagic.com/magicdraw/UML/2.5.0";
 
