@@ -1,0 +1,11 @@
+package com.incquerylabs.v4md.test.queries
+
+import "http://www.nomagic.com/magicdraw/UML/2.5"
+
+pattern RequirementRealization(requirement : Class, realizingElement : NamedElement) {
+	Class.appliedStereotypeInstance.classifier.name(requirement, "Requirement");
+	
+	Dependency.appliedStereotypeInstance.classifier.name(dep, "Satisfy");
+	Dependency.supplier(dep, requirement);
+	Dependency.client(dep, realizingElement);
+} 

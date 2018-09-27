@@ -1,0 +1,29 @@
+package com.incquerylabs.v4md.test.queries
+
+import "http://www.nomagic.com/magicdraw/UML/2.5"
+/* 
+ * Produce Class inheritance hierarchy
+ * 'or' keyword represents an or relation between bodies --> one of them needs to apply to the parameters for them to produce a match
+ * note that the transitive closure does not appear as parameters of a single match, but a number of matches in a following way:
+ * class1 --> parent1
+ * class1 --> parent2 
+ * ...
+ */
+pattern getSuperClassOrSelf(class : Classifier, superClass: Classifier) {
+	// * semantics for transitive closure can be implemented this way
+	// by default the transitive closure does not add the trivial relation to the TC
+	class == superClass;
+} or {
+	//transitive closure
+	find getSuperClass+(class, superClass);
+	
+} 
+
+/*
+ * Get superclasses of a class
+ * maps a class to its superclass --> the main pattern uses this subpattern to produce a class generalization hierarchy
+ */
+pattern getSuperClass(class : Classifier, superClass: Classifier) {
+	Generalization.general(gen, superClass);
+	Generalization.specific(gen, class);
+}
