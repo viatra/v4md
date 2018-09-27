@@ -1,0 +1,24 @@
+package com.incquerylabs.v4md.test.queries
+
+import "http://www.nomagic.com/magicdraw/UML/2.5"
+//Main pattern that queries every block in the model with a non emty name
+//Note that you  dont need to check the subpatterns to be able to execute the main query,
+// as during runtime queries are flattened, meaning that subpattern calls are replaced with the body of the called query
+pattern blocksWithNonEmptyName(class : Class){
+	//Filter for block
+	find blocks(class);
+	//Negative subpattern call --> true for classes that do not have an empty name
+	neg find classesWithEmptyName(class);
+}
+
+pattern classesWithEmptyName(class : Class){
+	//simple pattern constraint --> maps classes to their names
+	Class.name(class, name);
+	//check expression --> checks if the name is an empty string
+	check(name.equals(""));
+}
+
+pattern blocks(class : Class){
+	//constraint that queries every class that has an instance of the "Block" stereotype
+	Class.appliedStereotypeInstance.classifier.name(class, "Block");
+}
