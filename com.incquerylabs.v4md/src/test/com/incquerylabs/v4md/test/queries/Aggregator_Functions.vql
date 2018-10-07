@@ -1,0 +1,47 @@
+package com.incquerylabs.v4md.test.queries
+
+import "http://www.nomagic.com/magicdraw/UML/2.5"
+
+//Queries classes
+pattern classes(class : Class){
+	Class(class);
+}
+
+//Maps classes to their owned properties
+pattern classAttributes(class : Class, attribute : Property){
+	Class.ownedAttribute(class, attribute);
+}
+
+//Counts the number of properties of classes
+pattern classNumberOfAttributes(class : Class, number :  java Integer){
+	//Counts the number of matches of 'classAttributes' for each class
+	number == count find classAttributes(class, _);
+}
+
+//Queries the class with the most number of attributes
+pattern classWithMaxNumberOfAttributes(class : Class, number : java Integer) {
+    	//Calculates the largest class number
+	//Note use # to determine which parameter should be used for aggregation
+	//in this case to calculate max
+	number == max find classNumberOfAttributes(_, #tempNumber);
+	//Queries the class with the highest number
+	find classNumberOfAttributes(class, number);
+}
+
+//Sums the number of overall attributes of classes in the model
+pattern sumOfClassAttributes(s : java Integer) {
+	//use # to determine which parameter should be summarized
+	s == sum find classNumberOfAttributes(_c, #tempNumber);
+}
+
+//Calculates average number of attributes per class in the model
+pattern averageNumberOfAttributes(number : java Float, s : java Integer, c : java Integer) {
+	//calculates sum
+	s == sum find classNumberOfAttributes(_c, #tempNumber);
+	//determines the number of classes
+	c == count find classes(_c2);
+	//Calculates average in an eval() expression
+	//similar to check() in an eval expression standard Java code can be used
+	number == eval(s.floatValue/c.floatValue);
+    
+}

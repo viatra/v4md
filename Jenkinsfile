@@ -27,7 +27,10 @@ pipeline {
 		stage('Build Plug-in') { 
 			steps {
 				dir ('com.incquerylabs.v4md'){
-					sh "./gradlew -Pversion=${params.PLUGIN_VERSION} -PviatraVersion=${params.RELEASE_VERSION} -PviatraIncubationVersion=${params.INCUBATION_VERSION} -PbuildNumber=${params.BUILD_NUMBER} clean build"
+					sh "./gradlew -Pversion=${params.PLUGIN_VERSION} -PviatraVersion=${params.RELEASE_VERSION} -PviatraIncubationVersion=${params.INCUBATION_VERSION} -PbuildNumber=${params.BUILD_NUMBER} clean assemble"
+					wrap([$class: 'Xvnc']) {
+						sh "./gradlew -Pversion=${params.PLUGIN_VERSION} -PviatraVersion=${params.RELEASE_VERSION} -PviatraIncubationVersion=${params.INCUBATION_VERSION} -PbuildNumber=${params.BUILD_NUMBER} runTest"
+					}
 				}
 
 
@@ -54,6 +57,7 @@ pipeline {
 	post {
 		always {
 			archiveArtifacts artifacts: 'com.incquerylabs.v4md/build/distributions/*.zip', onlyIfSuccessful: true
+			junit testResults: 'com.incquerylabs.v4md/build/install/target/*.xml'
 		}
 	}
 }
