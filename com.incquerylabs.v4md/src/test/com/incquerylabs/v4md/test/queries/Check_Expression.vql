@@ -1,6 +1,6 @@
 package com.incquerylabs.v4md.test.queries
 
-import "http://www.nomagic.com/magicdraw/UML/2.5"
+import "http://www.nomagic.com/magicdraw/UML/2.5.1"
 
 pattern classesWithNameThatContainsID(class : Class){
 	Class.name(class, name);

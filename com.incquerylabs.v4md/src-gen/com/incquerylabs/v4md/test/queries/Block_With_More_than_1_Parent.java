@@ -4,8 +4,6 @@
 package com.incquerylabs.v4md.test.queries;
 
 import com.incquerylabs.v4md.test.queries.BlocksWithDeepGeneralizationHierarchy;
-import com.incquerylabs.v4md.test.queries.GetSuperClass;
-import com.incquerylabs.v4md.test.queries.GetSuperClass2;
 import com.incquerylabs.v4md.test.queries.GetSuperClasses;
 import com.incquerylabs.v4md.test.queries.MultipleInheritanceBlock;
 import org.eclipse.viatra.query.runtime.api.ViatraQueryEngine;
@@ -22,11 +20,9 @@ import org.eclipse.viatra.query.runtime.api.impl.BaseGeneratedPatternGroup;
  * <li>BlocksWithDeepGeneralizationHierarchy</li>
  * <li>MultipleInheritanceBlock</li>
  * <li>getSuperClasses</li>
- * <li>getSuperClass</li>
- * <li>getSuperClass2</li>
  * </ul>
  * 
- * @see IQueryGroup
+ * @see IPatternGroup
  * 
  */
 @SuppressWarnings("all")
@@ -51,8 +47,6 @@ public final class Block_With_More_than_1_Parent extends BaseGeneratedPatternGro
     querySpecifications.add(BlocksWithDeepGeneralizationHierarchy.instance());
     querySpecifications.add(MultipleInheritanceBlock.instance());
     querySpecifications.add(GetSuperClasses.instance());
-    querySpecifications.add(GetSuperClass.instance());
-    querySpecifications.add(GetSuperClass2.instance());
   }
   
   public BlocksWithDeepGeneralizationHierarchy getBlocksWithDeepGeneralizationHierarchy() {
@@ -77,21 +71,5 @@ public final class Block_With_More_than_1_Parent extends BaseGeneratedPatternGro
   
   public GetSuperClasses.Matcher getGetSuperClasses(final ViatraQueryEngine engine) {
     return GetSuperClasses.Matcher.on(engine);
-  }
-  
-  public GetSuperClass getGetSuperClass() {
-    return GetSuperClass.instance();
-  }
-  
-  public GetSuperClass.Matcher getGetSuperClass(final ViatraQueryEngine engine) {
-    return GetSuperClass.Matcher.on(engine);
-  }
-  
-  public GetSuperClass2 getGetSuperClass2() {
-    return GetSuperClass2.instance();
-  }
-  
-  public GetSuperClass2.Matcher getGetSuperClass2(final ViatraQueryEngine engine) {
-    return GetSuperClass2.Matcher.on(engine);
   }
 }

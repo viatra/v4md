@@ -22,7 +22,7 @@ import org.eclipse.viatra.query.runtime.api.impl.BaseGeneratedPatternGroup;
  * <li>blocks</li>
  * </ul>
  * 
- * @see IQueryGroup
+ * @see IPatternGroup
  * 
  */
 @SuppressWarnings("all")
