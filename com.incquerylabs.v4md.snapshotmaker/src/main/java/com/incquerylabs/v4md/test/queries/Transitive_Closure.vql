@@ -1,6 +1,6 @@
 package com.incquerylabs.v4md.test.queries
 
-import "http://www.nomagic.com/magicdraw/UML/2.5"
+import "http://www.nomagic.com/magicdraw/UML/2.5.1"
 /* 
  * Produce Class inheritance hierarchy
  * 'or' keyword represents an or relation between bodies --> one of them needs to apply to the parameters for them to produce a match
@@ -18,7 +18,7 @@ pattern getSuperClassOrSelf(class : Classifier, superClass: Classifier) {
 	find getSuperClass+(class, superClass);
 	
 } 
-
+ 
 /*
  * Get superclasses of a class
  * maps a class to its superclass --> the main pattern uses this subpattern to produce a class generalization hierarchy

@@ -1,6 +1,6 @@
 package com.incquerylabs.v4md.test.queries
 
-import "http://www.nomagic.com/magicdraw/UML/2.5"
+import "http://www.nomagic.com/magicdraw/UML/2.5.1"
 
 pattern BlocksWithDeepGeneralizationHierarchy(block : Class, superClass : Class) {
 	Class.appliedStereotypeInstance.classifier.name(block, "Block");
@@ -8,7 +8,7 @@ pattern BlocksWithDeepGeneralizationHierarchy(block : Class, superClass : Class)
     find getSuperClasses(block, superClass);
     check(parents > 1);
 }
-
+ 
 
 pattern MultipleInheritanceBlock(block : Class, parent1 : Class){
 	Class.appliedStereotypeInstance.classifier.name(block, "Block");
@@ -22,12 +22,3 @@ pattern getSuperClasses(class : Classifier, superClass: Classifier){
 	find getSuperClass+(class, superClass); 
 } 
 
-pattern getSuperClass(class : Classifier, superClass: Classifier) {
-	Generalization.general(gen, superClass);
-	Generalization.specific(gen, class);
-}
-
-pattern getSuperClass2(class : Classifier, superClass: Classifier) {
-	Generalization.general(gen, superClass);
-	Generalization.specific(gen, class);
-}
