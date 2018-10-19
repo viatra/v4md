@@ -23,7 +23,6 @@ import org.eclipse.viatra.query.runtime.api.impl.BaseGeneratedEMFQuerySpecificat
 import org.eclipse.viatra.query.runtime.api.impl.BaseMatcher;
 import org.eclipse.viatra.query.runtime.api.impl.BasePatternMatch;
 import org.eclipse.viatra.query.runtime.matchers.aggregators.sum;
-import org.eclipse.viatra.query.runtime.matchers.backend.QueryEvaluationHint;
 import org.eclipse.viatra.query.runtime.matchers.context.common.JavaTransitiveInstancesKey;
 import org.eclipse.viatra.query.runtime.matchers.psystem.PBody;
 import org.eclipse.viatra.query.runtime.matchers.psystem.PVariable;
@@ -222,7 +221,7 @@ public final class SumOfClassAttributes extends BaseGeneratedEMFQuerySpecificati
    * providing pattern-specific query methods.
    * 
    * <p>Use the pattern matcher on a given model via {@link #on(ViatraQueryEngine)},
-   * e.g. in conjunction with {@link ViatraQueryEngine#on(QueryScope)}.
+   * e.g. in conjunction with {@link ViatraQueryEngine#on(Notifier)}.
    * 
    * <p>Matches of the pattern will be represented as {@link Match}.
    * 
@@ -496,9 +495,9 @@ public final class SumOfClassAttributes extends BaseGeneratedEMFQuerySpecificati
   private static class GeneratedPQuery extends BaseGeneratedEMFPQuery {
     private final static SumOfClassAttributes.GeneratedPQuery INSTANCE = new GeneratedPQuery();
     
-    private final PParameter parameter_s = new PParameter("s", "java.lang.Integer", new JavaTransitiveInstancesKey(java.lang.Integer.class), PParameterDirection.INOUT);
+    private final PParameter parameter_pS = new PParameter("s", "java.lang.Integer", new JavaTransitiveInstancesKey(java.lang.Integer.class), PParameterDirection.INOUT);
     
-    private final List<PParameter> parameters = Arrays.asList(parameter_s);
+    private final List<PParameter> parameters = Arrays.asList(parameter_pS);
     
     private GeneratedPQuery() {
       super(PVisibility.PUBLIC);
@@ -521,7 +520,6 @@ public final class SumOfClassAttributes extends BaseGeneratedEMFQuerySpecificati
     
     @Override
     public Set<PBody> doGetContainedBodies() {
-      setEvaluationHints(new QueryEvaluationHint(null, QueryEvaluationHint.BackendRequirement.UNSPECIFIED));
       Set<PBody> bodies = new LinkedHashSet<>();
       {
           PBody body = new PBody(this);
@@ -530,7 +528,7 @@ public final class SumOfClassAttributes extends BaseGeneratedEMFQuerySpecificati
           PVariable var__tempNumber = body.getOrCreateVariableByName("#tempNumber");
           new TypeFilterConstraint(body, Tuples.flatTupleOf(var_s), new JavaTransitiveInstancesKey(java.lang.Integer.class));
           body.setSymbolicParameters(Arrays.<ExportedParameter>asList(
-             new ExportedParameter(body, var_s, parameter_s)
+             new ExportedParameter(body, var_s, parameter_pS)
           ));
           // 	//use # to determine which parameter should be summarized	s == sum find classNumberOfAttributes(_c, #tempNumber)
           PVariable var__virtual_0_ = body.getOrCreateVariableByName(".virtual{0}");

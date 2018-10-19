@@ -25,7 +25,6 @@ import org.eclipse.viatra.query.runtime.api.impl.BaseMatcher;
 import org.eclipse.viatra.query.runtime.api.impl.BasePatternMatch;
 import org.eclipse.viatra.query.runtime.emf.types.EClassTransitiveInstancesKey;
 import org.eclipse.viatra.query.runtime.matchers.aggregators.max;
-import org.eclipse.viatra.query.runtime.matchers.backend.QueryEvaluationHint;
 import org.eclipse.viatra.query.runtime.matchers.context.common.JavaTransitiveInstancesKey;
 import org.eclipse.viatra.query.runtime.matchers.psystem.PBody;
 import org.eclipse.viatra.query.runtime.matchers.psystem.PVariable;
@@ -250,7 +249,7 @@ public final class ClassWithMaxNumberOfAttributes extends BaseGeneratedEMFQueryS
    * providing pattern-specific query methods.
    * 
    * <p>Use the pattern matcher on a given model via {@link #on(ViatraQueryEngine)},
-   * e.g. in conjunction with {@link ViatraQueryEngine#on(QueryScope)}.
+   * e.g. in conjunction with {@link ViatraQueryEngine#on(Notifier)}.
    * 
    * <p>Matches of the pattern will be represented as {@link Match}.
    * 
@@ -656,11 +655,11 @@ public final class ClassWithMaxNumberOfAttributes extends BaseGeneratedEMFQueryS
   private static class GeneratedPQuery extends BaseGeneratedEMFPQuery {
     private final static ClassWithMaxNumberOfAttributes.GeneratedPQuery INSTANCE = new GeneratedPQuery();
     
-    private final PParameter parameter_class = new PParameter("class", "com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5", "Class")), PParameterDirection.INOUT);
+    private final PParameter parameter_pClass = new PParameter("class", "com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "Class")), PParameterDirection.INOUT);
     
-    private final PParameter parameter_number = new PParameter("number", "java.lang.Integer", new JavaTransitiveInstancesKey(java.lang.Integer.class), PParameterDirection.INOUT);
+    private final PParameter parameter_pNumber = new PParameter("number", "java.lang.Integer", new JavaTransitiveInstancesKey(java.lang.Integer.class), PParameterDirection.INOUT);
     
-    private final List<PParameter> parameters = Arrays.asList(parameter_class, parameter_number);
+    private final List<PParameter> parameters = Arrays.asList(parameter_pClass, parameter_pNumber);
     
     private GeneratedPQuery() {
       super(PVisibility.PUBLIC);
@@ -683,7 +682,6 @@ public final class ClassWithMaxNumberOfAttributes extends BaseGeneratedEMFQueryS
     
     @Override
     public Set<PBody> doGetContainedBodies() {
-      setEvaluationHints(new QueryEvaluationHint(null, QueryEvaluationHint.BackendRequirement.UNSPECIFIED));
       Set<PBody> bodies = new LinkedHashSet<>();
       {
           PBody body = new PBody(this);
@@ -691,11 +689,11 @@ public final class ClassWithMaxNumberOfAttributes extends BaseGeneratedEMFQueryS
           PVariable var_number = body.getOrCreateVariableByName("number");
           PVariable var___0_ = body.getOrCreateVariableByName("_<0>");
           PVariable var__tempNumber = body.getOrCreateVariableByName("#tempNumber");
-          new TypeConstraint(body, Tuples.flatTupleOf(var_class), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5", "Class")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var_class), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Class")));
           new TypeFilterConstraint(body, Tuples.flatTupleOf(var_number), new JavaTransitiveInstancesKey(java.lang.Integer.class));
           body.setSymbolicParameters(Arrays.<ExportedParameter>asList(
-             new ExportedParameter(body, var_class, parameter_class),
-             new ExportedParameter(body, var_number, parameter_number)
+             new ExportedParameter(body, var_class, parameter_pClass),
+             new ExportedParameter(body, var_number, parameter_pNumber)
           ));
           //     	//Calculates the largest class number	//Note use # to determine which parameter should be used for aggregation	//in this case to calculate max	number == max find classNumberOfAttributes(_, #tempNumber)
           PVariable var__virtual_0_ = body.getOrCreateVariableByName(".virtual{0}");

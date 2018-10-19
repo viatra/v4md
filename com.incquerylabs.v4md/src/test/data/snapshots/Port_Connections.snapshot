@@ -3,182 +3,6 @@
   <matchSetRecords patternQualifiedName="com.incquerylabs.v4md.test.queries.PortConnections">
     <matches>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136235_44706_15291"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136226_153116_15256"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133926_184701_15169"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_602068_16799"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_349365_16785"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163166_213752_17873"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133926_713028_15167"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136225_226395_15253"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136236_523153_15292"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_535313_16798"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_175589_16787"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_475995_17702"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_855983_17697"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_377435_16790"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163140_47602_17722"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_538013_17699"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163135_656767_17688"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163141_795250_17727"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163149_120778_17758"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160250_499995_16840"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163110_769866_17563"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133926_184701_15169"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136226_153116_15256"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136235_44706_15291"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163139_661978_17712"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_396165_16791"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_942177_16796"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133926_184701_15169"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136226_392871_15258"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136236_898663_15293"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163147_454182_17751"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160249_152409_16834"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_174535_16846"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_538013_17699"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159706_882776_16781"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163139_544022_17716"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133925_371784_15157"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136224_449928_15249"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136234_197398_15287"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133926_713028_15167"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136226_872986_15259"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136237_123663_15296"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133927_672466_15172"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136226_533365_15257"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136237_123663_15296"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136236_523153_15292"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136225_226395_15253"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133926_713028_15167"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
         <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163143_48170_17742"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
@@ -190,156 +14,13 @@
     </matches>
     <matches>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159710_341904_16801"/>
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163148_301435_17757"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_624409_16784"/>
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160250_752045_16838"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163140_62109_17718"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163138_165898_17709"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_277769_17696"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163142_707552_17732"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160252_160989_16849"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147660_835329_15940"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159710_341904_16801"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163141_795250_17727"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163135_18607_17687"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_538013_17699"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163143_192253_17738"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163134_176446_17686"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_475995_17702"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_588367_16844"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160249_680766_16835"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163148_145913_17755"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136237_123663_15296"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136226_533365_15257"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133927_672466_15172"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160250_330060_16842"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147659_124670_15931"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147662_931783_15954"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136235_943736_15288"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136225_902658_15255"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136236_523153_15292"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163139_544022_17716"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159706_707657_16780"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_602068_16799"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_961190_16843"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147659_693444_15932"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147662_236001_15955"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163141_578571_17728"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163135_389066_17693"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163141_686501_17724"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_535313_16798"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147660_386028_15938"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_174535_16846"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163140_489209_17717"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_930838_16782"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_155081_16797"/>
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163109_472624_17561"/>
       </substitutions>
     </matches>
     <matches>
@@ -355,61 +36,6 @@
     </matches>
     <matches>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163166_213752_17873"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_349365_16785"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_602068_16799"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136236_898663_15293"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136225_248436_15254"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133928_577800_15181"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147663_351066_15957"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147659_985228_15934"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_407855_16845"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_249306_17698"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163135_599529_17691"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163141_474133_17729"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_961190_16843"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160248_153299_16831"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163147_207588_17750"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
         <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163148_145913_17755"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
@@ -417,314 +43,6 @@
       </substitutions>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
         <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_588367_16844"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_249306_17698"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_825124_16793"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163139_873665_17714"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163140_47602_17722"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_377435_16790"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_855983_17697"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_602068_16799"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_410205_16786"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_714064_17701"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_174535_16846"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147660_386028_15938"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_535313_16798"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_714064_17701"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_410205_16786"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_602068_16799"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159705_511084_16775"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147660_154114_15942"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160253_498884_16851"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_174535_16846"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160249_152409_16834"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163147_454182_17751"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163139_878384_17713"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_796307_16792"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163166_920304_17875"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160253_498884_16851"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147660_154114_15942"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159705_511084_16775"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159705_79081_16773"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147660_238489_15941"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160253_498884_16851"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163143_707076_17739"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_16245_17694"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163142_627500_17730"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147664_846826_15961"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147660_565787_15939"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_602068_16799"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_602068_16799"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159706_707657_16780"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163139_544022_17716"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163148_301435_17757"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160250_647488_16837"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160252_160989_16849"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_407855_16845"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160249_468473_16836"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163148_110822_17756"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163147_207588_17750"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160248_153299_16831"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_961190_16843"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160252_160989_16849"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160250_647488_16837"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163148_301435_17757"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133926_412728_15166"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136224_461066_15250"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133923_692490_15152"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_588367_16844"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147659_901694_15933"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147662_619765_15956"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147662_236001_15955"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147659_693444_15932"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_961190_16843"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160253_498884_16851"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147660_238489_15941"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159705_79081_16773"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163142_707552_17732"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_277769_17696"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163138_165898_17709"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147662_931783_15954"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147659_124670_15931"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160250_330060_16842"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_538013_17699"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163135_18607_17687"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163141_795250_17727"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163142_627500_17730"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_16245_17694"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163143_707076_17739"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133927_275345_15171"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136223_820798_15248"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133925_501218_15159"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_155081_16797"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147659_869429_15935"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147663_625019_15958"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_588549_16795"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_682797_16788"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163140_765521_17720"/>
       </substitutions>
     </matches>
     <matches>
@@ -751,211 +69,13 @@
     </matches>
     <matches>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147663_625019_15958"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147659_869429_15935"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_155081_16797"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_155081_16797"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_767697_16783"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_805321_17700"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147663_652768_15959"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147659_333973_15936"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_588549_16795"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163109_987478_17559"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160249_563679_16833"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
         <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163147_454182_17751"/>
       </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163139_873665_17714"/>
-      </substitutions>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_825124_16793"/>
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160249_152409_16834"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_249306_17698"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_805321_17700"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163135_497582_17689"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163143_48170_17742"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136237_123663_15296"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136226_872986_15259"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133926_713028_15167"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163140_62109_17718"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_624409_16784"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159710_341904_16801"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_805321_17700"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_767697_16783"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_155081_16797"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163139_544022_17716"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159706_882776_16781"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_538013_17699"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163142_295484_17731"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163135_524825_17692"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_855983_17697"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133928_410010_15177"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136224_867304_15251"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136234_197398_15287"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163110_769866_17563"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160250_499995_16840"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163149_120778_17758"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163148_110822_17756"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160249_468473_16836"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_407855_16845"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147662_619765_15956"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147659_901694_15933"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_588367_16844"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136234_197398_15287"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136224_449928_15249"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133925_371784_15157"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133925_501218_15159"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136223_820798_15248"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133927_275345_15171"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163140_889870_17721"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_852292_16789"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163166_169110_17874"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163166_920304_17875"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_796307_16792"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163139_878384_17713"/>
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_174535_16846"/>
       </substitutions>
     </matches>
     <matches>
@@ -963,76 +83,21 @@
         <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136236_523153_15292"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136225_902658_15255"/>
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136225_226395_15253"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136235_943736_15288"/>
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133926_713028_15167"/>
       </substitutions>
     </matches>
     <matches>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163147_454182_17751"/>
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163139_878384_17713"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160249_563679_16833"/>
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_796307_16792"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163109_987478_17559"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163144_896247_17745"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_316932_17695"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163141_480786_17725"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_475995_17702"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_175589_16787"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_535313_16798"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_588549_16795"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147659_333973_15936"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147663_652768_15959"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_855983_17697"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163135_524825_17692"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163142_295484_17731"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136235_943736_15288"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136224_587014_15252"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136236_682002_15295"/>
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163166_920304_17875"/>
       </substitutions>
     </matches>
     <matches>
@@ -1048,189 +113,13 @@
     </matches>
     <matches>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163141_474133_17729"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163135_599529_17691"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_249306_17698"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163109_472624_17561"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160250_752045_16838"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163148_301435_17757"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163141_480786_17725"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_316932_17695"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163144_896247_17745"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136236_682002_15295"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136224_587014_15252"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136235_943736_15288"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163146_766237_17749"/>
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160250_330060_16842"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
         <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160249_181795_16832"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160250_330060_16842"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133923_692490_15152"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136224_461066_15250"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133926_412728_15166"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133928_577800_15181"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136225_248436_15254"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136236_898663_15293"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163140_765521_17720"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_682797_16788"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_588549_16795"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163148_301435_17757"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160250_752045_16838"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163109_472624_17561"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_538013_17699"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163135_22594_17690"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163144_528702_17743"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_942177_16796"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147660_662150_15937"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147664_885896_15960"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147664_885896_15960"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147660_662150_15937"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_942177_16796"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163144_528702_17743"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163135_22594_17690"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_538013_17699"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_475995_17702"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163134_176446_17686"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163143_192253_17738"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163109_914675_17560"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160250_717560_16839"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160253_498884_16851"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160253_498884_16851"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160250_717560_16839"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163109_914675_17560"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159710_341904_16801"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147660_835329_15940"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160252_160989_16849"/>
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163146_766237_17749"/>
       </substitutions>
     </matches>
     <matches>
@@ -1246,6 +135,347 @@
     </matches>
     <matches>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147663_625019_15958"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147659_869429_15935"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_155081_16797"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_538013_17699"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163135_22594_17690"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163144_528702_17743"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163147_207588_17750"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160248_153299_16831"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_961190_16843"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163140_62109_17718"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_624409_16784"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159710_341904_16801"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_714064_17701"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_410205_16786"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_602068_16799"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_961190_16843"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147659_693444_15932"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147662_236001_15955"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_588367_16844"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147659_901694_15933"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147662_619765_15956"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147662_619765_15956"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147659_901694_15933"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_588367_16844"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159705_79081_16773"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147660_238489_15941"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160253_498884_16851"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147664_846826_15961"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147660_565787_15939"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_602068_16799"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_249306_17698"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163135_599529_17691"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163141_474133_17729"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163109_914675_17560"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160250_717560_16839"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160253_498884_16851"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147662_931783_15954"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147659_124670_15931"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160250_330060_16842"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163141_474133_17729"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163135_599529_17691"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_249306_17698"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_155081_16797"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147659_869429_15935"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147663_625019_15958"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133927_672466_15172"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136226_533365_15257"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136237_123663_15296"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136237_123663_15296"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136226_872986_15259"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133926_713028_15167"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163143_192253_17738"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163134_176446_17686"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_475995_17702"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136236_523153_15292"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136225_902658_15255"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136235_943736_15288"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_805321_17700"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_767697_16783"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_155081_16797"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163142_627500_17730"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_16245_17694"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163143_707076_17739"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_407855_16845"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160249_468473_16836"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163148_110822_17756"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136234_197398_15287"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136224_449928_15249"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133925_371784_15157"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_805321_17700"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163135_497582_17689"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163143_48170_17742"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133925_371784_15157"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136224_449928_15249"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136234_197398_15287"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133925_501218_15159"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136223_820798_15248"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133927_275345_15171"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136237_123663_15296"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136226_533365_15257"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133927_672466_15172"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163149_120778_17758"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160250_499995_16840"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163110_769866_17563"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160253_498884_16851"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160250_717560_16839"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163109_914675_17560"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_155081_16797"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_767697_16783"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_805321_17700"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136236_682002_15295"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136224_587014_15252"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136235_943736_15288"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
         <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136234_197398_15287"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
@@ -1253,6 +483,369 @@
       </substitutions>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
         <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133928_410010_15177"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163109_472624_17561"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160250_752045_16838"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163148_301435_17757"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159710_341904_16801"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147660_835329_15940"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160252_160989_16849"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147663_351066_15957"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147659_985228_15934"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_407855_16845"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163166_920304_17875"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_796307_16792"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163139_878384_17713"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163144_528702_17743"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163135_22594_17690"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_538013_17699"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163143_707076_17739"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_16245_17694"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163142_627500_17730"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133926_184701_15169"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136226_153116_15256"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136235_44706_15291"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163144_896247_17745"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_316932_17695"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163141_480786_17725"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163138_165898_17709"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_277769_17696"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163142_707552_17732"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160253_498884_16851"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147660_154114_15942"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159705_511084_16775"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163140_489209_17717"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_930838_16782"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_155081_16797"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163140_889870_17721"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_852292_16789"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163166_169110_17874"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_942177_16796"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147660_662150_15937"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147664_885896_15960"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163109_987478_17559"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160249_563679_16833"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163147_454182_17751"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160252_160989_16849"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147660_835329_15940"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159710_341904_16801"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133926_412728_15166"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136224_461066_15250"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133923_692490_15152"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163110_769866_17563"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160250_499995_16840"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163149_120778_17758"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133928_410010_15177"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136224_867304_15251"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136234_197398_15287"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_538013_17699"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163135_18607_17687"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163141_795250_17727"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_538013_17699"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163135_656767_17688"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163141_795250_17727"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_174535_16846"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147660_386028_15938"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_535313_16798"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_174535_16846"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160249_152409_16834"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163147_454182_17751"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163141_480786_17725"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_316932_17695"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163144_896247_17745"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163141_795250_17727"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163135_656767_17688"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_538013_17699"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163141_795250_17727"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163135_18607_17687"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_538013_17699"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_538013_17699"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159706_882776_16781"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163139_544022_17716"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_855983_17697"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163135_524825_17692"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163142_295484_17731"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160252_160989_16849"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160250_647488_16837"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163148_301435_17757"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_588549_16795"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_682797_16788"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163140_765521_17720"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133926_713028_15167"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136226_872986_15259"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136237_123663_15296"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163140_765521_17720"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_682797_16788"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_588549_16795"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163147_454182_17751"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160249_563679_16833"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163109_987478_17559"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_961190_16843"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160248_153299_16831"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163147_207588_17750"/>
       </substitutions>
     </matches>
     <matches>
@@ -1268,13 +861,79 @@
     </matches>
     <matches>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160250_330060_16842"/>
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159710_341904_16801"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_624409_16784"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163140_62109_17718"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163146_766237_17749"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
         <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160249_181795_16832"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163146_766237_17749"/>
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160250_330060_16842"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163139_873665_17714"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_825124_16793"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_249306_17698"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160250_330060_16842"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147659_124670_15931"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147662_931783_15954"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163139_544022_17716"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159706_707657_16780"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_602068_16799"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163139_544022_17716"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159706_882776_16781"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_538013_17699"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133926_713028_15167"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136225_226395_15253"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136236_523153_15292"/>
       </substitutions>
     </matches>
     <matches>
@@ -1290,13 +949,354 @@
     </matches>
     <matches>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163141_795250_17727"/>
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_602068_16799"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163135_656767_17688"/>
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_410205_16786"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_538013_17699"/>
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_714064_17701"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163141_578571_17728"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163135_389066_17693"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163141_686501_17724"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133927_275345_15171"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136223_820798_15248"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133925_501218_15159"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163142_295484_17731"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163135_524825_17692"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_855983_17697"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163166_213752_17873"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_349365_16785"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_602068_16799"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_475995_17702"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_175589_16787"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_535313_16798"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147663_652768_15959"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147659_333973_15936"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_588549_16795"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147662_236001_15955"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147659_693444_15932"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_961190_16843"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_588367_16844"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160249_680766_16835"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163148_145913_17755"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136235_943736_15288"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136224_587014_15252"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136236_682002_15295"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_249306_17698"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_825124_16793"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163139_873665_17714"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_602068_16799"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159706_707657_16780"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163139_544022_17716"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147664_885896_15960"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147660_662150_15937"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_942177_16796"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136235_44706_15291"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136226_153116_15256"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133926_184701_15169"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_588549_16795"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147659_333973_15936"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147663_652768_15959"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136236_898663_15293"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136225_248436_15254"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133928_577800_15181"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163142_707552_17732"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_277769_17696"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163138_165898_17709"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133926_184701_15169"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136226_392871_15258"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136236_898663_15293"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163148_301435_17757"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160250_647488_16837"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160252_160989_16849"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_602068_16799"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_349365_16785"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163166_213752_17873"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_535313_16798"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159707_175589_16787"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_475995_17702"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159709_535313_16798"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147660_386028_15938"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_174535_16846"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163148_110822_17756"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160249_468473_16836"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160251_407855_16845"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136235_943736_15288"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136225_902658_15255"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136236_523153_15292"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_855983_17697"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_377435_16790"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163140_47602_17722"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159705_511084_16775"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147660_154114_15942"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160253_498884_16851"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133928_577800_15181"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136225_248436_15254"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136236_898663_15293"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163140_47602_17722"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_377435_16790"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163136_855983_17697"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160253_498884_16851"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147660_238489_15941"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159705_79081_16773"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163137_475995_17702"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163134_176446_17686"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163143_192253_17738"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163139_661978_17712"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_396165_16791"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159708_942177_16796"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port1">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133923_692490_15152"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="connector">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136224_461066_15250"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="port2">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324133926_412728_15166"/>
       </substitutions>
     </matches>
     <filter/>

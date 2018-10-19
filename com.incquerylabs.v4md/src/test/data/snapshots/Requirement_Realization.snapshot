@@ -3,15 +3,7 @@
   <matchSetRecords patternQualifiedName="com.incquerylabs.v4md.test.queries.RequirementRealization">
     <matches>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="requirement">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162244_13904_17449"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="realizingElement">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159210_687099_16730"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="requirement">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163693_70623_18289"/>
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163693_508607_18288"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="realizingElement">
         <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159210_687099_16730"/>
@@ -27,7 +19,39 @@
     </matches>
     <matches>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="requirement">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162242_42801_17440"/>
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324148997_899551_16126"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="realizingElement">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324137702_307391_15405"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="requirement">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162243_424589_17442"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="realizingElement">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159210_687099_16730"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="requirement">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162242_907310_17439"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="realizingElement">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159208_812536_16725"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="requirement">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163693_70623_18289"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="realizingElement">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159210_687099_16730"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="requirement">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324148998_161366_16127"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="realizingElement">
         <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159208_812536_16725"/>
@@ -43,10 +67,10 @@
     </matches>
     <matches>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="requirement">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163693_508607_18288"/>
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162242_42801_17440"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="realizingElement">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159210_687099_16730"/>
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159208_812536_16725"/>
       </substitutions>
     </matches>
     <matches>
@@ -59,10 +83,18 @@
     </matches>
     <matches>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="requirement">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162242_907310_17439"/>
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324148997_899551_16126"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="realizingElement">
         <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159208_812536_16725"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="requirement">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162244_13904_17449"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="realizingElement">
+        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159210_687099_16730"/>
       </substitutions>
     </matches>
     <matches>
@@ -71,38 +103,6 @@
       </substitutions>
       <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="realizingElement">
         <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159210_687099_16730"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="requirement">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324148997_899551_16126"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="realizingElement">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159208_812536_16725"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="requirement">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324148998_161366_16127"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="realizingElement">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159208_812536_16725"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="requirement">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162243_424589_17442"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="realizingElement">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159210_687099_16730"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="requirement">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324148997_899551_16126"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="realizingElement">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324137702_307391_15405"/>
       </substitutions>
     </matches>
     <filter/>

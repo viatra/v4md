@@ -4,13 +4,13 @@ pipeline {
 		label 'magicdraw19'
 	} 
 	parameters {
-		string(name: 'RELEASE_VERSION', defaultValue: '2.0.1', 
+		string(name: 'RELEASE_VERSION', defaultValue: '2.0.2', 
 			description: 'Set this parameter to the VIATRA version this V4MD build should include (e.g. 2.0.0.M3) and set the project version version accordingly. Leave it empty to skip this step.')
-		string(name: 'INCUBATION_VERSION', defaultValue: '0.20.1', 
+		string(name: 'INCUBATION_VERSION', defaultValue: '0.20.2', 
 			description: 'Set this parameter to the corresponding incubation version of the related VIATRA release.')
-		string(name: 'PLUGIN_VERSION', defaultValue: '2.0.2-SNAPSHOT', 
+		string(name: 'PLUGIN_VERSION', defaultValue: '2.0.3-SNAPSHOT', 
 			description: 'Set this parameter to the desired V4MD version.')
-		string(name: 'BUILD_NUMBER', defaultValue: '202010', 
+		string(name: 'BUILD_NUMBER', defaultValue: '203010', 
 			description: 'Set this parameter to the desired MD internal version.')
 	}
 	// Keep only the last 5 builds

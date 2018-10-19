@@ -28,7 +28,7 @@ import org.eclipse.viatra.query.runtime.api.impl.BaseGeneratedPatternGroup;
  * <li>averageNumberOfAttributes</li>
  * </ul>
  * 
- * @see IQueryGroup
+ * @see IPatternGroup
  * 
  */
 @SuppressWarnings("all")

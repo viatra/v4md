@@ -1,6 +1,6 @@
 package com.incquerylabs.v4md.test.queries
 
-import "http://www.nomagic.com/magicdraw/UML/2.5"
+import "http://www.nomagic.com/magicdraw/UML/2.5.1"
 
 pattern notReachableFromInit(state : State){
     neg find reachableFromInitState(state);
