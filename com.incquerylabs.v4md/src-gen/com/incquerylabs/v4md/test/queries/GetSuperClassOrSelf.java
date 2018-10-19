@@ -25,6 +25,7 @@ import org.eclipse.viatra.query.runtime.api.impl.BaseGeneratedEMFQuerySpecificat
 import org.eclipse.viatra.query.runtime.api.impl.BaseMatcher;
 import org.eclipse.viatra.query.runtime.api.impl.BasePatternMatch;
 import org.eclipse.viatra.query.runtime.emf.types.EClassTransitiveInstancesKey;
+import org.eclipse.viatra.query.runtime.matchers.backend.QueryEvaluationHint;
 import org.eclipse.viatra.query.runtime.matchers.psystem.PBody;
 import org.eclipse.viatra.query.runtime.matchers.psystem.PVariable;
 import org.eclipse.viatra.query.runtime.matchers.psystem.basicdeferred.Equality;
@@ -253,7 +254,7 @@ public final class GetSuperClassOrSelf extends BaseGeneratedEMFQuerySpecificatio
    * providing pattern-specific query methods.
    * 
    * <p>Use the pattern matcher on a given model via {@link #on(ViatraQueryEngine)},
-   * e.g. in conjunction with {@link ViatraQueryEngine#on(Notifier)}.
+   * e.g. in conjunction with {@link ViatraQueryEngine#on(QueryScope)}.
    * 
    * <p>Matches of the pattern will be represented as {@link Match}.
    * 
@@ -666,11 +667,11 @@ public final class GetSuperClassOrSelf extends BaseGeneratedEMFQuerySpecificatio
   private static class GeneratedPQuery extends BaseGeneratedEMFPQuery {
     private final static GetSuperClassOrSelf.GeneratedPQuery INSTANCE = new GeneratedPQuery();
     
-    private final PParameter parameter_pClass = new PParameter("class", "com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Classifier", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "Classifier")), PParameterDirection.INOUT);
+    private final PParameter parameter_class = new PParameter("class", "com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Classifier", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "Classifier")), PParameterDirection.INOUT);
     
-    private final PParameter parameter_pSuperClass = new PParameter("superClass", "com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Classifier", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "Classifier")), PParameterDirection.INOUT);
+    private final PParameter parameter_superClass = new PParameter("superClass", "com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Classifier", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "Classifier")), PParameterDirection.INOUT);
     
-    private final List<PParameter> parameters = Arrays.asList(parameter_pClass, parameter_pSuperClass);
+    private final List<PParameter> parameters = Arrays.asList(parameter_class, parameter_superClass);
     
     private GeneratedPQuery() {
       super(PVisibility.PUBLIC);
@@ -693,6 +694,7 @@ public final class GetSuperClassOrSelf extends BaseGeneratedEMFQuerySpecificatio
     
     @Override
     public Set<PBody> doGetContainedBodies() {
+      setEvaluationHints(new QueryEvaluationHint(null, QueryEvaluationHint.BackendRequirement.UNSPECIFIED));
       Set<PBody> bodies = new LinkedHashSet<>();
       {
           PBody body = new PBody(this);
@@ -701,8 +703,8 @@ public final class GetSuperClassOrSelf extends BaseGeneratedEMFQuerySpecificatio
           new TypeConstraint(body, Tuples.flatTupleOf(var_class), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Classifier")));
           new TypeConstraint(body, Tuples.flatTupleOf(var_superClass), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Classifier")));
           body.setSymbolicParameters(Arrays.<ExportedParameter>asList(
-             new ExportedParameter(body, var_class, parameter_pClass),
-             new ExportedParameter(body, var_superClass, parameter_pSuperClass)
+             new ExportedParameter(body, var_class, parameter_class),
+             new ExportedParameter(body, var_superClass, parameter_superClass)
           ));
           // 	// * semantics for transitive closure can be implemented this way	// by default the transitive closure does not add the trivial relation to the TC	class == superClass
           new Equality(body, var_class, var_superClass);
@@ -715,8 +717,8 @@ public final class GetSuperClassOrSelf extends BaseGeneratedEMFQuerySpecificatio
           new TypeConstraint(body, Tuples.flatTupleOf(var_class), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Classifier")));
           new TypeConstraint(body, Tuples.flatTupleOf(var_superClass), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Classifier")));
           body.setSymbolicParameters(Arrays.<ExportedParameter>asList(
-             new ExportedParameter(body, var_class, parameter_pClass),
-             new ExportedParameter(body, var_superClass, parameter_pSuperClass)
+             new ExportedParameter(body, var_class, parameter_class),
+             new ExportedParameter(body, var_superClass, parameter_superClass)
           ));
           // 	//transitive closure	find getSuperClass+(class, superClass)
           new BinaryTransitiveClosure(body, Tuples.flatTupleOf(var_class, var_superClass), GetSuperClass.instance().getInternalQueryRepresentation());

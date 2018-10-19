@@ -25,6 +25,7 @@ import org.eclipse.viatra.query.runtime.api.impl.BaseGeneratedEMFQuerySpecificat
 import org.eclipse.viatra.query.runtime.api.impl.BaseMatcher;
 import org.eclipse.viatra.query.runtime.api.impl.BasePatternMatch;
 import org.eclipse.viatra.query.runtime.emf.types.EClassTransitiveInstancesKey;
+import org.eclipse.viatra.query.runtime.matchers.backend.QueryEvaluationHint;
 import org.eclipse.viatra.query.runtime.matchers.psystem.PBody;
 import org.eclipse.viatra.query.runtime.matchers.psystem.PVariable;
 import org.eclipse.viatra.query.runtime.matchers.psystem.basicdeferred.ExportedParameter;
@@ -222,7 +223,7 @@ public final class CircularDependencyError extends BaseGeneratedEMFQuerySpecific
    * providing pattern-specific query methods.
    * 
    * <p>Use the pattern matcher on a given model via {@link #on(ViatraQueryEngine)},
-   * e.g. in conjunction with {@link ViatraQueryEngine#on(Notifier)}.
+   * e.g. in conjunction with {@link ViatraQueryEngine#on(QueryScope)}.
    * 
    * <p>Matches of the pattern will be represented as {@link Match}.
    * 
@@ -497,9 +498,9 @@ public final class CircularDependencyError extends BaseGeneratedEMFQuerySpecific
   private static class GeneratedPQuery extends BaseGeneratedEMFPQuery {
     private final static CircularDependencyError.GeneratedPQuery INSTANCE = new GeneratedPQuery();
     
-    private final PParameter parameter_pDep = new PParameter("dep", "com.nomagic.uml2.ext.magicdraw.classes.mddependencies.Dependency", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "Dependency")), PParameterDirection.INOUT);
+    private final PParameter parameter_dep = new PParameter("dep", "com.nomagic.uml2.ext.magicdraw.classes.mddependencies.Dependency", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "Dependency")), PParameterDirection.INOUT);
     
-    private final List<PParameter> parameters = Arrays.asList(parameter_pDep);
+    private final List<PParameter> parameters = Arrays.asList(parameter_dep);
     
     private GeneratedPQuery() {
       super(PVisibility.PUBLIC);
@@ -522,13 +523,14 @@ public final class CircularDependencyError extends BaseGeneratedEMFQuerySpecific
     
     @Override
     public Set<PBody> doGetContainedBodies() {
+      setEvaluationHints(new QueryEvaluationHint(null, QueryEvaluationHint.BackendRequirement.UNSPECIFIED));
       Set<PBody> bodies = new LinkedHashSet<>();
       {
           PBody body = new PBody(this);
           PVariable var_dep = body.getOrCreateVariableByName("dep");
           new TypeConstraint(body, Tuples.flatTupleOf(var_dep), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Dependency")));
           body.setSymbolicParameters(Arrays.<ExportedParameter>asList(
-             new ExportedParameter(body, var_dep, parameter_pDep)
+             new ExportedParameter(body, var_dep, parameter_dep)
           ));
           //     //Call transitive closure of sub-pattern 'DependencyChain'    find DependencyChain+(dep, dep)
           new BinaryTransitiveClosure(body, Tuples.flatTupleOf(var_dep, var_dep), DependencyChain.instance().getInternalQueryRepresentation());

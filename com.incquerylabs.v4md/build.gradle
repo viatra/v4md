@@ -21,17 +21,6 @@ repositories {
             artifact '/[module][revision]/[classifier].[ext]'
         }
     }
-    
-    // workaround until viatra testing framework gets added to maven repo
-    // https://bugs.eclipse.org/bugs/show_bug.cgi?id=539189
-    ivy{
-    	url 'http://download.eclipse.org/viatra/updates/release/2.0.2/plugins'
-    	layout 'pattern', {
-            artifact '/[module].[classifier]_[revision].[ext]'
-        }
-    	 
-    }
-    
     jcenter()
     mavenCentral()
     maven { url "https://repo.eclipse.org/content/groups/viatra/" }
@@ -84,13 +73,10 @@ dependencies {
     implementation files(classpathLibraries.collect { 'build/dependency-cache/extracted/' + it })
     implementation fileTree(dir: 'build/dependency-cache/extracted', include: ['lib/**/*.jar', 'plugins/**/*.jar'], exclude: ([classpathLibraries, ['plugins/com.nomagic.collaborator.publisher/**/*.jar', 'plugins/com.nomagic.magicdraw.emfuml2xmi*/**/*.jar']]).flatten())
 
-	testCompile 'junit:junit:4.11'
     testCompile 'org.apache.maven.surefire:maven-surefire-common:2.19.1'
     testCompile 'org.apache.maven.surefire:surefire-api:2.19.1'
     testCompile 'org.apache.maven.surefire:surefire-junit4:2.19.1'
-    //these are part of the viatra testing framework workaround as well
-    testCompile group: 'org.eclipse.viatra', name: 'org.eclipse.viatra.query', version: '2.0.2.201808291256', classifier: 'testing.core', ext: 'jar'
-    testCompile group: 'org.eclipse.viatra', name: 'org.eclipse.viatra.query', version: '2.0.2.201808291256', classifier: 'testing.snapshot', ext: 'jar'
+    testCompile group: 'org.eclipse.viatra', name: 'viatra-query-testing', version: viatraVersion, exclusions
 }
 
 task extractDependencies {

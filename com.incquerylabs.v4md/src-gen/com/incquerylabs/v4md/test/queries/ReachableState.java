@@ -25,6 +25,7 @@ import org.eclipse.viatra.query.runtime.api.impl.BaseMatcher;
 import org.eclipse.viatra.query.runtime.api.impl.BasePatternMatch;
 import org.eclipse.viatra.query.runtime.emf.types.EClassTransitiveInstancesKey;
 import org.eclipse.viatra.query.runtime.emf.types.EStructuralFeatureInstancesKey;
+import org.eclipse.viatra.query.runtime.matchers.backend.QueryEvaluationHint;
 import org.eclipse.viatra.query.runtime.matchers.psystem.PBody;
 import org.eclipse.viatra.query.runtime.matchers.psystem.PVariable;
 import org.eclipse.viatra.query.runtime.matchers.psystem.basicdeferred.Equality;
@@ -244,7 +245,7 @@ public final class ReachableState extends BaseGeneratedEMFQuerySpecification<Rea
    * providing pattern-specific query methods.
    * 
    * <p>Use the pattern matcher on a given model via {@link #on(ViatraQueryEngine)},
-   * e.g. in conjunction with {@link ViatraQueryEngine#on(Notifier)}.
+   * e.g. in conjunction with {@link ViatraQueryEngine#on(QueryScope)}.
    * 
    * <p>Matches of the pattern will be represented as {@link Match}.
    * 
@@ -648,11 +649,11 @@ public final class ReachableState extends BaseGeneratedEMFQuerySpecification<Rea
   private static class GeneratedPQuery extends BaseGeneratedEMFPQuery {
     private final static ReachableState.GeneratedPQuery INSTANCE = new GeneratedPQuery();
     
-    private final PParameter parameter_pSourceState = new PParameter("sourceState", "com.nomagic.uml2.ext.magicdraw.statemachines.mdbehaviorstatemachines.Vertex", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "Vertex")), PParameterDirection.INOUT);
+    private final PParameter parameter_sourceState = new PParameter("sourceState", "com.nomagic.uml2.ext.magicdraw.statemachines.mdbehaviorstatemachines.Vertex", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "Vertex")), PParameterDirection.INOUT);
     
-    private final PParameter parameter_pTargetState = new PParameter("targetState", "com.nomagic.uml2.ext.magicdraw.statemachines.mdbehaviorstatemachines.Vertex", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "Vertex")), PParameterDirection.INOUT);
+    private final PParameter parameter_targetState = new PParameter("targetState", "com.nomagic.uml2.ext.magicdraw.statemachines.mdbehaviorstatemachines.Vertex", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "Vertex")), PParameterDirection.INOUT);
     
-    private final List<PParameter> parameters = Arrays.asList(parameter_pSourceState, parameter_pTargetState);
+    private final List<PParameter> parameters = Arrays.asList(parameter_sourceState, parameter_targetState);
     
     private GeneratedPQuery() {
       super(PVisibility.PUBLIC);
@@ -675,6 +676,7 @@ public final class ReachableState extends BaseGeneratedEMFQuerySpecification<Rea
     
     @Override
     public Set<PBody> doGetContainedBodies() {
+      setEvaluationHints(new QueryEvaluationHint(null, QueryEvaluationHint.BackendRequirement.UNSPECIFIED));
       Set<PBody> bodies = new LinkedHashSet<>();
       {
           PBody body = new PBody(this);
@@ -684,8 +686,8 @@ public final class ReachableState extends BaseGeneratedEMFQuerySpecification<Rea
           new TypeConstraint(body, Tuples.flatTupleOf(var_sourceState), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Vertex")));
           new TypeConstraint(body, Tuples.flatTupleOf(var_targetState), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Vertex")));
           body.setSymbolicParameters(Arrays.<ExportedParameter>asList(
-             new ExportedParameter(body, var_sourceState, parameter_pSourceState),
-             new ExportedParameter(body, var_targetState, parameter_pTargetState)
+             new ExportedParameter(body, var_sourceState, parameter_sourceState),
+             new ExportedParameter(body, var_targetState, parameter_targetState)
           ));
           //     Transition.source(transition, sourceState)
           new TypeConstraint(body, Tuples.flatTupleOf(var_transition), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Transition")));
