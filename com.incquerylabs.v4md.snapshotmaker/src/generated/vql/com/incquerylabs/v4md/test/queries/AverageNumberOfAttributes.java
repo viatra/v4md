@@ -24,6 +24,7 @@ import org.eclipse.viatra.query.runtime.api.impl.BaseGeneratedEMFQuerySpecificat
 import org.eclipse.viatra.query.runtime.api.impl.BaseMatcher;
 import org.eclipse.viatra.query.runtime.api.impl.BasePatternMatch;
 import org.eclipse.viatra.query.runtime.matchers.aggregators.sum;
+import org.eclipse.viatra.query.runtime.matchers.backend.QueryEvaluationHint;
 import org.eclipse.viatra.query.runtime.matchers.context.common.JavaTransitiveInstancesKey;
 import org.eclipse.viatra.query.runtime.matchers.psystem.IExpressionEvaluator;
 import org.eclipse.viatra.query.runtime.matchers.psystem.IValueProvider;
@@ -272,7 +273,7 @@ public final class AverageNumberOfAttributes extends BaseGeneratedEMFQuerySpecif
    * providing pattern-specific query methods.
    * 
    * <p>Use the pattern matcher on a given model via {@link #on(ViatraQueryEngine)},
-   * e.g. in conjunction with {@link ViatraQueryEngine#on(Notifier)}.
+   * e.g. in conjunction with {@link ViatraQueryEngine#on(QueryScope)}.
    * 
    * <p>Matches of the pattern will be represented as {@link Match}.
    * 
@@ -762,13 +763,13 @@ public final class AverageNumberOfAttributes extends BaseGeneratedEMFQuerySpecif
   private static class GeneratedPQuery extends BaseGeneratedEMFPQuery {
     private final static AverageNumberOfAttributes.GeneratedPQuery INSTANCE = new GeneratedPQuery();
     
-    private final PParameter parameter_pNumber = new PParameter("number", "java.lang.Float", new JavaTransitiveInstancesKey(java.lang.Float.class), PParameterDirection.INOUT);
+    private final PParameter parameter_number = new PParameter("number", "java.lang.Float", new JavaTransitiveInstancesKey(java.lang.Float.class), PParameterDirection.INOUT);
     
-    private final PParameter parameter_pS = new PParameter("s", "java.lang.Integer", new JavaTransitiveInstancesKey(java.lang.Integer.class), PParameterDirection.INOUT);
+    private final PParameter parameter_s = new PParameter("s", "java.lang.Integer", new JavaTransitiveInstancesKey(java.lang.Integer.class), PParameterDirection.INOUT);
     
-    private final PParameter parameter_pC = new PParameter("c", "java.lang.Integer", new JavaTransitiveInstancesKey(java.lang.Integer.class), PParameterDirection.INOUT);
+    private final PParameter parameter_c = new PParameter("c", "java.lang.Integer", new JavaTransitiveInstancesKey(java.lang.Integer.class), PParameterDirection.INOUT);
     
-    private final List<PParameter> parameters = Arrays.asList(parameter_pNumber, parameter_pS, parameter_pC);
+    private final List<PParameter> parameters = Arrays.asList(parameter_number, parameter_s, parameter_c);
     
     private GeneratedPQuery() {
       super(PVisibility.PUBLIC);
@@ -791,6 +792,7 @@ public final class AverageNumberOfAttributes extends BaseGeneratedEMFQuerySpecif
     
     @Override
     public Set<PBody> doGetContainedBodies() {
+      setEvaluationHints(new QueryEvaluationHint(null, QueryEvaluationHint.BackendRequirement.UNSPECIFIED));
       Set<PBody> bodies = new LinkedHashSet<>();
       {
           PBody body = new PBody(this);
@@ -804,9 +806,9 @@ public final class AverageNumberOfAttributes extends BaseGeneratedEMFQuerySpecif
           new TypeFilterConstraint(body, Tuples.flatTupleOf(var_s), new JavaTransitiveInstancesKey(java.lang.Integer.class));
           new TypeFilterConstraint(body, Tuples.flatTupleOf(var_c), new JavaTransitiveInstancesKey(java.lang.Integer.class));
           body.setSymbolicParameters(Arrays.<ExportedParameter>asList(
-             new ExportedParameter(body, var_number, parameter_pNumber),
-             new ExportedParameter(body, var_s, parameter_pS),
-             new ExportedParameter(body, var_c, parameter_pC)
+             new ExportedParameter(body, var_number, parameter_number),
+             new ExportedParameter(body, var_s, parameter_s),
+             new ExportedParameter(body, var_c, parameter_c)
           ));
           // 	//calculates sum	s == sum find classNumberOfAttributes(_c, #tempNumber)
           PVariable var__virtual_0_ = body.getOrCreateVariableByName(".virtual{0}");
