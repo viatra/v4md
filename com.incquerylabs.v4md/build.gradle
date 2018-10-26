@@ -72,6 +72,11 @@ dependencies {
         exclude group: 'com.google.guava', module: 'guava'
         exclude module: 'log4j'
     }
+    def testExclusions = {
+    	exclude group: 'org.eclipse.viatra', module: 'viatra-query-runtime'
+    	exclude group: 'com.google.guava', module: 'guava'
+        exclude module: 'log4j'
+    }
 
     pub group: 'org.eclipse.viatra', name: 'viatra-query-runtime', version: viatraVersion, exclusions
     pub group: 'org.eclipse.viatra', name: 'viatra-transformation-runtime', version: viatraVersion, exclusions
@@ -88,6 +93,7 @@ dependencies {
     testCompile 'org.apache.maven.surefire:maven-surefire-common:2.19.1'
     testCompile 'org.apache.maven.surefire:surefire-api:2.19.1'
     testCompile 'org.apache.maven.surefire:surefire-junit4:2.19.1'
+
     //these are part of the viatra testing framework workaround as well
     testCompile group: 'org.eclipse.viatra', name: 'org.eclipse.viatra.query', version: '2.0.2.201808291256', classifier: 'testing.core', ext: 'jar'
     testCompile group: 'org.eclipse.viatra', name: 'org.eclipse.viatra.query', version: '2.0.2.201808291256', classifier: 'testing.snapshot', ext: 'jar'
@@ -156,6 +162,7 @@ class PreDist extends DefaultTask {
     String groupName
     Set<File> resolvedArtifacts
     org.gradle.api.tasks.bundling.Jar outputArtifact
+    String distributionFolderName
 
     @TaskAction
     void executeTask() {
@@ -163,14 +170,14 @@ class PreDist extends DefaultTask {
         project.copy {
             from resolvedArtifacts
             from outputArtifact
-            into "build/generated-dist/plugins/${groupName}"
+            into "build/${distributionFolderName}/plugins/${groupName}"
         }
-        project.fileTree(dir: 'build/generated-dist', include: '**/*${groupName}*/**').each { file ->
+        project.fileTree(dir: 'build/${distributionFolderName}', include: '**/*${groupName}*/**').each { file ->
             file.renameTo(project.file(file.getAbsolutePath().replace('${groupName}', "${groupName}")))
         }
 
         String pluginLibraries = ''
-        project.fileTree(dir: "build/generated-dist/plugins/${groupName}", include: '**/*.jar').each { file ->
+        project.fileTree(dir: "build/${distributionFolderName}/plugins/${groupName}", include: '**/*.jar').each { file ->
             pluginLibraries += '\t\t<library name=\"' + file.absolutePath.replaceAll(~/.*build\/generated-dist\/plugins\/${project.name}\//, '') + '\"/>' + System.lineSeparator()
         }
         project.copy {
@@ -178,7 +185,7 @@ class PreDist extends DefaultTask {
             filter { String line -> line.replace('<!-- START AUTO-GENERATED -->', '<!-- START AUTO-GENERATED -->' + System.lineSeparator() + System.lineSeparator() + pluginLibraries) }
             filter { String line -> line.replace('${human.version}', humanVersion) }
             filter { String line -> line.replace('${internal.version}', internalVersion) }
-            into "build/generated-dist/plugins/${groupName}"
+            into "build/${distributionFolderName}/plugins/${groupName}"
         } 
     }
 }
@@ -192,6 +199,7 @@ task preDist(type: PreDist) {
     pluginTemplate = "dist/template/plugins/${project.name}/plugin.xml"
     resolvedArtifacts = project.configurations.pub.resolvedConfiguration.resolvedArtifacts.file
     outputArtifact = project.jar
+    distributionFolderName = "generated-dist"
     
     doFirst{
     	project.copy {
@@ -213,8 +221,9 @@ task preDist(type: PreDist) {
     
     doLast{
     	String descriptorFiles = ''
+    	java.nio.file.Path containerPath = project.file('build/generated-dist').toPath()
         project.fileTree(dir: 'build/generated-dist').each { file ->
-            String relativePath = file.absolutePath.replaceAll(/.*build\/generated-dist\//, '')
+            String relativePath = file.toPath().relativize(containerPath).toString()
             descriptorFiles += '\t\t<file from=\"' + relativePath + '\" to=\"' + relativePath + '\"/>' + System.lineSeparator()
         }
         
@@ -326,6 +335,9 @@ task testJar(type: Jar) {
     classifier = 'tests'
     from sourceSets.test.output.classesDirs
 }
+
+String testDistFolder = "test-dist"
+
 task testDist(type: PreDist) {
     humanVersion = version
     internalVersion = buildNumber
@@ -334,16 +346,29 @@ task testDist(type: PreDist) {
     pluginTemplate = "src/test/com/incquerylabs/v4md/test/plugin.xml"
 	resolvedArtifacts = project.configurations.testCompile.resolvedConfiguration.resolvedArtifacts.file
 	outputArtifact = project.testJar
+	distributionFolderName = testDistFolder
 }
 testDist.dependsOn testJar
 distZip.dependsOn testDist
+
+task installTest {
+	doLast {
+        project.copy {
+            fileMode 0755
+            from "build/${testDistFolder}"
+            into 'build/install'
+        }
+	}
+}
+installTest.dependsOn installDist
+installTest.dependsOn testDist
 
 task configureTest {
 	doLast {
 	    project.delete "build/install/plugins/${project.name}/settings" // to enable test settings to take effect
 	}
 }
-configureTest.dependsOn installDist
+configureTest.dependsOn installTest
 
 def testArgs = [
 	'-Dcom.nomagic.magicdraw.launcher=com.nomagic.magicdraw.commandline.CommandLineActionLauncher',
