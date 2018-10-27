@@ -84,6 +84,12 @@ dependencies {
     testCompile group: 'org.eclipse.viatra', name: 'viatra-query-testing', version: viatraVersion, testExclusions
 }
 
+clean.doLast {
+	delete 'build/generated-dist'
+	delete 'build/test-dist'
+	delete 'install'
+}
+
 task extractDependencies {
 
     configurations.preCompile.resolvedConfiguration.resolvedArtifacts.each { artifact ->
