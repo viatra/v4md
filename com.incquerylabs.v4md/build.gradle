@@ -208,7 +208,7 @@ task preDist(type: PreDist) {
     	String descriptorFiles = ''
     	java.nio.file.Path containerPath = project.file('build/generated-dist').toPath()
         project.fileTree(dir: 'build/generated-dist').each { file ->
-            String relativePath = file.toPath().relativize(containerPath).toString()
+            String relativePath = containerPath.relativize(file.toPath()).toString()
             descriptorFiles += '\t\t<file from=\"' + relativePath + '\" to=\"' + relativePath + '\"/>' + System.lineSeparator()
         }
         
