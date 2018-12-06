@@ -87,7 +87,9 @@ dependencies {
 clean.doLast {
 	delete 'build/generated-dist'
 	delete 'build/test-dist'
-	delete 'install'
+	delete 'build/install'
+	delete 'build/distributions/'
+	delete 'build/libs'
 }
 
 task extractDependencies {
@@ -208,6 +210,8 @@ task preDist(type: PreDist) {
             into 'build/generated-dist'
             rename {filename -> filename.replace("LICENSE", "EULA_V4MD.txt")}
         }
+        // Ensure any old plugin descriptors are removed to avoid them getting included into the newly generated descriptor file
+        project.delete 'build/generated-dist/data/resourcemanager'
     }
     
     doLast{
