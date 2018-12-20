@@ -27,7 +27,8 @@ pipeline {
 		stage('Build Plug-in') { 
 			steps {
 				dir ('com.incquerylabs.v4md'){
-					sh "./gradlew -Pversion=${params.PLUGIN_VERSION} -PviatraVersion=${params.RELEASE_VERSION} -PviatraIncubationVersion=${params.INCUBATION_VERSION} -PbuildNumber=${params.BUILD_NUMBER} dependencyClean"
+					sh "rm build/dependency-cache"
+					sh "./gradlew -Pversion=${params.PLUGIN_VERSION} -PviatraVersion=${params.RELEASE_VERSION} -PviatraIncubationVersion=${params.INCUBATION_VERSION} -PbuildNumber=${params.BUILD_NUMBER} clean"
 					sh "./gradlew -Pversion=${params.PLUGIN_VERSION} -PviatraVersion=${params.RELEASE_VERSION} -PviatraIncubationVersion=${params.INCUBATION_VERSION} -PbuildNumber=${params.BUILD_NUMBER} assemble"
 				}
 			}
