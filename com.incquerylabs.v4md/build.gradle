@@ -92,6 +92,12 @@ clean.doLast {
 	delete 'build/libs'
 }
 
+task dependencyClean {
+	project.delete 'build/dependency-cache'
+}
+
+dependencyClean.dependsOn clean
+
 task extractDependencies {
 
     configurations.preCompile.resolvedConfiguration.resolvedArtifacts.each { artifact ->
