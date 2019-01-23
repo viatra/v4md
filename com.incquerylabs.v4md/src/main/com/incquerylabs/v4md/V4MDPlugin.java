@@ -1,8 +1,10 @@
 package com.incquerylabs.v4md;
 
+import com.incquerylabs.v4md.expressions.BinaryVQLExpression;
 import com.nomagic.magicdraw.core.Application;
 import com.nomagic.magicdraw.core.Project;
 import com.nomagic.magicdraw.core.project.ProjectEventListenerAdapter;
+import com.nomagic.magicdraw.expressions.evaluation.ExpressionEvaluationConfigurator;
 
 public class V4MDPlugin extends com.nomagic.magicdraw.plugins.Plugin {
 	
@@ -21,6 +23,10 @@ public class V4MDPlugin extends com.nomagic.magicdraw.plugins.Plugin {
 			}
 			
 		});
+		
+		// Registers an expression evaluator for generated VIATRA queries
+		ExpressionEvaluationConfigurator.getInstance().registerFactory(BinaryVQLExpression.LANGUAGE,
+				BinaryVQLExpression::new);
 	}
 	
 	@Override
