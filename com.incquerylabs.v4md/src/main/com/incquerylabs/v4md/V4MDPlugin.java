@@ -18,10 +18,10 @@ public class V4MDPlugin extends com.nomagic.magicdraw.plugins.Plugin {
 			}
 			
 			@Override
-			public void projectPreClosed(Project project) {
+			public void projectPreClosedFinal(Project project) {
 				ViatraQueryAdapter.disposeAdapter(project);
 			}
-			
+
 		});
 		
 		// Registers an expression evaluator for generated VIATRA queries
