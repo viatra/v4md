@@ -45,8 +45,8 @@ public class ViatraQueryAdapter extends AdapterImpl{
 	
 	public static Optional<ViatraQueryAdapter> getAdapter(Project project) {
 		Objects.requireNonNull(project, "ViatraQueryAdapter cannot be provided for a null Project");
-		return project.getPrimaryModel().eAdapters().stream().filter(ViatraQueryAdapter.class::isInstance)
-				.map(ViatraQueryAdapter.class::cast).findAny();
+		return Optional.ofNullable(project.getPrimaryModel()).flatMap(m -> m.eAdapters().stream()
+				.filter(ViatraQueryAdapter.class::isInstance).map(ViatraQueryAdapter.class::cast).findAny());
 	}
 	
 	public static ViatraQueryAdapter getOrCreateAdapter(Project project, Notifier... notifiers) {
