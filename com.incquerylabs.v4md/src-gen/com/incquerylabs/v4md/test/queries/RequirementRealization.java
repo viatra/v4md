@@ -294,11 +294,11 @@ public final class RequirementRealization extends BaseGeneratedEMFQuerySpecifica
       return new Matcher();
     }
     
-    private final static int POSITION_REQUIREMENT = 0;
+    private static final int POSITION_REQUIREMENT = 0;
     
-    private final static int POSITION_REALIZINGELEMENT = 1;
+    private static final int POSITION_REALIZINGELEMENT = 1;
     
-    private final static Logger LOGGER = ViatraQueryLoggingUtil.getLogger(RequirementRealization.Matcher.class);
+    private static final Logger LOGGER = ViatraQueryLoggingUtil.getLogger(RequirementRealization.Matcher.class);
     
     /**
      * Initializes the pattern matcher within an existing VIATRA Query engine.
@@ -631,7 +631,7 @@ public final class RequirementRealization extends BaseGeneratedEMFQuerySpecifica
    * 
    */
   private static class LazyHolder {
-    private final static RequirementRealization INSTANCE = new RequirementRealization();
+    private static final RequirementRealization INSTANCE = new RequirementRealization();
     
     /**
      * Statically initializes the query specification <b>after</b> the field {@link #INSTANCE} is assigned.
@@ -640,7 +640,7 @@ public final class RequirementRealization extends BaseGeneratedEMFQuerySpecifica
      * <p> The static initializer is defined using a helper field to work around limitations of the code generator.
      * 
      */
-    private final static Object STATIC_INITIALIZER = ensureInitialized();
+    private static final Object STATIC_INITIALIZER = ensureInitialized();
     
     public static Object ensureInitialized() {
       INSTANCE.ensureInitializedInternal();
@@ -649,7 +649,7 @@ public final class RequirementRealization extends BaseGeneratedEMFQuerySpecifica
   }
   
   private static class GeneratedPQuery extends BaseGeneratedEMFPQuery {
-    private final static RequirementRealization.GeneratedPQuery INSTANCE = new GeneratedPQuery();
+    private static final RequirementRealization.GeneratedPQuery INSTANCE = new GeneratedPQuery();
     
     private final PParameter parameter_requirement = new PParameter("requirement", "com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "Class")), PParameterDirection.INOUT);
     

@@ -289,11 +289,11 @@ public final class ClassNumberOfAttributes extends BaseGeneratedEMFQuerySpecific
       return new Matcher();
     }
     
-    private final static int POSITION_CLASS = 0;
+    private static final int POSITION_CLASS = 0;
     
-    private final static int POSITION_NUMBER = 1;
+    private static final int POSITION_NUMBER = 1;
     
-    private final static Logger LOGGER = ViatraQueryLoggingUtil.getLogger(ClassNumberOfAttributes.Matcher.class);
+    private static final Logger LOGGER = ViatraQueryLoggingUtil.getLogger(ClassNumberOfAttributes.Matcher.class);
     
     /**
      * Initializes the pattern matcher within an existing VIATRA Query engine.
@@ -626,7 +626,7 @@ public final class ClassNumberOfAttributes extends BaseGeneratedEMFQuerySpecific
    * 
    */
   private static class LazyHolder {
-    private final static ClassNumberOfAttributes INSTANCE = new ClassNumberOfAttributes();
+    private static final ClassNumberOfAttributes INSTANCE = new ClassNumberOfAttributes();
     
     /**
      * Statically initializes the query specification <b>after</b> the field {@link #INSTANCE} is assigned.
@@ -635,7 +635,7 @@ public final class ClassNumberOfAttributes extends BaseGeneratedEMFQuerySpecific
      * <p> The static initializer is defined using a helper field to work around limitations of the code generator.
      * 
      */
-    private final static Object STATIC_INITIALIZER = ensureInitialized();
+    private static final Object STATIC_INITIALIZER = ensureInitialized();
     
     public static Object ensureInitialized() {
       INSTANCE.ensureInitializedInternal();
@@ -644,7 +644,7 @@ public final class ClassNumberOfAttributes extends BaseGeneratedEMFQuerySpecific
   }
   
   private static class GeneratedPQuery extends BaseGeneratedEMFPQuery {
-    private final static ClassNumberOfAttributes.GeneratedPQuery INSTANCE = new GeneratedPQuery();
+    private static final ClassNumberOfAttributes.GeneratedPQuery INSTANCE = new GeneratedPQuery();
     
     private final PParameter parameter_class = new PParameter("class", "com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "Class")), PParameterDirection.INOUT);
     

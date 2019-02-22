@@ -270,9 +270,9 @@ public final class ReachableFromInitState extends BaseGeneratedEMFQuerySpecifica
       return new Matcher();
     }
     
-    private final static int POSITION_STATE = 0;
+    private static final int POSITION_STATE = 0;
     
-    private final static Logger LOGGER = ViatraQueryLoggingUtil.getLogger(ReachableFromInitState.Matcher.class);
+    private static final Logger LOGGER = ViatraQueryLoggingUtil.getLogger(ReachableFromInitState.Matcher.class);
     
     /**
      * Initializes the pattern matcher within an existing VIATRA Query engine.
@@ -479,7 +479,7 @@ public final class ReachableFromInitState extends BaseGeneratedEMFQuerySpecifica
    * 
    */
   private static class LazyHolder {
-    private final static ReachableFromInitState INSTANCE = new ReachableFromInitState();
+    private static final ReachableFromInitState INSTANCE = new ReachableFromInitState();
     
     /**
      * Statically initializes the query specification <b>after</b> the field {@link #INSTANCE} is assigned.
@@ -488,7 +488,7 @@ public final class ReachableFromInitState extends BaseGeneratedEMFQuerySpecifica
      * <p> The static initializer is defined using a helper field to work around limitations of the code generator.
      * 
      */
-    private final static Object STATIC_INITIALIZER = ensureInitialized();
+    private static final Object STATIC_INITIALIZER = ensureInitialized();
     
     public static Object ensureInitialized() {
       INSTANCE.ensureInitializedInternal();
@@ -497,7 +497,7 @@ public final class ReachableFromInitState extends BaseGeneratedEMFQuerySpecifica
   }
   
   private static class GeneratedPQuery extends BaseGeneratedEMFPQuery {
-    private final static ReachableFromInitState.GeneratedPQuery INSTANCE = new GeneratedPQuery();
+    private static final ReachableFromInitState.GeneratedPQuery INSTANCE = new GeneratedPQuery();
     
     private final PParameter parameter_state = new PParameter("state", "com.nomagic.uml2.ext.magicdraw.statemachines.mdbehaviorstatemachines.State", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "State")), PParameterDirection.INOUT);
     

@@ -267,9 +267,9 @@ public final class SumOfClassAttributes extends BaseGeneratedEMFQuerySpecificati
       return new Matcher();
     }
     
-    private final static int POSITION_S = 0;
+    private static final int POSITION_S = 0;
     
-    private final static Logger LOGGER = ViatraQueryLoggingUtil.getLogger(SumOfClassAttributes.Matcher.class);
+    private static final Logger LOGGER = ViatraQueryLoggingUtil.getLogger(SumOfClassAttributes.Matcher.class);
     
     /**
      * Initializes the pattern matcher within an existing VIATRA Query engine.
@@ -476,7 +476,7 @@ public final class SumOfClassAttributes extends BaseGeneratedEMFQuerySpecificati
    * 
    */
   private static class LazyHolder {
-    private final static SumOfClassAttributes INSTANCE = new SumOfClassAttributes();
+    private static final SumOfClassAttributes INSTANCE = new SumOfClassAttributes();
     
     /**
      * Statically initializes the query specification <b>after</b> the field {@link #INSTANCE} is assigned.
@@ -485,7 +485,7 @@ public final class SumOfClassAttributes extends BaseGeneratedEMFQuerySpecificati
      * <p> The static initializer is defined using a helper field to work around limitations of the code generator.
      * 
      */
-    private final static Object STATIC_INITIALIZER = ensureInitialized();
+    private static final Object STATIC_INITIALIZER = ensureInitialized();
     
     public static Object ensureInitialized() {
       INSTANCE.ensureInitializedInternal();
@@ -494,7 +494,7 @@ public final class SumOfClassAttributes extends BaseGeneratedEMFQuerySpecificati
   }
   
   private static class GeneratedPQuery extends BaseGeneratedEMFPQuery {
-    private final static SumOfClassAttributes.GeneratedPQuery INSTANCE = new GeneratedPQuery();
+    private static final SumOfClassAttributes.GeneratedPQuery INSTANCE = new GeneratedPQuery();
     
     private final PParameter parameter_s = new PParameter("s", "java.lang.Integer", new JavaTransitiveInstancesKey(java.lang.Integer.class), PParameterDirection.INOUT);
     

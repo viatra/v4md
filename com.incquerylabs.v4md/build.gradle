@@ -47,6 +47,38 @@ ext.classpathLibraries = [
         'lib/activation.jar'
 ]
 
+String[] openApiLibraries = classpathLibraries + [
+		'lib/bundles/com.nomagic.magicdraw.uml2'
+]
+
+String[] requiredPlugins = [
+		'com.nomagic.magicdraw.sysml'
+]
+
+eclipse {
+	project {
+	    // Adds VIATRA project specific entries to .project file
+		natures 'org.eclipse.viatra.query.projectnature', 'org.eclipse.xtext.ui.shared.xtextNature'
+		buildCommand 'org.eclipse.viatra.query.tooling.ui.projectbuilder'
+		buildCommand 'org.eclipse.xtext.ui.shared.xtextBuilder'
+	}
+	classpath {
+		file {
+			// Registers the OpenAPI Javadoc for the appropriate jar files in Eclipse
+			whenMerged { classpath ->
+                def javadocFile = new File(buildDir, "dependency-cache/extracted/openapi/docs/javadoc.zip")
+				classpath.entries.
+					findAll{ it instanceof org.gradle.plugins.ide.eclipse.model.Library }.
+					findAll{ openApiLibraries.any{lib -> it.path.contains(lib)}}.
+					each {
+						def factory = new org.gradle.plugins.ide.eclipse.model.internal.FileReferenceFactory() 
+						it.setJavadocPath(factory.fromFile(javadocFile))
+					}
+			}
+        }
+	}
+}
+
 configurations {
     pub
     implementation.extendsFrom pub
@@ -76,8 +108,12 @@ dependencies {
     
     // This ensures classpath load order to match the MagicDraw provided order and then includes extras needed for non-OpenAPI stuff.
     implementation files(classpathLibraries.collect { 'build/dependency-cache/extracted/' + it })
-    implementation fileTree(dir: 'build/dependency-cache/extracted', include: ['lib/**/*.jar', 'plugins/**/*.jar'], exclude: ([classpathLibraries, ['plugins/com.nomagic.collaborator.publisher/**/*.jar', 'plugins/com.nomagic.magicdraw.emfuml2xmi*/**/*.jar']]).flatten())
-
+    implementation fileTree(dir: 'build/dependency-cache/extracted', include: ['lib/**/*.jar'], exclude: classpathLibraries)
+    // Only adding the plugins that are necessary for compilation as dependency to ensure a smaller classpath
+    requiredPlugins.each {plugin ->
+    	implementation fileTree(dir: 'build/dependency-cache/extracted', include: ["plugins/${plugin}/**/*.jar"])
+    }
+    
     testCompile 'org.apache.maven.surefire:maven-surefire-common:2.19.1'
     testCompile 'org.apache.maven.surefire:surefire-api:2.19.1'
     testCompile 'org.apache.maven.surefire:surefire-junit4:2.19.1'

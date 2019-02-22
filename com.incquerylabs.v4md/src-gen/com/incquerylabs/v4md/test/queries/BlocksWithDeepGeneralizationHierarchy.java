@@ -297,11 +297,11 @@ public final class BlocksWithDeepGeneralizationHierarchy extends BaseGeneratedEM
       return new Matcher();
     }
     
-    private final static int POSITION_BLOCK = 0;
+    private static final int POSITION_BLOCK = 0;
     
-    private final static int POSITION_SUPERCLASS = 1;
+    private static final int POSITION_SUPERCLASS = 1;
     
-    private final static Logger LOGGER = ViatraQueryLoggingUtil.getLogger(BlocksWithDeepGeneralizationHierarchy.Matcher.class);
+    private static final Logger LOGGER = ViatraQueryLoggingUtil.getLogger(BlocksWithDeepGeneralizationHierarchy.Matcher.class);
     
     /**
      * Initializes the pattern matcher within an existing VIATRA Query engine.
@@ -634,7 +634,7 @@ public final class BlocksWithDeepGeneralizationHierarchy extends BaseGeneratedEM
    * 
    */
   private static class LazyHolder {
-    private final static BlocksWithDeepGeneralizationHierarchy INSTANCE = new BlocksWithDeepGeneralizationHierarchy();
+    private static final BlocksWithDeepGeneralizationHierarchy INSTANCE = new BlocksWithDeepGeneralizationHierarchy();
     
     /**
      * Statically initializes the query specification <b>after</b> the field {@link #INSTANCE} is assigned.
@@ -643,7 +643,7 @@ public final class BlocksWithDeepGeneralizationHierarchy extends BaseGeneratedEM
      * <p> The static initializer is defined using a helper field to work around limitations of the code generator.
      * 
      */
-    private final static Object STATIC_INITIALIZER = ensureInitialized();
+    private static final Object STATIC_INITIALIZER = ensureInitialized();
     
     public static Object ensureInitialized() {
       INSTANCE.ensureInitializedInternal();
@@ -652,7 +652,7 @@ public final class BlocksWithDeepGeneralizationHierarchy extends BaseGeneratedEM
   }
   
   private static class GeneratedPQuery extends BaseGeneratedEMFPQuery {
-    private final static BlocksWithDeepGeneralizationHierarchy.GeneratedPQuery INSTANCE = new GeneratedPQuery();
+    private static final BlocksWithDeepGeneralizationHierarchy.GeneratedPQuery INSTANCE = new GeneratedPQuery();
     
     private final PParameter parameter_block = new PParameter("block", "com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "Class")), PParameterDirection.INOUT);
     

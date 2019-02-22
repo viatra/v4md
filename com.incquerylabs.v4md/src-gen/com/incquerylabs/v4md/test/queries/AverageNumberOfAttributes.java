@@ -324,13 +324,13 @@ public final class AverageNumberOfAttributes extends BaseGeneratedEMFQuerySpecif
       return new Matcher();
     }
     
-    private final static int POSITION_NUMBER = 0;
+    private static final int POSITION_NUMBER = 0;
     
-    private final static int POSITION_S = 1;
+    private static final int POSITION_S = 1;
     
-    private final static int POSITION_C = 2;
+    private static final int POSITION_C = 2;
     
-    private final static Logger LOGGER = ViatraQueryLoggingUtil.getLogger(AverageNumberOfAttributes.Matcher.class);
+    private static final Logger LOGGER = ViatraQueryLoggingUtil.getLogger(AverageNumberOfAttributes.Matcher.class);
     
     /**
      * Initializes the pattern matcher within an existing VIATRA Query engine.
@@ -743,7 +743,7 @@ public final class AverageNumberOfAttributes extends BaseGeneratedEMFQuerySpecif
    * 
    */
   private static class LazyHolder {
-    private final static AverageNumberOfAttributes INSTANCE = new AverageNumberOfAttributes();
+    private static final AverageNumberOfAttributes INSTANCE = new AverageNumberOfAttributes();
     
     /**
      * Statically initializes the query specification <b>after</b> the field {@link #INSTANCE} is assigned.
@@ -752,7 +752,7 @@ public final class AverageNumberOfAttributes extends BaseGeneratedEMFQuerySpecif
      * <p> The static initializer is defined using a helper field to work around limitations of the code generator.
      * 
      */
-    private final static Object STATIC_INITIALIZER = ensureInitialized();
+    private static final Object STATIC_INITIALIZER = ensureInitialized();
     
     public static Object ensureInitialized() {
       INSTANCE.ensureInitializedInternal();
@@ -761,7 +761,7 @@ public final class AverageNumberOfAttributes extends BaseGeneratedEMFQuerySpecif
   }
   
   private static class GeneratedPQuery extends BaseGeneratedEMFPQuery {
-    private final static AverageNumberOfAttributes.GeneratedPQuery INSTANCE = new GeneratedPQuery();
+    private static final AverageNumberOfAttributes.GeneratedPQuery INSTANCE = new GeneratedPQuery();
     
     private final PParameter parameter_number = new PParameter("number", "java.lang.Float", new JavaTransitiveInstancesKey(java.lang.Float.class), PParameterDirection.INOUT);
     

@@ -317,13 +317,13 @@ public final class PortConnections extends BaseGeneratedEMFQuerySpecification<Po
       return new Matcher();
     }
     
-    private final static int POSITION_PORT1 = 0;
+    private static final int POSITION_PORT1 = 0;
     
-    private final static int POSITION_CONNECTOR = 1;
+    private static final int POSITION_CONNECTOR = 1;
     
-    private final static int POSITION_PORT2 = 2;
+    private static final int POSITION_PORT2 = 2;
     
-    private final static Logger LOGGER = ViatraQueryLoggingUtil.getLogger(PortConnections.Matcher.class);
+    private static final Logger LOGGER = ViatraQueryLoggingUtil.getLogger(PortConnections.Matcher.class);
     
     /**
      * Initializes the pattern matcher within an existing VIATRA Query engine.
@@ -736,7 +736,7 @@ public final class PortConnections extends BaseGeneratedEMFQuerySpecification<Po
    * 
    */
   private static class LazyHolder {
-    private final static PortConnections INSTANCE = new PortConnections();
+    private static final PortConnections INSTANCE = new PortConnections();
     
     /**
      * Statically initializes the query specification <b>after</b> the field {@link #INSTANCE} is assigned.
@@ -745,7 +745,7 @@ public final class PortConnections extends BaseGeneratedEMFQuerySpecification<Po
      * <p> The static initializer is defined using a helper field to work around limitations of the code generator.
      * 
      */
-    private final static Object STATIC_INITIALIZER = ensureInitialized();
+    private static final Object STATIC_INITIALIZER = ensureInitialized();
     
     public static Object ensureInitialized() {
       INSTANCE.ensureInitializedInternal();
@@ -754,7 +754,7 @@ public final class PortConnections extends BaseGeneratedEMFQuerySpecification<Po
   }
   
   private static class GeneratedPQuery extends BaseGeneratedEMFPQuery {
-    private final static PortConnections.GeneratedPQuery INSTANCE = new GeneratedPQuery();
+    private static final PortConnections.GeneratedPQuery INSTANCE = new GeneratedPQuery();
     
     private final PParameter parameter_port1 = new PParameter("port1", "com.nomagic.uml2.ext.magicdraw.compositestructures.mdports.Port", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "Port")), PParameterDirection.INOUT);
     

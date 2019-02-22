@@ -269,9 +269,9 @@ public final class CircularDependencyError extends BaseGeneratedEMFQuerySpecific
       return new Matcher();
     }
     
-    private final static int POSITION_DEP = 0;
+    private static final int POSITION_DEP = 0;
     
-    private final static Logger LOGGER = ViatraQueryLoggingUtil.getLogger(CircularDependencyError.Matcher.class);
+    private static final Logger LOGGER = ViatraQueryLoggingUtil.getLogger(CircularDependencyError.Matcher.class);
     
     /**
      * Initializes the pattern matcher within an existing VIATRA Query engine.
@@ -478,7 +478,7 @@ public final class CircularDependencyError extends BaseGeneratedEMFQuerySpecific
    * 
    */
   private static class LazyHolder {
-    private final static CircularDependencyError INSTANCE = new CircularDependencyError();
+    private static final CircularDependencyError INSTANCE = new CircularDependencyError();
     
     /**
      * Statically initializes the query specification <b>after</b> the field {@link #INSTANCE} is assigned.
@@ -487,7 +487,7 @@ public final class CircularDependencyError extends BaseGeneratedEMFQuerySpecific
      * <p> The static initializer is defined using a helper field to work around limitations of the code generator.
      * 
      */
-    private final static Object STATIC_INITIALIZER = ensureInitialized();
+    private static final Object STATIC_INITIALIZER = ensureInitialized();
     
     public static Object ensureInitialized() {
       INSTANCE.ensureInitializedInternal();
@@ -496,7 +496,7 @@ public final class CircularDependencyError extends BaseGeneratedEMFQuerySpecific
   }
   
   private static class GeneratedPQuery extends BaseGeneratedEMFPQuery {
-    private final static CircularDependencyError.GeneratedPQuery INSTANCE = new GeneratedPQuery();
+    private static final CircularDependencyError.GeneratedPQuery INSTANCE = new GeneratedPQuery();
     
     private final PParameter parameter_dep = new PParameter("dep", "com.nomagic.uml2.ext.magicdraw.classes.mddependencies.Dependency", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "Dependency")), PParameterDirection.INOUT);
     
