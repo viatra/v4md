@@ -1,6 +1,7 @@
 package com.incquerylabs.v4md;
 
 import com.incquerylabs.v4md.expressions.BinaryVQLExpression;
+import com.incquerylabs.v4md.internal.IProjectChangedListener;
 import com.nomagic.ci.persistence.IProject;
 import com.nomagic.magicdraw.core.Application;
 import com.nomagic.magicdraw.core.Project;
@@ -11,8 +12,9 @@ import com.nomagic.magicdraw.core.project.ProjectPartListener;
 import com.nomagic.magicdraw.expressions.evaluation.ExpressionEvaluationConfigurator;
 
 public class V4MDPlugin extends com.nomagic.magicdraw.plugins.Plugin {
-	
+
 	private final class V4MDProjectListener extends ProjectEventListenerAdapter implements ProjectPartListener {
+		
 		@Override
 		public void projectOpened(Project project) {
 			ViatraQueryAdapter.getOrCreateAdapter(project);
@@ -22,29 +24,29 @@ public class V4MDPlugin extends com.nomagic.magicdraw.plugins.Plugin {
 		public void projectPreClosed(Project project) {
 			ViatraQueryAdapter.disposeAdapter(project);
 		}
-
+		
 		@Override
 		public void projectPartLoaded(Project project, IProject storage) {
-			ViatraQueryAdapter.getAdapter(project).ifPresent(ViatraQueryAdapter::projectStructureUpdated);
+			IProjectChangedListener.MANAGER.notifyProjectListeners(project);
 		}
 
 		@Override
 		public void projectPartAttached(ModuleUsage usage) {
 			Project project = ProjectUtilities.getProject(usage.getUsed());
-			ViatraQueryAdapter.getAdapter(project).ifPresent(ViatraQueryAdapter::projectStructureUpdated);
+			IProjectChangedListener.MANAGER.notifyProjectListeners(project);
 		}
 
 		@Override
 		public void projectPartDetached(ModuleUsage usage) {
 			Project project = ProjectUtilities.getProject(usage.getUsed());
-			ViatraQueryAdapter.getAdapter(project).ifPresent(ViatraQueryAdapter::projectStructureUpdated);
+			IProjectChangedListener.MANAGER.notifyProjectListeners(project);
 			
 		}
 
 		@Override
 		public void projectPartRemoved(IProject project) {
 			Project modelProject = ProjectUtilities.getProject(project);
-			ViatraQueryAdapter.getAdapter(modelProject).ifPresent(ViatraQueryAdapter::projectStructureUpdated);
+			IProjectChangedListener.MANAGER.notifyProjectListeners(modelProject);
 		}
 	}
 

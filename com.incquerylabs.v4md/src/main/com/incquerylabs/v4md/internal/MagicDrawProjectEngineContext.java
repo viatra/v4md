@@ -27,7 +27,6 @@ import org.eclipse.viatra.query.runtime.matchers.ViatraQueryRuntimeException;
 import org.eclipse.viatra.query.runtime.matchers.context.IQueryRuntimeContext;
 
 import com.google.common.collect.Sets;
-import com.incquerylabs.v4md.internal.MagicDrawProjectScope.IProjectChangedListener;
 
 /**
  * Provides a specific engine context implementation for MagicDraw projects.
@@ -101,7 +100,7 @@ class MagicDrawProjectEngineContext implements IEngineContext {
 	            return;
 
 	        // no veto by filters
-	        modelRoots.add(root);
+	        modelRoots.remove(root);
 	        // TODO contentAdapter.removeAdapter(root); removeAdapter is not visible here
 	        Method method;
 			try {
@@ -120,7 +119,7 @@ class MagicDrawProjectEngineContext implements IEngineContext {
         this.engine = engine;
         this.logger = logger;
         this.taintListener = taintListener;
-        scope.addProjectChangeListener(scopeListener);
+        IProjectChangedListener.MANAGER.addProjectChangeListener(scope.getProject(), scopeListener);
     }
     
     /**
@@ -169,7 +168,7 @@ class MagicDrawProjectEngineContext implements IEngineContext {
         if (runtimeContext != null) runtimeContext.dispose();
         if (navHelper != null) navHelper.dispose();
         
-        scope.removeProjectChangeListener(scopeListener);
+        IProjectChangedListener.MANAGER.removeProjectChangeListener(scope.getProject(), scopeListener);
         
         this.baseIndex = null;
         this.engine = null;

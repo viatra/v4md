@@ -33,9 +33,6 @@ public class MagicDrawProjectScope extends EMFScope {
 					&& ((EReference) reference).isContainment() && reference.getName().contains("_from_"))
 			.withStrictNotificationMode(false);
 	
-	public interface IProjectChangedListener {
-		void modelSetUpdated();
-	}
 	static Stream<? extends Notifier> getProjectModels(Project projectModel) {
 		return projectModel.getModels().stream();
 	}
@@ -59,14 +56,6 @@ public class MagicDrawProjectScope extends EMFScope {
 	protected IEngineContext createEngineContext(ViatraQueryEngine engine, IIndexingErrorListener errorListener,
 			Logger logger) {
 		return new MagicDrawProjectEngineContext(this, engine, errorListener, logger);
-	}
-
-	boolean addProjectChangeListener(IProjectChangedListener listener) {
-		return listeners.add(listener);
-	}
-	
-	boolean removeProjectChangeListener(IProjectChangedListener listener) {
-		return listeners.remove(listener);
 	}
 	
 	public void projectStructureUpdated() {
