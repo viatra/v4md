@@ -19,6 +19,7 @@ import org.eclipse.viatra.query.runtime.base.api.BaseIndexOptions;
 import org.eclipse.viatra.query.runtime.emf.EMFScope;
 
 import com.nomagic.magicdraw.core.Project;
+import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Package;
 
 public class MagicDrawProjectScope extends EMFScope {
 
@@ -34,7 +35,8 @@ public class MagicDrawProjectScope extends EMFScope {
 			.withStrictNotificationMode(false);
 	
 	static Stream<? extends Notifier> getProjectModels(Project projectModel) {
-		return projectModel.getModels().stream();
+		Package primaryModel = projectModel.getPrimaryModel();
+		return projectModel.getModels().stream().filter(pkg -> pkg == primaryModel || !EcoreUtil.isAncestor(primaryModel, pkg));
 	}
 	
 	static Stream<Notifier> getCustomNotifiers(Notifier... notifiers) {
