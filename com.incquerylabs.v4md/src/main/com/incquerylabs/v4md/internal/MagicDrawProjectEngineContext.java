@@ -6,6 +6,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -18,6 +19,7 @@ import org.eclipse.viatra.query.runtime.base.api.BaseIndexOptions;
 import org.eclipse.viatra.query.runtime.base.api.NavigationHelper;
 import org.eclipse.viatra.query.runtime.base.api.filters.IBaseIndexObjectFilter;
 import org.eclipse.viatra.query.runtime.base.api.filters.IBaseIndexResourceFilter;
+import org.eclipse.viatra.query.runtime.base.core.NavigationHelperContentAdapter;
 import org.eclipse.viatra.query.runtime.base.core.NavigationHelperImpl;
 import org.eclipse.viatra.query.runtime.base.exception.ViatraBaseException;
 import org.eclipse.viatra.query.runtime.emf.DynamicEMFQueryRuntimeContext;
@@ -76,6 +78,16 @@ class MagicDrawProjectEngineContext implements IEngineContext {
 
 		public MagicDrawProjectNavigationHelper(Notifier emfRoot, BaseIndexOptions options, Logger logger) {
 			super(emfRoot, options, logger);
+			this.contentAdapter = new NavigationHelperContentAdapter(this) {
+				
+				@Override
+				public void notifyChanged(Notification notification) {
+					if (scope.getProject().getRepository().getEventSupport().isEnableEventFiring()) {
+						super.notifyChanged(notification);
+					}
+				}
+				
+			};
 		}
 		
 		Set<Notifier> getModelRoots() {
@@ -113,7 +125,7 @@ class MagicDrawProjectEngineContext implements IEngineContext {
 	        notifyBaseIndexChangeListeners();
 		}
 	}
-    
+	
     public MagicDrawProjectEngineContext(MagicDrawProjectScope scope, ViatraQueryEngine engine, IIndexingErrorListener taintListener, Logger logger) {
         this.scope = scope;
         this.engine = engine;

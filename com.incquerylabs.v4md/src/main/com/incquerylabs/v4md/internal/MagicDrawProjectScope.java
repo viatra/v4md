@@ -30,9 +30,15 @@ public class MagicDrawProjectScope extends EMFScope {
 	// XXX Omitting references can cause semantic errors (so far we are in the clear though)
 	// these references are only present in UML profiles, typically their contents are equal to the original references inherited from the UML type hierarchy, however there are some cases when this might not be the case.
 	private static final BaseIndexOptions BASE_OPTIONS = new BaseIndexOptions()
-			.withFeatureFilterConfiguration(reference -> reference instanceof EReference
-					&& ((EReference) reference).isContainment() && reference.getName().contains("_from_"))
+			.withFeatureFilterConfiguration(reference -> reference instanceof EReference && isReferenceToBeFiltered((EReference) reference))
 			.withStrictNotificationMode(false);
+	
+	private static boolean isReferenceToBeFiltered(EReference reference) {
+		String name = reference.getName();
+		return (reference.isContainment() && name.contains("_from_"))
+				||
+				name.startsWith("_");
+	}
 	
 	static Stream<? extends Notifier> getProjectModels(Project projectModel) {
 		Package primaryModel = projectModel.getPrimaryModel();
