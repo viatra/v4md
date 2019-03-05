@@ -1,27 +1,15 @@
 package com.incquerylabs.v4md.internal;
 
 import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.viatra.query.runtime.api.ViatraQueryEngine;
 import org.eclipse.viatra.query.runtime.api.scope.IBaseIndex;
 import org.eclipse.viatra.query.runtime.api.scope.IEngineContext;
 import org.eclipse.viatra.query.runtime.api.scope.IIndexingErrorListener;
-import org.eclipse.viatra.query.runtime.base.api.BaseIndexOptions;
 import org.eclipse.viatra.query.runtime.base.api.NavigationHelper;
-import org.eclipse.viatra.query.runtime.base.api.filters.IBaseIndexObjectFilter;
-import org.eclipse.viatra.query.runtime.base.api.filters.IBaseIndexResourceFilter;
-import org.eclipse.viatra.query.runtime.base.core.NavigationHelperContentAdapter;
-import org.eclipse.viatra.query.runtime.base.core.NavigationHelperImpl;
-import org.eclipse.viatra.query.runtime.base.exception.ViatraBaseException;
 import org.eclipse.viatra.query.runtime.emf.DynamicEMFQueryRuntimeContext;
 import org.eclipse.viatra.query.runtime.emf.EMFBaseIndexWrapper;
 import org.eclipse.viatra.query.runtime.emf.EMFQueryRuntimeContext;
@@ -38,11 +26,10 @@ import com.google.common.collect.Sets;
 class MagicDrawProjectEngineContext implements IEngineContext {
 
 	private final MagicDrawProjectScope scope;
-    ViatraQueryEngine engine;
-    Logger logger;
-    MagicDrawProjectNavigationHelper navHelper;
-    IBaseIndex baseIndex;
-    IIndexingErrorListener taintListener;
+    private Logger logger;
+    private MagicDrawProjectNavigationHelper navHelper;
+    private IBaseIndex baseIndex;
+    private IIndexingErrorListener taintListener;
     private EMFQueryRuntimeContext runtimeContext;
     
     private IProjectChangedListener scopeListener = this::modelSetUpdated;
@@ -70,65 +57,8 @@ class MagicDrawProjectEngineContext implements IEngineContext {
 		}
 	}
 	
-	/**
-	 * Customizes the NavigationHelperImpl by adding a new removeRoot method
-	 *
-	 */
-	private class MagicDrawProjectNavigationHelper extends NavigationHelperImpl {
-
-		public MagicDrawProjectNavigationHelper(Notifier emfRoot, BaseIndexOptions options, Logger logger) {
-			super(emfRoot, options, logger);
-			this.contentAdapter = new NavigationHelperContentAdapter(this) {
-				
-				@Override
-				public void notifyChanged(Notification notification) {
-					if (scope.getProject().getRepository().getEventSupport().isEnableEventFiring()) {
-						super.notifyChanged(notification);
-					}
-				}
-				
-			};
-		}
-		
-		Set<Notifier> getModelRoots() {
-			return modelRoots;
-		}
-		
-		public void removeRoot(Notifier root) {
-	        if (!((root instanceof EObject) || (root instanceof Resource) || (root instanceof ResourceSet))) {
-	            throw new ViatraBaseException(ViatraBaseException.INVALID_EMFROOT);
-	        }
-	        
-	        if (!modelRoots.contains(root))
-	            return;
-
-	        if (root instanceof Resource) {
-	            IBaseIndexResourceFilter resourceFilter = getBaseIndexOptions().getResourceFilterConfiguration();
-	            if (resourceFilter != null && resourceFilter.isResourceFiltered((Resource) root))
-	                return;
-	        }
-	        final IBaseIndexObjectFilter objectFilter = getBaseIndexOptions().getObjectFilterConfiguration();
-	        if (objectFilter != null && objectFilter.isFiltered(root))
-	            return;
-
-	        // no veto by filters
-	        modelRoots.remove(root);
-	        // TODO contentAdapter.removeAdapter(root); removeAdapter is not visible here
-	        Method method;
-			try {
-				method = contentAdapter.getClass().getMethod("removeAdaper", Notifier.class);
-				method.setAccessible(true);
-				method.invoke(contentAdapter, root);
-			} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-				logger.fatal("Error while updating project", e);
-			}
-	        notifyBaseIndexChangeListeners();
-		}
-	}
-	
-    public MagicDrawProjectEngineContext(MagicDrawProjectScope scope, ViatraQueryEngine engine, IIndexingErrorListener taintListener, Logger logger) {
+	public MagicDrawProjectEngineContext(MagicDrawProjectScope scope, IIndexingErrorListener taintListener, Logger logger) {
         this.scope = scope;
-        this.engine = engine;
         this.logger = logger;
         this.taintListener = taintListener;
         IProjectChangedListener.MANAGER.addProjectChangeListener(scope.getProject(), scopeListener);
@@ -143,7 +73,7 @@ class MagicDrawProjectEngineContext implements IEngineContext {
     
     private MagicDrawProjectNavigationHelper getNavHelper(boolean ensureInitialized) {
         if (navHelper == null) {
-            navHelper = new MagicDrawProjectNavigationHelper(null, this.scope.getOptions(), logger); 
+            navHelper = new MagicDrawProjectNavigationHelper(null, this.scope.getOptions(), scope.getProject().getRepository().getEventSupport(), logger); 
             		
 
             getBaseIndex().addIndexingErrorListener(taintListener);
@@ -183,7 +113,6 @@ class MagicDrawProjectEngineContext implements IEngineContext {
         IProjectChangedListener.MANAGER.removeProjectChangeListener(scope.getProject(), scopeListener);
         
         this.baseIndex = null;
-        this.engine = null;
         this.logger = null;
         this.navHelper = null;
     }

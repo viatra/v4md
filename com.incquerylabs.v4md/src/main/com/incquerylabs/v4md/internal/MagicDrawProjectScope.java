@@ -3,19 +3,20 @@ package com.incquerylabs.v4md.internal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.apache.log4j.Logger;
 import org.eclipse.emf.common.notify.Notifier;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.viatra.query.runtime.api.AdvancedViatraQueryEngine;
 import org.eclipse.viatra.query.runtime.api.ViatraQueryEngine;
 import org.eclipse.viatra.query.runtime.api.scope.IEngineContext;
 import org.eclipse.viatra.query.runtime.api.scope.IIndexingErrorListener;
+import org.eclipse.viatra.query.runtime.api.scope.QueryScope;
 import org.eclipse.viatra.query.runtime.base.api.BaseIndexOptions;
+import org.eclipse.viatra.query.runtime.emf.EMFBaseIndexWrapper;
 import org.eclipse.viatra.query.runtime.emf.EMFScope;
 
 import com.nomagic.magicdraw.core.Project;
@@ -63,7 +64,7 @@ public class MagicDrawProjectScope extends EMFScope {
 	@Override
 	protected IEngineContext createEngineContext(ViatraQueryEngine engine, IIndexingErrorListener errorListener,
 			Logger logger) {
-		return new MagicDrawProjectEngineContext(this, engine, errorListener, logger);
+		return new MagicDrawProjectEngineContext(this, errorListener, logger);
 	}
 	
 	public void projectStructureUpdated() {
@@ -80,8 +81,10 @@ public class MagicDrawProjectScope extends EMFScope {
 		return getCustomNotifiers(customNotifiers);
 	}
 	
-	public boolean isIndexed(EObject element) {
-		Set<Notifier> modelRoots = Stream.concat(getProjectModels(), getCustomNotifiers()).collect(Collectors.toSet());
-		return EcoreUtil.isAncestor(modelRoots, element);
+	public static MagicDrawProjectNavigationHelper extractNavigationHelper(ViatraQueryEngine engine) {
+		final QueryScope scope = engine.getScope();
+        if (scope instanceof MagicDrawProjectScope)
+            return (MagicDrawProjectNavigationHelper) ((EMFBaseIndexWrapper)AdvancedViatraQueryEngine.from(engine).getBaseIndex()).getNavigationHelper();
+        else throw new IllegalArgumentException("Cannot extract EMF base index from VIATRA Query engine instantiated on non-EMF scope " + scope);
 	}
 }
