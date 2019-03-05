@@ -6,6 +6,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -18,6 +19,7 @@ import org.eclipse.viatra.query.runtime.base.api.BaseIndexOptions;
 import org.eclipse.viatra.query.runtime.base.api.NavigationHelper;
 import org.eclipse.viatra.query.runtime.base.api.filters.IBaseIndexObjectFilter;
 import org.eclipse.viatra.query.runtime.base.api.filters.IBaseIndexResourceFilter;
+import org.eclipse.viatra.query.runtime.base.core.NavigationHelperContentAdapter;
 import org.eclipse.viatra.query.runtime.base.core.NavigationHelperImpl;
 import org.eclipse.viatra.query.runtime.base.exception.ViatraBaseException;
 import org.eclipse.viatra.query.runtime.emf.DynamicEMFQueryRuntimeContext;
@@ -27,7 +29,6 @@ import org.eclipse.viatra.query.runtime.matchers.ViatraQueryRuntimeException;
 import org.eclipse.viatra.query.runtime.matchers.context.IQueryRuntimeContext;
 
 import com.google.common.collect.Sets;
-import com.incquerylabs.v4md.internal.MagicDrawProjectScope.IProjectChangedListener;
 
 /**
  * Provides a specific engine context implementation for MagicDraw projects.
@@ -77,6 +78,16 @@ class MagicDrawProjectEngineContext implements IEngineContext {
 
 		public MagicDrawProjectNavigationHelper(Notifier emfRoot, BaseIndexOptions options, Logger logger) {
 			super(emfRoot, options, logger);
+			this.contentAdapter = new NavigationHelperContentAdapter(this) {
+				
+				@Override
+				public void notifyChanged(Notification notification) {
+					if (scope.getProject().getRepository().getEventSupport().isEnableEventFiring()) {
+						super.notifyChanged(notification);
+					}
+				}
+				
+			};
 		}
 		
 		Set<Notifier> getModelRoots() {
@@ -101,7 +112,7 @@ class MagicDrawProjectEngineContext implements IEngineContext {
 	            return;
 
 	        // no veto by filters
-	        modelRoots.add(root);
+	        modelRoots.remove(root);
 	        // TODO contentAdapter.removeAdapter(root); removeAdapter is not visible here
 	        Method method;
 			try {
@@ -114,13 +125,13 @@ class MagicDrawProjectEngineContext implements IEngineContext {
 	        notifyBaseIndexChangeListeners();
 		}
 	}
-    
+	
     public MagicDrawProjectEngineContext(MagicDrawProjectScope scope, ViatraQueryEngine engine, IIndexingErrorListener taintListener, Logger logger) {
         this.scope = scope;
         this.engine = engine;
         this.logger = logger;
         this.taintListener = taintListener;
-        scope.addProjectChangeListener(scopeListener);
+        IProjectChangedListener.MANAGER.addProjectChangeListener(scope.getProject(), scopeListener);
     }
     
     /**
@@ -169,7 +180,7 @@ class MagicDrawProjectEngineContext implements IEngineContext {
         if (runtimeContext != null) runtimeContext.dispose();
         if (navHelper != null) navHelper.dispose();
         
-        scope.removeProjectChangeListener(scopeListener);
+        IProjectChangedListener.MANAGER.removeProjectChangeListener(scope.getProject(), scopeListener);
         
         this.baseIndex = null;
         this.engine = null;

@@ -19,6 +19,7 @@ import org.eclipse.viatra.query.runtime.base.api.BaseIndexOptions;
 import org.eclipse.viatra.query.runtime.emf.EMFScope;
 
 import com.nomagic.magicdraw.core.Project;
+import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Package;
 
 public class MagicDrawProjectScope extends EMFScope {
 
@@ -29,15 +30,19 @@ public class MagicDrawProjectScope extends EMFScope {
 	// XXX Omitting references can cause semantic errors (so far we are in the clear though)
 	// these references are only present in UML profiles, typically their contents are equal to the original references inherited from the UML type hierarchy, however there are some cases when this might not be the case.
 	private static final BaseIndexOptions BASE_OPTIONS = new BaseIndexOptions()
-			.withFeatureFilterConfiguration(reference -> reference instanceof EReference
-					&& ((EReference) reference).isContainment() && reference.getName().contains("_from_"))
+			.withFeatureFilterConfiguration(reference -> reference instanceof EReference && isReferenceToBeFiltered((EReference) reference))
 			.withStrictNotificationMode(false);
 	
-	public interface IProjectChangedListener {
-		void modelSetUpdated();
+	private static boolean isReferenceToBeFiltered(EReference reference) {
+		String name = reference.getName();
+		return (reference.isContainment() && name.contains("_from_"))
+				||
+				name.startsWith("_");
 	}
+	
 	static Stream<? extends Notifier> getProjectModels(Project projectModel) {
-		return projectModel.getModels().stream();
+		Package primaryModel = projectModel.getPrimaryModel();
+		return projectModel.getModels().stream().filter(pkg -> pkg == primaryModel || !EcoreUtil.isAncestor(primaryModel, pkg));
 	}
 	
 	static Stream<Notifier> getCustomNotifiers(Notifier... notifiers) {
@@ -59,14 +64,6 @@ public class MagicDrawProjectScope extends EMFScope {
 	protected IEngineContext createEngineContext(ViatraQueryEngine engine, IIndexingErrorListener errorListener,
 			Logger logger) {
 		return new MagicDrawProjectEngineContext(this, engine, errorListener, logger);
-	}
-
-	boolean addProjectChangeListener(IProjectChangedListener listener) {
-		return listeners.add(listener);
-	}
-	
-	boolean removeProjectChangeListener(IProjectChangedListener listener) {
-		return listeners.remove(listener);
 	}
 	
 	public void projectStructureUpdated() {
