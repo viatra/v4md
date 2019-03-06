@@ -31,16 +31,20 @@ public class MagicDrawProjectNavigationHelper extends NavigationHelperImpl {
 	public MagicDrawProjectNavigationHelper(Notifier emfRoot, BaseIndexOptions options, EventSupport eventSupport, Logger logger) {
 		super(emfRoot, options, logger);
 		this.logger = logger;
-		this.contentAdapter = new NavigationHelperContentAdapter(this) {
-			
-			@Override
-			public void notifyChanged(Notification notification) {
-				if (eventSupport.isEnableEventFiring()) {
-					super.notifyChanged(notification);
-				}
-			}
-			
-		};
+		// TODO While this change helps avoiding some duplicate notifications, it causes
+		// a regression when adding a new project usage to a local project: when the
+		// usage is added, event firing is turned off, resulting in the added profile
+		// not available in the index of the project
+//		this.contentAdapter = new NavigationHelperContentAdapter(this) {
+//			
+//			@Override
+//			public void notifyChanged(Notification notification) {
+//				if (eventSupport.isEnableEventFiring()) {
+//					super.notifyChanged(notification);
+//				}
+//			}
+//			
+//		};
 	}
 	
 	Set<Notifier> getModelRoots() {
