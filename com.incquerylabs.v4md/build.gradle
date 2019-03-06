@@ -351,6 +351,7 @@ publishing {
         mavenJava(MavenPublication) {
             version "$version"
             from components.java
+            artifact tasks.sourceJar
 
             artifact distZip {
 
