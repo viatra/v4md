@@ -17,8 +17,8 @@ public abstract class BinaryQueryResultProvider {
 	 * This method is responsible for calculating the results to be returned to MagicDraw.
 	 * @return A non-null, but possibly empty stream of results
 	 */
-	public abstract Stream<Element> getResults(ViatraQueryEngine engine, Object source);
-
+	public abstract Stream<Object> getResults(ViatraQueryEngine engine, Object source);
+	
 	/**
 	 * Returns the expected source object types for the given query
 	 */

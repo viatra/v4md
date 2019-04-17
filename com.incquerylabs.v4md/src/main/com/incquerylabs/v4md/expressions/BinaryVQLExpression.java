@@ -1,8 +1,8 @@
 package com.incquerylabs.v4md.expressions;
 
 import java.lang.reflect.Constructor;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.eclipse.viatra.query.runtime.api.ViatraQueryEngine;
 
@@ -53,11 +53,12 @@ public class BinaryVQLExpression implements ParameterizedExpression {
 	public Object getValue(Element sourceParameter, ValueContext context) throws Exception {
 		ViatraQueryEngine engine = ViatraQueryAdapter.getAdapter(project).get().getEngine();
 
-		Set<Element> returnSet = new HashSet<Element>();
+		List<Object> returnSet = new ArrayList<>();
 		if (provider != null) {
 			provider.getResults(engine, sourceParameter).forEach(returnSet::add);
 		}
-		return returnSet;
+		// MagicDraw sometimes handles single-valued returns differently, so instead of 1-length lists we should return the element itself
+		return returnSet.size() == 1 ? returnSet.get(0) : returnSet;
 	}
 
 	@Override
