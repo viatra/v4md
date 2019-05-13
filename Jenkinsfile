@@ -50,11 +50,7 @@ pipeline {
 				withCredentials([usernamePassword(credentialsId: 'nexus-buildserver-deploy', passwordVariable: 'DEPLOY_PASSWORD', usernameVariable: 'DEPLOY_USER')]) {
 					script{
 					    dir ('com.incquerylabs.v4md') {
-						    if (params.PLUGIN_VERSION.endsWith('-SNAPSHOT')) {
-	                    		sh "./gradlew -PdeployUrl='https://build.incquerylabs.com/nexus/repository/v4md-snapshots/' ${VERSION_STRINGS} publish"
-						    } else {			    
-	                    		sh "./gradlew -PdeployUrl='https://build.incquerylabs.com/nexus/repository/v4md-releases/' ${VERSION_STRINGS} publish"
-	                    	}                          
+                    			sh "./gradlew -PdeployReleaseUrl='https://build.incquerylabs.com/nexus/repository/v4md-releases/' -PdeploySnapshotUrl='https://build.incquerylabs.com/nexus/repository/v4md-snapshots/' ${VERSION_STRINGS} publish"
 					    }
 					}
 				}

@@ -329,7 +329,7 @@ distTar {
 publishing {
     repositories {
         maven {
-            url deployUrl
+            url version.endsWith('-SNAPSHOT') ? deploySnapshotUrl: deployReleaseUrl
             if (deployUser != null) {
                 credentials {
                     username = deployUser
