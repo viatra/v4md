@@ -25,6 +25,7 @@ import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Package;
 public class MagicDrawProjectScope extends EMFScope {
 
 	private final Project project;
+	private final boolean enableProfiler;
 	private Notifier[] customNotifiers;
 	private List<IProjectChangedListener> listeners = new ArrayList<>();
 
@@ -51,9 +52,14 @@ public class MagicDrawProjectScope extends EMFScope {
 	}
 	
 	public MagicDrawProjectScope(Project project, Notifier... notifiers) {
+		this(project, false, notifiers);
+	}
+	
+	public MagicDrawProjectScope(Project project, boolean enableProfiler, Notifier... notifiers) {
 		super(Stream.concat(getProjectModels(project), getCustomNotifiers(notifiers)).collect(Collectors.toSet()),
 				BASE_OPTIONS);
 		this.project = project;
+		this.enableProfiler = enableProfiler;
 		this.customNotifiers = notifiers;
 	}
 
@@ -64,7 +70,7 @@ public class MagicDrawProjectScope extends EMFScope {
 	@Override
 	protected IEngineContext createEngineContext(ViatraQueryEngine engine, IIndexingErrorListener errorListener,
 			Logger logger) {
-		return new MagicDrawProjectEngineContext(this, errorListener, logger);
+		return new MagicDrawProjectEngineContext(this, errorListener, enableProfiler, logger);
 	}
 	
 	public void projectStructureUpdated() {

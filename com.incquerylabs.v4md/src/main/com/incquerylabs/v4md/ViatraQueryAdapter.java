@@ -65,6 +65,6 @@ public class ViatraQueryAdapter extends AdapterImpl{
 	}
 	
 	private static AdvancedViatraQueryEngine createQueryEngine(Project project, Notifier... notifiers) throws ViatraQueryException {
-		return AdvancedViatraQueryEngine.createUnmanagedEngine(new MagicDrawProjectScope(project, notifiers));
+		return AdvancedViatraQueryEngine.createUnmanagedEngine(new MagicDrawProjectScope(project, ViatraQueryAdapterOptions.getInstance().isEnableEngineProfiling(), notifiers));
 	}
 }

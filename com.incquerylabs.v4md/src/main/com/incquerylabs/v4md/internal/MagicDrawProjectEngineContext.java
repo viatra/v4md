@@ -26,6 +26,7 @@ import com.google.common.collect.Sets;
 class MagicDrawProjectEngineContext implements IEngineContext {
 
 	private final MagicDrawProjectScope scope;
+	private final boolean enableProfiler;
     private Logger logger;
     private MagicDrawProjectNavigationHelper navHelper;
     private IBaseIndex baseIndex;
@@ -57,8 +58,9 @@ class MagicDrawProjectEngineContext implements IEngineContext {
 		}
 	}
 	
-	public MagicDrawProjectEngineContext(MagicDrawProjectScope scope, IIndexingErrorListener taintListener, Logger logger) {
+	public MagicDrawProjectEngineContext(MagicDrawProjectScope scope, IIndexingErrorListener taintListener, boolean enableProfiler, Logger logger) {
         this.scope = scope;
+		this.enableProfiler = enableProfiler;
         this.logger = logger;
         this.taintListener = taintListener;
         IProjectChangedListener.MANAGER.addProjectChangeListener(scope.getProject(), scopeListener);
@@ -73,7 +75,9 @@ class MagicDrawProjectEngineContext implements IEngineContext {
     
     private MagicDrawProjectNavigationHelper getNavHelper(boolean ensureInitialized) {
         if (navHelper == null) {
-            navHelper = new MagicDrawProjectNavigationHelper(null, this.scope.getOptions(), scope.getProject().getRepository().getEventSupport(), logger); 
+            navHelper = enableProfiler
+            		? new ProfilingMagicDrawProjectNavigationHelper(null, this.scope.getOptions(), scope.getProject().getRepository().getEventSupport(), logger)
+            		: new MagicDrawProjectNavigationHelper(null, this.scope.getOptions(), scope.getProject().getRepository().getEventSupport(), logger); 
             		
 
             getBaseIndex().addIndexingErrorListener(taintListener);
