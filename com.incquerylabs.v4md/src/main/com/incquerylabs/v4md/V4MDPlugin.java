@@ -14,14 +14,10 @@ import com.nomagic.magicdraw.expressions.evaluation.ExpressionEvaluationConfigur
 public class V4MDPlugin extends com.nomagic.magicdraw.plugins.Plugin {
 
 	private final class V4MDProjectListener extends ProjectEventListenerAdapter implements ProjectPartListener {
-		
-		@Override
-		public void projectOpened(Project project) {
-			ViatraQueryAdapter.getOrCreateAdapter(project);
-		}
 
 		@Override
 		public void projectPreClosed(Project project) {
+			// There is no need to explicitly initialize adapters; the dispose handles uninitialized adapters correctly
 			ViatraQueryAdapter.disposeAdapter(project);
 		}
 		
