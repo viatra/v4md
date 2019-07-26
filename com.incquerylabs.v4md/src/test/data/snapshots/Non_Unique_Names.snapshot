@@ -1,83 +1,83 @@
 <?xml version="1.0" encoding="ASCII"?>
 <vqSnapshot:QuerySnapshot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vqSnapshot="http://www.eclipse.org/viatra/query/snapshot" inputSpecification="EObject">
-  <matchSetRecords patternQualifiedName="com.incquerylabs.v4md.test.queries.IDStringPropertyEqualityError">
+  <matchSetRecords patternQualifiedName="com.incquerylabs.v4md.test.queries.PropertyStringValueEquals">
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="elem">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162242_907310_17439"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="element" value="TestModel::2 - Requirements::Functionality::Transport cargo::Set start and destination of cargo">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="property">
-        <value href="local:/PROJECT-44892a3bf693c0a47eb2f3bf10930f?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_11_5EAPbeta_be00301_1147873236436_846958_2313"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="element2" value="TestModel::2 - Requirements::Functionality::Transport cargo::Set start and destination of cargo::Reconfiguration">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="property" value="SysML::Requirements::AbstractRequirement::Id : String">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Property"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="elem">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324148998_194193_16128"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="element" value="TestModel::2 - Requirements::Functionality::Transport cargo::Set start and destination of cargo::Reconfiguration">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="property">
-        <value href="local:/PROJECT-44892a3bf693c0a47eb2f3bf10930f?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_11_5EAPbeta_be00301_1147873236436_846958_2313"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="element2" value="TestModel::2 - Requirements::Functionality::Transport cargo::Set start and destination of cargo">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="elem">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324148997_899551_16126"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="property">
-        <value href="local:/PROJECT-44892a3bf693c0a47eb2f3bf10930f?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_11_5EAPbeta_be00301_1147873236436_846958_2313"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="property" value="SysML::Requirements::AbstractRequirement::Id : String">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Property"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="elem">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163688_479771_18265"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="element" value="TestModel::2 - Requirements::Functionality::Transport cargo">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="property">
-        <value href="local:/PROJECT-44892a3bf693c0a47eb2f3bf10930f?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_11_5EAPbeta_be00301_1147873236436_846958_2313"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="element2" value="TestModel::2 - Requirements::Functionality::Operate railway infrastructure">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="property" value="SysML::Requirements::AbstractRequirement::Id : String">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Property"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="element" value="TestModel::2 - Requirements::Functionality::Operate railway infrastructure">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="element2" value="TestModel::2 - Requirements::Functionality::Transport cargo">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="property" value="SysML::Requirements::AbstractRequirement::Id : String">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Property"/>
       </substitutions>
     </matches>
     <filter/>
   </matchSetRecords>
-  <matchSetRecords patternQualifiedName="com.incquerylabs.v4md.test.queries.PropertyStringValueEquals">
+  <matchSetRecords patternQualifiedName="com.incquerylabs.v4md.test.queries.IDStringPropertyEqualityError">
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="element">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324148997_899551_16126"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="elem" value="TestModel::2 - Requirements::Functionality::Transport cargo">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="element2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324148998_194193_16128"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="property">
-        <value href="local:/PROJECT-44892a3bf693c0a47eb2f3bf10930f?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_11_5EAPbeta_be00301_1147873236436_846958_2313"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="property" value="SysML::Requirements::AbstractRequirement::Id : String">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Property"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="element">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162242_907310_17439"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="elem" value="TestModel::2 - Requirements::Functionality::Transport cargo::Set start and destination of cargo">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="element2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163688_479771_18265"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="property">
-        <value href="local:/PROJECT-44892a3bf693c0a47eb2f3bf10930f?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_11_5EAPbeta_be00301_1147873236436_846958_2313"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="property" value="SysML::Requirements::AbstractRequirement::Id : String">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Property"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="element">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324148998_194193_16128"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="elem" value="TestModel::2 - Requirements::Functionality::Operate railway infrastructure">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="element2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324148997_899551_16126"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="property">
-        <value href="local:/PROJECT-44892a3bf693c0a47eb2f3bf10930f?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_11_5EAPbeta_be00301_1147873236436_846958_2313"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="property" value="SysML::Requirements::AbstractRequirement::Id : String">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Property"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="element">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163688_479771_18265"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="elem" value="TestModel::2 - Requirements::Functionality::Transport cargo::Set start and destination of cargo::Reconfiguration">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="element2">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162242_907310_17439"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="property">
-        <value href="local:/PROJECT-44892a3bf693c0a47eb2f3bf10930f?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_11_5EAPbeta_be00301_1147873236436_846958_2313"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="property" value="SysML::Requirements::AbstractRequirement::Id : String">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Property"/>
       </substitutions>
     </matches>
     <filter/>

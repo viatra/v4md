@@ -10,11 +10,18 @@ import org.junit.runner.Computer;
 import org.junit.runner.JUnitCore;
 
 import com.incquerylabs.v4md.test.AllTests;
+import com.incquerylabs.v4md.test.snapshot.ISnapshotManager;
+import com.incquerylabs.v4md.test.snapshot.SnapshotAnalyzer;
+import com.incquerylabs.v4md.test.snapshot.SnapshotCreator;
 import com.nomagic.magicdraw.commandline.CommandLineAction;
+
+import edu.emory.mathcs.backport.java.util.Arrays;
 
 
 
 public class TestRunner implements CommandLineAction{
+	
+	public static ISnapshotManager snapshotManager = new SnapshotAnalyzer();
 	
 	private StartupReportConfiguration getConfiguration() {
 		return StartupReportConfiguration.defaultValue();
@@ -22,6 +29,10 @@ public class TestRunner implements CommandLineAction{
 
 	@Override
 	public byte execute(String[] args) {
+		if(Arrays.asList(args).contains("generateQuerySnapshots")) {
+			TestRunner.snapshotManager = new SnapshotCreator();
+		}
+		
 		JUnitCore core = new JUnitCore();
 		RunListener reporter = new DefaultReporterFactory(getConfiguration()).createReporter();
 		final ReportEntry report = new SimpleReportEntry(AllTests.class.getName(), AllTests.class.getName());

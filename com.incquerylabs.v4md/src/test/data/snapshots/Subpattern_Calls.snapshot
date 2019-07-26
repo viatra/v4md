@@ -1,885 +1,885 @@
 <?xml version="1.0" encoding="ASCII"?>
 <vqSnapshot:QuerySnapshot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vqSnapshot="http://www.eclipse.org/viatra/query/snapshot" inputSpecification="EObject">
-  <matchSetRecords patternQualifiedName="com.incquerylabs.v4md.test.queries.blocksWithNonEmptyName">
+  <matchSetRecords patternQualifiedName="com.incquerylabs.v4md.test.queries.classesWithEmptyName">
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126722_475212_14711"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Actuator::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//StateMachine"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147668_476479_15987"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147668_146244_15982"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160277_481106_16908"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160284_25752_16928"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160281_145763_16919"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159211_677007_16731"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160277_931103_16907"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136916_624856_15373"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160282_241475_16923"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160274_455321_16901"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160279_970176_16916"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160273_229380_16895"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147668_613175_15984"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160286_903183_16937"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-9b4d2b1641e6203934d95e7bde5fe08?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_19_0beta_be00301_1509089448616_560737_12757"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-44892a3bf693c0a47eb2f3bf10930f?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_16_5_1_12c903cb_1245417288453_874257_4989_180beta"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163150_744919_17763"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159211_407969_16732"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159208_812536_16725"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126719_218340_14701"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159703_571528_16766"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126718_109222_14697"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160281_964235_16921"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160287_535731_16940"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160271_344467_16893"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160280_820059_16917"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324137702_66429_15402"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126717_175267_14693"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163149_997738_17762"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126719_889829_14702"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147668_422539_15985"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159703_197150_16763"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126721_611874_14709"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324137704_680739_15411"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163149_724302_17761"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126716_832285_14691"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160278_257014_16914"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160284_6403_16929"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136917_254740_15375"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126715_251927_14690"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136917_262140_15374"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126717_167889_14695"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160285_704708_16935"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163150_595315_17764"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126717_672984_14694"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-44892a3bf693c0a47eb2f3bf10930f?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_16_5_1_12c903cb_1245419143265_313151_5613_180beta"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160272_938563_16894"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324130411_420358_14883"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-9b4d2b1641e6203934d95e7bde5fe08?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_18_3_903028d_1448291312269_537593_13833"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160282_462125_16925"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160275_462707_16903"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147668_65942_15986"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160287_266668_16942"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_2_5c501eb_1510667856531_532686_17125"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126721_365033_14708"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147667_323093_15981"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160283_89137_16926"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160271_937315_16892"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159210_687099_16730"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160288_133540_16945"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159214_99838_16739"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-9b4d2b1641e6203934d95e7bde5fe08?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_18_3_903028d_1448291312270_739376_13834"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159212_438535_16736"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324157006_353973_16497"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159213_574507_16738"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160278_656112_16913"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160285_372588_16933"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147668_299347_15983"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160288_803336_16943"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126718_512542_14699"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-9b4d2b1641e6203934d95e7bde5fe08?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_18_3_903028d_1448291312268_435020_13832"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126716_294775_14692"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126717_6091_14696"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159211_183830_16733"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126718_629569_14700"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126718_619421_14698"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-44892a3bf693c0a47eb2f3bf10930f?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_16_5_1_12c903cb_1245417628921_308934_5138_180beta"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159210_396589_16729"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-44892a3bf693c0a47eb2f3bf10930f?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_16_5_1_12c903cb_1245415169125_739263_4059_180beta"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324137702_307391_15405"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126721_848827_14707"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126722_260772_14713"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324130411_51045_14882"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160275_677864_16904"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160276_788260_16905"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <filter/>
   </matchSetRecords>
   <matchSetRecords patternQualifiedName="com.incquerylabs.v4md.test.queries.blocks">
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126722_475212_14711"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::TrackDescPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147668_476479_15987"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::7 - Allocation::ZoneController">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147668_146244_15982"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Zone Commander">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160277_481106_16908"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Route Planner">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160284_25752_16928"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone safety::EmergencyBreak">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160281_145763_16919"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::SystemMonitorPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159211_677007_16731"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160277_931103_16907"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::ComputationalUnit">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136916_624856_15373"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::TransportationClientPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160282_241475_16923"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="MD Customization for SysML::analysis patterns::rollup patterns::MassRollUpPattern">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-44892a3bf693c0a47eb2f3bf10930f?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_16_5_1_12c903cb_1245415169125_739263_4059_180beta"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::OperatorMonitorPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160279_970176_16916"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.4 Signals::Segment">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160273_229380_16895"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::RailwayControlPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147668_613175_15984"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::7 - Allocation::Allocation specification">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160286_903183_16937"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::CargoLoaderControlPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-9b4d2b1641e6203934d95e7bde5fe08?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_19_0beta_be00301_1509089448616_560737_12757"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="SysML::Libraries::UnitAndQuantityKind::Deprecated::ScaleValueDefinition">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-44892a3bf693c0a47eb2f3bf10930f?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_16_5_1_12c903cb_1245417288453_874257_4989_180beta"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="MD Customization for SysML::analysis patterns::rollup patterns::CostRollUpPattern">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163150_744919_17763"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::TrainDriverMonitorPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159211_407969_16732"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Zone Controller Ports::ZoneSyncPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159208_812536_16725"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::1 - System context, glossary::Information items::TrackMonitoringData">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126719_218340_14701"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::CommandStation">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159703_571528_16766"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::External and Main Ports::TrainDriverPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126718_109222_14697"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Actuator">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160281_964235_16921"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::1 - System context, glossary::Information items::RouteSpecification">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160287_535731_16940"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::RaspberryPiCamera">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147668_422539_15985"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::Microcomputer">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160280_820059_16917"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::Camera">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324137702_66429_15402"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="SysML::Libraries::UnitAndQuantityKind::QuantityKind">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126717_175267_14693"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::1 - System context, glossary::Information items::TrainControlCommand">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163149_997738_17762"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="SysML::Libraries::UnitAndQuantityKind::Unit">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126719_889829_14702"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::External and Main Ports::ZoneMonitorPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159703_197150_16763"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Transporation Train Controller">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126721_611874_14709"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::1 - System context, glossary::Information items::TrainData">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324137704_680739_15411"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::TrainDriverControlPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163149_724302_17761"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::Webcamera">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126716_832285_14691"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Zone Controller Ports::SelfTestMonitorPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160278_257014_16914"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Cargo Manager">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160284_6403_16929"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::External and Main Ports::RailwayOperatorPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136917_254740_15375"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::External and Main Ports::ZoneMonitoringPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126715_251927_14690"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::External and Main Ports::ZoneControllerPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324136917_262140_15374"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Zone Controller Ports::ZoneStateTransmitterPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126717_167889_14695"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::External and Main Ports::TransportationZoneControlPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160285_704708_16935"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::1 - System context, glossary::Information items::TrackControlCommand">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160286_472966_16936"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Track description">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126717_672984_14694"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::External and Main Ports::CargoLoaderPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-44892a3bf693c0a47eb2f3bf10930f?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_16_5_1_12c903cb_1245419143265_313151_5613_180beta"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Cargo Delivery Interface">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160272_938563_16894"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::BeagleBoneBlack">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324130411_420358_14883"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Accident Prevention Subsystem">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-9b4d2b1641e6203934d95e7bde5fe08?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_18_3_903028d_1448291312269_537593_13833"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::RouteCommanderPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163150_595315_17764"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Zone Controller Ports::ZoneActuatorPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160282_462125_16925"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::RoutePlannerPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160275_462707_16903"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147668_65942_15986"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::VirtualMachine">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160287_266668_16942"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone safety::SelfTester">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_2_5c501eb_1510667856531_532686_17125"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::Computer">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126721_365033_14708"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="MD Customization for SysML::analysis patterns::MonteCarloAnalysis">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147667_323093_15981"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::SegmentOccupationSensor">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160283_89137_16926"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::Router">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160271_937315_16892"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.4 Signals::Turnout">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159210_687099_16730"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone safety::SafetyRuleChecker">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160271_344467_16893"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::System Monitor">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160288_133540_16945"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::1 - System context, glossary::Information items::TrainSpeed">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159214_99838_16739"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::External and Main Ports::SegmentActuatorPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-9b4d2b1641e6203934d95e7bde5fe08?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_18_3_903028d_1448291312270_739376_13834"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::Arduino">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159212_438535_16736"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::Controller">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324157006_353973_16497"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="MD Customization for SysML::analysis patterns::rollup patterns::PowerRollUpPattern">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159213_574507_16738"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="SysML::Libraries::UnitAndQuantityKind::Deprecated::Scale">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160278_656112_16913"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::MultiMaus">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160285_372588_16933"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::RaspberryPi">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324147668_299347_15983"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Railway Operator Interface">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160288_803336_16943"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::TransportationMonitorPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126718_512542_14699"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::RailwaySystem">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-9b4d2b1641e6203934d95e7bde5fe08?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_18_3_903028d_1448291312268_435020_13832"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone State Transmitter">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126716_294775_14692"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::PCAdapter">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126717_6091_14696"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::sdasdasd">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159211_183830_16733"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Route Manager">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126718_629569_14700"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.4 Signals::TrackElement">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126718_619421_14698"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone safety::HeartbeatListener">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-44892a3bf693c0a47eb2f3bf10930f?resource=com.nomagic.magicdraw.uml_umodel.shared_umodel#_16_5_1_12c903cb_1245417628921_308934_5138_180beta"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::ZoneCommanderPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324159210_396589_16729"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::PC">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160274_455321_16901"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone Controller">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324137702_307391_15405"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::ClientMonitorPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126721_848827_14707"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Monitor">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324126722_260772_14713"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::1 - System context, glossary::Information items::Feedback">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324130411_51045_14882"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::External and Main Ports::ClientPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160275_677864_16904"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::External and Main Ports::TurnoutActuatorPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160276_788260_16905"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::SystemMonitorCargoNotificationPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <filter/>
   </matchSetRecords>
-  <matchSetRecords patternQualifiedName="com.incquerylabs.v4md.test.queries.classesWithEmptyName">
+  <matchSetRecords patternQualifiedName="com.incquerylabs.v4md.test.queries.blocksWithNonEmptyName">
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324160286_472966_16936"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Zone Controller Ports::SelfTestMonitorPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="class">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163146_540879_17748"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::7 - Allocation::ZoneController">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Zone Commander">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::SystemMonitorCargoNotificationPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone safety::EmergencyBreak">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::SystemMonitorPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::ComputationalUnit">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::PC">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="MD Customization for SysML::analysis patterns::rollup patterns::MassRollUpPattern">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::OperatorMonitorPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.4 Signals::Segment">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::RailwayControlPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::1 - System context, glossary::Information items::TrackMonitoringData">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::CargoLoaderControlPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="SysML::Libraries::UnitAndQuantityKind::Deprecated::ScaleValueDefinition">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="MD Customization for SysML::analysis patterns::rollup patterns::CostRollUpPattern">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::TrainDriverMonitorPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::7 - Allocation::Allocation specification">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::CommandStation">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::External and Main Ports::TrainDriverPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Actuator">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::1 - System context, glossary::Information items::RouteSpecification">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::RaspberryPiCamera">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::Microcomputer">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::Camera">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::1 - System context, glossary::Information items::Feedback">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::1 - System context, glossary::Information items::TrainControlCommand">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="SysML::Libraries::UnitAndQuantityKind::Unit">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::External and Main Ports::ZoneMonitorPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Transporation Train Controller">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::1 - System context, glossary::Information items::TrainData">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::TrainDriverControlPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::Webcamera">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Cargo Manager">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::External and Main Ports::RailwayOperatorPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::External and Main Ports::ZoneMonitoringPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::External and Main Ports::ZoneControllerPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Zone Controller Ports::ZoneStateTransmitterPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::External and Main Ports::TransportationZoneControlPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::1 - System context, glossary::Information items::TrackControlCommand">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Track description">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::External and Main Ports::CargoLoaderPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Cargo Delivery Interface">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::BeagleBoneBlack">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Accident Prevention Subsystem">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::RouteCommanderPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Zone Controller Ports::ZoneActuatorPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::RoutePlannerPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.4 Signals::TrackElement">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::VirtualMachine">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone safety::SelfTester">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::ClientMonitorPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::Computer">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="MD Customization for SysML::analysis patterns::MonteCarloAnalysis">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::SegmentOccupationSensor">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::Arduino">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.4 Signals::Turnout">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone safety::SafetyRuleChecker">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::System Monitor">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::1 - System context, glossary::Information items::TrainSpeed">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::External and Main Ports::SegmentActuatorPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Route Manager">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::Controller">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="MD Customization for SysML::analysis patterns::rollup patterns::PowerRollUpPattern">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="SysML::Libraries::UnitAndQuantityKind::Deprecated::Scale">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::MultiMaus">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Zone Controller Ports::ZoneSyncPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Railway Operator Interface">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::TransportationMonitorPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::RailwaySystem">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone State Transmitter">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::PCAdapter">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::sdasdasd">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::Router">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::TrackDescPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone safety::HeartbeatListener">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::ZoneCommanderPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::TransportationClientPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone Controller">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::6 - Platform architecture::RaspberryPi">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Monitor">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="SysML::Libraries::UnitAndQuantityKind::QuantityKind">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::External and Main Ports::ClientPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.2 Ports::External and Main Ports::TurnoutActuatorPort">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Route Planner">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Class"/>
       </substitutions>
     </matches>
     <filter/>
