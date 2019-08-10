@@ -26,10 +26,32 @@ import com.nomagic.uml2.ext.jmi.EventSupport;
  */
 public class MagicDrawProjectNavigationHelper extends NavigationHelperImpl {
 
+	/**
+	 * TODO this logger wrapping is a very hacky solution, but until bug
+	 * https://bugs.eclipse.org/bugs/show_bug.cgi?id=549955 is fixed, it is not
+	 * possible to overwrite the message any other way
+	 */
+	private static final class WrappedLogger extends Logger {
+		private WrappedLogger(Logger source) {
+			super(source.getName());
+			parent = source;
+			repository = source.getLoggerRepository();
+		}
+
+		@Override
+		public void error(Object message) {
+			if (message instanceof String && ((String)message).contains("This indicates some errors in underlying model representation.")) {
+				super.debug(message);
+			} else {
+				super.error(message);
+			}
+		}
+	}
+
 	private Logger logger;
 
 	public MagicDrawProjectNavigationHelper(Notifier emfRoot, BaseIndexOptions options, EventSupport eventSupport, Logger logger) {
-		super(emfRoot, options, logger);
+		super(emfRoot, options, new WrappedLogger(logger));
 		this.logger = logger;
 		// TODO While this change helps avoiding some duplicate notifications, it causes
 		// a regression when adding a new project usage to a local project: when the
@@ -85,4 +107,6 @@ public class MagicDrawProjectNavigationHelper extends NavigationHelperImpl {
 		}
         notifyBaseIndexChangeListeners();
 	}
+	
+	
 }
