@@ -344,7 +344,6 @@ publishing {
             version "$version"
             from components.java
             artifact tasks.sourceJar
-
             artifact distZip {
 
                 classifier "plugin"
@@ -406,6 +405,12 @@ task runTest(type: JavaExec) {
 	jvmArgs += testArgs
 }
 runTest.dependsOn configureTest
+
+task runSnapshotGeneration(type: JavaExec) {
+	args 'generateQuerySnapshots'
+	jvmArgs += testArgs
+}
+runSnapshotGeneration.dependsOn configureTest
 
 task debugTest(type: JavaExec) {
 	jvmArgs += testArgs

@@ -2,299 +2,299 @@
 <vqSnapshot:QuerySnapshot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vqSnapshot="http://www.eclipse.org/viatra/query/snapshot" inputSpecification="EObject">
   <matchSetRecords patternQualifiedName="com.incquerylabs.v4md.test.queries.reachableState">
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163666_469260_18080"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Pseudostate"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163666_460172_18081"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163665_430578_18075"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163665_356902_18074"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::Off">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162188_164345_17149"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::Divergent">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162188_304663_17148"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163668_576521_18091"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163667_795921_18089"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Straight">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162194_821752_17165"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Actuator::::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Pseudostate"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162194_632262_17162"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162194_634900_17163"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162194_270674_17164"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Actuator::::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324164327_509476_19275"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Actuator::::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324164328_860347_19276"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163664_13273_18069"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163664_927724_18070"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Actuator::::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162193_457394_17161"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone safety::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Pseudostate"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162194_821752_17165"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163667_932710_18082"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163666_469260_18080"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone safety::::Safe">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162194_821752_17165"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162194_634900_17163"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163664_765350_18068"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163664_13273_18069"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162188_772144_17147"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::Straight">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162188_304663_17148"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162194_270674_17164"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162194_634900_17163"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Divergent">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163665_356902_18074"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163665_430578_18075"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163667_795921_18089"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163668_336321_18090"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162188_304663_17148"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Pseudostate"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162188_772144_17147"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162194_270674_17164"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162194_632262_17162"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Straight">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163666_91715_18076"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::Off">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163665_356902_18074"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162193_752491_17160"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162193_457394_17161"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163666_460172_18081"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163666_469260_18080"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324164327_619681_19274"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324164327_509476_19275"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163664_927724_18070"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone safety::::Running self test">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163664_13273_18069"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162193_457394_17161"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162194_632262_17162"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone safety::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Pseudostate"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163668_336321_18090"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163667_795921_18089"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="sourceState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162194_632262_17162"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="targetState">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162193_457394_17161"/>
-      </substitutions>
-    </matches>
-    <filter/>
-  </matchSetRecords>
-  <matchSetRecords patternQualifiedName="com.incquerylabs.v4md.test.queries.reachableFromInitState">
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="state">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162188_772144_17147"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="state">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163666_469260_18080"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone safety::::Danger">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone safety::::Safe">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="state">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162194_632262_17162"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone safety::::Waiting for human intervention">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone safety::::Running self test">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="state">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324164327_509476_19275"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone safety::::Safe">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone safety::::Danger">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="state">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163664_13273_18069"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Pseudostate"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="state">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163667_795921_18089"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="state">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162193_457394_17161"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone safety::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Pseudostate"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone safety::::Running self test">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="state">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162194_270674_17164"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone safety::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Pseudostate"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone safety::::Waiting for human intervention">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="state">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162194_634900_17163"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::Off">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="state">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324164328_860347_19276"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="state">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163664_927724_18070"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone safety::::Danger">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone safety::::Waiting for human intervention">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="state">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163665_356902_18074"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Pseudostate"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="state">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163666_460172_18081"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone safety::::Running self test">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone safety::::Waiting for human intervention">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="state">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163668_336321_18090"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Pseudostate"/>
       </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="state">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324163665_430578_18075"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:EMFSubstitution" parameterName="state">
-        <value href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#_18_5_1_1608043f_1503324162188_304663_17148"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
       </substitutions>
     </matches>
     <filter/>
   </matchSetRecords>
   <matchSetRecords patternQualifiedName="com.incquerylabs.v4md.test.queries.notReachableFromInit">
+    <filter/>
+  </matchSetRecords>
+  <matchSetRecords patternQualifiedName="com.incquerylabs.v4md.test.queries.reachableFromInitState">
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On::::Straight">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone safety::::Safe">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::Off">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Actuator::::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone safety::::Waiting for human intervention">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Actuator::::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone safety::::Danger">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On::::Divergent">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone safety::::Running self test">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//State"/>
+      </substitutions>
+    </matches>
     <filter/>
   </matchSetRecords>
   <modelRoots href="local:/PROJECT-a8c862d0-3cc4-40e2-9524-b1481ed02376?resource=com.nomagic.magicdraw.uml_umodel.model#eee_1045467100313_135436_1"/>

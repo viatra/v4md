@@ -15,13 +15,20 @@ import com.incquerylabs.v4md.ViatraQueryAdapter;
 public class V4MDPatternBasedMatchSetProvider implements IMatchSetModelProvider {
 
 	private ViatraQueryAdapter adapter;
-	private SnapshotHelper helper = new SnapshotHelper();
+	private SnapshotHelper helper;
 	
 	public V4MDPatternBasedMatchSetProvider(ViatraQueryAdapter adapter) {
 		this.adapter = adapter;
+		this.helper = new SnapshotHelper();
 	}
 	
 	
+	public V4MDPatternBasedMatchSetProvider(ViatraQueryAdapter adapter, SnapshotHelper snapshotHelper) {
+		this.adapter = adapter;
+		this.helper = snapshotHelper;
+	}
+
+
 	@Override
 	public <Match extends IPatternMatch> MatchSetRecord getMatchSetRecord(EMFScope scope,
 			IQuerySpecification<? extends ViatraQueryMatcher<Match>> querySpecification, Match filter) {
