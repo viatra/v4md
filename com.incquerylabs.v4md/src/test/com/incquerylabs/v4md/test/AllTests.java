@@ -6,7 +6,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({
-	//QueryTests.class,
+	QueryTests.class,
 	ModelUpdateTests.class
 })
 public class AllTests {}
