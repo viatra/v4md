@@ -39,7 +39,7 @@ class MagicDrawProjectEngineContext implements IEngineContext {
 		Set<Notifier> customNotifiers = scope.getCustomNotifiers().collect(Collectors.toSet());
 		Set<Notifier> projectRoots = scope.getProjectModels().collect(Collectors.toSet());
 		MagicDrawProjectNavigationHelper navigationHelper = getNavHelper(true);
-		Set<Notifier> actualModelRoots = navigationHelper.getModelRoots();
+		Set<Notifier> actualModelRoots = navigationHelper.getModelRoots().collect(Collectors.toSet());
 		
 		Set<Notifier> rootsToAdd = Sets.difference(projectRoots, actualModelRoots);
 		Set<Notifier> rootsToRemove = Sets.difference(Sets.difference(actualModelRoots, projectRoots), customNotifiers);
