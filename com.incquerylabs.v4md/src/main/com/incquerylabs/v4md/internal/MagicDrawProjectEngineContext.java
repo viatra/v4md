@@ -1,6 +1,7 @@
 package com.incquerylabs.v4md.internal;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -15,8 +16,6 @@ import org.eclipse.viatra.query.runtime.emf.EMFBaseIndexWrapper;
 import org.eclipse.viatra.query.runtime.emf.EMFQueryRuntimeContext;
 import org.eclipse.viatra.query.runtime.matchers.ViatraQueryRuntimeException;
 import org.eclipse.viatra.query.runtime.matchers.context.IQueryRuntimeContext;
-
-import com.google.common.collect.Sets;
 
 /**
  * Provides a specific engine context implementation for MagicDraw projects.
@@ -41,17 +40,16 @@ class MagicDrawProjectEngineContext implements IEngineContext {
 		MagicDrawProjectNavigationHelper navigationHelper = getNavHelper(true);
 		Set<Notifier> actualModelRoots = navigationHelper.getModelRoots().collect(Collectors.toSet());
 		
-		Set<Notifier> rootsToAdd = Sets.difference(projectRoots, actualModelRoots);
-		Set<Notifier> rootsToRemove = Sets.difference(Sets.difference(actualModelRoots, projectRoots), customNotifiers);
+		Set<Notifier> rootsToAdd = new HashSet<>(projectRoots);
+		rootsToAdd.removeAll(actualModelRoots);
+		Set<Notifier> rootsToRemove = new HashSet<>(actualModelRoots);
+		rootsToRemove.removeAll(projectRoots);
+		rootsToRemove.removeAll(customNotifiers);
 		
 		try {
 			navigationHelper.coalesceTraversals(() -> {
-				while (!rootsToRemove.isEmpty()) {
-					navigationHelper.removeRoot(rootsToRemove.iterator().next());
-				}
-				while (!rootsToAdd.isEmpty()) {
-					navigationHelper.addRoot(rootsToAdd.iterator().next());
-				}
+				rootsToRemove.forEach(navigationHelper::removeRoot);
+				rootsToAdd.forEach(navigationHelper::addRoot);
 			});
 		} catch (InvocationTargetException e) {
 			logger.fatal("Error while updating project", e);
