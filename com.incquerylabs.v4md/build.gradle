@@ -103,7 +103,7 @@ dependencies {
     pub group: 'org.eclipse.viatra', name: 'viatra-transformation-runtime', version: viatraVersion, exclusions
     pub group: 'org.eclipse.viatra', name: 'viatra-transformation-debugger-runtime', version: viatraIncubationVersion, exclusions
     
-    pub group: 'org.eclipse.xtend', name: 'org.eclipse.xtend.lib', version: xtextVersion
+    pub group: 'org.eclipse.xtend', name: 'org.eclipse.xtend.lib', version: xtextVersion, exclusions
         
     
     // This ensures classpath load order to match the MagicDraw provided order and then includes extras needed for non-OpenAPI stuff.
