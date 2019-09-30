@@ -8,13 +8,41 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.viatra.query.runtime.base.api.BaseIndexOptions;
 import org.eclipse.viatra.query.runtime.base.core.NavigationHelperContentAdapter;
 
-import com.google.common.base.Stopwatch;
 import com.nomagic.uml2.ext.jmi.EventSupport;
 
 public class ProfilingMagicDrawProjectNavigationHelper extends MagicDrawProjectNavigationHelper {
 
+	public class StopWatch {
+		
+		long startedAt = 0;
+		long stoppedElapsed = 0;
+		boolean running = true;
+
+		public void start() {
+			startedAt = System.currentTimeMillis();
+			running = true;
+			
+		}
+
+		public void stop() {
+			stoppedElapsed = getElapsed();
+			running = false;
+		}
+
+		public long getElapsed() {
+			return running ? System.currentTimeMillis() - startedAt + stoppedElapsed : stoppedElapsed;
+		}
+	
+
+		public void resetTime() {
+			startedAt = System.currentTimeMillis();
+			stoppedElapsed = 0;
+		}
+		
+	}
+	
 	long notificationCount;
-	Stopwatch watch;
+	StopWatch watch;
 	boolean isEnabled = false;
 	
 	public ProfilingMagicDrawProjectNavigationHelper(Notifier emfRoot, BaseIndexOptions options,
@@ -89,7 +117,7 @@ public class ProfilingMagicDrawProjectNavigationHelper extends MagicDrawProjectN
 	}
 
 	public long getTotalMeasuredTimeInMS() {
-		return watch.elapsed(TimeUnit.MILLISECONDS);
+		return watch.getElapsed();
 	}
 
 	public boolean isEnabled() {
@@ -102,6 +130,6 @@ public class ProfilingMagicDrawProjectNavigationHelper extends MagicDrawProjectN
 	
 	public void resetMeasurement() {
 		notificationCount = 0;
-		watch = Stopwatch.createUnstarted();
+		watch.resetTime();
 	}
 }

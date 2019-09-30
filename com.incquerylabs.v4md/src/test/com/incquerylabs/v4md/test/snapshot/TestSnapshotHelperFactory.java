@@ -7,9 +7,7 @@ import java.util.function.Function;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.viatra.query.testing.core.SnapshotHelper;
-import org.eclipse.viatra.query.testing.core.api.JavaObjectAccess;
 
-import com.google.common.collect.Maps;
 import com.nomagic.uml2.ext.jmi.helpers.ModelHelper;
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.NamedElement;
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Property;
@@ -62,7 +60,7 @@ public class TestSnapshotHelperFactory {
 	}
 	
 	public SnapshotHelper createSnapshotHelper(Map<EClass, Function<EObject, String>> snapshotStringFunctionMap) {
-		return new SnapshotHelper(Maps.<String, JavaObjectAccess>newHashMap(), snapshotStringFunctionMap);
+		return new SnapshotHelper(new HashMap<>(), snapshotStringFunctionMap);
 	}
 	
 	public SnapshotHelper createSnapshotHelper() {

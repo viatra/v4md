@@ -1,6 +1,8 @@
 package com.incquerylabs.v4md.internal;
 
-import com.google.common.collect.ArrayListMultimap;
+import org.eclipse.collections.api.multimap.MutableMultimap;
+import org.eclipse.collections.impl.factory.Multimaps;
+
 import com.nomagic.magicdraw.core.Project;
 
 public interface IProjectChangedListener {
@@ -9,7 +11,7 @@ public interface IProjectChangedListener {
 	public static final Manager MANAGER = new Manager();
 	
 	public class Manager {
-		ArrayListMultimap<Project, IProjectChangedListener> listenerMap = ArrayListMultimap.create();
+		MutableMultimap<Project, IProjectChangedListener> listenerMap = Multimaps.mutable.set.empty();
 		
 		
 		private Manager() {
