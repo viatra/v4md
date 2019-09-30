@@ -94,6 +94,7 @@ dependencies {
         exclude module: 'log4j'
     }
     def testExclusions = {
+    	exclude group: 'com.google.guava', module: 'guava'
     	exclude group: 'org.eclipse.viatra', module: 'viatra-query-runtime'
         exclude module: 'log4j'
     }
@@ -113,6 +114,7 @@ dependencies {
     	implementation fileTree(dir: 'build/dependency-cache/extracted', include: ["plugins/${plugin}/**/*.jar"])
     }
     
+    testCompile  group: 'com.google.guava', name: 'guava', version: '21.0'
     testCompile 'org.apache.maven.surefire:maven-surefire-common:2.19.1'
     testCompile 'org.apache.maven.surefire:surefire-api:2.19.1'
     testCompile 'org.apache.maven.surefire:surefire-junit4:2.19.1'
