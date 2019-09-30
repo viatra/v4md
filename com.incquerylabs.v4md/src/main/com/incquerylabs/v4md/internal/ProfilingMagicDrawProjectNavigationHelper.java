@@ -1,7 +1,5 @@
 package com.incquerylabs.v4md.internal;
 
-import java.util.concurrent.TimeUnit;
-
 import org.apache.log4j.Logger;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
@@ -13,48 +11,79 @@ import com.nomagic.uml2.ext.jmi.EventSupport;
 public class ProfilingMagicDrawProjectNavigationHelper extends MagicDrawProjectNavigationHelper {
 
 	public class StopWatch {
-		
-		long startedAt = 0;
-		long stoppedElapsed = 0;
-		boolean running = true;
 
+		private long currentStartTime = 0;
+		private long totalElapsedTime = 0;
+		private boolean running = true;
+
+		/**
+		 * Puts the timer in running state and saves the current time.
+		 */
 		public void start() {
-			startedAt = System.currentTimeMillis();
+			currentStartTime = System.currentTimeMillis();
 			running = true;
-			
+
 		}
 
+		/**
+		 * Puts the the timer in stopped state and saves the total time spent in started
+		 * state between the last reset and now
+		 */
 		public void stop() {
-			stoppedElapsed = getElapsed();
+			totalElapsedTime = getTotalElapsedTime();
 			running = false;
 		}
 
-		public long getElapsed() {
-			return running ? System.currentTimeMillis() - startedAt + stoppedElapsed : stoppedElapsed;
+		/**
+		 * @return time between the last start and now
+		 */
+		public long getCurrentElapsedTime() {
+			return System.currentTimeMillis() - currentStartTime;
 		}
-	
 
-		public void resetTime() {
-			startedAt = System.currentTimeMillis();
-			stoppedElapsed = 0;
+		/**
+		 * @return the total time spent in started state between the last reset and now
+		 */
+		public long getTotalElapsedTime() {
+			return isRunning() ? getCurrentElapsedTime() + totalElapsedTime : totalElapsedTime;
 		}
 		
+		/**
+		 * Saves the current time and resets all the time spent between the last reset and now.
+		 */
+		public void resetTime() {
+			currentStartTime = System.currentTimeMillis();
+			totalElapsedTime = 0;
+		}
+		
+		/**
+		 * @return internal state of the timer.
+		 * 
+		 * false: stopped
+		 * true: running
+		 */
+		public boolean isRunning() {
+			return running;
+		}
+
 	}
-	
+
 	long notificationCount;
 	StopWatch watch;
 	boolean isEnabled = false;
-	
+
 	public ProfilingMagicDrawProjectNavigationHelper(Notifier emfRoot, BaseIndexOptions options,
 			EventSupport eventSupport, Logger logger) {
 		super(emfRoot, options, eventSupport, logger);
 		resetMeasurement();
-		// In general it might be too late to replace the content adapter here, but in case V4MD nothing was indexed at this point
-		// TODO replace this when a VIATRA version that fixes bug https://bugs.eclipse.org/bugs/show_bug.cgi?id=547205 is available
+		// In general it might be too late to replace the content adapter here, but in
+		// case V4MD nothing was indexed at this point
+		// TODO replace this when a VIATRA version that fixes bug
+		// https://bugs.eclipse.org/bugs/show_bug.cgi?id=547205 is available
 		this.contentAdapter = new NavigationHelperContentAdapter(this) {
 
 			boolean measurement = false;
-			
+
 			@Override
 			public void notifyChanged(Notification notification) {
 				// Handle possibility of reentrancy
@@ -108,7 +137,7 @@ public class ProfilingMagicDrawProjectNavigationHelper extends MagicDrawProjectN
 					super.unsetTarget(target);
 				}
 			}
-			
+
 		};
 	}
 
@@ -117,7 +146,7 @@ public class ProfilingMagicDrawProjectNavigationHelper extends MagicDrawProjectN
 	}
 
 	public long getTotalMeasuredTimeInMS() {
-		return watch.getElapsed();
+		return watch.getTotalElapsedTime();
 	}
 
 	public boolean isEnabled() {
@@ -127,7 +156,7 @@ public class ProfilingMagicDrawProjectNavigationHelper extends MagicDrawProjectN
 	public void setEnabled(boolean isEnabled) {
 		this.isEnabled = isEnabled;
 	}
-	
+
 	public void resetMeasurement() {
 		notificationCount = 0;
 		watch.resetTime();
