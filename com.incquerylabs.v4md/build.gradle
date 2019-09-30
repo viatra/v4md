@@ -95,7 +95,6 @@ dependencies {
     }
     def testExclusions = {
     	exclude group: 'org.eclipse.viatra', module: 'viatra-query-runtime'
-    	exclude group: 'com.google.guava', module: 'guava'
         exclude module: 'log4j'
     }
 
