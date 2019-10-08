@@ -103,7 +103,6 @@ dependencies {
     pub group: 'org.eclipse.viatra', name: 'viatra-transformation-runtime', version: viatraVersion, exclusions
     pub group: 'org.eclipse.viatra', name: 'viatra-transformation-debugger-runtime', version: viatraIncubationVersion, exclusions
     
-    pub group: 'org.eclipse.xtend', name: 'org.eclipse.xtend.lib', version: xtextVersion, exclusions
         
     
     // This ensures classpath load order to match the MagicDraw provided order and then includes extras needed for non-OpenAPI stuff.
@@ -114,7 +113,8 @@ dependencies {
     	implementation fileTree(dir: 'build/dependency-cache/extracted', include: ["plugins/${plugin}/**/*.jar"])
     }
     
-    testCompile  group: 'com.google.guava', name: 'guava', version: '21.0'
+    testCompile group: 'org.eclipse.xtend', name: 'org.eclipse.xtend.lib', version: xtextVersion, exclusions
+    testCompile group: 'com.google.guava', name: 'guava', version: '21.0'
     testCompile 'org.apache.maven.surefire:maven-surefire-common:2.19.1'
     testCompile 'org.apache.maven.surefire:surefire-api:2.19.1'
     testCompile 'org.apache.maven.surefire:surefire-junit4:2.19.1'
