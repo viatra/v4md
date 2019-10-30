@@ -2,6 +2,7 @@ package com.incquerylabs.v4md;
 
 import com.incquerylabs.v4md.expressions.BinaryVQLExpression;
 import com.incquerylabs.v4md.internal.IProjectChangedListener;
+import com.incquerylabs.v4md.transformations.IncrementalTransformationSynchronizer;
 import com.nomagic.ci.persistence.IProject;
 import com.nomagic.magicdraw.core.Application;
 import com.nomagic.magicdraw.core.Project;
@@ -18,6 +19,7 @@ public class V4MDPlugin extends com.nomagic.magicdraw.plugins.Plugin {
 		@Override
 		public void projectPreClosed(Project project) {
 			// There is no need to explicitly initialize adapters; the dispose handles uninitialized adapters correctly
+			IncrementalTransformationSynchronizer.disposeSynchronizer(project);
 			ViatraQueryAdapter.disposeAdapter(project);
 		}
 		

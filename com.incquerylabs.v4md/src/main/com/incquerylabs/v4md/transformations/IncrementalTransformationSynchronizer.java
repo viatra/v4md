@@ -56,6 +56,10 @@ public class IncrementalTransformationSynchronizer extends TransactionBasedSynch
 		public ModelSynchronizer apply(Project t) {
 			return (ModelSynchronizer) storage.computeIfAbsent(t, IncrementalTransformationSynchronizer::new);
 		}
+		
+	}
+	public static void disposeSynchronizer(Project p) {
+		((ViatraTransformationSynchronizerManager)FACTORY).storage.remove(p);
 	}
 
 	private BatchTransformation transformation;
