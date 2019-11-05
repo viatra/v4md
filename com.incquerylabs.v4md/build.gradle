@@ -102,7 +102,6 @@ dependencies {
     pub group: 'org.eclipse.viatra', name: 'viatra-query-runtime', version: viatraVersion, exclusions
     pub group: 'org.eclipse.viatra', name: 'viatra-transformation-runtime', version: viatraVersion, exclusions
     pub group: 'org.eclipse.viatra', name: 'viatra-transformation-debugger-runtime', version: viatraIncubationVersion, exclusions
-    pub group: 'com.google.guava', name: 'guava', version: '21.0'
     
         
     
@@ -118,6 +117,7 @@ dependencies {
     testCompile 'org.apache.maven.surefire:maven-surefire-common:2.19.1'
     testCompile 'org.apache.maven.surefire:surefire-api:2.19.1'
     testCompile 'org.apache.maven.surefire:surefire-junit4:2.19.1'
+    testCompile group: 'com.google.guava', name: 'guava', version: '21.0'
     testCompile group: 'org.eclipse.viatra', name: 'viatra-query-testing', version: viatraVersion, testExclusions
 }
 
