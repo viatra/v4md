@@ -35,7 +35,7 @@ class MagicDrawProjectEngineContext implements IEngineContext {
     private IProjectChangedListener scopeListener = this::modelSetUpdated;
 	private boolean useEmptyQueryScope;
     
-	protected void modelSetUpdated() {
+	private void modelSetUpdated() {
 		Set<Notifier> customNotifiers = scope.getCustomNotifiers().collect(Collectors.toSet());
 		Set<Notifier> projectRoots = scope.getProjectModels().collect(Collectors.toSet());
 		MagicDrawProjectNavigationHelper navigationHelper = getNavHelper(true);
