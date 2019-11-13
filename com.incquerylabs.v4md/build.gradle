@@ -156,7 +156,10 @@ sourceSets {
     main {
         java {
             srcDirs 'src/main'
-        }    
+        } 
+        resources {
+        	srcDirs 'src/resources'
+        }   
     }
     test {
     	java{
@@ -316,7 +319,7 @@ tasks.withType(JavaExec) {
 	
     main = 'com.nomagic.osgi.launcher.ProductionFrameworkLauncher'
     jvmArgs = platformConfigSetting + ['-Xmx8192M', '-Xss512M', '-noverify', '-splash:data/splash.png','-Dmd.class.path=$java.class.path']
-	args 'DEVELOPER'
+	args 'USE_EMPTY_QUERY_ENGINE'
 }
 
 tasks.withType(Tar) {
