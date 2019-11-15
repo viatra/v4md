@@ -20,18 +20,18 @@ import com.nomagic.magicdraw.ui.notification.config.NotificationViewConfig;
 
 public class V4MDSpecificEnvironmentOptionsGroup extends AbstractPropertyOptionsGroup implements EnvironmentChangeListener {
 
-	private static final String V4MD_DEVELOPER_MODE_REQUIRED = "Developer Mode is required.";
+	private static final String V4MD_DEVELOPER_MODE_REQUIRED = "Developer Mode is required. ";
 	private static final String V4MD_GROUP_DEBUGGING_NAME = "Debugging";
 	private static final String V4MD_GROUP_ID = "V4MD";
-	private static final String V4MD_GROUP_NAME = "VIATRA for MagicDraw";
+	private static final String V4MD_GROUP_NAME = "V4MD";
 	public  static final String USE_EMPTY_QUERY_SCOPE_ID = "USE_EMPTY_QUERY_SCOPE";
-	private static final String USE_EMPTY_QUERY_SCOPE_NAME = "Use empty query scope";
-	private static final String USE_EMPTY_QUERY_SCOPE_DESCRIPTION = "For debugging purposes, this property disables the full featured VIATRA Query Scope and uses an empty implementation which always returns empty results. After changing the property, you have to reload the projects.";
+	private static final String USE_EMPTY_QUERY_SCOPE_NAME = "Disable Model Indexing";
+	private static final String USE_EMPTY_QUERY_SCOPE_DESCRIPTION = "For debugging purposes, this property disables model indexing by V4MD and all queries will return an empty result. After changing the property, you have to reload the currently open projects.";
 	private static final String USE_EMPTY_QUERY_SCOPE_DESCRIPTION_ID = "USE_EMPTY_QUERY_SCOPE_DESCRIPTION_ID";
 	private static final String USE_EMPTY_QUERY_SCOPE_NOTIFICATION_TITLE = "V4MD's empty scope is used";
-	private static final String USE_EMPTY_QUERY_SCOPE_NOTIFICATION_MESSAGE = String.format("Currently, V4MD is disabled for debugging purposes. API is still working, but no calculation is executed using the VIATRA engine. All queries return empty set of matches. To enable V4MD, please go to the Options->Environment->%s and uncheck %s. After changing the property, you have to reload the projects.", V4MD_GROUP_NAME, USE_EMPTY_QUERY_SCOPE_NAME);
-	private static final String USE_EMPTY_QUERY_SCOPE_WARNING_ENABLED = "V4MD's empty scope is enabled. This can cause unexpected behavior. This feature is only useful for performance analysis. Disable if you don't know what you are doing.";
-	private static final String USE_EMPTY_QUERY_SCOPE_WARNING_PROJECTS = "All opened projects have to be reloaded to activate V4MD's empty scope!";
+	private static final String USE_EMPTY_QUERY_SCOPE_NOTIFICATION_MESSAGE = String.format("Currently, model indexing by V4MD is disabled, and all queries return an empty result. To re-enable indexing, please go to the Options->Environment->%s and uncheck %s. After changing the property, you have to reload the currently open projects.", V4MD_GROUP_NAME, USE_EMPTY_QUERY_SCOPE_NAME);
+	private static final String USE_EMPTY_QUERY_SCOPE_WARNING_ENABLED = "Model indexing by V4MD is disabled. This can cause unexpected behavior. This feature is only useful for performance analysis. Re-enable indexing if you don't know what you are doing!";
+	private static final String USE_EMPTY_QUERY_SCOPE_WARNING_PROJECTS = "All open projects have to be reloaded to actually disable the model indexing by V4MD on these models!";
 	
 	private BooleanProperty emptyScopeProperty = new BooleanProperty(USE_EMPTY_QUERY_SCOPE_ID, false);
 	

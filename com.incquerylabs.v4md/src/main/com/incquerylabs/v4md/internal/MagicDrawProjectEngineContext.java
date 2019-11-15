@@ -64,8 +64,9 @@ class MagicDrawProjectEngineContext implements IEngineContext {
         this.taintListener = taintListener;
 		this.useEmptyQueryScope = useEmptyQueryScope;
         
-        if(!useEmptyQueryScope)
-        	IProjectChangedListener.MANAGER.addProjectChangeListener(scope.getProject(), scopeListener);
+        if(!useEmptyQueryScope) {
+			IProjectChangedListener.MANAGER.addProjectChangeListener(scope.getProject(), scopeListener);
+		}
     }
 	
 	public MagicDrawProjectEngineContext(MagicDrawProjectScope scope, IIndexingErrorListener taintListener, boolean enableProfiler, Logger logger) {
@@ -120,8 +121,9 @@ class MagicDrawProjectEngineContext implements IEngineContext {
         if (runtimeContext != null) runtimeContext.dispose();
         if (navHelper != null) navHelper.dispose();
         
-        if(!useEmptyQueryScope)
-            IProjectChangedListener.MANAGER.removeProjectChangeListener(scope.getProject(), scopeListener);
+        if(!useEmptyQueryScope) {
+			IProjectChangedListener.MANAGER.removeProjectChangeListener(scope.getProject(), scopeListener);
+		}
         
         this.baseIndex = null;
         this.logger = null;

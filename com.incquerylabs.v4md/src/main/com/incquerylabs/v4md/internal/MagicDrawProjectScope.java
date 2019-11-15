@@ -54,14 +54,23 @@ public class MagicDrawProjectScope extends EMFScope {
 	}
 	
 	/**
-	 * A special constructor that provides the ability to create empty scope. 
+	 * A special constructor that provides the ability to create empty scope.
 	 */
-	protected MagicDrawProjectScope(Project project) {
+	private MagicDrawProjectScope(Project project) {
 		super(new ResourceSetImpl(), BASE_OPTIONS); //Mocking a dummy notifier
 		this.project = project;
 		this.enableProfiler = false;
 		this.customNotifiers = new Notifier[0];
 		this.useEmptyQueryScope = true;
+	}
+	
+	/**
+	 * Returns a special empty project scope associated to the given project where only a dummy notifier is indexed. 
+	 * @param project associated to the empty scope
+	 * @return a special empty project scope
+	 */
+	public static MagicDrawProjectScope createMagicDrawEmptyProjectScope(Project project) {
+		return new MagicDrawProjectScope(project);
 	}
 	
 	public MagicDrawProjectScope(Project project, Notifier... notifiers) {
