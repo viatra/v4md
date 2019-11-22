@@ -1,8 +1,14 @@
 package com.incquerylabs.v4md;
 
 import java.awt.Color;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
+
+import javax.annotation.CheckForNull;
+
+import org.apache.log4j.Logger;
 
 import com.incquerylabs.v4md.ui.V4MDResourcesUtil;
 import com.nomagic.annotation.Used;
@@ -12,7 +18,9 @@ import com.nomagic.magicdraw.core.options.AbstractPropertyOptionsGroup;
 import com.nomagic.magicdraw.core.options.EnvironmentOptions.EnvironmentChangeListener;
 import com.nomagic.magicdraw.properties.BooleanProperty;
 import com.nomagic.magicdraw.properties.Property;
+import com.nomagic.magicdraw.properties.PropertyManager;
 import com.nomagic.magicdraw.properties.PropertyResourceProvider;
+import com.nomagic.magicdraw.properties.Style;
 import com.nomagic.magicdraw.ui.notification.HRefRunnable;
 import com.nomagic.magicdraw.ui.notification.Notification;
 import com.nomagic.magicdraw.ui.notification.NotificationManager;
@@ -33,15 +41,18 @@ public class V4MDSpecificEnvironmentOptionsGroup extends AbstractPropertyOptions
 	private static final String USE_EMPTY_QUERY_SCOPE_WARNING_ENABLED = "Model indexing by V4MD is disabled. This can cause unexpected behavior. This feature is only useful for performance analysis. Re-enable indexing if you don't know what you are doing!";
 	private static final String USE_EMPTY_QUERY_SCOPE_WARNING_PROJECTS = "All open projects have to be reloaded to actually disable the model indexing by V4MD on these models!";
 	
-	private BooleanProperty emptyScopeProperty = new BooleanProperty(USE_EMPTY_QUERY_SCOPE_ID, false);
+	private static Logger logger = Logger.getLogger(V4MDSpecificEnvironmentOptionsGroup.class);
+	private Style style;
 	
 	public V4MDSpecificEnvironmentOptionsGroup() {
 		super(V4MD_GROUP_ID);
-		createUseEmptyQueryScope(false);
-
-		Application.getInstance().getEnvironmentOptions().addEnvironmentChangeListener(this);
+		registerEnvironmentChangeListener();
 	}
 
+	private void registerEnvironmentChangeListener() {
+		Application.getInstance().getEnvironmentOptions().addEnvironmentChangeListener(this);
+	}
+	
 	public static V4MDSpecificEnvironmentOptionsGroup getCurrentGroup() {
 		return (V4MDSpecificEnvironmentOptionsGroup) Application.getInstance().getEnvironmentOptions()
 				.getGroup(V4MD_GROUP_ID);
@@ -52,12 +63,26 @@ public class V4MDSpecificEnvironmentOptionsGroup extends AbstractPropertyOptions
 	}
 
 	@Override
+	public void loadOptions(Style style, boolean paramBoolean) {
+		// This method is used, when the option is previously persisted
+		// It was the only place where we could apply the read-only behavior on UI
+		ArrayList<Property> collection = new ArrayList<>();
+		for (PropertyManager manager : style.getManagers()) {
+			setEditability(manager.getProperty(USE_EMPTY_QUERY_SCOPE_ID));
+			collection.addAll(manager.getProperties());
+		}
+		this.getOptions().apply(collection);
+	}
+	
+	@Override
 	public void setDefaultValues() {
 		super.setDefaultValues();
+		createUseEmptyQueryScope(false);
+		setEditability(getProperty(USE_EMPTY_QUERY_SCOPE_ID));		
 	}
 
 	@Used
-	public boolean useEmptyQueryScope() {
+	public boolean isEmptyQueryScopeRequired() {
 		if(!isDeveloper()) {
 			return false; // This property is only available in Developer Mode.
 		}
@@ -75,12 +100,9 @@ public class V4MDSpecificEnvironmentOptionsGroup extends AbstractPropertyOptions
 		return returnValue;
 	}
 
-	public void createUseEmptyQueryScope(boolean enabled) {
+	public void createUseEmptyQueryScope(boolean value) {
+		Property emptyScopeProperty = new BooleanProperty(USE_EMPTY_QUERY_SCOPE_ID, value);
 		emptyScopeProperty.setGroup(V4MD_GROUP_DEBUGGING_NAME);
-		emptyScopeProperty.setEditable(isDeveloper());
-		if(!isDeveloper()) {
-			emptyScopeProperty.setNonEditableReason(V4MD_DEVELOPER_MODE_REQUIRED);
-		}
 		emptyScopeProperty.setResourceProvider(new PropertyResourceProvider() {
 
 			@Override
@@ -93,6 +115,15 @@ public class V4MDSpecificEnvironmentOptionsGroup extends AbstractPropertyOptions
 			}
 		});
 		addProperty(emptyScopeProperty, USE_EMPTY_QUERY_SCOPE_DESCRIPTION_ID);		
+	}
+
+	private void setEditability(@CheckForNull Property p) {
+		if(p == null) return;
+		
+		p.setEditable(isDeveloper());
+		if(!isDeveloper()) {
+			p.setNonEditableReason(V4MD_DEVELOPER_MODE_REQUIRED);
+		}
 	}
 
 	private void notifyWindow(String id, String title, String text) {
@@ -123,6 +154,7 @@ public class V4MDSpecificEnvironmentOptionsGroup extends AbstractPropertyOptions
 	}
 	
 	private boolean isDeveloper() {
+		logger.debug("isDeveloper " + Boolean.getBoolean("DEVELOPER"));
 		return Boolean.getBoolean("DEVELOPER");
 	}
 }

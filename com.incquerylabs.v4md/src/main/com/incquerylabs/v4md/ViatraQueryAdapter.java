@@ -172,7 +172,7 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	}
 	
 	private static MagicDrawProjectScope createMagicDrawProjectScope(Project project, Notifier... notifiers) {
-		if(V4MDSpecificEnvironmentOptionsGroup.getCurrentGroup().useEmptyQueryScope()) {
+		if(V4MDSpecificEnvironmentOptionsGroup.getCurrentGroup().isEmptyQueryScopeRequired()) {
 			return MagicDrawProjectScope.createMagicDrawEmptyProjectScope(project);
 		}
 		return new MagicDrawProjectScope(project, ViatraQueryAdapterOptions.getInstance().isEnableEngineProfiling(), notifiers);
