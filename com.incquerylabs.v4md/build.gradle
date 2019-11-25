@@ -156,7 +156,10 @@ sourceSets {
     main {
         java {
             srcDirs 'src/main'
-        }    
+        } 
+        resources {
+        	srcDirs 'src/resources'
+        }   
     }
     test {
     	java{

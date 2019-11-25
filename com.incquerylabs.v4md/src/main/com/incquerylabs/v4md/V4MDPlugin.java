@@ -51,7 +51,8 @@ public class V4MDPlugin extends com.nomagic.magicdraw.plugins.Plugin {
 	@Override
 	public void init() {
 		Application.getInstance().getProjectsManager().addProjectListener(new V4MDProjectListener());
-		
+		Application.getInstance().getEnvironmentOptions().addGroup(new V4MDSpecificEnvironmentOptionsGroup());
+	
 		// Registers an expression evaluator for generated VIATRA queries
 		ExpressionEvaluationConfigurator.getInstance().registerFactory(BinaryVQLExpression.LANGUAGE,
 				BinaryVQLExpression::new);

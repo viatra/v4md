@@ -168,6 +168,13 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	}
 	
 	private static AdvancedViatraQueryEngine createQueryEngine(Project project, Notifier... notifiers) throws ViatraQueryException {
-		return AdvancedViatraQueryEngine.createUnmanagedEngine(new MagicDrawProjectScope(project, ViatraQueryAdapterOptions.getInstance().isEnableEngineProfiling(), notifiers));
+		return AdvancedViatraQueryEngine.createUnmanagedEngine(createMagicDrawProjectScope(project, notifiers));
+	}
+	
+	private static MagicDrawProjectScope createMagicDrawProjectScope(Project project, Notifier... notifiers) {
+		if(V4MDSpecificEnvironmentOptionsGroup.getCurrentGroup().isEmptyQueryScopeRequired()) {
+			return MagicDrawProjectScope.createMagicDrawEmptyProjectScope(project);
+		}
+		return new MagicDrawProjectScope(project, ViatraQueryAdapterOptions.getInstance().isEnableEngineProfiling(), notifiers);
 	}
 }

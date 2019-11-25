@@ -33,6 +33,7 @@ class MagicDrawProjectEngineContext implements IEngineContext {
     private EMFQueryRuntimeContext runtimeContext;
     
     private IProjectChangedListener scopeListener = this::modelSetUpdated;
+	private boolean useEmptyQueryScope;
     
 	private void modelSetUpdated() {
 		Set<Notifier> customNotifiers = scope.getCustomNotifiers().collect(Collectors.toSet());
@@ -56,12 +57,20 @@ class MagicDrawProjectEngineContext implements IEngineContext {
 		}
 	}
 	
-	public MagicDrawProjectEngineContext(MagicDrawProjectScope scope, IIndexingErrorListener taintListener, boolean enableProfiler, Logger logger) {
+	public MagicDrawProjectEngineContext(MagicDrawProjectScope scope, IIndexingErrorListener taintListener, boolean enableProfiler, Logger logger, boolean useEmptyQueryScope) {
         this.scope = scope;
 		this.enableProfiler = enableProfiler;
         this.logger = logger;
         this.taintListener = taintListener;
-        IProjectChangedListener.MANAGER.addProjectChangeListener(scope.getProject(), scopeListener);
+		this.useEmptyQueryScope = useEmptyQueryScope;
+        
+        if(!useEmptyQueryScope) {
+			IProjectChangedListener.MANAGER.addProjectChangeListener(scope.getProject(), scopeListener);
+		}
+    }
+	
+	public MagicDrawProjectEngineContext(MagicDrawProjectScope scope, IIndexingErrorListener taintListener, boolean enableProfiler, Logger logger) {
+        this(scope, taintListener, enableProfiler, logger, false);
     }
     
     /**
@@ -112,7 +121,9 @@ class MagicDrawProjectEngineContext implements IEngineContext {
         if (runtimeContext != null) runtimeContext.dispose();
         if (navHelper != null) navHelper.dispose();
         
-        IProjectChangedListener.MANAGER.removeProjectChangeListener(scope.getProject(), scopeListener);
+        if(!useEmptyQueryScope) {
+			IProjectChangedListener.MANAGER.removeProjectChangeListener(scope.getProject(), scopeListener);
+		}
         
         this.baseIndex = null;
         this.logger = null;
