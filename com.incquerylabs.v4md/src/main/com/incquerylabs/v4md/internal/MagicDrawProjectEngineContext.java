@@ -25,7 +25,6 @@ import org.eclipse.viatra.query.runtime.matchers.context.IQueryRuntimeContext;
 class MagicDrawProjectEngineContext implements IEngineContext {
 
 	private final MagicDrawProjectScope scope;
-	private final boolean enableProfiler;
     private Logger logger;
     private MagicDrawProjectNavigationHelper navHelper;
     private IBaseIndex baseIndex;
@@ -57,9 +56,8 @@ class MagicDrawProjectEngineContext implements IEngineContext {
 		}
 	}
 	
-	public MagicDrawProjectEngineContext(MagicDrawProjectScope scope, IIndexingErrorListener taintListener, boolean enableProfiler, Logger logger, boolean useEmptyQueryScope) {
+	public MagicDrawProjectEngineContext(MagicDrawProjectScope scope, IIndexingErrorListener taintListener, Logger logger, boolean useEmptyQueryScope) {
         this.scope = scope;
-		this.enableProfiler = enableProfiler;
         this.logger = logger;
         this.taintListener = taintListener;
 		this.useEmptyQueryScope = useEmptyQueryScope;
@@ -69,10 +67,6 @@ class MagicDrawProjectEngineContext implements IEngineContext {
 		}
     }
 	
-	public MagicDrawProjectEngineContext(MagicDrawProjectScope scope, IIndexingErrorListener taintListener, boolean enableProfiler, Logger logger) {
-        this(scope, taintListener, enableProfiler, logger, false);
-    }
-    
     /**
      * @throws ViatraQueryRuntimeException thrown if the navigation helper cannot be initialized
      */
@@ -82,9 +76,7 @@ class MagicDrawProjectEngineContext implements IEngineContext {
     
     private MagicDrawProjectNavigationHelper getNavHelper(boolean ensureInitialized) {
         if (navHelper == null) {
-            navHelper = enableProfiler
-            		? new ProfilingMagicDrawProjectNavigationHelper(null, this.scope.getOptions(), scope.getProject().getRepository().getEventSupport(), logger)
-            		: new MagicDrawProjectNavigationHelper(null, this.scope.getOptions(), scope.getProject().getRepository().getEventSupport(), logger); 
+            navHelper = new MagicDrawProjectNavigationHelper(null, this.scope.getOptions(), scope.getProject().getRepository().getEventSupport(), logger); 
             		
 
             getBaseIndex().addIndexingErrorListener(taintListener);
