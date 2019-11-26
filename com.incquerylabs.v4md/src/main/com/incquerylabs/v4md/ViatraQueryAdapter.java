@@ -9,9 +9,11 @@ import java.util.Set;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.viatra.query.runtime.api.AdvancedViatraQueryEngine;
+import org.eclipse.viatra.query.runtime.api.ViatraQueryEngineOptions;
 import org.eclipse.viatra.query.runtime.exception.ViatraQueryException;
 
 import com.incquerylabs.v4md.internal.MagicDrawProjectScope;
+import com.incquerylabs.v4md.internal.NopQueryBackend;
 import com.nomagic.magicdraw.core.Project;
 
 /**
@@ -168,7 +170,17 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	}
 	
 	private static AdvancedViatraQueryEngine createQueryEngine(Project project, Notifier... notifiers) throws ViatraQueryException {
-		return AdvancedViatraQueryEngine.createUnmanagedEngine(createMagicDrawProjectScope(project, notifiers));
+		ViatraQueryEngineOptions options;
+		if (V4MDSpecificEnvironmentOptionsGroup.getCurrentGroup().isEmptyQueryScopeRequired()) {
+			options = ViatraQueryEngineOptions.defineOptions()
+					.withDefaultBackend(NopQueryBackend.FACTORY)
+					.withDefaultCachingBackend(NopQueryBackend.FACTORY)
+					.withDefaultSearchBackend(NopQueryBackend.FACTORY)
+					.build();
+		} else {
+			options = ViatraQueryEngineOptions.getDefault();
+		}
+		return AdvancedViatraQueryEngine.createUnmanagedEngine(createMagicDrawProjectScope(project, notifiers), options);
 	}
 	
 	private static MagicDrawProjectScope createMagicDrawProjectScope(Project project, Notifier... notifiers) {
