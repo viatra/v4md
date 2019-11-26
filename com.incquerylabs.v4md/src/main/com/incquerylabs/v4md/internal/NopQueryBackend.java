@@ -42,7 +42,7 @@ public class NopQueryBackend implements IQueryBackend {
 
 		@Override
 		public Optional<Long> estimateCardinality(TupleMask groupMask, Accuracy requiredAccuracy) {
-			return Optional.empty();
+			return Optional.of(0l);
 		}
 
 		@Override
@@ -125,7 +125,7 @@ public class NopQueryBackend implements IQueryBackend {
 		}
 	}; 
 	
-	private NopQueryResultProvider instance = new NopQueryResultProvider();
+	private NopQueryResultProvider resultProvider = new NopQueryResultProvider();
 	private boolean isCaching;
 	private IQueryBackendFactory factory;
 	
@@ -144,17 +144,17 @@ public class NopQueryBackend implements IQueryBackend {
 
 	@Override
 	public IQueryResultProvider getResultProvider(PQuery query) {
-		return instance;
+		return resultProvider;
 	}
 
 	@Override
 	public IQueryResultProvider getResultProvider(PQuery query, QueryEvaluationHint hints) {
-		return instance;
+		return resultProvider;
 	}
 
 	@Override
 	public IQueryResultProvider peekExistingResultProvider(PQuery query) {
-		return instance;
+		return resultProvider;
 	}
 
 	@Override
