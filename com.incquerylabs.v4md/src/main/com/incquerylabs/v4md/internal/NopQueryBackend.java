@@ -79,7 +79,7 @@ public class NopQueryBackend implements IQueryBackend {
 		}
 	}
 	
-	public static final IQueryBackendFactory FACTORY = new IQueryBackendFactory() {
+	public static final IQueryBackendFactory CACHING_FACTORY = new IQueryBackendFactory() {
 		
 		@Override
 		public boolean isCaching() {
@@ -93,7 +93,30 @@ public class NopQueryBackend implements IQueryBackend {
 		
 		@Override
 		public IQueryBackend create(IQueryBackendContext context) {
-			return new NopQueryBackend();
+			return new NopQueryBackend(this, true);
+		}
+		
+		@Override
+		public IMatcherCapability calculateRequiredCapability(PQuery query, QueryEvaluationHint hint) {
+			return capability -> true;
+		}
+	}; 
+	
+	public static final IQueryBackendFactory SEARCH_FACTORY = new IQueryBackendFactory() {
+		
+		@Override
+		public boolean isCaching() {
+			return false;
+		}
+		
+		@Override
+		public Class<? extends IQueryBackend> getBackendClass() {
+			return NopQueryBackend.class;
+		}
+		
+		@Override
+		public IQueryBackend create(IQueryBackendContext context) {
+			return new NopQueryBackend(this, false);
 		}
 		
 		@Override
@@ -103,11 +126,20 @@ public class NopQueryBackend implements IQueryBackend {
 	}; 
 	
 	private NopQueryResultProvider instance = new NopQueryResultProvider();
+	private boolean isCaching;
+	private IQueryBackendFactory factory;
 	
 	
+	
+	public NopQueryBackend(IQueryBackendFactory factory, boolean isCaching) {
+		super();
+		this.isCaching = isCaching;
+		this.factory = factory;
+	}
+
 	@Override
 	public boolean isCaching() {
-		return true;
+		return isCaching;
 	}
 
 	@Override
@@ -135,7 +167,7 @@ public class NopQueryBackend implements IQueryBackend {
 
 	@Override
 	public IQueryBackendFactory getFactory() {
-		return FACTORY;
+		return factory;
 	}
 
 }

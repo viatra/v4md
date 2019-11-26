@@ -173,9 +173,9 @@ public class ViatraQueryAdapter extends AdapterImpl {
 		ViatraQueryEngineOptions options;
 		if (V4MDSpecificEnvironmentOptionsGroup.getCurrentGroup().isEmptyQueryScopeRequired()) {
 			options = ViatraQueryEngineOptions.defineOptions()
-					.withDefaultBackend(NopQueryBackend.FACTORY)
-					.withDefaultCachingBackend(NopQueryBackend.FACTORY)
-					.withDefaultSearchBackend(NopQueryBackend.FACTORY)
+					.withDefaultBackend(NopQueryBackend.CACHING_FACTORY)
+					.withDefaultCachingBackend(NopQueryBackend.CACHING_FACTORY)
+					.withDefaultSearchBackend(NopQueryBackend.SEARCH_FACTORY)
 					.build();
 		} else {
 			options = ViatraQueryEngineOptions.getDefault();
