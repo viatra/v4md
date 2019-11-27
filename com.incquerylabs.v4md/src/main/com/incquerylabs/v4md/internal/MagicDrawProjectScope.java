@@ -17,6 +17,7 @@ import org.eclipse.viatra.query.runtime.api.scope.IEngineContext;
 import org.eclipse.viatra.query.runtime.api.scope.IIndexingErrorListener;
 import org.eclipse.viatra.query.runtime.api.scope.QueryScope;
 import org.eclipse.viatra.query.runtime.base.api.BaseIndexOptions;
+import org.eclipse.viatra.query.runtime.base.api.profiler.ProfilerMode;
 import org.eclipse.viatra.query.runtime.emf.EMFBaseIndexWrapper;
 import org.eclipse.viatra.query.runtime.emf.EMFScope;
 
@@ -26,7 +27,6 @@ import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Package;
 public class MagicDrawProjectScope extends EMFScope {
 
 	private final Project project;
-	private final boolean enableProfiler;
 	private Notifier[] customNotifiers;
 	private List<IProjectChangedListener> listeners = new ArrayList<>();
 	private boolean useEmptyQueryScope = false;
@@ -36,6 +36,7 @@ public class MagicDrawProjectScope extends EMFScope {
 	private static final BaseIndexOptions BASE_OPTIONS = new BaseIndexOptions()
 			.withFeatureFilterConfiguration(reference -> reference instanceof EReference && isReferenceToBeFiltered((EReference) reference))
 			.withStrictNotificationMode(false);
+	private static final BaseIndexOptions BASE_OPTIONS_WITH_PROFILER = BASE_OPTIONS.withIndexProfilerMode(ProfilerMode.START_DISABLED);
 	
 	private static boolean isReferenceToBeFiltered(EReference reference) {
 		String name = reference.getName();
@@ -59,7 +60,6 @@ public class MagicDrawProjectScope extends EMFScope {
 	private MagicDrawProjectScope(Project project) {
 		super(new ResourceSetImpl(), BASE_OPTIONS); //Mocking a dummy notifier
 		this.project = project;
-		this.enableProfiler = false;
 		this.customNotifiers = new Notifier[0];
 		this.useEmptyQueryScope = true;
 	}
@@ -79,9 +79,8 @@ public class MagicDrawProjectScope extends EMFScope {
 	
 	public MagicDrawProjectScope(Project project, boolean enableProfiler, Notifier... notifiers) {
 		super(Stream.concat(getProjectModels(project), getCustomNotifiers(notifiers)).collect(Collectors.toSet()),
-				BASE_OPTIONS);
+				enableProfiler ? BASE_OPTIONS_WITH_PROFILER : BASE_OPTIONS);
 		this.project = project;
-		this.enableProfiler = enableProfiler;
 		this.customNotifiers = notifiers;
 	}
 
@@ -92,7 +91,7 @@ public class MagicDrawProjectScope extends EMFScope {
 	@Override
 	protected IEngineContext createEngineContext(ViatraQueryEngine engine, IIndexingErrorListener errorListener,
 			Logger logger) {
-		return new MagicDrawProjectEngineContext(this, errorListener, enableProfiler, logger, useEmptyQueryScope);
+		return new MagicDrawProjectEngineContext(this, errorListener, logger, useEmptyQueryScope);
 	}
 	
 	public void projectStructureUpdated() {
