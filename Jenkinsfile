@@ -75,13 +75,13 @@ pipeline {
             office365ConnectorSend message: "Build Unstable - ${env.JOB_NAME} <${env.BUILD_URL}>", 
 				status:"Unstable", 
 				color: "fcb019",
-				webhookUrl:TEAMS_NOTIFICATION_URL
+				webhookUrl:$TEAMS_NOTIFICATION_URL
         }
         failure {
             office365ConnectorSend message: "Build Failed - ${env.JOB_NAME} <${env.BUILD_URL}>", 
 				status:"Failure",
 				color: "f21607",
-				webhookUrl:TEAMS_NOTIFICATION_URL
+				webhookUrl:$TEAMS_NOTIFICATION_URL
         }
 	}
 }
