@@ -19,7 +19,7 @@ pipeline {
 	}
 	environment {
 		VERSION_STRINGS = "${params.PLUGIN_VERSION ? '-Pversion=' + params.PLUGIN_VERSION : ''} ${params.RELEASE_VERSION ? '-PviatraVersion=' + params.RELEASE_VERSION : ''} ${params.INCUBATION_VERSION ? '-PviatraIncubationVersion=' + params.INCUBATION_VERSION : ''} ${params.BUILD_NUMBER ? '-PbuildNumber=' + params.BUILD_NUMBER : ''}"
-		TEAMS_NOTIFICATION_URL = "credentials('v4md-teams-channel-url')"
+		TEAMS_NOTIFICATION_URL = credentials('v4md-teams-channel-url')
 	}
 	
 	tools { 
@@ -69,19 +69,19 @@ pipeline {
             office365ConnectorSend message: "Build Successful - ${env.JOB_NAME} <${env.BUILD_URL}>", 
 				status:"Success",
 				color: "00db00",
-				webhookUrl:$TEAMS_NOTIFICATION_URL
+				webhookUrl:"${TEAMS_NOTIFICATION_URL}"
         }
         unstable {
             office365ConnectorSend message: "Build Unstable - ${env.JOB_NAME} <${env.BUILD_URL}>", 
 				status:"Unstable", 
 				color: "fcb019",
-				webhookUrl:$TEAMS_NOTIFICATION_URL
+				webhookUrl:"${TEAMS_NOTIFICATION_URL}"
         }
         failure {
             office365ConnectorSend message: "Build Failed - ${env.JOB_NAME} <${env.BUILD_URL}>", 
 				status:"Failure",
 				color: "f21607",
-				webhookUrl:$TEAMS_NOTIFICATION_URL
+				webhookUrl:"${TEAMS_NOTIFICATION_URL}"
         }
 	}
 }
