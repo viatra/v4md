@@ -68,17 +68,17 @@ pipeline {
 		success {
             		office365ConnectorSend status: "Success",
 				color: "00db00",
-				webhookUrl:"${TEAMS_NOTIFICATION_URL}"
+				webhookUrl: "${TEAMS_NOTIFICATION_URL}"
         	}
         	unstable {
             		office365ConnectorSend status: "Unstable",
 				color: "fcb019",
-				webhookUrl:"${TEAMS_NOTIFICATION_URL}"
+				webhookUrl: "${TEAMS_NOTIFICATION_URL}"
         	}
         	failure {
             		office365ConnectorSend status: "Failure",
 				color: "f21607",
-				webhookUrl:"${TEAMS_NOTIFICATION_URL}"
+				webhookUrl: "${TEAMS_NOTIFICATION_URL}"
         	}
 	}
 }
