@@ -66,22 +66,19 @@ pipeline {
 		}
 		
 		success {
-            office365ConnectorSend message: "Build Successful - ${env.JOB_NAME} <${env.BUILD_URL}>", 
-				status:"Success",
+            		office365ConnectorSend status: "Success",
 				color: "00db00",
 				webhookUrl:"${TEAMS_NOTIFICATION_URL}"
-        }
-        unstable {
-            office365ConnectorSend message: "Build Unstable - ${env.JOB_NAME} <${env.BUILD_URL}>", 
-				status:"Unstable", 
+        	}
+        	unstable {
+            		office365ConnectorSend status: "Unstable",
 				color: "fcb019",
 				webhookUrl:"${TEAMS_NOTIFICATION_URL}"
-        }
-        failure {
-            office365ConnectorSend message: "Build Failed - ${env.JOB_NAME} <${env.BUILD_URL}>", 
-				status:"Failure",
+        	}
+        	failure {
+            		office365ConnectorSend status: "Failure",
 				color: "f21607",
 				webhookUrl:"${TEAMS_NOTIFICATION_URL}"
-        }
+        	}
 	}
 }
