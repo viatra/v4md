@@ -86,8 +86,8 @@ configurations {
 }
 
 dependencies {
-    preCompile group: 'com.nomagic', name: 'magicdraw', version: '190sp3', classifier: 'MagicDraw_190_sp3_no_install', ext: 'zip'
-    preCompile group: 'com.nomagic', name: 'sysml', version: '190sp3', classifier: 'SysML_Plugin_190_sp3_bundle', ext: 'zip'
+    preCompile group: 'com.nomagic', name: 'magicdraw', version: '190sp2', classifier: 'MagicDraw_190_sp2_no_install', ext: 'zip'
+    preCompile group: 'com.nomagic', name: 'sysml', version: '190sp2', classifier: 'SysML_Plugin_190_sp2_bundle', ext: 'zip'
 	
     def exclusions = {
         exclude group: 'com.google.guava', module: 'guava'
