@@ -5,20 +5,14 @@ pipeline {
 	} 
 	parameters {
 		string(name: 'RELEASE_VERSION', defaultValue: '', 
-			description: 'Set this parameter to the VIATRA version this V4MD build should include (e.g. 2.0.0.M3) and set the project version version accordingly. Leave it empty to skip this step.')
-		string(name: 'INCUBATION_VERSION', defaultValue: '', 
-			description: 'Set this parameter to the corresponding incubation version of the related VIATRA release.')
-		string(name: 'PLUGIN_VERSION', defaultValue: '', 
-			description: 'Set this parameter to the desired V4MD version.')
-		string(name: 'BUILD_NUMBER', defaultValue: '', 
-			description: 'Set this parameter to the desired MD internal version.')
+			description: 'Set this parameter to update the project version version accordingly, should be used to remove -SNAPSHOT from version numbers. Leave it empty to keep version from the repository.')
 	}
 	// Keep only the last 5 builds
 	options {
 		buildDiscarder(logRotator(numToKeepStr: '5'))
 	}
 	environment {
-		VERSION_STRINGS = "${params.PLUGIN_VERSION ? '-Pversion=' + params.PLUGIN_VERSION : ''} ${params.RELEASE_VERSION ? '-PviatraVersion=' + params.RELEASE_VERSION : ''} ${params.INCUBATION_VERSION ? '-PviatraIncubationVersion=' + params.INCUBATION_VERSION : ''} ${params.BUILD_NUMBER ? '-PbuildNumber=' + params.BUILD_NUMBER : ''}"
+		VERSION_STRINGS = " ${params.RELEASE_VERSION ? '-Pversion=' + params.RELEASE_VERSION : ''} "
 		TEAMS_NOTIFICATION_URL = credentials('v4md-teams-channel-url')
 	}
 	
