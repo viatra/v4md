@@ -101,7 +101,6 @@ dependencies {
 
     pub group: 'org.eclipse.viatra', name: 'viatra-query-runtime', version: viatraVersion, exclusions
     pub group: 'org.eclipse.viatra', name: 'viatra-transformation-runtime', version: viatraVersion, exclusions
-    pub group: 'org.eclipse.viatra', name: 'viatra-transformation-debugger-runtime', version: viatraIncubationVersion, exclusions
     
         
     
