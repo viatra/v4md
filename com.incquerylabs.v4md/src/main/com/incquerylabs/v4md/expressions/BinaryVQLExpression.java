@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.viatra.query.runtime.api.ViatraQueryEngine;
+import org.eclipse.viatra.query.runtime.exception.ViatraQueryException;
 
 import com.incquerylabs.v4md.ViatraQueryAdapter;
 import com.nomagic.magicdraw.core.Project;
@@ -33,6 +34,7 @@ import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Element;
 public class BinaryVQLExpression implements ParameterizedExpression {
 
 	public static final String LANGUAGE = "Binary VQL";
+	public static final String MESSAGE_ADAPTER_NOT_AVAILABLE = "ViatraQueryAdapter is not available for project '%s' yet.";
 
 	protected Project project;
 	protected String className;
@@ -51,7 +53,10 @@ public class BinaryVQLExpression implements ParameterizedExpression {
 	}
 
 	public Object getValue(Element sourceParameter, ValueContext context) throws Exception {
-		ViatraQueryEngine engine = ViatraQueryAdapter.getAdapter(project).get().getEngine();
+		ViatraQueryEngine engine = ViatraQueryAdapter.getAdapter(project).orElseThrow(()-> {
+										String message = String.format(MESSAGE_ADAPTER_NOT_AVAILABLE, project.getName());
+										return new ViatraQueryException(message, message);
+									}).getInitializedEngineChecked();
 
 		List<Object> returnSet = new ArrayList<>();
 		if (provider != null) {
@@ -63,7 +68,7 @@ public class BinaryVQLExpression implements ParameterizedExpression {
 
 	@Override
 	public Class<?> getResultType() {
-		return provider != null ? null : provider.getResultType();
+		return provider == null ? null : provider.getResultType();
 	}
 
 }

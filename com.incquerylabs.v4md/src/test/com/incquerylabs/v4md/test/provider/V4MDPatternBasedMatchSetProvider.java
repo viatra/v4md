@@ -1,7 +1,6 @@
 package com.incquerylabs.v4md.test.provider;
 
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.viatra.query.runtime.api.AdvancedViatraQueryEngine;
 import org.eclipse.viatra.query.runtime.api.IPatternMatch;
 import org.eclipse.viatra.query.runtime.api.IQuerySpecification;
 import org.eclipse.viatra.query.runtime.api.ViatraQueryMatcher;
@@ -33,7 +32,7 @@ public class V4MDPatternBasedMatchSetProvider implements IMatchSetModelProvider 
 	public <Match extends IPatternMatch> MatchSetRecord getMatchSetRecord(EMFScope scope,
 			IQuerySpecification<? extends ViatraQueryMatcher<Match>> querySpecification, Match filter) {
 
-		ViatraQueryMatcher<Match> matcher = adapter.getEngine().getMatcher(querySpecification);
+		ViatraQueryMatcher<Match> matcher = adapter.getInitializedEngineChecked().getMatcher(querySpecification);
         return helper.createMatchSetRecordForMatcher(matcher,
                 filter == null ? matcher.newEmptyMatch() : filter);
 	}
