@@ -107,28 +107,32 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	}
 	
 	private Optional<AdvancedViatraQueryEngine> initializeEngine() {
-		if(!isInitialized && ProjectUtilities.isLoaded(project.getPrimaryProject())) {
-			engine = Optional.of(createQueryEngine(project, notifiers));
-		}
-		isInitialized = engine.map(e -> {
-				boolean thereWasException = false;
-				try {
-					e.getBaseIndex().coalesceTraversals(() -> {
-						initializationActions.forEach(action -> action.accept(e));
-						return null;
-					});
-					initializationActions.clear();
-					notifiers = new Notifier[0];
-				} catch (InvocationTargetException ite) {
-					LOGGER.warn(MESSAGE_ENGINE_PREPARE_ACTION_ERROR);
-					engine = null;
-					thereWasException = true;
+		if(!isInitialized) {
+			synchronized(this) {
+				if(!isInitialized && ProjectUtilities.isLoaded(project.getPrimaryProject())) {
+					engine = Optional.of(createQueryEngine(project, notifiers));
 				}
-				return !thereWasException;
-			}).orElseGet(() -> {
-				LOGGER.warn(MESSAGE_ENGINE_NOT_READY);
-				return false;
-			});
+				isInitialized = engine.map(e -> {
+						boolean thereWasException = false;
+						try {
+							e.getBaseIndex().coalesceTraversals(() -> {
+								initializationActions.forEach(action -> action.accept(e));
+								return null;
+							});
+							initializationActions.clear();
+							notifiers = new Notifier[0];
+						} catch (InvocationTargetException ite) {
+							LOGGER.warn(MESSAGE_ENGINE_PREPARE_ACTION_ERROR);
+							engine = null;
+							thereWasException = true;
+						}
+						return !thereWasException;
+					}).orElseGet(() -> {
+						LOGGER.warn(MESSAGE_ENGINE_NOT_READY);
+						return false;
+					});
+			}
+		}
 		return engine;
 	}
 	
@@ -159,6 +163,7 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	 */
 	public void dispose(){
 		engine.ifPresent(AdvancedViatraQueryEngine::dispose);
+		isInitialized = false;
 		project.getPrimaryModel().eAdapters().remove(this);
 	}
 	
