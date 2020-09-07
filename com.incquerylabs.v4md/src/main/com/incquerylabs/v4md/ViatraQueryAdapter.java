@@ -52,7 +52,7 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	/**
 	 * @return initialized engine
 	 * @throws ViatraQueryException if engine cannot be initialized yet
-	 * @deprecated Use {@link #getInitializedEngineChecked()} instead
+	 * @deprecated Use {@link #getInitializedEngineChecked()} or {@link #getInitializedEngine()} instead
 	 */
 	@Deprecated
 	public AdvancedViatraQueryEngine getEngine() {
