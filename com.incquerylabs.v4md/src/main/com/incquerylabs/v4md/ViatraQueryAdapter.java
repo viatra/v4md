@@ -1,6 +1,7 @@
 
 package com.incquerylabs.v4md;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -32,6 +33,8 @@ import com.nomagic.magicdraw.core.ProjectUtilities;
  * 
  */
 public class ViatraQueryAdapter extends AdapterImpl {
+	public static final String MESSAGE_ENGINE_PREPARE_ACTION_ERROR = 
+			"Required actions cannot be executed on the VIATRA engine!";
 	public static final String MESSAGE_ENGINE_NOT_READY = 
 			"Cannot initialize VIATRA Query Engine until the project is loaded.";
 	private static final Logger LOGGER = Logger.getLogger(ViatraQueryAdapter.class);
@@ -79,7 +82,7 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	 * 
 	 * @return the initialized VIATRA engine if possible, otherwise an empty Optional
 	 * @see ViatraQueryAdapter#getInitializedEngine(Consumer)
-	 * @see ViatraQueryAdapter#initializeQueryWhenEngineReady(IQuerySpecification)
+	 * @see ViatraQueryAdapter#requireMatcher(IQuerySpecification)
 	 */
 	public Optional<AdvancedViatraQueryEngine> getInitializedEngine() {
 		if(!isInitialized) {
@@ -106,15 +109,26 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	private Optional<AdvancedViatraQueryEngine> initializeEngine() {
 		if(!isInitialized && ProjectUtilities.isLoaded(project.getPrimaryProject())) {
 			engine = Optional.of(createQueryEngine(project, notifiers));
-			notifiers = new Notifier[0];
-			isInitialized = true;
 		}
-		if(!isInitialized) {
-			LOGGER.warn(MESSAGE_ENGINE_NOT_READY);
-		} else {
-			initializationActions.forEach(action -> action.accept(engine.get()));
-			initializationActions.clear();
-		}
+		isInitialized = engine.map(e -> {
+				boolean thereWasException = false;
+				try {
+					e.getBaseIndex().coalesceTraversals(() -> {
+						initializationActions.forEach(action -> action.accept(e));
+						return null;
+					});
+					initializationActions.clear();
+					notifiers = new Notifier[0];
+				} catch (InvocationTargetException ite) {
+					LOGGER.warn(MESSAGE_ENGINE_PREPARE_ACTION_ERROR);
+					engine = null;
+					thereWasException = true;
+				}
+				return !thereWasException;
+			}).orElseGet(() -> {
+				LOGGER.warn(MESSAGE_ENGINE_NOT_READY);
+				return false;
+			});
 		return engine;
 	}
 	
@@ -128,7 +142,7 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	 * @return the matcher if it could haven been initialized or an empty optional if not
 	 */
 	public <M extends ViatraQueryMatcher<? extends IPatternMatch>> Optional<M> 
-			initializeQueryWhenEngineReady(IQuerySpecification<M> querySpecification) {
+			requireMatcher(IQuerySpecification<M> querySpecification) {
 		Function<AdvancedViatraQueryEngine, M> getMatcher = e -> e.getMatcher(querySpecification);
 		Optional<M> matcher = getInitializedEngine().map(getMatcher::apply);
 		if(!matcher.isPresent()) {
