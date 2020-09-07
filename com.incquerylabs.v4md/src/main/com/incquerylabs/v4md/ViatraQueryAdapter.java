@@ -122,8 +122,8 @@ public class ViatraQueryAdapter extends AdapterImpl {
 							initializationActions.clear();
 							notifiers = new Notifier[0];
 						} catch (InvocationTargetException ite) {
-							LOGGER.warn(MESSAGE_ENGINE_PREPARE_ACTION_ERROR);
-							engine = null;
+							LOGGER.error(MESSAGE_ENGINE_PREPARE_ACTION_ERROR, ite);
+							e.dispose();
 							thereWasException = true;
 						}
 						return !thereWasException;
@@ -131,6 +131,9 @@ public class ViatraQueryAdapter extends AdapterImpl {
 						LOGGER.warn(MESSAGE_ENGINE_NOT_READY);
 						return false;
 					});
+				if(!isInitialized) {
+					engine = Optional.empty();
+				}
 			}
 		}
 		return engine;
