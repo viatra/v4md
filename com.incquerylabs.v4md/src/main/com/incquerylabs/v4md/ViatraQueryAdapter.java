@@ -33,7 +33,7 @@ import com.nomagic.magicdraw.core.ProjectUtilities;
  */
 public class ViatraQueryAdapter extends AdapterImpl {
 	public static final String MESSAGE_ENGINE_NOT_READY = 
-			"VIATRA engine is not available while the primary project is not loaded!";
+			"Cannot initialize VIATRA Query Engine until the project is loaded.";
 	private static final Logger LOGGER = Logger.getLogger(ViatraQueryAdapter.class);
 	
 	private Optional<AdvancedViatraQueryEngine> engine = Optional.empty();
