@@ -53,9 +53,9 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	}
 
 	/**
-	 * @return initialized engine
-	 * @throws ViatraQueryException if engine cannot be initialized yet
 	 * @deprecated Use {@link #getInitializedEngineChecked()} or {@link #getInitializedEngine()} instead
+	 * @return initialized engine
+	 * @throws ViatraQueryException if no query engine was initialized before and initialization failed
 	 */
 	@Deprecated
 	public AdvancedViatraQueryEngine getEngine() {
@@ -63,11 +63,21 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	}
 
 	/**
-	 * Try to initialize the VIATRA engine if it hasn!t been before and if the 
-	 * initialization is not possible, it throws a ViatraQueryException.
-	 * 
+	 * Returns an initialized VIATRA query engine stored in the adapter.
+	 * If a query engine was initialized earlier, that engine will be returned;
+	 * if no query engine was initialized earlier, a new one is created. If
+	 * the initialization fails, e.g. the engine was requested before the
+	 * model was loaded entirely, a {@link ViatraQueryException} is thrown.
+	 * </p>
+	 * This method should only be called if the engine initialization is
+	 * expected to be completed successfully, otherwise it is recommended
+	 * to use {@link #getInitializedEngine()},
+	 * {@link #getInitializedEngine(Consumer)}
+	 * or {@link #requireMatcher(IQuerySpecification)} instead
+	 * as they are aimed to handle the initialization issues better.
+
 	 * @return the initialized engine
-	 * @throws ViatraQueryException if initialized engine is not available yet
+	 * @throws ViatraQueryException if no query engine was initialized before and initialization failed
 	 */
 	public AdvancedViatraQueryEngine getInitializedEngineChecked() {
 		return getInitializedEngine()
@@ -101,7 +111,11 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	 */
 	public Optional<AdvancedViatraQueryEngine> getInitializedEngine(Consumer<AdvancedViatraQueryEngine> action) {
 		if(action != null) {
-			initializationActions.add(action);
+			if(engine.isPresent()) {
+				action.accept(engine.get());
+			} else {
+				initializationActions.add(action);
+			}
 		}
 		return getInitializedEngine();
 	}
