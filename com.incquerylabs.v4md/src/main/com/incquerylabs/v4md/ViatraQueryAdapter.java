@@ -132,7 +132,7 @@ public class ViatraQueryAdapter extends AdapterImpl {
 						notifiers = new Notifier[0];
 					} catch (InvocationTargetException ite) {
 						// we can invalidate our engine because there is two option for this exception:
-						// 1. we throw something directly from the callable (but we don't do this)
+						// 1. an exception is thrown directly by the action (which is not supported)
 						// 2. the engine got tainted because of an internal error, making the engine unusable
 						// so even if we execute some action later than the  real initialization of the engine,
 						// the engine will brake down and can't be used anymore
