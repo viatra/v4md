@@ -133,7 +133,7 @@ public class ViatraQueryAdapter extends AdapterImpl {
 					} catch (InvocationTargetException ite) {
 						// we can invalidate our engine because there is two option for this exception:
 						// 1. we throw something directly from the callable (but we don't do this)
-						// 2. the engine goes to tainted and throws something what is wrapped into this -> from this point the engine is unusable
+						// 2. the engine got tainted because of an internal error, making the engine unusable
 						// so even if we execute some action later than the  real initialization of the engine,
 						// the engine will brake down and can't be used anymore
 						LOGGER.error(MESSAGE_ENGINE_PREPARE_ACTION_ERROR, ite);
