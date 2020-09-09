@@ -104,7 +104,7 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	 * If not, the action will be registered in the list of actions which need to be done 
 	 * when the engine is ready and will be executed when the engine become available.
 	 * 
-	 * @param action the operation which would like to use the initialized VIATRA engine
+	 * @param action the operation which would like to use the initialized VIATRA engine - the action should not throw an exception during execution
 	 * @return the initialized VIATRA engine of it is available, otherwise empty Optional.
 	 */
 	public void executeActionOnEngine(Consumer<AdvancedViatraQueryEngine> action) {
