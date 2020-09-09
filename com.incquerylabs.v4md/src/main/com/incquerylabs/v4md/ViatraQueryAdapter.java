@@ -9,16 +9,14 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 import java.util.function.Consumer;
-import java.util.function.Function;
 
 import org.apache.log4j.Logger;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.viatra.query.runtime.api.AdvancedViatraQueryEngine;
-import org.eclipse.viatra.query.runtime.api.IPatternMatch;
+import org.eclipse.viatra.query.runtime.api.IQueryGroup;
 import org.eclipse.viatra.query.runtime.api.IQuerySpecification;
 import org.eclipse.viatra.query.runtime.api.ViatraQueryEngineOptions;
-import org.eclipse.viatra.query.runtime.api.ViatraQueryMatcher;
 import org.eclipse.viatra.query.runtime.exception.ViatraQueryException;
 
 import com.incquerylabs.v4md.internal.MagicDrawProjectScope;
@@ -72,8 +70,8 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	 * This method should only be called if the engine initialization is
 	 * expected to be completed successfully, otherwise it is recommended
 	 * to use {@link #getInitializedEngine()},
-	 * {@link #getInitializedEngine(Consumer)}
-	 * or {@link #requireMatcher(IQuerySpecification)} instead
+	 * {@link #executeActionOnEngine(Consumer)}
+	 * or {@link #requireQueries(IQuerySpecification)} instead
 	 * as they are aimed to handle the initialization issues better.
 
 	 * @return the initialized engine
@@ -91,8 +89,8 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	 * every initialization action registered before will be executed.
 	 * 
 	 * @return the initialized VIATRA engine if possible, otherwise an empty Optional
-	 * @see ViatraQueryAdapter#getInitializedEngine(Consumer)
-	 * @see ViatraQueryAdapter#requireMatcher(IQuerySpecification)
+	 * @see ViatraQueryAdapter#executeActionOnEngine(Consumer)
+	 * @see ViatraQueryAdapter#requireQueries(IQuerySpecification)
 	 */
 	public Optional<AdvancedViatraQueryEngine> getInitializedEngine() {
 		if(!isInitialized) {
@@ -109,67 +107,79 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	 * @param action the operation which would like to use the initialized VIATRA engine
 	 * @return the initialized VIATRA engine of it is available, otherwise empty Optional.
 	 */
-	public Optional<AdvancedViatraQueryEngine> getInitializedEngine(Consumer<AdvancedViatraQueryEngine> action) {
+	public void executeActionOnEngine(Consumer<AdvancedViatraQueryEngine> action) {
 		if(action != null) {
-			if(engine.isPresent()) {
-				action.accept(engine.get());
-			} else {
-				initializationActions.add(action);
-			}
+			initializationActions.add(action);
 		}
-		return getInitializedEngine();
+		// we use initializeEngine instead of getInitializedEngine because the initializeEngine
+		// executes the actions anyway while the other is just when the initialization is not complete
+		initializeEngine();
 	}
 	
 	private Optional<AdvancedViatraQueryEngine> initializeEngine() {
-		if(!isInitialized) {
-			synchronized(this) {
-				if(!isInitialized && ProjectUtilities.isLoaded(project.getPrimaryProject())) {
-					engine = Optional.of(createQueryEngine(project, notifiers));
-				}
-				isInitialized = engine.map(e -> {
-						boolean thereWasException = false;
-						try {
-							e.getBaseIndex().coalesceTraversals(() -> {
-								initializationActions.forEach(action -> action.accept(e));
-								return null;
-							});
-							initializationActions.clear();
-							notifiers = new Notifier[0];
-						} catch (InvocationTargetException ite) {
-							LOGGER.error(MESSAGE_ENGINE_PREPARE_ACTION_ERROR, ite);
-							e.dispose();
-							thereWasException = true;
-						}
-						return !thereWasException;
-					}).orElseGet(() -> {
-						LOGGER.warn(MESSAGE_ENGINE_NOT_READY);
-						return false;
-					});
-				if(!isInitialized) {
-					engine = Optional.empty();
-				}
+		synchronized(this) {
+			if(!isInitialized && ProjectUtilities.isLoaded(project.getPrimaryProject())) {
+				engine = Optional.of(createQueryEngine(project, notifiers));
+			}
+			isInitialized = engine.map(e -> {
+					boolean thereWasException = false;
+					try {
+						e.getBaseIndex().coalesceTraversals(() -> {
+							initializationActions.forEach(action -> action.accept(e));
+							return null;
+						});
+						initializationActions.clear();
+						notifiers = new Notifier[0];
+					} catch (InvocationTargetException ite) {
+						// we can invalidate our engine because there is two option for this exception:
+						// 1. we throw something directly from the callable (but we don't do this)
+						// 2. the engine goes to tainted and throws something what is wrapped into this -> from this point the engine is unusable
+						// so even if we execute some action later than the  real initialization of the engine,
+						// the engine will brake down and can't be used anymore
+						LOGGER.error(MESSAGE_ENGINE_PREPARE_ACTION_ERROR, ite);
+						e.dispose();
+						thereWasException = true;
+					}
+					return !thereWasException;
+				}).orElseGet(() -> {
+					LOGGER.warn(MESSAGE_ENGINE_NOT_READY);
+					return false;
+				});
+			if(!isInitialized) {
+				engine = Optional.empty();
 			}
 		}
 		return engine;
 	}
 	
 	/**
-	 * Create a matcher for the VIATRA query engine of the adapter. If it cannot be created
-	 * immediately, the initialization of the matcher will be done when the engine is ready.
+	 * Prepare queries on the VIATRA query engine of the adapter. If it cannot be created
+	 * immediately, the initialization of the queries will be done when the engine is ready.
 	 * 
-	 * @param <M> The IQuerySpecification implementation specific type of the 
-	 * ViatraQueryMatcher which would be initialized by this method
-	 * @param querySpecification is the query for which an initialized matcher is needed
-	 * @return the matcher if it could haven been initialized or an empty optional if not
+	 * @param querySpecifications the initializable queries
 	 */
-	public <M extends ViatraQueryMatcher<? extends IPatternMatch>> Optional<M> 
-			requireMatcher(IQuerySpecification<M> querySpecification) {
-		Function<AdvancedViatraQueryEngine, M> getMatcher = e -> e.getMatcher(querySpecification);
-		Optional<M> matcher = getInitializedEngine().map(getMatcher::apply);
-		if(!matcher.isPresent()) {
-			initializationActions.add(getMatcher::apply);
-		}
-		return matcher;
+	public void requireQueries(IQuerySpecification<?>... querySpecifications) {
+		Consumer<AdvancedViatraQueryEngine> initializer = e -> {
+			for (IQuerySpecification<?> querySpecification : querySpecifications) {
+				e.getMatcher(querySpecification);
+			}
+		};
+		executeActionOnEngine(initializer);
+	}
+	
+	/**
+	 * Prepare queries on the VIATRA query engine of the adapter. If it cannot be created
+	 * immediately, the initialization of the queries will be done when the engine is ready.
+	 * 
+	 * @param queryGroups the initializable queries
+	 */
+	public void requireQueries(IQueryGroup... queryGroups) {
+		Consumer<AdvancedViatraQueryEngine> initializer = e -> {
+			for (IQueryGroup queryGroup : queryGroups) {
+				queryGroup.prepare(e);
+			}
+		};
+		executeActionOnEngine(initializer);
 	}
 	
 	/**
