@@ -134,7 +134,6 @@ public class ViatraQueryAdapter extends AdapterImpl {
 						// we can invalidate our engine because there is two option for this exception:
 						// 1. an exception is thrown directly by the action (which is not supported)
 						// 2. the engine got tainted because of an internal error, making the engine unusable
-						// so even if we execute some action later than the  real initialization of the engine,
 						// the engine will brake down and can't be used anymore
 						LOGGER.error(MESSAGE_ENGINE_PREPARE_ACTION_ERROR, ite);
 						e.dispose();
