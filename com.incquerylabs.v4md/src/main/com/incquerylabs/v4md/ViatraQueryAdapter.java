@@ -100,12 +100,12 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	}
 	
 	/**
-	 * Checks if an engine is available and execute the given action on it if yes.
-	 * If not, the action will be registered in the list of actions which need to be done 
-	 * when the engine is ready and will be executed when the engine become available.
+	 * Executes the give action on the engine associated with the current adapter.
+	 * If the engine is not yet initialized, the action is saved and will be executed
+	 * later when the engine gets initialized.
 	 * 
-	 * @param action the operation which would like to use the initialized VIATRA engine - the action should not throw an exception during execution
-	 * @return the initialized VIATRA engine of it is available, otherwise empty Optional.
+	 * @param action the operation which would like to use the initialized VIATRA engine - 
+	 *               the action should not throw an exception during execution
 	 */
 	public void executeActionOnEngine(Consumer<AdvancedViatraQueryEngine> action) {
 		if(action != null) {
