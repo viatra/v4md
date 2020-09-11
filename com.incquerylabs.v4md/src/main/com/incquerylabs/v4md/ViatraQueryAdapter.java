@@ -1,20 +1,28 @@
 
 package com.incquerylabs.v4md;
 
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
+import java.util.function.Consumer;
 
+import org.apache.log4j.Logger;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.viatra.query.runtime.api.AdvancedViatraQueryEngine;
+import org.eclipse.viatra.query.runtime.api.IQueryGroup;
+import org.eclipse.viatra.query.runtime.api.IQuerySpecification;
 import org.eclipse.viatra.query.runtime.api.ViatraQueryEngineOptions;
 import org.eclipse.viatra.query.runtime.exception.ViatraQueryException;
 
 import com.incquerylabs.v4md.internal.MagicDrawProjectScope;
 import com.incquerylabs.v4md.internal.NopQueryBackend;
 import com.nomagic.magicdraw.core.Project;
+import com.nomagic.magicdraw.core.ProjectUtilities;
 
 /**
  * Centralized management class for managing the lifecycle of query engines. The
@@ -23,19 +31,153 @@ import com.nomagic.magicdraw.core.Project;
  * 
  */
 public class ViatraQueryAdapter extends AdapterImpl {
+	public static final String MESSAGE_ENGINE_PREPARE_ACTION_ERROR = 
+			"Required actions cannot be executed on the VIATRA engine!";
+	public static final String MESSAGE_ENGINE_NOT_READY = 
+			"Cannot initialize VIATRA Query Engine until the project is loaded.";
+	private static final Logger LOGGER = Logger.getLogger(ViatraQueryAdapter.class);
 	
-	private AdvancedViatraQueryEngine engine;
+	private Optional<AdvancedViatraQueryEngine> engine = Optional.empty();
 	private Project project;
 	private boolean engineDisposable = true;
 	private Set<String> identifierMap = new HashSet<>();
+	private boolean isInitialized = false;
+	private Notifier[] notifiers;
+	private List<Consumer<AdvancedViatraQueryEngine>> initializationActions = new ArrayList<>();
 
-	private ViatraQueryAdapter(AdvancedViatraQueryEngine engine, Project project) {
-		this.engine = engine;
+	private ViatraQueryAdapter(Project project, Notifier[] notifiers) {
 		this.project = project;
+		this.notifiers = notifiers;
+	}
+
+	/**
+	 * @deprecated Use {@link #getInitializedEngineChecked()} or {@link #getInitializedEngine()} instead
+	 * @return initialized engine
+	 * @throws ViatraQueryException if no query engine was initialized before and initialization failed
+	 */
+	@Deprecated
+	public AdvancedViatraQueryEngine getEngine() {
+		return getInitializedEngineChecked();
+	}
+
+	/**
+	 * Returns an initialized VIATRA query engine stored in the adapter.
+	 * If a query engine was initialized earlier, that engine will be returned;
+	 * if no query engine was initialized earlier, a new one is created. If
+	 * the initialization fails, e.g. the engine was requested before the
+	 * model was loaded entirely, a {@link ViatraQueryException} is thrown.
+	 * </p>
+	 * This method should only be called if the engine initialization is
+	 * expected to be completed successfully, otherwise it is recommended
+	 * to use {@link #getInitializedEngine()},
+	 * {@link #executeActionOnEngine(Consumer)}
+	 * or {@link #requireQueries(IQuerySpecification)} instead
+	 * as they are aimed to handle the initialization issues better.
+
+	 * @return the initialized engine
+	 * @throws ViatraQueryException if no query engine was initialized before and initialization failed
+	 */
+	public AdvancedViatraQueryEngine getInitializedEngineChecked() {
+		return getInitializedEngine()
+				.orElseThrow(() ->
+					new ViatraQueryException(MESSAGE_ENGINE_NOT_READY, MESSAGE_ENGINE_NOT_READY));
+	}
+
+	/**
+	 * Provide the initialized VIATRA if possible.<br />
+	 * If the engine hasn't been initialized but it can be, then it will be initialize and
+	 * every initialization action registered before will be executed.
+	 * 
+	 * @return the initialized VIATRA engine if possible, otherwise an empty Optional
+	 * @see ViatraQueryAdapter#executeActionOnEngine(Consumer)
+	 * @see ViatraQueryAdapter#requireQueries(IQuerySpecification)
+	 */
+	public Optional<AdvancedViatraQueryEngine> getInitializedEngine() {
+		if(!isInitialized) {
+			initializeEngine();
+		}
+		return engine;
 	}
 	
-	public AdvancedViatraQueryEngine getEngine() {
+	/**
+	 * Executes the give action on the engine associated with the current adapter.
+	 * If the engine is not yet initialized, the action is saved and will be executed
+	 * later when the engine gets initialized.
+	 * 
+	 * @param action the operation which would like to use the initialized VIATRA engine - 
+	 *               the action should not throw an exception during execution
+	 */
+	public void executeActionOnEngine(Consumer<AdvancedViatraQueryEngine> action) {
+		if(action != null) {
+			initializationActions.add(action);
+		}
+		// we use initializeEngine instead of getInitializedEngine because the initializeEngine
+		// executes the actions anyway while the other is just when the initialization is not complete
+		initializeEngine();
+	}
+	
+	private Optional<AdvancedViatraQueryEngine> initializeEngine() {
+		synchronized(this) {
+			if(!isInitialized && ProjectUtilities.isLoaded(project.getPrimaryProject())) {
+				engine = Optional.of(createQueryEngine(project, notifiers));
+			}
+			isInitialized = engine.map(e -> {
+					boolean thereWasException = false;
+					try {
+						e.getBaseIndex().coalesceTraversals(() -> {
+							initializationActions.forEach(action -> action.accept(e));
+							return null;
+						});
+						initializationActions.clear();
+						notifiers = new Notifier[0];
+					} catch (InvocationTargetException ite) {
+						// we can invalidate our engine because there is two option for this exception:
+						// 1. an exception is thrown directly by the action (which is not supported)
+						// 2. the engine got tainted because of an internal error, making the engine unusable
+						LOGGER.error(MESSAGE_ENGINE_PREPARE_ACTION_ERROR, ite);
+						e.dispose();
+						thereWasException = true;
+					}
+					return !thereWasException;
+				}).orElseGet(() -> {
+					LOGGER.warn(MESSAGE_ENGINE_NOT_READY);
+					return false;
+				});
+			if(!isInitialized) {
+				engine = Optional.empty();
+			}
+		}
 		return engine;
+	}
+	
+	/**
+	 * Prepare queries on the VIATRA query engine of the adapter. If it cannot be created
+	 * immediately, the initialization of the queries will be done when the engine is ready.
+	 * 
+	 * @param querySpecifications the initializable queries
+	 */
+	public void requireQueries(IQuerySpecification<?>... querySpecifications) {
+		Consumer<AdvancedViatraQueryEngine> initializer = e -> {
+			for (IQuerySpecification<?> querySpecification : querySpecifications) {
+				e.getMatcher(querySpecification);
+			}
+		};
+		executeActionOnEngine(initializer);
+	}
+	
+	/**
+	 * Prepare queries on the VIATRA query engine of the adapter. If it cannot be created
+	 * immediately, the initialization of the queries will be done when the engine is ready.
+	 * 
+	 * @param queryGroups the initializable queries
+	 */
+	public void requireQueries(IQueryGroup... queryGroups) {
+		Consumer<AdvancedViatraQueryEngine> initializer = e -> {
+			for (IQueryGroup queryGroup : queryGroups) {
+				queryGroup.prepare(e);
+			}
+		};
+		executeActionOnEngine(initializer);
 	}
 	
 	/**
@@ -45,7 +187,8 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	 * @see #dispose(String)
 	 */
 	public void dispose(){
-		engine.dispose();
+		engine.ifPresent(AdvancedViatraQueryEngine::dispose);
+		isInitialized = false;
 		project.getPrimaryModel().eAdapters().remove(this);
 	}
 	
@@ -64,14 +207,14 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	}
 	
 	public void wipeEngine(){
-		engine.wipe();
+		engine.ifPresent(AdvancedViatraQueryEngine::wipe);
 	}
 	
 	/**
 	 * This method is called by a project change listener registered by V4MD; it should not be called by end-users.
 	 */
 	void projectStructureUpdated() {
-		((MagicDrawProjectScope)engine.getScope()).projectStructureUpdated();
+		engine.ifPresent(e -> ((MagicDrawProjectScope)e.getScope()).projectStructureUpdated());
 	}
 	
 	/**
@@ -163,7 +306,7 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	
 	private static ViatraQueryAdapter doGetOrCreateAdapter(Project project, Notifier... notifiers) {
 		return getAdapter(project).orElseGet(() -> {
-			ViatraQueryAdapter adapter = new ViatraQueryAdapter(createQueryEngine(project, notifiers), project);
+			ViatraQueryAdapter adapter = new ViatraQueryAdapter(project, notifiers);
 			project.getPrimaryModel().eAdapters().add(adapter);
 			return adapter;
 		});

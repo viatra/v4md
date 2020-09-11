@@ -52,7 +52,7 @@ public class ModelUpdateTests extends MagicDrawTestCase {
 			ViatraQueryLoggingUtil.getLogger(ViatraQueryEngine.class).addAppender(testAppender);
 		}
 		
-		Matcher matcher = PortConnections.Matcher.on(adapter.getEngine());
+		Matcher matcher = PortConnections.Matcher.on(adapter.getInitializedEngineChecked());
 		
 		matcher.countMatches();
 				

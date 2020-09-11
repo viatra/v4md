@@ -3,20 +3,10 @@ package com.incquerylabs.v4md.test;
 import java.io.File;
 import java.io.IOException;
 
-import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.viatra.query.runtime.api.AdvancedViatraQueryEngine;
 import org.eclipse.viatra.query.runtime.emf.EMFScope;
-import org.eclipse.viatra.query.testing.core.InitializedSnapshotMatchSetModelProvider;
-import org.eclipse.viatra.query.testing.core.ViatraQueryTestCase;
-import org.eclipse.viatra.query.testing.snapshot.QuerySnapshot;
-import org.eclipse.viatra.query.testing.snapshot.SnapshotPackage;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
 
 import com.incquerylabs.v4md.ViatraQueryAdapter;
-import com.incquerylabs.v4md.test.provider.V4MDPatternBasedMatchSetProvider;
 import com.incquerylabs.v4md.test.queries.Aggregator_Functions;
 import com.incquerylabs.v4md.test.queries.Block_With_More_than_1_Parent;
 import com.incquerylabs.v4md.test.queries.Check_Expression;
@@ -29,11 +19,6 @@ import com.incquerylabs.v4md.test.queries.Subpattern_Calls;
 import com.incquerylabs.v4md.test.queries.Transitive_Closure;
 import com.incquerylabs.v4md.test.queries.Unreachable_States;
 import com.incquerylabs.v4md.test.runner.TestRunner;
-import com.incquerylabs.v4md.test.snapshot.ISnapshotManager;
-import com.incquerylabs.v4md.test.snapshot.SnapshotAnalyzer;
-import com.incquerylabs.v4md.test.snapshot.SnapshotCreator;
-import com.nomagic.ci.persistence.local.proxy.SnapshotManager;
-import com.nomagic.magicdraw.core.Application;
 import com.nomagic.magicdraw.core.Project;
 import com.nomagic.magicdraw.tests.MagicDrawTestCase;
 import com.nomagic.magicdraw.tests.common.TestEnvironment;
@@ -57,7 +42,7 @@ public class QueryTests extends MagicDrawTestCase {
 
 	protected EMFScope getScopeForProject(Project project) {
 		ViatraQueryAdapter adapter = ViatraQueryAdapter.getOrCreateAdapter(project);
-		AdvancedViatraQueryEngine engine = adapter.getEngine();
+		AdvancedViatraQueryEngine engine = adapter.getInitializedEngineChecked();
 		//V4MD uses EMFScope instances
 	
 		return (EMFScope) engine.getScope();

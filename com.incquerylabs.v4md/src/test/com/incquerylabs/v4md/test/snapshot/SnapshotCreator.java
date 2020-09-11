@@ -37,7 +37,7 @@ public class SnapshotCreator implements ISnapshotManager {
 	@Override
 	public void assertQueryResult(Project project, IQueryGroup queryGroup, String snapshotFileName) {
 		try {
-			ViatraQueryEngine engine = ViatraQueryAdapter.getOrCreateAdapter(project).getEngine();	
+			ViatraQueryEngine engine = ViatraQueryAdapter.getOrCreateAdapter(project).getInitializedEngineChecked();	
 			createAndSaveSnapshot(engine, queryGroup, snapshotFileName);
 		} catch (IOException e) {
 			Assert.fail(e.getMessage());

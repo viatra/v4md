@@ -4,6 +4,7 @@ import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.eclipse.viatra.query.runtime.api.ViatraQueryEngine;
 
 import com.incquerylabs.v4md.ViatraQueryAdapter;
@@ -33,6 +34,8 @@ import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Element;
 public class BinaryVQLExpression implements ParameterizedExpression {
 
 	public static final String LANGUAGE = "Binary VQL";
+	public static final String MESSAGE_ADAPTER_NOT_AVAILABLE = "ViatraQueryAdapter is not available for project '%s' yet.";
+	private static final Logger LOG = Logger.getLogger(BinaryVQLExpression.class);
 
 	protected Project project;
 	protected String className;
@@ -51,10 +54,15 @@ public class BinaryVQLExpression implements ParameterizedExpression {
 	}
 
 	public Object getValue(Element sourceParameter, ValueContext context) throws Exception {
-		ViatraQueryEngine engine = ViatraQueryAdapter.getAdapter(project).get().getEngine();
+		ViatraQueryEngine engine = ViatraQueryAdapter.getAdapter(project)
+													.flatMap(ViatraQueryAdapter::getInitializedEngine)
+													.orElseGet(()-> {
+														LOG.warn(String.format(MESSAGE_ADAPTER_NOT_AVAILABLE, project.getName()));
+														return null;
+													});
 
 		List<Object> returnSet = new ArrayList<>();
-		if (provider != null) {
+		if (engine != null && provider != null) {
 			provider.getResults(engine, sourceParameter).forEach(returnSet::add);
 		}
 		// MagicDraw sometimes handles single-valued returns differently, so instead of 1-length lists we should return the element itself
@@ -63,7 +71,7 @@ public class BinaryVQLExpression implements ParameterizedExpression {
 
 	@Override
 	public Class<?> getResultType() {
-		return provider != null ? null : provider.getResultType();
+		return provider == null ? null : provider.getResultType();
 	}
 
 }
