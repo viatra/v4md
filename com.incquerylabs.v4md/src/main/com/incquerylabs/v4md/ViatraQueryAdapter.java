@@ -109,7 +109,9 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	 */
 	public void executeActionOnEngine(Consumer<AdvancedViatraQueryEngine> action) {
 		if(action != null) {
-			initializationActions.add(action);
+			synchronized (this) {
+				initializationActions.add(action);
+			}
 		}
 		// we use initializeEngine instead of getInitializedEngine because the initializeEngine
 		// executes the actions anyway while the other is just when the initialization is not complete
@@ -124,11 +126,13 @@ public class ViatraQueryAdapter extends AdapterImpl {
 			isInitialized = engine.map(e -> {
 					boolean thereWasException = false;
 					try {
-						e.getBaseIndex().coalesceTraversals(() -> {
-							initializationActions.forEach(action -> action.accept(e));
-							return null;
-						});
-						initializationActions.clear();
+						if(!initializationActions.isEmpty()) {
+							e.getBaseIndex().coalesceTraversals(() -> {
+								initializationActions.forEach(action -> action.accept(e));
+								return null;
+							});
+							initializationActions.clear();
+						}
 						notifiers = new Notifier[0];
 					} catch (InvocationTargetException ite) {
 						// we can invalidate our engine because there is two option for this exception:
@@ -144,6 +148,7 @@ public class ViatraQueryAdapter extends AdapterImpl {
 					return false;
 				});
 			if(!isInitialized) {
+				engine.ifPresent(AdvancedViatraQueryEngine::dispose);
 				engine = Optional.empty();
 			}
 		}
