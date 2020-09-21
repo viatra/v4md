@@ -107,50 +107,46 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	 * @param action the operation which would like to use the initialized VIATRA engine - 
 	 *               the action should not throw an exception during execution
 	 */
-	public void executeActionOnEngine(Consumer<AdvancedViatraQueryEngine> action) {
+	public synchronized void executeActionOnEngine(Consumer<AdvancedViatraQueryEngine> action) {
 		if(action != null) {
-			synchronized (this) {
-				initializationActions.add(action);
-			}
+			initializationActions.add(action);
 		}
 		// we use initializeEngine instead of getInitializedEngine because the initializeEngine
 		// executes the actions anyway while the other is just when the initialization is not complete
 		initializeEngine();
 	}
 	
-	private Optional<AdvancedViatraQueryEngine> initializeEngine() {
-		synchronized(this) {
-			if(!isInitialized && ProjectUtilities.isLoaded(project.getPrimaryProject())) {
-				engine = Optional.of(createQueryEngine(project, notifiers));
-			}
-			isInitialized = engine.map(e -> {
-					boolean thereWasException = false;
-					try {
-						if(!initializationActions.isEmpty()) {
-							e.getBaseIndex().coalesceTraversals(() -> {
-								initializationActions.forEach(action -> action.accept(e));
-								return null;
-							});
-							initializationActions.clear();
-						}
-						notifiers = new Notifier[0];
-					} catch (InvocationTargetException ite) {
-						// we can invalidate our engine because there is two option for this exception:
-						// 1. an exception is thrown directly by the action (which is not supported)
-						// 2. the engine got tainted because of an internal error, making the engine unusable
-						LOGGER.error(MESSAGE_ENGINE_PREPARE_ACTION_ERROR, ite);
-						e.dispose();
-						thereWasException = true;
+	private synchronized Optional<AdvancedViatraQueryEngine> initializeEngine() {
+		if(!isInitialized && ProjectUtilities.isLoaded(project.getPrimaryProject())) {
+			engine = Optional.of(createQueryEngine(project, notifiers));
+		}
+		isInitialized = engine.map(e -> {
+				boolean thereWasException = false;
+				try {
+					if(!initializationActions.isEmpty()) {
+						e.getBaseIndex().coalesceTraversals(() -> {
+							initializationActions.forEach(action -> action.accept(e));
+							return null;
+						});
+						initializationActions.clear();
 					}
-					return !thereWasException;
-				}).orElseGet(() -> {
-					LOGGER.warn(MESSAGE_ENGINE_NOT_READY);
-					return false;
-				});
-			if(!isInitialized) {
-				engine.ifPresent(AdvancedViatraQueryEngine::dispose);
-				engine = Optional.empty();
-			}
+					notifiers = new Notifier[0];
+				} catch (InvocationTargetException ite) {
+					// we can invalidate our engine because there is two option for this exception:
+					// 1. an exception is thrown directly by the action (which is not supported)
+					// 2. the engine got tainted because of an internal error, making the engine unusable
+					LOGGER.error(MESSAGE_ENGINE_PREPARE_ACTION_ERROR, ite);
+					e.dispose();
+					thereWasException = true;
+				}
+				return !thereWasException;
+			}).orElseGet(() -> {
+				LOGGER.warn(MESSAGE_ENGINE_NOT_READY);
+				return false;
+			});
+		if(!isInitialized) {
+			engine.ifPresent(AdvancedViatraQueryEngine::dispose);
+			engine = Optional.empty();
 		}
 		return engine;
 	}
