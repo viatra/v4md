@@ -77,7 +77,7 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	 * @return the initialized engine
 	 * @throws ViatraQueryException if no query engine was initialized before and initialization failed
 	 */
-	public AdvancedViatraQueryEngine getInitializedEngineChecked() {
+	public synchronized AdvancedViatraQueryEngine getInitializedEngineChecked() {
 		return getInitializedEngine()
 				.orElseThrow(() ->
 					new ViatraQueryException(MESSAGE_ENGINE_NOT_READY, MESSAGE_ENGINE_NOT_READY));
@@ -92,7 +92,7 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	 * @see ViatraQueryAdapter#executeActionOnEngine(Consumer)
 	 * @see ViatraQueryAdapter#requireQueries(IQuerySpecification)
 	 */
-	public Optional<AdvancedViatraQueryEngine> getInitializedEngine() {
+	public synchronized Optional<AdvancedViatraQueryEngine> getInitializedEngine() {
 		if(!isInitialized) {
 			initializeEngine();
 		}
@@ -157,7 +157,7 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	 * 
 	 * @param querySpecifications the initializable queries
 	 */
-	public void requireQueries(IQuerySpecification<?>... querySpecifications) {
+	public synchronized void requireQueries(IQuerySpecification<?>... querySpecifications) {
 		Consumer<AdvancedViatraQueryEngine> initializer = e -> {
 			for (IQuerySpecification<?> querySpecification : querySpecifications) {
 				e.getMatcher(querySpecification);
@@ -172,7 +172,7 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	 * 
 	 * @param queryGroups the initializable queries
 	 */
-	public void requireQueries(IQueryGroup... queryGroups) {
+	public synchronized void requireQueries(IQueryGroup... queryGroups) {
 		Consumer<AdvancedViatraQueryEngine> initializer = e -> {
 			for (IQueryGroup queryGroup : queryGroups) {
 				queryGroup.prepare(e);
@@ -187,7 +187,7 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	 * <b>Note</b> Calling this method disposes the engine without any validation; it is not expected to be called by clients.
 	 * @see #dispose(String)
 	 */
-	public void dispose(){
+	public synchronized void dispose(){
 		engine.ifPresent(AdvancedViatraQueryEngine::dispose);
 		isInitialized = false;
 		project.getPrimaryModel().eAdapters().remove(this);
@@ -200,14 +200,14 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	 * list of known users; and if there are no other users remaining, it disposes
 	 * the engine itself.
 	 */
-	public void dispose(String identifier) {
+	public synchronized void dispose(String identifier) {
 		identifierMap.remove(Objects.requireNonNull(identifier, "Identifier must not be null"));
 		if (engineDisposable && identifierMap.isEmpty()) {
 			dispose();
 		}
 	}
 	
-	public void wipeEngine(){
+	public synchronized void wipeEngine(){
 		engine.ifPresent(AdvancedViatraQueryEngine::wipe);
 	}
 	
