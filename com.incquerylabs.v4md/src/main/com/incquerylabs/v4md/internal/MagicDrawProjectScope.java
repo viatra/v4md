@@ -42,7 +42,7 @@ public class MagicDrawProjectScope extends EMFScope {
 		String name = reference.getName();
 		return (reference.isContainment() && name.contains("_from_"))
 				||
-				name.startsWith("_");
+				(!name.equals("_representation") && name.startsWith("_"));
 	}
 	
 	static Stream<? extends Notifier> getProjectModels(Project projectModel) {
