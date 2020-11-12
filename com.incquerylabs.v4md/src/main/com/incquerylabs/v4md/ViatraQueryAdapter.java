@@ -331,6 +331,9 @@ public class ViatraQueryAdapter extends AdapterImpl {
 		if(V4MDSpecificEnvironmentOptionsGroup.getCurrentGroup().isEmptyQueryScopeRequired()) {
 			return MagicDrawProjectScope.createMagicDrawEmptyProjectScope(project);
 		}
-		return new MagicDrawProjectScope(project, ViatraQueryAdapterOptions.getInstance().isEnableEngineProfiling(), notifiers);
+		
+		boolean enableDiagramContentIndexing = V4MDSpecificEnvironmentOptionsGroup.getCurrentGroup().isDiagramContentIndexingEnabled();
+		boolean enableProfiler = ViatraQueryAdapterOptions.getInstance().isEnableEngineProfiling();
+		return new MagicDrawProjectScope(project, enableProfiler, enableDiagramContentIndexing, notifiers);
 	}
 }

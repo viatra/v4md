@@ -29,9 +29,14 @@ import com.nomagic.magicdraw.ui.notification.config.NotificationViewConfig;
 public class V4MDSpecificEnvironmentOptionsGroup extends AbstractPropertyOptionsGroup implements EnvironmentChangeListener {
 
 	private static final String V4MD_DEVELOPER_MODE_REQUIRED = "Developer Mode is required. ";
+	private static final String V4MD_GROUP_ADVANCED_NAME = "Advanced";
 	private static final String V4MD_GROUP_DEBUGGING_NAME = "Debugging";
 	private static final String V4MD_GROUP_ID = "V4MD";
 	private static final String V4MD_GROUP_NAME = "V4MD";
+	public  static final String INDEX_DIAGRAM_ID = "INDEX_DIAGRAM_ID";
+	private static final String INDEX_DIAGRAM_NAME = "Enable Diagram Content Indexing";
+	private static final String INDEX_DIAGRAM_DESCRIPTION = "By default, contents of the diagrams are not indexed. When diagram content indexing is enabled, diagram related queries can be defined. However, performance issues may occur due to the fact that more elements need to be indexed. After changing the property, you have to reload the currently open projects.";
+	private static final String INDEX_DIAGRAM_DESCRIPTION_ID = "INDEX_DIAGRAM_DESCRIPTION_ID";
 	public  static final String USE_EMPTY_QUERY_SCOPE_ID = "USE_EMPTY_QUERY_SCOPE";
 	private static final String USE_EMPTY_QUERY_SCOPE_NAME = "Disable Model Indexing";
 	private static final String USE_EMPTY_QUERY_SCOPE_DESCRIPTION = "For debugging purposes, this property disables model indexing by V4MD and all queries will return an empty result. After changing the property, you have to reload the currently open projects.";
@@ -77,7 +82,8 @@ public class V4MDSpecificEnvironmentOptionsGroup extends AbstractPropertyOptions
 	@Override
 	public void setDefaultValues() {
 		super.setDefaultValues();
-		createUseEmptyQueryScope(false);
+		createDiagramContentIndexingProperty(false);
+		createUseEmptyQueryScopeProperty(false);
 		setEditability(getProperty(USE_EMPTY_QUERY_SCOPE_ID));		
 	}
 
@@ -100,7 +106,7 @@ public class V4MDSpecificEnvironmentOptionsGroup extends AbstractPropertyOptions
 		return returnValue;
 	}
 
-	public void createUseEmptyQueryScope(boolean value) {
+	public void createUseEmptyQueryScopeProperty(boolean value) {
 		Property emptyScopeProperty = new BooleanProperty(USE_EMPTY_QUERY_SCOPE_ID, value);
 		emptyScopeProperty.setGroup(V4MD_GROUP_DEBUGGING_NAME);
 		emptyScopeProperty.setResourceProvider(new PropertyResourceProvider() {
@@ -117,6 +123,35 @@ public class V4MDSpecificEnvironmentOptionsGroup extends AbstractPropertyOptions
 		addProperty(emptyScopeProperty, USE_EMPTY_QUERY_SCOPE_DESCRIPTION_ID);		
 	}
 
+	@Used
+	public boolean isDiagramContentIndexingEnabled() {
+		
+		Property p = getProperty(INDEX_DIAGRAM_ID);
+		if (p == null) {
+			return false; // This property is not yet set.
+		}
+		
+		Boolean returnValue = (Boolean) p.getValue();
+		return returnValue;
+	}
+
+	public void createDiagramContentIndexingProperty(boolean value) {
+		Property emptyScopeProperty = new BooleanProperty(INDEX_DIAGRAM_ID, value);
+		emptyScopeProperty.setGroup(V4MD_GROUP_ADVANCED_NAME);
+		emptyScopeProperty.setResourceProvider(new PropertyResourceProvider() {
+
+			@Override
+			public String getString(String key, Property property) {
+				if (Objects.equals(INDEX_DIAGRAM_ID, key))
+					return INDEX_DIAGRAM_NAME;
+				if (Objects.equals(INDEX_DIAGRAM_DESCRIPTION_ID, key))
+					return INDEX_DIAGRAM_DESCRIPTION;
+				return key;
+			}
+		});
+		addProperty(emptyScopeProperty, INDEX_DIAGRAM_DESCRIPTION_ID);		
+	}
+	
 	private void setEditability(@CheckForNull Property p) {
 		if(p == null) return;
 		
