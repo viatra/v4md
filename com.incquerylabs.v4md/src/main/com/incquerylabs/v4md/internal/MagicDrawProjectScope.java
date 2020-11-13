@@ -52,7 +52,7 @@ public class MagicDrawProjectScope extends EMFScope {
 		String name = reference.getName();
 		if (reference.isContainment() && name.contains("_from_")) {
 			return true;
-		} else if (enableDiagramContentIndexing && !name.equals("_representation")) {
+		} else if (enableDiagramContentIndexing && name.equals("_representation")) {
 			/*
 			 * "_representation" is a special feature of the MagicDraw metamodel that
 			 * describes the containment of diagram related representation elements
