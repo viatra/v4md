@@ -334,6 +334,7 @@ public class ViatraQueryAdapter extends AdapterImpl {
 		
 		boolean enableDiagramContentIndexing = V4MDSpecificEnvironmentOptionsGroup.getCurrentGroup().isDiagramContentIndexingEnabled();
 		boolean enableProfiler = ViatraQueryAdapterOptions.getInstance().isEnableEngineProfiling();
+		LOGGER.info("Initializing MagicDrawProject Scope with parameters enableProfiler=" + enableProfiler +" enableDiagramContentIndexing=" + enableDiagramContentIndexing);
 		return new MagicDrawProjectScope(project, enableProfiler, enableDiagramContentIndexing, notifiers);
 	}
 }

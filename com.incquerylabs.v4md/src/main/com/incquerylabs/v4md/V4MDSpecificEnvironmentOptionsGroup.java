@@ -128,10 +128,12 @@ public class V4MDSpecificEnvironmentOptionsGroup extends AbstractPropertyOptions
 		
 		Property p = getProperty(INDEX_DIAGRAM_ID);
 		if (p == null) {
+			logger.info("Diagram Content Indexing property is not yet set.");
 			return false; // This property is not yet set.
 		}
 		
 		Boolean returnValue = (Boolean) p.getValue();
+		logger.info("Diagram Content Indexing property is currently set to " + returnValue.toString() + ".");
 		return returnValue;
 	}
 
@@ -150,6 +152,7 @@ public class V4MDSpecificEnvironmentOptionsGroup extends AbstractPropertyOptions
 			}
 		});
 		addProperty(emptyScopeProperty, INDEX_DIAGRAM_DESCRIPTION_ID);		
+		logger.info("Diagram Content Indexing property is set to default.");
 	}
 	
 	private void setEditability(@CheckForNull Property p) {
