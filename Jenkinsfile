@@ -25,17 +25,17 @@ pipeline {
 		stage('Build Plug-in') { 
 			steps {
 				dir ('com.incquerylabs.v4md'){
-					sh "./gradlew clean"
-					sh "./gradlew ${VERSION_STRINGS} assemble"
+					sh './gradlew clean'
+					sh './gradlew ${VERSION_STRINGS} assemble'
 				}
 			}
 		}
 		stage('Running Plug-in Tests') { 
 			steps {
 				dir ('com.incquerylabs.v4md'){
-    				wrap([$class: 'Xvnc']) {
-    					sh "./gradlew ${VERSION_STRINGS} runTest"
-    				}
+    				    wrap([$class: 'Xvnc']) {
+    					sh './gradlew ${VERSION_STRINGS} runTest'
+    				    }
 				}
 			}
 		}
@@ -45,7 +45,7 @@ pipeline {
 				withCredentials([usernamePassword(credentialsId: 'nexus-buildserver-deploy', passwordVariable: 'DEPLOY_PASSWORD', usernameVariable: 'DEPLOY_USER')]) {
 					script{
 					    dir ('com.incquerylabs.v4md') {
-                    			sh "./gradlew ${VERSION_STRINGS} publish"
+                    			        sh './gradlew ${VERSION_STRINGS} publish'
 					    }
 					}
 				}
@@ -62,17 +62,17 @@ pipeline {
 		success {
             		office365ConnectorSend status: "Success",
 				color: "00db00",
-				webhookUrl: "${TEAMS_NOTIFICATION_URL}"
+				webhookUrl: '${TEAMS_NOTIFICATION_URL}'
         	}
         	unstable {
             		office365ConnectorSend status: "Unstable",
 				color: "fcb019",
-				webhookUrl: "${TEAMS_NOTIFICATION_URL}"
+				webhookUrl: '${TEAMS_NOTIFICATION_URL}'
         	}
         	failure {
             		office365ConnectorSend status: "Failure",
 				color: "f21607",
-				webhookUrl: "${TEAMS_NOTIFICATION_URL}"
+				webhookUrl: '${TEAMS_NOTIFICATION_URL}'
         	}
 	}
 }
