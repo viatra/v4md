@@ -15,12 +15,6 @@ pipeline {
 		VERSION_STRINGS = " ${params.RELEASE_VERSION ? '-Pversion=' + params.RELEASE_VERSION : ''} "
 		TEAMS_NOTIFICATION_URL = credentials('v4md-teams-channel-url')
 	}
-	
-	tools { 
-		maven 'Maven 3.3.9' 
-		jdk 'OpenJDK 8' 
-	}
-
 	stages {
 		stage('Build Plug-in') { 
 			steps {
