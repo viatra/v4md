@@ -96,10 +96,22 @@ public final class AverageNumberOfAttributes extends BaseGeneratedEMFQuerySpecif
     
     @Override
     public Object get(final String parameterName) {
-      if ("number".equals(parameterName)) return this.fNumber;
-      if ("s".equals(parameterName)) return this.fS;
-      if ("c".equals(parameterName)) return this.fC;
-      return null;
+      switch(parameterName) {
+          case "number": return this.fNumber;
+          case "s": return this.fS;
+          case "c": return this.fC;
+          default: return null;
+      }
+    }
+    
+    @Override
+    public Object get(final int index) {
+      switch(index) {
+          case 0: return this.fNumber;
+          case 1: return this.fS;
+          case 2: return this.fC;
+          default: return null;
+      }
     }
     
     public Float getNumber() {
@@ -735,9 +747,9 @@ public final class AverageNumberOfAttributes extends BaseGeneratedEMFQuerySpecif
   }
   
   /**
-   * Inner class allowing the singleton instance of {@link JvmGenericType: com.incquerylabs.v4md.test.queries.AverageNumberOfAttributes (visibility: PUBLIC, simpleName: AverageNumberOfAttributes, identifier: com.incquerylabs.v4md.test.queries.AverageNumberOfAttributes, deprecated: <unset>) (abstract: false, static: false, final: true, packageName: com.incquerylabs.v4md.test.queries) (interface: false, strictFloatingPoint: false, anonymous: false)} to be created 
+   * Inner class allowing the singleton instance of {@link AverageNumberOfAttributes} to be created 
    *     <b>not</b> at the class load time of the outer class, 
-   *     but rather at the first call to {@link JvmGenericType: com.incquerylabs.v4md.test.queries.AverageNumberOfAttributes (visibility: PUBLIC, simpleName: AverageNumberOfAttributes, identifier: com.incquerylabs.v4md.test.queries.AverageNumberOfAttributes, deprecated: <unset>) (abstract: false, static: false, final: true, packageName: com.incquerylabs.v4md.test.queries) (interface: false, strictFloatingPoint: false, anonymous: false)#instance()}.
+   *     but rather at the first call to {@link AverageNumberOfAttributes#instance()}.
    * 
    * <p> This workaround is required e.g. to support recursion.
    * 

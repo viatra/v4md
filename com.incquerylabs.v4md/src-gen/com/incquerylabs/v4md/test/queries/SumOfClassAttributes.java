@@ -79,8 +79,18 @@ public final class SumOfClassAttributes extends BaseGeneratedEMFQuerySpecificati
     
     @Override
     public Object get(final String parameterName) {
-      if ("s".equals(parameterName)) return this.fS;
-      return null;
+      switch(parameterName) {
+          case "s": return this.fS;
+          default: return null;
+      }
+    }
+    
+    @Override
+    public Object get(final int index) {
+      switch(index) {
+          case 0: return this.fS;
+          default: return null;
+      }
     }
     
     public Integer getS() {
@@ -468,9 +478,9 @@ public final class SumOfClassAttributes extends BaseGeneratedEMFQuerySpecificati
   }
   
   /**
-   * Inner class allowing the singleton instance of {@link JvmGenericType: com.incquerylabs.v4md.test.queries.SumOfClassAttributes (visibility: PUBLIC, simpleName: SumOfClassAttributes, identifier: com.incquerylabs.v4md.test.queries.SumOfClassAttributes, deprecated: <unset>) (abstract: false, static: false, final: true, packageName: com.incquerylabs.v4md.test.queries) (interface: false, strictFloatingPoint: false, anonymous: false)} to be created 
+   * Inner class allowing the singleton instance of {@link SumOfClassAttributes} to be created 
    *     <b>not</b> at the class load time of the outer class, 
-   *     but rather at the first call to {@link JvmGenericType: com.incquerylabs.v4md.test.queries.SumOfClassAttributes (visibility: PUBLIC, simpleName: SumOfClassAttributes, identifier: com.incquerylabs.v4md.test.queries.SumOfClassAttributes, deprecated: <unset>) (abstract: false, static: false, final: true, packageName: com.incquerylabs.v4md.test.queries) (interface: false, strictFloatingPoint: false, anonymous: false)#instance()}.
+   *     but rather at the first call to {@link SumOfClassAttributes#instance()}.
    * 
    * <p> This workaround is required e.g. to support recursion.
    * 

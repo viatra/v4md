@@ -84,8 +84,18 @@ public final class ClassesWithEmptyName extends BaseGeneratedEMFQuerySpecificati
     
     @Override
     public Object get(final String parameterName) {
-      if ("class".equals(parameterName)) return this.fClass;
-      return null;
+      switch(parameterName) {
+          case "class": return this.fClass;
+          default: return null;
+      }
+    }
+    
+    @Override
+    public Object get(final int index) {
+      switch(index) {
+          case 0: return this.fClass;
+          default: return null;
+      }
     }
     
     public com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class getValueOfClass() {
@@ -474,9 +484,9 @@ public final class ClassesWithEmptyName extends BaseGeneratedEMFQuerySpecificati
   }
   
   /**
-   * Inner class allowing the singleton instance of {@link JvmGenericType: com.incquerylabs.v4md.test.queries.ClassesWithEmptyName (visibility: PUBLIC, simpleName: ClassesWithEmptyName, identifier: com.incquerylabs.v4md.test.queries.ClassesWithEmptyName, deprecated: <unset>) (abstract: false, static: false, final: true, packageName: com.incquerylabs.v4md.test.queries) (interface: false, strictFloatingPoint: false, anonymous: false)} to be created 
+   * Inner class allowing the singleton instance of {@link ClassesWithEmptyName} to be created 
    *     <b>not</b> at the class load time of the outer class, 
-   *     but rather at the first call to {@link JvmGenericType: com.incquerylabs.v4md.test.queries.ClassesWithEmptyName (visibility: PUBLIC, simpleName: ClassesWithEmptyName, identifier: com.incquerylabs.v4md.test.queries.ClassesWithEmptyName, deprecated: <unset>) (abstract: false, static: false, final: true, packageName: com.incquerylabs.v4md.test.queries) (interface: false, strictFloatingPoint: false, anonymous: false)#instance()}.
+   *     but rather at the first call to {@link ClassesWithEmptyName#instance()}.
    * 
    * <p> This workaround is required e.g. to support recursion.
    * 

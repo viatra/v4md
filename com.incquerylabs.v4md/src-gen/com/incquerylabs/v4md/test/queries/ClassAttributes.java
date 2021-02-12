@@ -81,9 +81,20 @@ public final class ClassAttributes extends BaseGeneratedEMFQuerySpecification<Cl
     
     @Override
     public Object get(final String parameterName) {
-      if ("class".equals(parameterName)) return this.fClass;
-      if ("attribute".equals(parameterName)) return this.fAttribute;
-      return null;
+      switch(parameterName) {
+          case "class": return this.fClass;
+          case "attribute": return this.fAttribute;
+          default: return null;
+      }
+    }
+    
+    @Override
+    public Object get(final int index) {
+      switch(index) {
+          case 0: return this.fClass;
+          case 1: return this.fAttribute;
+          default: return null;
+      }
     }
     
     public com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class getValueOfClass() {
@@ -614,9 +625,9 @@ public final class ClassAttributes extends BaseGeneratedEMFQuerySpecification<Cl
   }
   
   /**
-   * Inner class allowing the singleton instance of {@link JvmGenericType: com.incquerylabs.v4md.test.queries.ClassAttributes (visibility: PUBLIC, simpleName: ClassAttributes, identifier: com.incquerylabs.v4md.test.queries.ClassAttributes, deprecated: <unset>) (abstract: false, static: false, final: true, packageName: com.incquerylabs.v4md.test.queries) (interface: false, strictFloatingPoint: false, anonymous: false)} to be created 
+   * Inner class allowing the singleton instance of {@link ClassAttributes} to be created 
    *     <b>not</b> at the class load time of the outer class, 
-   *     but rather at the first call to {@link JvmGenericType: com.incquerylabs.v4md.test.queries.ClassAttributes (visibility: PUBLIC, simpleName: ClassAttributes, identifier: com.incquerylabs.v4md.test.queries.ClassAttributes, deprecated: <unset>) (abstract: false, static: false, final: true, packageName: com.incquerylabs.v4md.test.queries) (interface: false, strictFloatingPoint: false, anonymous: false)#instance()}.
+   *     but rather at the first call to {@link ClassAttributes#instance()}.
    * 
    * <p> This workaround is required e.g. to support recursion.
    * 
