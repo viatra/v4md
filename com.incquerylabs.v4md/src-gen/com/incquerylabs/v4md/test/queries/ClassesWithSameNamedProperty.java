@@ -92,10 +92,22 @@ public final class ClassesWithSameNamedProperty extends BaseGeneratedEMFQuerySpe
     
     @Override
     public Object get(final String parameterName) {
-      if ("class1".equals(parameterName)) return this.fClass1;
-      if ("class2".equals(parameterName)) return this.fClass2;
-      if ("name".equals(parameterName)) return this.fName;
-      return null;
+      switch(parameterName) {
+          case "class1": return this.fClass1;
+          case "class2": return this.fClass2;
+          case "name": return this.fName;
+          default: return null;
+      }
+    }
+    
+    @Override
+    public Object get(final int index) {
+      switch(index) {
+          case 0: return this.fClass1;
+          case 1: return this.fClass2;
+          case 2: return this.fName;
+          default: return null;
+      }
     }
     
     public com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class getClass1() {
@@ -728,9 +740,9 @@ public final class ClassesWithSameNamedProperty extends BaseGeneratedEMFQuerySpe
   }
   
   /**
-   * Inner class allowing the singleton instance of {@link JvmGenericType: com.incquerylabs.v4md.test.queries.ClassesWithSameNamedProperty (visibility: PUBLIC, simpleName: ClassesWithSameNamedProperty, identifier: com.incquerylabs.v4md.test.queries.ClassesWithSameNamedProperty, deprecated: <unset>) (abstract: false, static: false, final: true, packageName: com.incquerylabs.v4md.test.queries) (interface: false, strictFloatingPoint: false, anonymous: false)} to be created 
+   * Inner class allowing the singleton instance of {@link ClassesWithSameNamedProperty} to be created 
    *     <b>not</b> at the class load time of the outer class, 
-   *     but rather at the first call to {@link JvmGenericType: com.incquerylabs.v4md.test.queries.ClassesWithSameNamedProperty (visibility: PUBLIC, simpleName: ClassesWithSameNamedProperty, identifier: com.incquerylabs.v4md.test.queries.ClassesWithSameNamedProperty, deprecated: <unset>) (abstract: false, static: false, final: true, packageName: com.incquerylabs.v4md.test.queries) (interface: false, strictFloatingPoint: false, anonymous: false)#instance()}.
+   *     but rather at the first call to {@link ClassesWithSameNamedProperty#instance()}.
    * 
    * <p> This workaround is required e.g. to support recursion.
    * 

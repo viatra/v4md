@@ -103,10 +103,22 @@ public final class PropertyStringValueEquals extends BaseGeneratedEMFQuerySpecif
     
     @Override
     public Object get(final String parameterName) {
-      if ("element".equals(parameterName)) return this.fElement;
-      if ("element2".equals(parameterName)) return this.fElement2;
-      if ("property".equals(parameterName)) return this.fProperty;
-      return null;
+      switch(parameterName) {
+          case "element": return this.fElement;
+          case "element2": return this.fElement2;
+          case "property": return this.fProperty;
+          default: return null;
+      }
+    }
+    
+    @Override
+    public Object get(final int index) {
+      switch(index) {
+          case 0: return this.fElement;
+          case 1: return this.fElement2;
+          case 2: return this.fProperty;
+          default: return null;
+      }
     }
     
     public NamedElement getElement() {
@@ -749,9 +761,9 @@ public final class PropertyStringValueEquals extends BaseGeneratedEMFQuerySpecif
   }
   
   /**
-   * Inner class allowing the singleton instance of {@link JvmGenericType: com.incquerylabs.v4md.test.queries.PropertyStringValueEquals (visibility: PUBLIC, simpleName: PropertyStringValueEquals, identifier: com.incquerylabs.v4md.test.queries.PropertyStringValueEquals, deprecated: <unset>) (abstract: false, static: false, final: true, packageName: com.incquerylabs.v4md.test.queries) (interface: false, strictFloatingPoint: false, anonymous: false)} to be created 
+   * Inner class allowing the singleton instance of {@link PropertyStringValueEquals} to be created 
    *     <b>not</b> at the class load time of the outer class, 
-   *     but rather at the first call to {@link JvmGenericType: com.incquerylabs.v4md.test.queries.PropertyStringValueEquals (visibility: PUBLIC, simpleName: PropertyStringValueEquals, identifier: com.incquerylabs.v4md.test.queries.PropertyStringValueEquals, deprecated: <unset>) (abstract: false, static: false, final: true, packageName: com.incquerylabs.v4md.test.queries) (interface: false, strictFloatingPoint: false, anonymous: false)#instance()}.
+   *     but rather at the first call to {@link PropertyStringValueEquals#instance()}.
    * 
    * <p> This workaround is required e.g. to support recursion.
    * 

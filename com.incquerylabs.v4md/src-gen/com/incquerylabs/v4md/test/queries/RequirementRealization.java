@@ -87,9 +87,20 @@ public final class RequirementRealization extends BaseGeneratedEMFQuerySpecifica
     
     @Override
     public Object get(final String parameterName) {
-      if ("requirement".equals(parameterName)) return this.fRequirement;
-      if ("realizingElement".equals(parameterName)) return this.fRealizingElement;
-      return null;
+      switch(parameterName) {
+          case "requirement": return this.fRequirement;
+          case "realizingElement": return this.fRealizingElement;
+          default: return null;
+      }
+    }
+    
+    @Override
+    public Object get(final int index) {
+      switch(index) {
+          case 0: return this.fRequirement;
+          case 1: return this.fRealizingElement;
+          default: return null;
+      }
     }
     
     public com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class getRequirement() {
@@ -623,9 +634,9 @@ public final class RequirementRealization extends BaseGeneratedEMFQuerySpecifica
   }
   
   /**
-   * Inner class allowing the singleton instance of {@link JvmGenericType: com.incquerylabs.v4md.test.queries.RequirementRealization (visibility: PUBLIC, simpleName: RequirementRealization, identifier: com.incquerylabs.v4md.test.queries.RequirementRealization, deprecated: <unset>) (abstract: false, static: false, final: true, packageName: com.incquerylabs.v4md.test.queries) (interface: false, strictFloatingPoint: false, anonymous: false)} to be created 
+   * Inner class allowing the singleton instance of {@link RequirementRealization} to be created 
    *     <b>not</b> at the class load time of the outer class, 
-   *     but rather at the first call to {@link JvmGenericType: com.incquerylabs.v4md.test.queries.RequirementRealization (visibility: PUBLIC, simpleName: RequirementRealization, identifier: com.incquerylabs.v4md.test.queries.RequirementRealization, deprecated: <unset>) (abstract: false, static: false, final: true, packageName: com.incquerylabs.v4md.test.queries) (interface: false, strictFloatingPoint: false, anonymous: false)#instance()}.
+   *     but rather at the first call to {@link RequirementRealization#instance()}.
    * 
    * <p> This workaround is required e.g. to support recursion.
    * 

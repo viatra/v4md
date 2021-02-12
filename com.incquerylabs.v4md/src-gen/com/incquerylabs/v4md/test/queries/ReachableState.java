@@ -85,9 +85,20 @@ public final class ReachableState extends BaseGeneratedEMFQuerySpecification<Rea
     
     @Override
     public Object get(final String parameterName) {
-      if ("sourceState".equals(parameterName)) return this.fSourceState;
-      if ("targetState".equals(parameterName)) return this.fTargetState;
-      return null;
+      switch(parameterName) {
+          case "sourceState": return this.fSourceState;
+          case "targetState": return this.fTargetState;
+          default: return null;
+      }
+    }
+    
+    @Override
+    public Object get(final int index) {
+      switch(index) {
+          case 0: return this.fSourceState;
+          case 1: return this.fTargetState;
+          default: return null;
+      }
     }
     
     public Vertex getSourceState() {
@@ -621,9 +632,9 @@ public final class ReachableState extends BaseGeneratedEMFQuerySpecification<Rea
   }
   
   /**
-   * Inner class allowing the singleton instance of {@link JvmGenericType: com.incquerylabs.v4md.test.queries.ReachableState (visibility: PUBLIC, simpleName: ReachableState, identifier: com.incquerylabs.v4md.test.queries.ReachableState, deprecated: <unset>) (abstract: false, static: false, final: true, packageName: com.incquerylabs.v4md.test.queries) (interface: false, strictFloatingPoint: false, anonymous: false)} to be created 
+   * Inner class allowing the singleton instance of {@link ReachableState} to be created 
    *     <b>not</b> at the class load time of the outer class, 
-   *     but rather at the first call to {@link JvmGenericType: com.incquerylabs.v4md.test.queries.ReachableState (visibility: PUBLIC, simpleName: ReachableState, identifier: com.incquerylabs.v4md.test.queries.ReachableState, deprecated: <unset>) (abstract: false, static: false, final: true, packageName: com.incquerylabs.v4md.test.queries) (interface: false, strictFloatingPoint: false, anonymous: false)#instance()}.
+   *     but rather at the first call to {@link ReachableState#instance()}.
    * 
    * <p> This workaround is required e.g. to support recursion.
    * 
