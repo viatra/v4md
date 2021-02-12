@@ -2,19 +2,51 @@
 <vqSnapshot:QuerySnapshot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vqSnapshot="http://www.eclipse.org/viatra/query/snapshot" inputSpecification="EObject">
   <matchSetRecords patternQualifiedName="com.incquerylabs.v4md.test.queries.DependencyChain">
     <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::3 - Use cases::Smart transportation system::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Abstraction"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Usage"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::4 - Functional architecture::4.3 Interfaces::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Usage"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::2 - Requirements::Functionality::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Dependency"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::2 - Requirements::Functionality::">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Dependency"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::4 - Functional architecture::4.2 Ports::External and Main Ports::">
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::2 - Requirements::Safety::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Abstraction"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::2 - Requirements::Safety::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Abstraction"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::2 - Requirements::Performance::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Abstraction"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::2 - Requirements::Safety::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Abstraction"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::4 - Functional architecture::4.3 Interfaces::">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Usage"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::4 - Functional architecture::4.3 Interfaces::">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Usage"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Abstraction"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::6 - Platform architecture::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Abstraction"/>
       </substitutions>
     </matches>
     <matches>
@@ -34,15 +66,63 @@
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::2 - Requirements::Safety::">
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Abstraction"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::2 - Requirements::Safety::">
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::6 - Platform architecture::">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Abstraction"/>
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::4 - Functional architecture::4.2 Ports::Transportation Ports::">
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::3 - Use cases::Smart transportation system::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Abstraction"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::2 - Requirements::Functionality::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Dependency"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::2 - Requirements::Functionality::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Dependency"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::2 - Requirements::Functionality::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Dependency"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::2 - Requirements::Performance::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Abstraction"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::2 - Requirements::Performance::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Abstraction"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Usage"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::4 - Functional architecture::4.3 Interfaces::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Usage"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::4 - Functional architecture::4.3 Interfaces::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Usage"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::4 - Functional architecture::4.3 Interfaces::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Usage"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::2 - Requirements::Functionality::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Dependency"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::2 - Requirements::Functionality::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Dependency"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Usage"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::4 - Functional architecture::4.3 Interfaces::">
@@ -58,99 +138,19 @@
       </substitutions>
     </matches>
     <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::4 - Functional architecture::4.2 Ports::External and Main Ports::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Usage"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::4 - Functional architecture::4.3 Interfaces::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Usage"/>
+      </substitutions>
+    </matches>
+    <matches>
       <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::3 - Use cases::Infrastructure control::">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Abstraction"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::2 - Requirements::Functionality::">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Dependency"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::4 - Functional architecture::4.3 Interfaces::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Usage"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::4 - Functional architecture::4.3 Interfaces::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Usage"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::2 - Requirements::Functionality::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Dependency"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::2 - Requirements::Functionality::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Dependency"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Usage"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::4 - Functional architecture::4.3 Interfaces::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Usage"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::2 - Requirements::Functionality::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Dependency"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::2 - Requirements::Functionality::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Dependency"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Abstraction"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::6 - Platform architecture::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Abstraction"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Usage"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::4 - Functional architecture::4.3 Interfaces::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Usage"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::2 - Requirements::Performance::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Abstraction"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::2 - Requirements::Performance::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Abstraction"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::4 - Functional architecture::4.3 Interfaces::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Usage"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::4 - Functional architecture::4.3 Interfaces::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Usage"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::2 - Requirements::Functionality::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Dependency"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::2 - Requirements::Functionality::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Dependency"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::2 - Requirements::Performance::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Abstraction"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::2 - Requirements::Safety::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Abstraction"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="source" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Abstraction"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="target" value="TestModel::6 - Platform architecture::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Abstraction"/>
       </substitutions>
     </matches>
     <filter/>
@@ -162,23 +162,23 @@
       </substitutions>
     </matches>
     <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="dep" value="TestModel::2 - Requirements::Functionality::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Dependency"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="dep" value="TestModel::2 - Requirements::Functionality::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Dependency"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="dep" value="TestModel::2 - Requirements::Functionality::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Dependency"/>
+      </substitutions>
+    </matches>
+    <matches>
       <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="dep" value="TestModel::4 - Functional architecture::4.3 Interfaces::">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Usage"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="dep" value="TestModel::2 - Requirements::Functionality::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Dependency"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="dep" value="TestModel::2 - Requirements::Functionality::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Dependency"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="dep" value="TestModel::2 - Requirements::Functionality::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1#//Dependency"/>
       </substitutions>
     </matches>
     <matches>
