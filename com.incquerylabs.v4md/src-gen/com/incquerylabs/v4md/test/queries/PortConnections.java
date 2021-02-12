@@ -91,10 +91,22 @@ public final class PortConnections extends BaseGeneratedEMFQuerySpecification<Po
     
     @Override
     public Object get(final String parameterName) {
-      if ("port1".equals(parameterName)) return this.fPort1;
-      if ("connector".equals(parameterName)) return this.fConnector;
-      if ("port2".equals(parameterName)) return this.fPort2;
-      return null;
+      switch(parameterName) {
+          case "port1": return this.fPort1;
+          case "connector": return this.fConnector;
+          case "port2": return this.fPort2;
+          default: return null;
+      }
+    }
+    
+    @Override
+    public Object get(final int index) {
+      switch(index) {
+          case 0: return this.fPort1;
+          case 1: return this.fConnector;
+          case 2: return this.fPort2;
+          default: return null;
+      }
     }
     
     public Port getPort1() {
@@ -728,9 +740,9 @@ public final class PortConnections extends BaseGeneratedEMFQuerySpecification<Po
   }
   
   /**
-   * Inner class allowing the singleton instance of {@link JvmGenericType: com.incquerylabs.v4md.test.queries.PortConnections (visibility: PUBLIC, simpleName: PortConnections, identifier: com.incquerylabs.v4md.test.queries.PortConnections, deprecated: <unset>) (abstract: false, static: false, final: true, packageName: com.incquerylabs.v4md.test.queries) (interface: false, strictFloatingPoint: false, anonymous: false)} to be created 
+   * Inner class allowing the singleton instance of {@link PortConnections} to be created 
    *     <b>not</b> at the class load time of the outer class, 
-   *     but rather at the first call to {@link JvmGenericType: com.incquerylabs.v4md.test.queries.PortConnections (visibility: PUBLIC, simpleName: PortConnections, identifier: com.incquerylabs.v4md.test.queries.PortConnections, deprecated: <unset>) (abstract: false, static: false, final: true, packageName: com.incquerylabs.v4md.test.queries) (interface: false, strictFloatingPoint: false, anonymous: false)#instance()}.
+   *     but rather at the first call to {@link PortConnections#instance()}.
    * 
    * <p> This workaround is required e.g. to support recursion.
    * 
