@@ -8,6 +8,14 @@ apply plugin: 'java'
 apply plugin: 'java-library'
 apply plugin: 'maven-publish'
 
+ext.buildNumber = project.hasProperty('buildNumber') ? project.getProperty('buildNumber') : System.currentTimeSeconds()
+ext.timestamp = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH:mm").format(LocalDateTime.now())
+ext.release = version.endsWith("-SNAPSHOT")
+ext.deployUser = hasProperty('deployUser') ? deployUser : System.getenv('DEPLOY_USER')
+ext.deployPassword = hasProperty('deployPassword') ? deployPassword : System.getenv('DEPLOY_PASSWORD')
+ext.magicdrawAccessUser = hasProperty('mdAccessUser') ? mdAccessUser : (System.getenv('MD_ACCESS_USER') ? System.getenv('MD_ACCESS_USER') : deployUser)
+ext.magicdrawAccessPassword = hasProperty('mdAccessPassword') ? mdAccessUser : (System.getenv('MD_ACCESS_PASSWORD') ? System.getenv('MD_ACCESS_PASSWRD') : deployPassword)
+
 // See https://stackoverflow.com/a/40239092/114313
 version "${version}"
 
@@ -15,23 +23,16 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 repositories {
-    ivy {
-        url 'http://download1.nomagic.com/'
-        layout 'pattern', {
-            artifact '/[module][revision]/[classifier].[ext]'
-        }
-    }
-    jcenter()
+    maven {
+  	url magicdrawBinaryRepository
+  		credentials {
+    		username = magicdrawAccessUser
+    		password = magicdrawAccessPassword
+  		}
+	}
     mavenCentral()
     maven { url "https://repo.eclipse.org/content/groups/viatra/" }
 }
-
-ext.buildNumber = project.hasProperty('buildNumber') ? project.getProperty('buildNumber') : System.currentTimeSeconds()
-ext.timestamp = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH:mm").format(LocalDateTime.now())
-ext.release = version.endsWith("-SNAPSHOT")
-ext.deployUser = hasProperty('deployUser') ? deployUser : System.getenv('DEPLOY_USER')
-ext.deployPassword = hasProperty('deployPassword') ? deployPassword : System.getenv('DEPLOY_PASSWORD')
-
 
 //This is the part that is painful to maintain, as MD releases tend to move around these library jars
 ext.classpathLibraries = [
@@ -86,8 +87,7 @@ configurations {
 }
 
 dependencies {
-    preCompile group: 'com.nomagic', name: 'magicdraw', version: '190sp2', classifier: 'MagicDraw_190_sp2_no_install', ext: 'zip'
-    preCompile group: 'com.nomagic', name: 'sysml', version: '190sp2', classifier: 'SysML_Plugin_190_sp2_bundle', ext: 'zip'
+	preCompile group: 'com.nomagic', name: 'csm', version: '190sp4', classifier: 'no_install', ext: 'zip'
 	
     def exclusions = {
         exclude group: 'com.google.guava', module: 'guava'
