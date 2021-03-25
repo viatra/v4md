@@ -18,6 +18,8 @@ import org.eclipse.viatra.query.runtime.api.IQueryGroup;
 import org.eclipse.viatra.query.runtime.api.IQuerySpecification;
 import org.eclipse.viatra.query.runtime.api.ViatraQueryEngineOptions;
 import org.eclipse.viatra.query.runtime.exception.ViatraQueryException;
+import org.eclipse.viatra.query.runtime.localsearch.matcher.integration.LocalSearchEMFBackendFactory;
+import org.eclipse.viatra.query.runtime.rete.matcher.ReteBackendFactory;
 
 import com.incquerylabs.v4md.internal.MagicDrawProjectScope;
 import com.incquerylabs.v4md.internal.NopQueryBackend;
@@ -36,6 +38,16 @@ public class ViatraQueryAdapter extends AdapterImpl {
 	public static final String MESSAGE_ENGINE_NOT_READY = 
 			"Cannot initialize VIATRA Query Engine until the project is loaded.";
 	private static final Logger LOGGER = Logger.getLogger(ViatraQueryAdapter.class);
+	
+	
+	static {
+		ViatraQueryEngineOptions.setSystemDefaultBackends(
+				ReteBackendFactory.INSTANCE, 
+				ReteBackendFactory.INSTANCE, 
+				LocalSearchEMFBackendFactory.INSTANCE
+		);
+	}
+	
 	
 	private Optional<AdvancedViatraQueryEngine> engine = Optional.empty();
 	private Project project;
