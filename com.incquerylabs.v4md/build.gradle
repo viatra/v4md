@@ -14,7 +14,7 @@ ext.release = version.endsWith("-SNAPSHOT")
 ext.deployUser = hasProperty('deployUser') ? deployUser : System.getenv('DEPLOY_USER')
 ext.deployPassword = hasProperty('deployPassword') ? deployPassword : System.getenv('DEPLOY_PASSWORD')
 ext.magicdrawAccessUser = hasProperty('mdAccessUser') ? mdAccessUser : (System.getenv('MD_ACCESS_USER') ? System.getenv('MD_ACCESS_USER') : deployUser)
-ext.magicdrawAccessPassword = hasProperty('mdAccessPassword') ? mdAccessUser : (System.getenv('MD_ACCESS_PASSWORD') ? System.getenv('MD_ACCESS_PASSWORD') : deployPassword)
+ext.magicdrawAccessPassword = hasProperty('mdAccessPassword') ? mdAccessPassword : (System.getenv('MD_ACCESS_PASSWORD') ? System.getenv('MD_ACCESS_PASSWORD') : deployPassword)
 
 // See https://stackoverflow.com/a/40239092/114313
 version "${version}"
