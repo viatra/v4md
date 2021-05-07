@@ -2,7 +2,6 @@ package com.incquerylabs.v4md;
 
 import java.awt.Color;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 
@@ -42,7 +41,6 @@ public class V4MDSpecificEnvironmentOptionsGroup extends AbstractPropertyOptions
 	private static final String USE_EMPTY_QUERY_SCOPE_WARNING_PROJECTS = "All open projects have to be reloaded to actually disable the model indexing by V4MD on these models!";
 	
 	private static Logger logger = Logger.getLogger(V4MDSpecificEnvironmentOptionsGroup.class);
-	private Style style;
 	
 	public V4MDSpecificEnvironmentOptionsGroup() {
 		super(V4MD_GROUP_ID);
@@ -120,9 +118,18 @@ public class V4MDSpecificEnvironmentOptionsGroup extends AbstractPropertyOptions
 	private void setEditability(@CheckForNull Property p) {
 		if(p == null) return;
 		
+		boolean isFrozen = p._isFrozen();
+		if(isFrozen) {
+			p._setFrozen(false);
+		}
+		
 		p.setEditable(isDeveloper());
 		if(!isDeveloper()) {
 			p.setNonEditableReason(V4MD_DEVELOPER_MODE_REQUIRED);
+		}
+		
+		if(isFrozen) {
+			p._setFrozen(true);
 		}
 	}
 
