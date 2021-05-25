@@ -1,7 +1,7 @@
 // Tell Jenkins how to build projects from this repository
 pipeline {
 	agent {
-		label 'magicdraw19'
+		label 'ecs-md-slave'
 	} 
 	parameters {
 		string(name: 'RELEASE_VERSION', defaultValue: '', 
@@ -14,10 +14,6 @@ pipeline {
 	environment {
 		VERSION_STRINGS = " ${params.RELEASE_VERSION ? '-Pversion=' + params.RELEASE_VERSION : ''} "
 		TEAMS_NOTIFICATION_URL = credentials('v4md-teams-channel-url')
-	}
-	tools { 	
-		maven 'Maven 3.3.9' 	
-		jdk 'OpenJDK 8' 	
 	}
 	stages {
 		stage('Build Plug-in') { 
@@ -41,40 +37,5 @@ pipeline {
 				}
 			}
 		}
-		stage('Deploy Plugin') {
-			when {branch "master"} 
-			steps {
-				withCredentials([usernamePassword(credentialsId: 'nexus-buildserver-deploy', passwordVariable: 'DEPLOY_PASSWORD', usernameVariable: 'DEPLOY_USER')]) {
-					script{
-					    dir ('com.incquerylabs.v4md') {
-                    			        sh './gradlew ${VERSION_STRINGS} publish'
-					    }
-					}
-				}
-			}
-		}
-	}
-
-	post {
-		always {
-			archiveArtifacts artifacts: 'com.incquerylabs.v4md/build/distributions/*.zip', onlyIfSuccessful: true
-			junit testResults: 'com.incquerylabs.v4md/build/install/target/*.xml'
-		}
-		
-		success {
-            		office365ConnectorSend status: "Success",
-				color: "00db00",
-				webhookUrl: '${TEAMS_NOTIFICATION_URL}'
-        	}
-        	unstable {
-            		office365ConnectorSend status: "Unstable",
-				color: "fcb019",
-				webhookUrl: '${TEAMS_NOTIFICATION_URL}'
-        	}
-        	failure {
-            		office365ConnectorSend status: "Failure",
-				color: "f21607",
-				webhookUrl: '${TEAMS_NOTIFICATION_URL}'
-        	}
 	}
 }
