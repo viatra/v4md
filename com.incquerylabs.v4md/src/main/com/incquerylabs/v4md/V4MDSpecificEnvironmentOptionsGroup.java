@@ -1,7 +1,6 @@
 package com.incquerylabs.v4md;
 
 import java.awt.Color;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -13,9 +12,7 @@ import com.nomagic.magicdraw.core.options.AbstractPropertyOptionsGroup;
 import com.nomagic.magicdraw.core.options.EnvironmentOptions.EnvironmentChangeListener;
 import com.nomagic.magicdraw.properties.BooleanProperty;
 import com.nomagic.magicdraw.properties.Property;
-import com.nomagic.magicdraw.properties.PropertyManager;
 import com.nomagic.magicdraw.properties.PropertyResourceProvider;
-import com.nomagic.magicdraw.properties.Style;
 import com.nomagic.magicdraw.ui.notification.HRefRunnable;
 import com.nomagic.magicdraw.ui.notification.Notification;
 import com.nomagic.magicdraw.ui.notification.NotificationManager;
@@ -51,18 +48,6 @@ public class V4MDSpecificEnvironmentOptionsGroup extends AbstractPropertyOptions
 
 	public String getName() {
 		return V4MD_GROUP_NAME;
-	}
-
-	@Override
-	public void loadOptions(Style style, boolean paramBoolean) {
-		// This method is used, when the option is previously persisted
-		// It was the only place where we could apply the read-only behavior on UI
-		ArrayList<Property> collection = new ArrayList<>();
-		for (PropertyManager manager : style.getManagers()) {
-			manager.getProperty(USE_EMPTY_QUERY_SCOPE_ID).setEditable(true);
-			collection.addAll(manager.getProperties());
-		}
-		this.getOptions().apply(collection);
 	}
 	
 	@Override
