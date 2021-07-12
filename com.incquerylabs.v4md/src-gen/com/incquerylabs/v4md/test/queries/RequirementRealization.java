@@ -47,9 +47,9 @@ import org.eclipse.viatra.query.runtime.util.ViatraQueryLoggingUtil;
  * <p>Original source:
  *         <code><pre>
  *         pattern RequirementRealization(requirement : Class, realizingElement : NamedElement) {
- *         	Class.appliedStereotypeInstance.classifier.name(requirement, "Requirement");
+ *         	Class.appliedStereotype.name(requirement, "Requirement");
  *         	
- *         	Dependency.appliedStereotypeInstance.classifier.name(dep, "Satisfy");
+ *         	Dependency.appliedStereotype.name(dep, "Satisfy");
  *         	Dependency.supplier(dep, requirement);
  *         	Dependency.client(dep, realizingElement);
  *         }
@@ -265,9 +265,9 @@ public final class RequirementRealization extends BaseGeneratedEMFQuerySpecifica
    * <p>Original source:
    * <code><pre>
    * pattern RequirementRealization(requirement : Class, realizingElement : NamedElement) {
-   * 	Class.appliedStereotypeInstance.classifier.name(requirement, "Requirement");
+   * 	Class.appliedStereotype.name(requirement, "Requirement");
    * 	
-   * 	Dependency.appliedStereotypeInstance.classifier.name(dep, "Satisfy");
+   * 	Dependency.appliedStereotype.name(dep, "Satisfy");
    * 	Dependency.supplier(dep, requirement);
    * 	Dependency.client(dep, realizingElement);
    * }
@@ -662,9 +662,9 @@ public final class RequirementRealization extends BaseGeneratedEMFQuerySpecifica
   private static class GeneratedPQuery extends BaseGeneratedEMFPQuery {
     private static final RequirementRealization.GeneratedPQuery INSTANCE = new GeneratedPQuery();
     
-    private final PParameter parameter_requirement = new PParameter("requirement", "com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "Class")), PParameterDirection.INOUT);
+    private final PParameter parameter_requirement = new PParameter("requirement", "com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Class")), PParameterDirection.INOUT);
     
-    private final PParameter parameter_realizingElement = new PParameter("realizingElement", "com.nomagic.uml2.ext.magicdraw.classes.mdkernel.NamedElement", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "NamedElement")), PParameterDirection.INOUT);
+    private final PParameter parameter_realizingElement = new PParameter("realizingElement", "com.nomagic.uml2.ext.magicdraw.classes.mdkernel.NamedElement", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "NamedElement")), PParameterDirection.INOUT);
     
     private final List<PParameter> parameters = Arrays.asList(parameter_requirement, parameter_realizingElement);
     
@@ -696,52 +696,46 @@ public final class RequirementRealization extends BaseGeneratedEMFQuerySpecifica
           PVariable var_requirement = body.getOrCreateVariableByName("requirement");
           PVariable var_realizingElement = body.getOrCreateVariableByName("realizingElement");
           PVariable var_dep = body.getOrCreateVariableByName("dep");
-          new TypeConstraint(body, Tuples.flatTupleOf(var_requirement), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Class")));
-          new TypeConstraint(body, Tuples.flatTupleOf(var_realizingElement), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "NamedElement")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var_requirement), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Class")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var_realizingElement), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "NamedElement")));
           body.setSymbolicParameters(Arrays.<ExportedParameter>asList(
              new ExportedParameter(body, var_requirement, parameter_requirement),
              new ExportedParameter(body, var_realizingElement, parameter_realizingElement)
           ));
-          // 	Class.appliedStereotypeInstance.classifier.name(requirement, "Requirement")
+          // 	Class.appliedStereotype.name(requirement, "Requirement")
           PVariable var__virtual_0_ = body.getOrCreateVariableByName(".virtual{0}");
           new ConstantValue(body, var__virtual_0_, "Requirement");
-          new TypeConstraint(body, Tuples.flatTupleOf(var_requirement), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Class")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var_requirement), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Class")));
           PVariable var__virtual_1_ = body.getOrCreateVariableByName(".virtual{1}");
-          new TypeConstraint(body, Tuples.flatTupleOf(var_requirement, var__virtual_1_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Element", "appliedStereotypeInstance")));
-          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_1_), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "InstanceSpecification")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var_requirement, var__virtual_1_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Element", "appliedStereotype")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_1_), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Stereotype")));
           PVariable var__virtual_2_ = body.getOrCreateVariableByName(".virtual{2}");
-          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_1_, var__virtual_2_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "InstanceSpecification", "classifier")));
-          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_2_), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Classifier")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_1_, var__virtual_2_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "NamedElement", "name")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_2_), new EDataTypeInSlotsKey((EDataType)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "String")));
+          new Equality(body, var__virtual_2_, var__virtual_0_);
+          // 		Dependency.appliedStereotype.name(dep, "Satisfy")
           PVariable var__virtual_3_ = body.getOrCreateVariableByName(".virtual{3}");
-          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_2_, var__virtual_3_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "NamedElement", "name")));
-          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_3_), new EDataTypeInSlotsKey((EDataType)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "String")));
-          new Equality(body, var__virtual_3_, var__virtual_0_);
-          // 		Dependency.appliedStereotypeInstance.classifier.name(dep, "Satisfy")
+          new ConstantValue(body, var__virtual_3_, "Satisfy");
+          new TypeConstraint(body, Tuples.flatTupleOf(var_dep), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Dependency")));
           PVariable var__virtual_4_ = body.getOrCreateVariableByName(".virtual{4}");
-          new ConstantValue(body, var__virtual_4_, "Satisfy");
-          new TypeConstraint(body, Tuples.flatTupleOf(var_dep), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Dependency")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var_dep, var__virtual_4_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Element", "appliedStereotype")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_4_), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Stereotype")));
           PVariable var__virtual_5_ = body.getOrCreateVariableByName(".virtual{5}");
-          new TypeConstraint(body, Tuples.flatTupleOf(var_dep, var__virtual_5_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Element", "appliedStereotypeInstance")));
-          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_5_), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "InstanceSpecification")));
-          PVariable var__virtual_6_ = body.getOrCreateVariableByName(".virtual{6}");
-          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_5_, var__virtual_6_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "InstanceSpecification", "classifier")));
-          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_6_), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Classifier")));
-          PVariable var__virtual_7_ = body.getOrCreateVariableByName(".virtual{7}");
-          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_6_, var__virtual_7_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "NamedElement", "name")));
-          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_7_), new EDataTypeInSlotsKey((EDataType)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "String")));
-          new Equality(body, var__virtual_7_, var__virtual_4_);
+          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_4_, var__virtual_5_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "NamedElement", "name")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_5_), new EDataTypeInSlotsKey((EDataType)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "String")));
+          new Equality(body, var__virtual_5_, var__virtual_3_);
           // 	Dependency.supplier(dep, requirement)
-          new TypeConstraint(body, Tuples.flatTupleOf(var_dep), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Dependency")));
-          PVariable var__virtual_8_ = body.getOrCreateVariableByName(".virtual{8}");
-          new TypeConstraint(body, Tuples.flatTupleOf(var_dep, var__virtual_8_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Dependency", "supplier")));
-          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_8_), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "NamedElement")));
-          new Equality(body, var__virtual_8_, var_requirement);
+          new TypeConstraint(body, Tuples.flatTupleOf(var_dep), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Dependency")));
+          PVariable var__virtual_6_ = body.getOrCreateVariableByName(".virtual{6}");
+          new TypeConstraint(body, Tuples.flatTupleOf(var_dep, var__virtual_6_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Dependency", "supplier")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_6_), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "NamedElement")));
+          new Equality(body, var__virtual_6_, var_requirement);
           // 	Dependency.client(dep, realizingElement)
-          new TypeConstraint(body, Tuples.flatTupleOf(var_dep), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Dependency")));
-          PVariable var__virtual_9_ = body.getOrCreateVariableByName(".virtual{9}");
-          new TypeConstraint(body, Tuples.flatTupleOf(var_dep, var__virtual_9_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Dependency", "client")));
-          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_9_), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "NamedElement")));
-          new Equality(body, var__virtual_9_, var_realizingElement);
+          new TypeConstraint(body, Tuples.flatTupleOf(var_dep), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Dependency")));
+          PVariable var__virtual_7_ = body.getOrCreateVariableByName(".virtual{7}");
+          new TypeConstraint(body, Tuples.flatTupleOf(var_dep, var__virtual_7_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Dependency", "client")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_7_), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "NamedElement")));
+          new Equality(body, var__virtual_7_, var_realizingElement);
           bodies.add(body);
       }
       return bodies;

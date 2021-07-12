@@ -501,7 +501,7 @@ public final class Classes extends BaseGeneratedEMFQuerySpecification<Classes.Ma
   private static class GeneratedPQuery extends BaseGeneratedEMFPQuery {
     private static final Classes.GeneratedPQuery INSTANCE = new GeneratedPQuery();
     
-    private final PParameter parameter_class = new PParameter("class", "com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "Class")), PParameterDirection.INOUT);
+    private final PParameter parameter_class = new PParameter("class", "com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Class")), PParameterDirection.INOUT);
     
     private final List<PParameter> parameters = Arrays.asList(parameter_class);
     
@@ -531,12 +531,12 @@ public final class Classes extends BaseGeneratedEMFQuerySpecification<Classes.Ma
       {
           PBody body = new PBody(this);
           PVariable var_class = body.getOrCreateVariableByName("class");
-          new TypeConstraint(body, Tuples.flatTupleOf(var_class), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Class")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var_class), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Class")));
           body.setSymbolicParameters(Arrays.<ExportedParameter>asList(
              new ExportedParameter(body, var_class, parameter_class)
           ));
           // 	Class(class)
-          new TypeConstraint(body, Tuples.flatTupleOf(var_class), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Class")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var_class), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Class")));
           bodies.add(body);
       }
       return bodies;

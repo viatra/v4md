@@ -3,7 +3,6 @@
  */
 package com.incquerylabs.v4md.test.queries;
 
-import com.incquerylabs.v4md.test.queries.ReachableFromInitState;
 import com.nomagic.uml2.ext.magicdraw.statemachines.mdbehaviorstatemachines.State;
 import java.util.Arrays;
 import java.util.Collection;
@@ -502,7 +501,7 @@ public final class NotReachableFromInit extends BaseGeneratedEMFQuerySpecificati
   private static class GeneratedPQuery extends BaseGeneratedEMFPQuery {
     private static final NotReachableFromInit.GeneratedPQuery INSTANCE = new GeneratedPQuery();
     
-    private final PParameter parameter_state = new PParameter("state", "com.nomagic.uml2.ext.magicdraw.statemachines.mdbehaviorstatemachines.State", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "State")), PParameterDirection.INOUT);
+    private final PParameter parameter_state = new PParameter("state", "com.nomagic.uml2.ext.magicdraw.statemachines.mdbehaviorstatemachines.State", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "State")), PParameterDirection.INOUT);
     
     private final List<PParameter> parameters = Arrays.asList(parameter_state);
     
@@ -532,7 +531,7 @@ public final class NotReachableFromInit extends BaseGeneratedEMFQuerySpecificati
       {
           PBody body = new PBody(this);
           PVariable var_state = body.getOrCreateVariableByName("state");
-          new TypeConstraint(body, Tuples.flatTupleOf(var_state), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "State")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var_state), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "State")));
           body.setSymbolicParameters(Arrays.<ExportedParameter>asList(
              new ExportedParameter(body, var_state, parameter_state)
           ));

@@ -3,7 +3,6 @@
  */
 package com.incquerylabs.v4md.test.queries;
 
-import com.incquerylabs.v4md.test.queries.DependencyChain;
 import com.nomagic.uml2.ext.magicdraw.classes.mddependencies.Dependency;
 import java.util.Arrays;
 import java.util.Collection;
@@ -508,7 +507,7 @@ public final class CircularDependencyError extends BaseGeneratedEMFQuerySpecific
   private static class GeneratedPQuery extends BaseGeneratedEMFPQuery {
     private static final CircularDependencyError.GeneratedPQuery INSTANCE = new GeneratedPQuery();
     
-    private final PParameter parameter_dep = new PParameter("dep", "com.nomagic.uml2.ext.magicdraw.classes.mddependencies.Dependency", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "Dependency")), PParameterDirection.INOUT);
+    private final PParameter parameter_dep = new PParameter("dep", "com.nomagic.uml2.ext.magicdraw.classes.mddependencies.Dependency", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Dependency")), PParameterDirection.INOUT);
     
     private final List<PParameter> parameters = Arrays.asList(parameter_dep);
     
@@ -538,7 +537,7 @@ public final class CircularDependencyError extends BaseGeneratedEMFQuerySpecific
       {
           PBody body = new PBody(this);
           PVariable var_dep = body.getOrCreateVariableByName("dep");
-          new TypeConstraint(body, Tuples.flatTupleOf(var_dep), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Dependency")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var_dep), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Dependency")));
           body.setSymbolicParameters(Arrays.<ExportedParameter>asList(
              new ExportedParameter(body, var_dep, parameter_dep)
           ));

@@ -659,9 +659,9 @@ public final class GetSuperClass extends BaseGeneratedEMFQuerySpecification<GetS
   private static class GeneratedPQuery extends BaseGeneratedEMFPQuery {
     private static final GetSuperClass.GeneratedPQuery INSTANCE = new GeneratedPQuery();
     
-    private final PParameter parameter_class = new PParameter("class", "com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Classifier", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "Classifier")), PParameterDirection.INOUT);
+    private final PParameter parameter_class = new PParameter("class", "com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Classifier", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Classifier")), PParameterDirection.INOUT);
     
-    private final PParameter parameter_superClass = new PParameter("superClass", "com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Classifier", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "Classifier")), PParameterDirection.INOUT);
+    private final PParameter parameter_superClass = new PParameter("superClass", "com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Classifier", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Classifier")), PParameterDirection.INOUT);
     
     private final List<PParameter> parameters = Arrays.asList(parameter_class, parameter_superClass);
     
@@ -693,23 +693,23 @@ public final class GetSuperClass extends BaseGeneratedEMFQuerySpecification<GetS
           PVariable var_class = body.getOrCreateVariableByName("class");
           PVariable var_superClass = body.getOrCreateVariableByName("superClass");
           PVariable var_gen = body.getOrCreateVariableByName("gen");
-          new TypeConstraint(body, Tuples.flatTupleOf(var_class), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Classifier")));
-          new TypeConstraint(body, Tuples.flatTupleOf(var_superClass), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Classifier")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var_class), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Classifier")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var_superClass), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Classifier")));
           body.setSymbolicParameters(Arrays.<ExportedParameter>asList(
              new ExportedParameter(body, var_class, parameter_class),
              new ExportedParameter(body, var_superClass, parameter_superClass)
           ));
           // 	Generalization.general(gen, superClass)
-          new TypeConstraint(body, Tuples.flatTupleOf(var_gen), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Generalization")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var_gen), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Generalization")));
           PVariable var__virtual_0_ = body.getOrCreateVariableByName(".virtual{0}");
-          new TypeConstraint(body, Tuples.flatTupleOf(var_gen, var__virtual_0_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Generalization", "general")));
-          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_0_), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Classifier")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var_gen, var__virtual_0_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Generalization", "general")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_0_), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Classifier")));
           new Equality(body, var__virtual_0_, var_superClass);
           // 	Generalization.specific(gen, class)
-          new TypeConstraint(body, Tuples.flatTupleOf(var_gen), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Generalization")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var_gen), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Generalization")));
           PVariable var__virtual_1_ = body.getOrCreateVariableByName(".virtual{1}");
-          new TypeConstraint(body, Tuples.flatTupleOf(var_gen, var__virtual_1_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Generalization", "specific")));
-          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_1_), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Classifier")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var_gen, var__virtual_1_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Generalization", "specific")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_1_), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Classifier")));
           new Equality(body, var__virtual_1_, var_class);
           bodies.add(body);
       }
