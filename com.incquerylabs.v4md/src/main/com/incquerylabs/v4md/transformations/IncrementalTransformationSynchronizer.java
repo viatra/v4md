@@ -40,7 +40,7 @@ import com.nomagic.uml2.synchronizer.TransactionBasedSynchronizer;
  *
  */
 @SuppressWarnings("deprecation")
-public class IncrementalTransformationSynchronizer extends TransactionBasedSynchronizer {
+public class IncrementalTransformationSynchronizer extends TransactionBasedSynchronizer<Project> {
 
 	public static Function<Project, ModelSynchronizer> FACTORY = new ViatraTransformationSynchronizerManager();
 

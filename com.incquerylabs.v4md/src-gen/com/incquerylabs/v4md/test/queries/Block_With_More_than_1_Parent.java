@@ -3,9 +3,6 @@
  */
 package com.incquerylabs.v4md.test.queries;
 
-import com.incquerylabs.v4md.test.queries.BlocksWithDeepGeneralizationHierarchy;
-import com.incquerylabs.v4md.test.queries.GetSuperClasses;
-import com.incquerylabs.v4md.test.queries.MultipleInheritanceBlock;
 import org.eclipse.viatra.query.runtime.api.ViatraQueryEngine;
 import org.eclipse.viatra.query.runtime.api.impl.BaseGeneratedPatternGroup;
 

@@ -3,9 +3,6 @@
  */
 package com.incquerylabs.v4md.test.queries;
 
-import com.incquerylabs.v4md.test.queries.NotReachableFromInit;
-import com.incquerylabs.v4md.test.queries.ReachableFromInitState;
-import com.incquerylabs.v4md.test.queries.ReachableState;
 import org.eclipse.viatra.query.runtime.api.ViatraQueryEngine;
 import org.eclipse.viatra.query.runtime.api.impl.BaseGeneratedPatternGroup;
 

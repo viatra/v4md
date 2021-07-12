@@ -3,7 +3,6 @@
  */
 package com.incquerylabs.v4md.test.queries;
 
-import com.incquerylabs.v4md.test.queries.ClassNumberOfAttributes;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.LinkedHashSet;

@@ -3,9 +3,6 @@
  */
 package com.incquerylabs.v4md.test.queries;
 
-import com.incquerylabs.v4md.test.queries.Blocks;
-import com.incquerylabs.v4md.test.queries.BlocksWithNonEmptyName;
-import com.incquerylabs.v4md.test.queries.ClassesWithEmptyName;
 import org.eclipse.viatra.query.runtime.api.ViatraQueryEngine;
 import org.eclipse.viatra.query.runtime.api.impl.BaseGeneratedPatternGroup;
 

@@ -3,7 +3,6 @@
  */
 package com.incquerylabs.v4md.test.queries;
 
-import com.incquerylabs.v4md.test.queries.GetSuperClasses;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.LinkedHashSet;
@@ -52,7 +51,7 @@ import org.eclipse.viatra.query.runtime.util.ViatraQueryLoggingUtil;
  * <p>Original source:
  *         <code><pre>
  *         pattern BlocksWithDeepGeneralizationHierarchy(block : Class, superClass : Class) {
- *         	Class.appliedStereotypeInstance.classifier.name(block, "Block");
+ *         	Class.appliedStereotype.name(block, "Block");
  *             parents == count find getSuperClasses(block, _);
  *             find getSuperClasses(block, superClass);
  *             check(parents {@literal >} 1);
@@ -269,7 +268,7 @@ public final class BlocksWithDeepGeneralizationHierarchy extends BaseGeneratedEM
    * <p>Original source:
    * <code><pre>
    * pattern BlocksWithDeepGeneralizationHierarchy(block : Class, superClass : Class) {
-   * 	Class.appliedStereotypeInstance.classifier.name(block, "Block");
+   * 	Class.appliedStereotype.name(block, "Block");
    *     parents == count find getSuperClasses(block, _);
    *     find getSuperClasses(block, superClass);
    *     check(parents {@literal >} 1);
@@ -665,9 +664,9 @@ public final class BlocksWithDeepGeneralizationHierarchy extends BaseGeneratedEM
   private static class GeneratedPQuery extends BaseGeneratedEMFPQuery {
     private static final BlocksWithDeepGeneralizationHierarchy.GeneratedPQuery INSTANCE = new GeneratedPQuery();
     
-    private final PParameter parameter_block = new PParameter("block", "com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "Class")), PParameterDirection.INOUT);
+    private final PParameter parameter_block = new PParameter("block", "com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Class")), PParameterDirection.INOUT);
     
-    private final PParameter parameter_superClass = new PParameter("superClass", "com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1", "Class")), PParameterDirection.INOUT);
+    private final PParameter parameter_superClass = new PParameter("superClass", "com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class", new EClassTransitiveInstancesKey((EClass)getClassifierLiteralSafe("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Class")), PParameterDirection.INOUT);
     
     private final List<PParameter> parameters = Arrays.asList(parameter_block, parameter_superClass);
     
@@ -700,30 +699,27 @@ public final class BlocksWithDeepGeneralizationHierarchy extends BaseGeneratedEM
           PVariable var_superClass = body.getOrCreateVariableByName("superClass");
           PVariable var_parents = body.getOrCreateVariableByName("parents");
           PVariable var___0_ = body.getOrCreateVariableByName("_<0>");
-          new TypeConstraint(body, Tuples.flatTupleOf(var_block), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Class")));
-          new TypeConstraint(body, Tuples.flatTupleOf(var_superClass), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Class")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var_block), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Class")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var_superClass), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Class")));
           body.setSymbolicParameters(Arrays.<ExportedParameter>asList(
              new ExportedParameter(body, var_block, parameter_block),
              new ExportedParameter(body, var_superClass, parameter_superClass)
           ));
-          // 	Class.appliedStereotypeInstance.classifier.name(block, "Block")
+          // 	Class.appliedStereotype.name(block, "Block")
           PVariable var__virtual_0_ = body.getOrCreateVariableByName(".virtual{0}");
           new ConstantValue(body, var__virtual_0_, "Block");
-          new TypeConstraint(body, Tuples.flatTupleOf(var_block), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Class")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var_block), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Class")));
           PVariable var__virtual_1_ = body.getOrCreateVariableByName(".virtual{1}");
-          new TypeConstraint(body, Tuples.flatTupleOf(var_block, var__virtual_1_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Element", "appliedStereotypeInstance")));
-          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_1_), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "InstanceSpecification")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var_block, var__virtual_1_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Element", "appliedStereotype")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_1_), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Stereotype")));
           PVariable var__virtual_2_ = body.getOrCreateVariableByName(".virtual{2}");
-          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_1_, var__virtual_2_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "InstanceSpecification", "classifier")));
-          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_2_), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "Classifier")));
-          PVariable var__virtual_3_ = body.getOrCreateVariableByName(".virtual{3}");
-          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_2_, var__virtual_3_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "NamedElement", "name")));
-          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_3_), new EDataTypeInSlotsKey((EDataType)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1", "String")));
-          new Equality(body, var__virtual_3_, var__virtual_0_);
+          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_1_, var__virtual_2_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "NamedElement", "name")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_2_), new EDataTypeInSlotsKey((EDataType)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "String")));
+          new Equality(body, var__virtual_2_, var__virtual_0_);
           //     parents == count find getSuperClasses(block, _)
-          PVariable var__virtual_4_ = body.getOrCreateVariableByName(".virtual{4}");
-          new PatternMatchCounter(body, Tuples.flatTupleOf(var_block, var___0_), GetSuperClasses.instance().getInternalQueryRepresentation(), var__virtual_4_);
-          new Equality(body, var_parents, var__virtual_4_);
+          PVariable var__virtual_3_ = body.getOrCreateVariableByName(".virtual{3}");
+          new PatternMatchCounter(body, Tuples.flatTupleOf(var_block, var___0_), GetSuperClasses.instance().getInternalQueryRepresentation(), var__virtual_3_);
+          new Equality(body, var_parents, var__virtual_3_);
           //     find getSuperClasses(block, superClass)
           new PositivePatternCall(body, Tuples.flatTupleOf(var_block, var_superClass), GetSuperClasses.instance().getInternalQueryRepresentation());
           //     check(parents > 1)
