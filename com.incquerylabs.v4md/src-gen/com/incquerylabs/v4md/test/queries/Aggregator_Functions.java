@@ -3,12 +3,6 @@
  */
 package com.incquerylabs.v4md.test.queries;
 
-import com.incquerylabs.v4md.test.queries.AverageNumberOfAttributes;
-import com.incquerylabs.v4md.test.queries.ClassAttributes;
-import com.incquerylabs.v4md.test.queries.ClassNumberOfAttributes;
-import com.incquerylabs.v4md.test.queries.ClassWithMaxNumberOfAttributes;
-import com.incquerylabs.v4md.test.queries.Classes;
-import com.incquerylabs.v4md.test.queries.SumOfClassAttributes;
 import org.eclipse.viatra.query.runtime.api.ViatraQueryEngine;
 import org.eclipse.viatra.query.runtime.api.impl.BaseGeneratedPatternGroup;
 

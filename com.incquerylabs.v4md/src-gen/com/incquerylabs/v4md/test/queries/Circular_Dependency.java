@@ -3,8 +3,6 @@
  */
 package com.incquerylabs.v4md.test.queries;
 
-import com.incquerylabs.v4md.test.queries.CircularDependencyError;
-import com.incquerylabs.v4md.test.queries.DependencyChain;
 import org.eclipse.viatra.query.runtime.api.ViatraQueryEngine;
 import org.eclipse.viatra.query.runtime.api.impl.BaseGeneratedPatternGroup;
 

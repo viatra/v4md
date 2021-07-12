@@ -20,5 +20,5 @@ pattern classesWithEmptyName(class : Class){
 
 pattern blocks(class : Class){
 	//constraint that queries every class that has an instance of the "Block" stereotype
-	Class.appliedStereotypeInstance.classifier.name(class, "Block");
+	Class.appliedStereotype.name(class, "Block");
 }
