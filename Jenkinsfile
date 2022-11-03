@@ -17,7 +17,7 @@ pipeline {
 	}
 	tools { 	
 		maven 'Maven 3.3.9' 	
-		jdk 'AdoptOpenJDK 8' 	
+		jdk 'AdoptOpenJDK 8.0' 	
 	}
 	stages {
 		stage('Build Plug-in') { 
