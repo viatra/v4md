@@ -1,6 +1,6 @@
 package com.incquerylabs.v4md.test.queries
 
-import "http://www.nomagic.com/magicdraw/UML/2.5.1"
+import "http://www.nomagic.com/magicdraw/UML/2.5.1.1"
 //Main pattern that queries every block in the model with a non emty name
 //Note that you  dont need to check the subpatterns to be able to execute the main query,
 // as during runtime queries are flattened, meaning that subpattern calls are replaced with the body of the called query

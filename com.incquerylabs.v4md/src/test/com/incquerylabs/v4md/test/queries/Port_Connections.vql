@@ -1,6 +1,6 @@
 package com.incquerylabs.v4md.test.queries
 
-import "http://www.nomagic.com/magicdraw/UML/2.5.1"
+import "http://www.nomagic.com/magicdraw/UML/2.5.1.1"
 
 pattern PortConnections(port1 : Port, connector : Connector, port2 : Port) {
     Connector.end(connector, end1);

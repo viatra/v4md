@@ -43,7 +43,7 @@ import org.eclipse.viatra.query.runtime.util.ViatraQueryLoggingUtil;
  * <p>Original source:
  *         <code><pre>
  *         pattern getSuperClasses(class : Classifier, superClass: Classifier){
- *         	find getSuperClass+(class, superClass); 
+ *         	find getSuperClass+(class, superClass);
  *         }
  * </pre></code>
  * 
@@ -257,7 +257,7 @@ public final class GetSuperClasses extends BaseGeneratedEMFQuerySpecification<Ge
    * <p>Original source:
    * <code><pre>
    * pattern getSuperClasses(class : Classifier, superClass: Classifier){
-   * 	find getSuperClass+(class, superClass); 
+   * 	find getSuperClass+(class, superClass);
    * }
    * </pre></code>
    * 
