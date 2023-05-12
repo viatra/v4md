@@ -87,7 +87,7 @@ configurations {
 }
 
 dependencies {
-	preCompile group: 'com.nomagic', name: 'csm', version: '2021xr1-ea', classifier: 'no_install', ext: 'zip'
+	preCompile group: 'com.nomagic', name: 'csm', version: '2021xr1', classifier: 'no_install', ext: 'zip'
 	
     def exclusions = {
         exclude group: 'com.google.guava', module: 'guava'
