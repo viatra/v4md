@@ -1,6 +1,6 @@
 package com.incquerylabs.v4md.test.queries
 
-import "http://www.nomagic.com/magicdraw/UML/2.5.1"
+import "http://www.nomagic.com/magicdraw/UML/2.5.1.1"
 
 pattern BlocksWithDeepGeneralizationHierarchy(block : Class, superClass : Class) {
 	Class.appliedStereotype.name(block, "Block");
@@ -19,6 +19,6 @@ pattern MultipleInheritanceBlock(block : Class, parent1 : Class){
 
 
 pattern getSuperClasses(class : Classifier, superClass: Classifier){
-	find getSuperClass+(class, superClass); 
+	find getSuperClass+(class, superClass);
 } 
 
