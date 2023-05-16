@@ -348,7 +348,7 @@ publishing {
             artifact tasks.sourceJar
             artifact distZip {
 
-                classifier "plugin-2021x"
+                classifier "plugin"
                 extension "zip"
 
             }
