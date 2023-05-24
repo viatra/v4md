@@ -343,6 +343,7 @@ publishing {
 
     publications {
         mavenJava(MavenPublication) {
+            artifactId "${artifactId}-${mdVersion}"
             version "$version"
             from components.java
             artifact tasks.sourceJar
