@@ -42,7 +42,7 @@ pipeline {
 			}
 		}
 		stage('Deploy Plugin') {
-			when {branch "issues/77/separate_2021x_publish"} 
+			when {branch "PR-80"} 
 			steps {
 				withCredentials([usernamePassword(credentialsId: 'nexus-buildserver-deploy', passwordVariable: 'DEPLOY_PASSWORD', usernameVariable: 'DEPLOY_USER')]) {
 					script{
