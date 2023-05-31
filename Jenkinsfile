@@ -1,7 +1,7 @@
 // Tell Jenkins how to build projects from this repository
 pipeline {
 	agent {
-		label 'iqlabs-performance'
+		label 'magicdraw'
 	} 
 	parameters {
 		string(name: 'RELEASE_VERSION', defaultValue: '', 
