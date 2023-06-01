@@ -61,6 +61,9 @@ import org.eclipse.viatra.query.runtime.util.ViatraQueryLoggingUtil;
  *         	StringTaggedValue.value(taggedValue2, val2);
  *         	
  *         	val1 == val2;
+ *         	
+ *         	TaggedValue.tagDefinition(taggedValue, property);
+ *         	TaggedValue.tagDefinition(taggedValue2, property);
  *         }
  * </pre></code>
  * 
@@ -307,6 +310,9 @@ public final class PropertyStringValueEquals extends BaseGeneratedEMFQuerySpecif
    * 	StringTaggedValue.value(taggedValue2, val2);
    * 	
    * 	val1 == val2;
+   * 	
+   * 	TaggedValue.tagDefinition(taggedValue, property);
+   * 	TaggedValue.tagDefinition(taggedValue2, property);
    * }
    * </pre></code>
    * 
@@ -865,6 +871,18 @@ public final class PropertyStringValueEquals extends BaseGeneratedEMFQuerySpecif
           new Equality(body, var__virtual_5_, var_val2);
           // 		val1 == val2
           new Equality(body, var_val1, var_val2);
+          // 		TaggedValue.tagDefinition(taggedValue, property)
+          new TypeConstraint(body, Tuples.flatTupleOf(var_taggedValue), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "TaggedValue")));
+          PVariable var__virtual_6_ = body.getOrCreateVariableByName(".virtual{6}");
+          new TypeConstraint(body, Tuples.flatTupleOf(var_taggedValue, var__virtual_6_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "TaggedValue", "tagDefinition")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_6_), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Property")));
+          new Equality(body, var__virtual_6_, var_property);
+          // 	TaggedValue.tagDefinition(taggedValue2, property)
+          new TypeConstraint(body, Tuples.flatTupleOf(var_taggedValue2), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "TaggedValue")));
+          PVariable var__virtual_7_ = body.getOrCreateVariableByName(".virtual{7}");
+          new TypeConstraint(body, Tuples.flatTupleOf(var_taggedValue2, var__virtual_7_), new EStructuralFeatureInstancesKey(getFeatureLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "TaggedValue", "tagDefinition")));
+          new TypeConstraint(body, Tuples.flatTupleOf(var__virtual_7_), new EClassTransitiveInstancesKey((EClass)getClassifierLiteral("http://www.nomagic.com/magicdraw/UML/2.5.1.1", "Property")));
+          new Equality(body, var__virtual_7_, var_property);
           bodies.add(body);
       }
       return bodies;

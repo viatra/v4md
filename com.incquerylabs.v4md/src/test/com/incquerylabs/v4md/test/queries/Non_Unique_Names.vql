@@ -24,4 +24,7 @@ pattern PropertyStringValueEquals(element : NamedElement, element2 : NamedElemen
 	StringTaggedValue.value(taggedValue2, val2);
 	
 	val1 == val2;
+	
+	TaggedValue.tagDefinition(taggedValue, property);
+	TaggedValue.tagDefinition(taggedValue2, property);
 }

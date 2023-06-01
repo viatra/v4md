@@ -1,7 +1,7 @@
 // Tell Jenkins how to build projects from this repository
 pipeline {
 	agent {
-		label 'magicdraw19'
+		label 'magicdraw'
 	} 
 	parameters {
 		string(name: 'RELEASE_VERSION', defaultValue: '', 
@@ -42,7 +42,7 @@ pipeline {
 			}
 		}
 		stage('Deploy Plugin') {
-			when {branch "2021x"} 
+			when {branch "2022x"} 
 			steps {
 				withCredentials([usernamePassword(credentialsId: 'nexus-buildserver-deploy', passwordVariable: 'DEPLOY_PASSWORD', usernameVariable: 'DEPLOY_USER')]) {
 					script{

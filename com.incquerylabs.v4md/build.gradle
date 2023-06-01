@@ -36,16 +36,7 @@ repositories {
 
 //This is the part that is painful to maintain, as MD releases tend to move around these library jars
 ext.classpathLibraries = [
-        'lib/patch.jar',
-        'lib/md.jar',
-        'lib/md_api.jar',
-        'lib/md_common.jar',
-        'lib/md_common_api.jar',
-        'lib/md_common_test.jar',
-        'lib/tw_common.jar',
-        'lib/tw_common_api.jar',
-        'lib/launcher.jar',
-        'lib/activation.jar'
+        "lib/classpath.jar"
 ]
 
 String[] openApiLibraries = classpathLibraries + [
@@ -87,7 +78,7 @@ configurations {
 }
 
 dependencies {
-	preCompile group: 'com.nomagic', name: 'csm', version: '2021xr1', classifier: 'no_install', ext: 'zip'
+	preCompile group: 'com.nomagic', name: 'csm', version: '2022xr1h1', classifier: 'no_install', ext: 'zip'
 	
     def exclusions = {
         exclude group: 'com.google.guava', module: 'guava'
