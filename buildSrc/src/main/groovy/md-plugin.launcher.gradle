@@ -1,0 +1,73 @@
+plugins {
+	id 'base'
+}
+
+ext {
+    taskGroup = "magicdraw"
+
+    installationDirName = "install"
+    installationDir = "${project.buildDir}/$installationDirName"
+}
+
+configurations {
+    magicDrawRunnable {
+        canBeResolved = true
+        canBeConsumed = false
+    }
+	runnablePlugin {
+		canBeResolved = true
+		canBeConsumed = false
+	}
+	testPlugin {
+		canBeResolved = true
+		canBeConsumed = false
+	}
+}
+
+dependencies {
+    magicDrawRunnable project(path: ":v4md.md-dependencies", configuration: 'magicDraw')
+}
+
+clean.doFirst {
+	delete 'build/install'
+}
+
+task installPlugins(type: Sync) {
+    // Sync is used to ensure the run starts with a clean installation state
+
+    dependsOn configurations.magicDrawRunnable
+	dependsOn configurations.runnablePlugin
+
+    from configurations.magicDrawRunnable
+    from configurations.runnablePlugin
+
+    into installationDir
+}
+
+task installTestPlugins(type: Copy) {
+    // Sync is not used to have the installation be additional to the already installed plugins
+
+    dependsOn installPlugins
+	dependsOn configurations.testPlugin
+
+    from configurations.testPlugin
+
+    into installationDir
+}
+
+task runMagicDraw(type: MagicDrawExec) {
+    group = taskGroup
+    dependsOn installPlugins
+}
+
+task debugMagicDraw(type: MagicDrawExec) {
+    group = taskGroup
+    dependsOn installPlugins
+
+    debugOptions {
+        enabled = true
+        port = 9099
+        server = true
+        suspend = true
+    }
+}

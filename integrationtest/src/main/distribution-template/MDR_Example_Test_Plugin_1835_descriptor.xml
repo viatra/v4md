@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resourceDescriptor critical="false"
+                    date="${build.timestamp}"
+                    description="Integration test plugin for the ReqIF Exporter plugin"
+                    id="1835"
+                    mdVersionMax="higher"
+                    mdVersionMin="2021x Refresh1"
+                    name="ReqIF Exporter Integration Test"
+                    product="ReqIF Exporter Integration Test"
+                    type="Plugin">
+    <version human="${human.version}" resource="${internal.version}" internal="${internal.version}"/>
+    <provider name="IncQuery Labs cPlc."/>
+    <edition>Reader</edition>
+    <edition>Community</edition>
+    <edition>Standard</edition>
+    <edition>Professional Java</edition>
+    <edition>Professional C++</edition>
+    <edition>Professional C#</edition>
+    <edition>Professional ArcStyler</edition>
+    <edition>Professional EFFS ArcStyler</edition>
+    <edition>OptimalJ</edition>
+    <edition>Professional</edition>
+    <edition>Architect</edition>
+    <edition>Enterprise</edition>
+
+    
+    <installation>
+        <!-- START AUTO-GENERATED -->
+        <!-- END AUTO-GENERATED -->
+    </installation>
+</resourceDescriptor>

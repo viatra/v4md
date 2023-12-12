@@ -1,6 +1,8 @@
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
-import java.util.zip.ZipFile
+plugins{
+   	id 'md-plugin.java'
+	id 'eclipse'
+	id 'idea' 
+}
 
 apply plugin: 'distribution'
 apply plugin: 'eclipse'
@@ -8,44 +10,16 @@ apply plugin: 'java'
 apply plugin: 'java-library'
 apply plugin: 'maven-publish'
 
-ext.buildNumber = project.hasProperty('buildNumber') ? project.getProperty('buildNumber') : System.currentTimeSeconds()
-ext.timestamp = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH:mm").format(LocalDateTime.now())
-ext.release = version.endsWith("-SNAPSHOT")
-ext.deployUser = hasProperty('deployUser') ? deployUser : System.getenv('DEPLOY_USER')
-ext.deployPassword = hasProperty('deployPassword') ? deployPassword : System.getenv('DEPLOY_PASSWORD')
-ext.magicdrawAccessUser = hasProperty('mdAccessUser') ? mdAccessUser : (System.getenv('MD_ACCESS_USER') ? System.getenv('MD_ACCESS_USER') : deployUser)
-ext.magicdrawAccessPassword = hasProperty('mdAccessPassword') ? mdAccessPassword : (System.getenv('MD_ACCESS_PASSWORD') ? System.getenv('MD_ACCESS_PASSWORD') : deployPassword)
+ext {
+	pluginId = mdPluginProjectName
+	pluginDescriptorName = "MDR_Plugin_V4MD_1720_descriptor"
+}
 
 // See https://stackoverflow.com/a/40239092/114313
 version "${version}"
 
 sourceCompatibility = JavaVersion.VERSION_11
 targetCompatibility = JavaVersion.VERSION_11
-
-repositories {
-    maven {
-  	url magicdrawBinaryRepository
-  		credentials {
-    		username = magicdrawAccessUser
-    		password = magicdrawAccessPassword
-  		}
-	}
-    mavenCentral()
-    maven { url "https://repo.eclipse.org/content/groups/viatra/" }
-}
-
-//This is the part that is painful to maintain, as MD releases tend to move around these library jars
-ext.classpathLibraries = [
-        "lib/classpath.jar"
-]
-
-String[] openApiLibraries = classpathLibraries + [
-		'lib/bundles/com.nomagic.magicdraw.uml2'
-]
-
-String[] requiredPlugins = [
-		'com.nomagic.magicdraw.sysml'
-]
 
 eclipse {
 	project {
@@ -54,93 +28,38 @@ eclipse {
 		buildCommand 'org.eclipse.viatra.query.tooling.ui.projectbuilder'
 		buildCommand 'org.eclipse.xtext.ui.shared.xtextBuilder'
 	}
-	classpath {
-		file {
-			// Registers the OpenAPI Javadoc for the appropriate jar files in Eclipse
-			whenMerged { classpath ->
-                def javadocFile = new File(buildDir, "dependency-cache/extracted/openapi/docs/javadoc.zip")
-				classpath.entries.
-					findAll{ it instanceof org.gradle.plugins.ide.eclipse.model.Library }.
-					findAll{ openApiLibraries.any{lib -> it.path.contains(lib)}}.
-					each {
-						def factory = new org.gradle.plugins.ide.eclipse.model.internal.FileReferenceFactory() 
-						it.setJavadocPath(factory.fromFile(javadocFile))
-					}
-			}
-        }
-	}
-}
-
-configurations {
-    pub
-    implementation.extendsFrom pub
-    preCompile
+//	classpath {
+//		file {
+//			// Registers the OpenAPI Javadoc for the appropriate jar files in Eclipse
+//			whenMerged { classpath ->
+//                def javadocFile = new File(buildDir, "dependency-cache/extracted/openapi/docs/javadoc.zip")
+//				classpath.entries.
+//					findAll{ it instanceof org.gradle.plugins.ide.eclipse.model.Library }.
+//					findAll{ openApiLibraries.any{lib -> it.path.contains(lib)}}.
+//					each {
+//						def factory = new org.gradle.plugins.ide.eclipse.model.internal.FileReferenceFactory() 
+//						it.setJavadocPath(factory.fromFile(javadocFile))
+//					}
+//			}
+//        }
+//	}
 }
 
 dependencies {
-	preCompile group: 'com.nomagic', name: 'csm', version: '2022xr1h1', classifier: 'no_install', ext: 'zip'
-	
     def exclusions = {
         exclude group: 'com.google.guava', module: 'guava'
         exclude module: 'log4j'
     }
-    def testExclusions = {
-    	exclude group: 'com.google.guava', module: 'guava'
-    	exclude group: 'org.eclipse.viatra', module: 'viatra-query-runtime'
-        exclude module: 'log4j'
-    }
 
-    pub group: 'org.eclipse.viatra', name: 'viatra-query-runtime', version: viatraVersion, exclusions
-    pub group: 'org.eclipse.viatra', name: 'viatra-transformation-runtime', version: viatraVersion, exclusions
-    
-        
-    
-    // This ensures classpath load order to match the MagicDraw provided order and then includes extras needed for non-OpenAPI stuff.
-    implementation files(classpathLibraries.collect { 'build/dependency-cache/extracted/' + it })
-    implementation fileTree(dir: 'build/dependency-cache/extracted', include: ['lib/**/*.jar'], exclude: classpathLibraries)
-    // Only adding the plugins that are necessary for compilation as dependency to ensure a smaller classpath
-    requiredPlugins.each {plugin ->
-    	implementation fileTree(dir: 'build/dependency-cache/extracted', include: ["plugins/${plugin}/**/*.jar"])
-    }
-    
-    testCompile group: 'org.eclipse.xtend', name: 'org.eclipse.xtend.lib', version: xtextVersion, exclusions
-    testCompile 'org.apache.maven.surefire:maven-surefire-common:2.19.1'
-    testCompile 'org.apache.maven.surefire:surefire-api:2.19.1'
-    testCompile 'org.apache.maven.surefire:surefire-junit4:2.19.1'
-    testCompile group: 'com.google.guava', name: 'guava', version: '27.1-jre'
-    testCompile group: 'org.eclipse.viatra', name: 'viatra-query-testing', version: viatraVersion, testExclusions
-}
-
-task extractDependencies {
-
-    configurations.preCompile.resolvedConfiguration.resolvedArtifacts.each { artifact ->
-        inputs.file artifact.file
-        def zipFile = new ZipFile(artifact.file)
-        zipFile.entries().each { entry ->
-            if (!entry.isDirectory()) {
-                outputs.file 'build/dependency-cache/extracted/' + entry.getName()
-            }
-        }
-    }
-    doLast {
-        inputs.files.each { archive ->
-            copy {
-                from zipTree(archive)
-                into 'build/dependency-cache/extracted'
-            }
-        }
-        fileTree(dir: 'build/dependency-cache/extracted', include: '*.zip').each { archive ->
-            copy {
-                from zipTree(archive)
-                into 'build/dependency-cache/extracted'
-            }
-        }
-    }
+    api group: 'org.eclipse.viatra', name: 'viatra-query-runtime', version: viatraVersion, exclusions
+    api group: 'org.eclipse.viatra', name: 'viatra-transformation-runtime', version: viatraVersion, exclusions
 }
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
+
+apply plugin: 'md-plugin.md' 
 
 sourceSets {
     main {
@@ -151,175 +70,15 @@ sourceSets {
         	srcDirs 'src/resources'
         }   
     }
-    test {
-    	java{
-    		srcDirs = ['src/test', 'src-gen']
-    	}
-    }
 }
-
-compileJava.dependsOn rootProject.extractDependencies
 
 javadoc {
 	enabled false
 }
 
-task sourceJar(type: Jar, dependsOn: classes) {
-    classifier = 'sources'
-    from sourceSets.main.allSource
-}
+//jvmArgs = platformConfigSetting + ['-Xmx8192M', '-Xss512M', '-noverify', '-splash:data/splash.png','-Dmd.class.path=$java.class.path', '-Dlogback.configurationFile=data/logback.xml', '-Desi.system.config=data/application.conf']
 
-class PreDist extends DefaultTask {
-    String humanVersion
-    String internalVersion
-    String buildTimestamp
-    String pluginTemplate
-    String groupName
-    Set<File> resolvedArtifacts
-    org.gradle.api.tasks.bundling.Jar outputArtifact
-    String distributionFolderName
-
-    @TaskAction
-    void executeTask() {
-        
-        project.copy {
-            from resolvedArtifacts
-            from outputArtifact
-            into "build/${distributionFolderName}/plugins/${groupName}"
-        }
-        project.fileTree(dir: 'build/${distributionFolderName}', include: '**/*${groupName}*/**').each { file ->
-            file.renameTo(project.file(file.getAbsolutePath().replace('${groupName}', "${groupName}")))
-        }
-
-        String pluginLibraries = ''
-        project.fileTree(dir: "build/${distributionFolderName}/plugins/${groupName}", include: '**/*.jar').each { file ->
-            pluginLibraries += '\t\t<library name=\"' + file.absolutePath.replaceAll(~/.*build\/generated-dist\/plugins\/${project.name}\//, '') + '\"/>' + System.lineSeparator()
-        }
-        project.copy {
-            from pluginTemplate
-            filter { String line -> line.replace('<!-- START AUTO-GENERATED -->', '<!-- START AUTO-GENERATED -->' + System.lineSeparator() + System.lineSeparator() + pluginLibraries) }
-            filter { String line -> line.replace('${human.version}', humanVersion) }
-            filter { String line -> line.replace('${internal.version}', internalVersion) }
-            into "build/${distributionFolderName}/plugins/${groupName}"
-        } 
-    }
-}
-
-task preDist(type: PreDist) {
-	dependsOn jar
-    humanVersion = version
-    internalVersion = buildNumber
-    buildTimestamp = timestamp
-    groupName = project.name
-    pluginTemplate = "dist/template/plugins/${project.name}/plugin.xml"
-    resolvedArtifacts = project.configurations.pub.resolvedConfiguration.resolvedArtifacts.file
-    outputArtifact = project.jar
-    distributionFolderName = "generated-dist"
-    
-    doFirst{
-    	project.copy {
-            from 'src/main/dist'
-            exclude 'template'
-            from 'src/main/dist/template'
-            exclude 'plugins'
-            from 'src/main/dist/template/plugins'
-            exclude '${project.name}'
-            into 'build/generated-dist'
-        }
-        
-        project.copy {
-            from "../LICENSE"
-            into 'build/generated-dist'
-            rename {filename -> filename.replace("LICENSE", "EULA_V4MD.txt")}
-        }
-        // Ensure any old plugin descriptors are removed to avoid them getting included into the newly generated descriptor file
-        project.delete 'build/generated-dist/data/resourcemanager'
-    }
-    
-    doLast{
-    	String descriptorFiles = ''
-    	java.nio.file.Path containerPath = project.file('build/generated-dist').toPath()
-        project.fileTree(dir: 'build/generated-dist').each { file ->
-            String relativePath = containerPath.relativize(file.toPath()).toString()
-            descriptorFiles += '\t\t<file from=\"' + relativePath + '\" to=\"' + relativePath + '\"/>' + System.lineSeparator()
-        }
-        
-    	project.copy {
-            from "dist/template/data/resourcemanager/MDR_Plugin_V4MD_1720_descriptor.xml"
-            filter { String line -> line.replace('<!-- START AUTO-GENERATED -->', '<!-- START AUTO-GENERATED -->' + System.lineSeparator() + System.lineSeparator() + descriptorFiles) }
-            filter { String line -> line.replace('${human.version}', humanVersion) }
-            filter { String line -> line.replace('${internal.version}', internalVersion) }
-            filter { String line -> line.replace('${build.timestamp}', buildTimestamp) }
-            into 'build/generated-dist/data/resourcemanager'
-        }
-    }
-}
-
-distributions {
-    main {
-        contents {
-            exclude 'template'
-            from 'build/generated-dist'
-        }
-    }
-}
-
-distZip {
-    dependsOn preDist
-
-    includeEmptyDirs false
-    duplicatesStrategy DuplicatesStrategy.EXCLUDE
-    eachFile { file ->
-        file.setPath(path.substring(path.indexOf("/") + 1, path.length()))
-    }
-}
-
-installDist {
-    destinationDir = file('build/plugin')
-    doLast {
-        copy {
-            fileMode 0755
-            from 'build/dependency-cache/extracted'
-            from 'build/plugin'
-            into 'build/install'
-        }
-    }
-}
-
-installDist.dependsOn distZip
-
-def os = org.gradle.internal.os.OperatingSystem.current()
-def platformConfigSetting = 
-        (os.isWindows())
-		? ['-DWINCONFIG=true']
-		: ((os.isMacOsX())
-			? ['-DWINCONFIG=false', '-Xdock:name=MagicDraw', '-Xdock:icon=bin/md.icns', '-Dapple.laf.useScreenMenuBar=true']
-: ['-DWINCONFIG=false'])
-
-tasks.withType(JavaExec) {
-	doFirst {
-        classpath fileTree(dir: 'build/install', include: ['lib/**/*.jar'])
-    }
-
-	workingDir 'build/install'
-    ignoreExitValue true
-
-    standardOutput = System.out
-    errorOutput = System.err
-    
-	
-    jvmArgs = platformConfigSetting + ['-Xmx8192M', '-Xss512M', '-noverify', '-splash:data/splash.png','-Dmd.class.path=$java.class.path', '-Dlogback.configurationFile=data/logback.xml', '-Desi.system.config=data/application.conf']
-}
-
-tasks.withType(Tar) {
-    enabled = false
-}
-
-distTar {
-    enabled = false
-}
-
-publishing {
+/*publishing {
     repositories {
         maven {
             url version.endsWith('-SNAPSHOT') ? deploySnapshotUrl: deployReleaseUrl
@@ -346,82 +105,16 @@ publishing {
             }
         }
     }
-}
+}*/
 
-task testJar(type: Jar) {
-    classifier = 'tests'
-    from sourceSets.test.output.classesDirs
-}
-
-String testDistFolder = "test-dist"
-
-task testDist(type: PreDist) {
-    humanVersion = version
-    internalVersion = buildNumber
-    buildTimestamp = timestamp
-    groupName = "com.incquerylabs.v4md.test"
-    pluginTemplate = "src/test/com/incquerylabs/v4md/test/plugin.xml"
-	resolvedArtifacts = project.configurations.testCompile.resolvedConfiguration.resolvedArtifacts.file
-	outputArtifact = project.testJar
-	distributionFolderName = testDistFolder
-}
-testDist.dependsOn testJar
-distZip.dependsOn testDist
-
-task installTest {
-	doLast {
-        project.copy {
-            fileMode 0755
-            from "build/${testDistFolder}"
-            into 'build/install'
-        }
-	}
-}
-installTest.dependsOn installDist
-installTest.dependsOn testDist
-
-task configureTest {
+/*task configureTest {
 	doLast {
 	    project.delete "build/install/plugins/${project.name}/settings" // to enable test settings to take effect
 	}
 }
-configureTest.dependsOn installTest
+configureTest.dependsOn installTest*/
 
-def testArgs = [
+/*def testArgs = [
  	'-Dcom.nomagic.magicdraw.commandline.action=com.incquerylabs.v4md.test.runner.TestRunner',
  	'-Dtests.resources=../../src/test/data'
-]
-
-def debugArgs = ['-Xdebug', '-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=9099', '-Dcom.sun.management.jmxremote.port=1099', '-Dcom.sun.management.jmxremote.authenticate=false', '-Dcom.sun.management.jmxremote.ssl=false']
-
-task runTest(type: JavaExec) {
-	jvmArgs += testArgs
-	main = 'com.nomagic.magicdraw.commandline.CommandLineActionLauncher'
-	args "NOGUI"
-	args "DEVELOPER"
-	args "-verbose"
-}
-runTest.dependsOn configureTest
-
-task runSnapshotGeneration(type: JavaExec) {
-	jvmArgs += testArgs
-	jvmArgs += debugArgs
-	main = 'com.nomagic.magicdraw.commandline.CommandLineActionLauncher'
-	args "generateQuerySnapshots"
-	args "NOGUI"
-	args "DEVELOPER"
-	args "-verbose"
-}
-
-runSnapshotGeneration.dependsOn configureTest
-
-task debugTest(type: JavaExec) {
-	jvmArgs += testArgs
-	jvmArgs += debugArgs
-	main = 'com.nomagic.magicdraw.commandline.CommandLineActionLauncher'
-	args "NOGUI"
-	args "DEVELOPER"
-}
-
-debugTest.dependsOn configureTest
-
+]*/

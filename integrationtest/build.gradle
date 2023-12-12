@@ -1,0 +1,55 @@
+plugins {
+    id 'md-plugin.java'
+    id 'eclipse'
+}
+
+dependencies {
+    def exclusions = {
+        exclude group: 'com.google.guava', module: 'guava'
+        exclude module: 'log4j'
+    }
+    
+    def testExclusions = {
+        exclude group: 'com.google.guava', module: 'guava'
+        exclude group: 'org.eclipse.viatra', module: 'viatra-query-runtime'
+        exclude module: 'log4j'
+    }
+      
+    implementation group: 'org.eclipse.xtend', name: 'org.eclipse.xtend.lib', version: xtextVersion, exclusions
+    implementation 'org.apache.maven.surefire:maven-surefire-common:2.19.1'
+    implementation 'org.apache.maven.surefire:surefire-api:2.19.1'
+    implementation 'org.apache.maven.surefire:surefire-junit4:2.19.1'
+    implementation group: 'com.google.guava', name: 'guava', version: '27.1-jre'
+    implementation group: 'org.eclipse.viatra', name: 'viatra-query-testing', version: viatraVersion, testExclusions
+
+    compileOnly project(':'+mdPluginProjectName)
+}
+
+ext {
+    pluginId = mdIntegrationTestProjectName
+    pluginDescriptorName = "MDR_Example_Test_Plugin_1835_descriptor"
+}
+
+apply plugin: 'md-plugin.md'
+
+// Workaround for compileOnly dependencies in Buildship, see https://github.com/eclipse/buildship/issues/939
+configurations {
+	eclipseExtraClasspath.extendsFrom compileOnly
+}
+
+eclipse {
+    classpath {
+        plusConfigurations += [ configurations.eclipseExtraClasspath ]
+    }
+}
+
+sourceSets {
+    main {
+        java {
+           srcDirs = ['src/test', 'src/vql-gen']
+        }
+        resources {
+            srcDirs 'src/resources'
+        }
+    }
+}

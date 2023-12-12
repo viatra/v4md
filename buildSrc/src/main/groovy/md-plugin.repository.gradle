@@ -1,0 +1,15 @@
+plugins {
+    id 'base'
+}
+
+repositories {
+    maven {
+        url "https://build.incquerylabs.com/nexus/repository/nomagic-binaries/"
+        credentials {
+            username = System.getenv("nexusUsername") ?: nexusUsername
+            password = System.getenv("nexusPassword") ?: nexusPassword
+        }
+    }
+    maven { url 'https://repo.eclipse.org/content/groups/viatra/' }
+    mavenCentral()
+}
