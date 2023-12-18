@@ -3,6 +3,9 @@ plugins {
     id 'eclipse'
 }
 
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
+
 dependencies {
     def exclusions = {
         exclude group: 'com.google.guava', module: 'guava'

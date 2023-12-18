@@ -29,9 +29,10 @@ public class MagicDrawExec extends JavaExec {
             newArgs.add("-Xdock:icon=bin/md.icns");
             newArgs.add("-Dapple.laf.useScreenMenuBar=true");
         }
+        
+        newArgs.add("@bin/vm.options");
+        
         jvmArgs(newArgs);
-
-        args("DEVELOPER");
     }
 
     public MagicDrawExec setCliApplication(String applicationClassName) {

@@ -24,8 +24,9 @@ def includedMagicDrawJars = [
         'lib/**/*.jar'
 ]
 
+
 dependencies {
-    dependency group: 'com.nomagic', name: 'csm', version: '2022xr1h1', classifier: 'no_install', ext: 'zip'
+    dependency group: 'com.nomagic', name: 'csm', version: mdVersion, classifier: 'no_install', ext: 'zip'
 
     api fileTree(dir: "dependencies", include: includedMagicDrawJars)
 }

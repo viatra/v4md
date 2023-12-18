@@ -1,4 +1,5 @@
 plugins{
+	id 'maven-publish'
    	id 'md-plugin.java'
 	id 'eclipse'
 	id 'idea' 
@@ -18,8 +19,8 @@ ext {
 // See https://stackoverflow.com/a/40239092/114313
 version "${version}"
 
-sourceCompatibility = JavaVersion.VERSION_11
-targetCompatibility = JavaVersion.VERSION_11
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
 
 eclipse {
 	project {
@@ -78,34 +79,21 @@ javadoc {
 
 //jvmArgs = platformConfigSetting + ['-Xmx8192M', '-Xss512M', '-noverify', '-splash:data/splash.png','-Dmd.class.path=$java.class.path', '-Dlogback.configurationFile=data/logback.xml', '-Desi.system.config=data/application.conf']
 
-/*publishing {
-    repositories {
-        maven {
-            url version.endsWith('-SNAPSHOT') ? deploySnapshotUrl: deployReleaseUrl
-            if (deployUser != null) {
-                credentials {
-                    username = deployUser
-                    password = deployPassword
-                }
-            }
-        }
-    }
 
+publishing {
     publications {
         mavenJava(MavenPublication) {
             artifactId "${artifactId}-${mdVersion}"
             version "$version"
-            from components.java
-            artifact tasks.sourceJar
-            artifact distZip {
-
-                classifier "plugin"
-                extension "zip"
-
+            
+            artifact(distZip){
+				classifier 'plugin'	            	
             }
         }
     }
-}*/
+}
+
+publish.dependsOn distZip
 
 /*task configureTest {
 	doLast {
