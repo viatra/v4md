@@ -81,6 +81,18 @@ javadoc {
 
 
 publishing {
+	repositories {
+        maven {
+            url version.endsWith('-SNAPSHOT') ? deploySnapshotUrl: deployReleaseUrl
+            if (deployUser != null) {
+                credentials {
+                    username = deployUser
+                    password = deployPassword
+                }
+            }
+        }
+    }
+
     publications {
         mavenJava(MavenPublication) {
             artifactId "${artifactId}-${mdVersion}"
