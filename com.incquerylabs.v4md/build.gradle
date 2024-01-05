@@ -86,6 +86,14 @@ task copyLicense(type: Copy) {
 distZip.dependsOn copyLicense
 distTar.dependsOn copyLicense
 
+task sourceJar(type: Jar) {
+    from sourceSets.main.allSource
+    
+    dependsOn classes
+}
+
+preparePlugins.dependsOn sourceJar
+
 publishing {
 	repositories {
         maven {
@@ -108,8 +116,8 @@ publishing {
 				classifier 'plugin'	            	
             }
             
-			artifact(jar) {
-				classifier 'plugin'	            	
+			artifact(sourceJar) {
+				classifier 'sources'	            	
             }
         }
     }
