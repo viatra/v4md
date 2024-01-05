@@ -104,7 +104,11 @@ publishing {
             artifactId "${artifactId}-${mdVersion}"
             version "$version"
             
-            artifact(distZip){
+            artifact(distZip) {
+				classifier 'plugin'	            	
+            }
+            
+			artifact(jar) {
 				classifier 'plugin'	            	
             }
         }
