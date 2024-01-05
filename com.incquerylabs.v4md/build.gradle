@@ -87,12 +87,9 @@ distZip.dependsOn copyLicense
 distTar.dependsOn copyLicense
 
 task sourceJar(type: Jar) {
+	archiveClassifier = 'sources'
     from sourceSets.main.allSource
-    
-    dependsOn classes
 }
-
-preparePlugins.dependsOn sourceJar
 
 publishing {
 	repositories {
@@ -116,9 +113,7 @@ publishing {
 				classifier 'plugin'	            	
             }
             
-			artifact(sourceJar) {
-				classifier 'sources'	            	
-            }
+			artifact tasks.sourceJar
         }
     }
 }
