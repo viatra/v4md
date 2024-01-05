@@ -77,6 +77,14 @@ javadoc {
 	enabled false
 }
 
+task copyLicense(type: Copy) {
+    from "${rootProject.projectDir}/LICENSE"
+    into "$buildDir/generated-dist"
+    rename {filename -> filename.replace("LICENSE", "EULA_V4MD.txt")}
+}
+
+distZip.dependsOn copyLicense
+
 publishing {
 	repositories {
         maven {
