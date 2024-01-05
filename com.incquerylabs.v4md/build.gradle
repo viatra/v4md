@@ -77,9 +77,6 @@ javadoc {
 	enabled false
 }
 
-//jvmArgs = platformConfigSetting + ['-Xmx8192M', '-Xss512M', '-noverify', '-splash:data/splash.png','-Dmd.class.path=$java.class.path', '-Dlogback.configurationFile=data/logback.xml', '-Desi.system.config=data/application.conf']
-
-
 publishing {
 	repositories {
         maven {
@@ -106,15 +103,3 @@ publishing {
 }
 
 publish.dependsOn distZip
-
-/*task configureTest {
-	doLast {
-	    project.delete "build/install/plugins/${project.name}/settings" // to enable test settings to take effect
-	}
-}
-configureTest.dependsOn installTest*/
-
-/*def testArgs = [
- 	'-Dcom.nomagic.magicdraw.commandline.action=com.incquerylabs.v4md.test.runner.TestRunner',
- 	'-Dtests.resources=../../src/test/data'
-]*/
