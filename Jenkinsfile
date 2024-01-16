@@ -23,21 +23,17 @@ pipeline {
 		stage('Build Plug-in') { 
 			steps {
 				withCredentials([usernamePassword(credentialsId: 'nexus-buildserver-deploy', passwordVariable: 'DEPLOY_PASSWORD', usernameVariable: 'DEPLOY_USER')]) {
-					//dir ('com.incquerylabs.v4md'){
-						sh './gradlew clean'
-						sh './gradlew ${VERSION_STRINGS} assemble'
-					//}
+					sh './gradlew clean'
+					sh './gradlew ${VERSION_STRINGS} assemble'
 				}
 			}
 		}
 		stage('Running Plug-in Tests') { 
 			steps {
 				withCredentials([usernamePassword(credentialsId: 'nexus-buildserver-deploy', passwordVariable: 'DEPLOY_PASSWORD', usernameVariable: 'DEPLOY_USER')]) {
-					//dir ('com.incquerylabs.v4md'){
-	    			    wrap([$class: 'Xvnc']) {
-	    					sh './gradlew ${VERSION_STRINGS} runIntegrationTest'
-	    			    }
-					//}
+    			    wrap([$class: 'Xvnc']) {
+    					sh './gradlew ${VERSION_STRINGS} runIntegrationTest'
+    			    }
 				}
 			}
 		}
