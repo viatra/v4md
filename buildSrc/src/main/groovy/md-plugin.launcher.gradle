@@ -10,10 +10,10 @@ ext {
 }
 
 configurations {
-    magicDrawRunnable {
-        canBeResolved = true
-        canBeConsumed = false
-    }
+	magicDrawRunnable {
+		canBeResolved = true
+		canBeConsumed = false
+	}
 	runnablePlugin {
 		canBeResolved = true
 		canBeConsumed = false
@@ -33,15 +33,15 @@ clean.doFirst {
 }
 
 task installPlugins(type: Sync) {
-    // Sync is used to ensure the run starts with a clean installation state
+	// Sync is used to ensure the run starts with a clean installation state
 
-    dependsOn configurations.magicDrawRunnable
+	dependsOn configurations.magicDrawRunnable
 	dependsOn configurations.runnablePlugin
 
-    from configurations.magicDrawRunnable
-    from configurations.runnablePlugin
+	from configurations.magicDrawRunnable
+	from configurations.runnablePlugin
 
-    into installationDir
+	into installationDir
 }
 
 task installTestPlugins(type: Copy) {

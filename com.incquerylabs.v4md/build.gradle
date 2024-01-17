@@ -16,9 +16,6 @@ ext {
 	pluginDescriptorName = "MDR_Plugin_V4MD_1720_descriptor"
 }
 
-// See https://stackoverflow.com/a/40239092/114313
-version "${version}"
-
 sourceCompatibility = JavaVersion.VERSION_17
 targetCompatibility = JavaVersion.VERSION_17
 
@@ -89,7 +86,7 @@ distTar.dependsOn copyLicense
 
 task sourceJar(type: Jar) {
 	archiveClassifier = 'sources'
-    from sourceSets.main.allSource
+	from sourceSets.main.allSource
 }
 
 publishing {
