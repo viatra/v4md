@@ -16,8 +16,26 @@ ext {
 	pluginDescriptorName = "MDR_Plugin_V4MD_1720_descriptor"
 }
 
-sourceCompatibility = JavaVersion.VERSION_17
-targetCompatibility = JavaVersion.VERSION_17
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
+
+//This is the part that is painful to maintain, as MD releases tend to move around these library jars
+ext.classpathLibraries = [
+        'lib/patch.jar',
+        'lib/md.jar',
+        'lib/md_api.jar',
+        'lib/md_common.jar',
+        'lib/md_common_api.jar',
+        'lib/md_common_test.jar',
+        'lib/tw_common.jar',
+        'lib/tw_common_api.jar',
+        'lib/launcher.jar',
+        'lib/activation.jar'
+]
+
+String[] openApiLibraries = classpathLibraries + [
+		'lib/bundles/com.nomagic.magicdraw.uml2'
+]
 
 eclipse {
 	project {
@@ -27,20 +45,19 @@ eclipse {
 		buildCommand 'org.eclipse.xtext.ui.shared.xtextBuilder'
 	}
 	classpath {
-		downloadJavadoc = true
-		downloadSources = true
 		file {
-			whenMerged { cp ->
-// Registers the OpenAPI Javadoc for the appropriate jar files in Eclipse
-				def fileReferenceFactory = new org.gradle.plugins.ide.eclipse.model.internal.FileReferenceFactory()
-
-				def entry = cp.entries.findAll{ entry -> ['md_api', 'nomagic.magicdraw'].any{ entry.path.contains(it) }  }
-				
-				def javadocJar = fileTree(dir: "${project(':v4md.md-dependencies').projectDir}/dependencies/openapi/docs", include: '*md-javadoc*.jar').singleFile
-				
-				entry.forEach{ it.javadocPath = fileReferenceFactory.fromFile(javadocJar) }
+			// Registers the OpenAPI Javadoc for the appropriate jar files in Eclipse
+			whenMerged { classpath ->
+                def javadocFile = new File(buildDir, "dependency-cache/extracted/openapi/docs/javadoc.zip")
+				classpath.entries.
+					findAll{ it instanceof org.gradle.plugins.ide.eclipse.model.Library }.
+					findAll{ openApiLibraries.any{lib -> it.path.contains(lib)}}.
+					each {
+						def factory = new org.gradle.plugins.ide.eclipse.model.internal.FileReferenceFactory() 
+						it.setJavadocPath(factory.fromFile(javadocFile))
+					}
 			}
-		}
+        }
 	}
 }
 

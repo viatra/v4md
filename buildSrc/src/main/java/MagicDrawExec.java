@@ -22,15 +22,16 @@ public class MagicDrawExec extends JavaExec {
         var os = OperatingSystem.current();
 
         final List<String> newArgs = new ArrayList<>();
-
+        
+//      jvm args from old gradle setup	  
+//		jvmArgs = platformConfigSetting + ['-Xmx8192M', '-Xss512M', '-noverify', '-splash:data/splash.png','-Dmd.class.path=$java.class.path', '-Dlogback.configurationFile=data/logback.xml', '-Desi.system.config=data/application.conf']
+        
         newArgs.add("-DWINCONFIG=" + Boolean.toString(os.isWindows()));
         if (os.isMacOsX()) {
             newArgs.add("-Xdock:name=MagicDraw");
             newArgs.add("-Xdock:icon=bin/md.icns");
             newArgs.add("-Dapple.laf.useScreenMenuBar=true");
         }
-        
-        newArgs.add("@bin/vm.options");
         
         jvmArgs(newArgs);
     }

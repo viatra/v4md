@@ -10,9 +10,9 @@ import java.util.function.Predicate;
 import org.eclipse.viatra.query.runtime.matchers.util.Preconditions;
 import org.eclipse.viatra.transformation.runtime.emf.transformation.batch.BatchTransformation;
 
-import com.dassault_systemes.modeler.foundation.synchronizer.ModelSynchronizer;
-import com.dassault_systemes.modeler.foundation.synchronizer.ModelSynchronizerManager;
 import com.nomagic.magicdraw.core.Project;
+import com.nomagic.uml2.synchronizer.ModelSynchronizer;
+import com.nomagic.uml2.synchronizer.ModelSynchronizerManager;
 import com.nomagic.uml2.synchronizer.TransactionBasedSynchronizer;
 
 /**

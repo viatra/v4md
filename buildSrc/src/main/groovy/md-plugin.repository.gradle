@@ -13,8 +13,8 @@ repositories {
     maven {
         url "https://build.incquerylabs.com/nexus/repository/nomagic-binaries/"
         credentials {
-            username = System.getenv("nexusUsername") ?: magicdrawAccessUser
-            password = System.getenv("nexusPassword") ?: magicdrawAccessPassword
+            username = (System.getenv("nexusUsername") ?: magicdrawAccessUser) ?: nexusUsername
+            password = (System.getenv("nexusPassword") ?: magicdrawAccessPassword) ?: nexusPassword
         }
     }
     maven { url 'https://repo.eclipse.org/content/groups/viatra/' }
