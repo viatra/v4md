@@ -16,8 +16,8 @@ ext {
 	pluginDescriptorName = "MDR_Plugin_V4MD_1720_descriptor"
 }
 
-sourceCompatibility = JavaVersion.VERSION_11
-targetCompatibility = JavaVersion.VERSION_11
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
 
 //This is the part that is painful to maintain, as MD releases tend to move around these library jars
 ext.classpathLibraries = [

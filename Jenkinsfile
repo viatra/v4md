@@ -1,7 +1,7 @@
 // Tell Jenkins how to build projects from this repository
 pipeline {
 	agent {
-		label 'magicdraw'
+		label 'magicdraw-0'
 	} 
 	parameters {
 		string(name: 'RELEASE_VERSION', defaultValue: '', 
@@ -17,7 +17,7 @@ pipeline {
 	}
 	tools { 	
 		maven 'Maven 3.3.9' 	
-		jdk 'AdoptOpenJDK 11' 	
+		jdk 'AdoptOpenJDK 17' 	
 	}
 	stages {
 		stage('Build Plug-in') { 

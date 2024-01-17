@@ -33,6 +33,8 @@ public class MagicDrawExec extends JavaExec {
             newArgs.add("-Dapple.laf.useScreenMenuBar=true");
         }
         
+        newArgs.add("@bin/vm.options");
+        
         jvmArgs(newArgs);
     }
 

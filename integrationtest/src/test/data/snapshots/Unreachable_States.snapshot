@@ -3,231 +3,12 @@
   <matchSetRecords patternQualifiedName="com.incquerylabs.v4md.test.queries.notReachableFromInit">
     <filter/>
   </matchSetRecords>
-  <matchSetRecords patternQualifiedName="com.incquerylabs.v4md.test.queries.reachableFromInitState">
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone safety::::Safe">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On::::Straight">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Actuator::::::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::Off">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone safety::::Danger">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone safety::::Running self test">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On::::Divergent">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone safety::::Waiting for human intervention">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Actuator::::::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <filter/>
-  </matchSetRecords>
   <matchSetRecords patternQualifiedName="com.incquerylabs.v4md.test.queries.reachableState">
     <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone safety::::Waiting for human intervention">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone safety::::Running self test">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone safety::::Danger">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone safety::::Safe">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone safety::::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Pseudostate"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone safety::::Waiting for human intervention">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone safety::::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Pseudostate"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone safety::::Running self test">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone safety::::Danger">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone safety::::Waiting for human intervention">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Actuator::::::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Actuator::::::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone safety::::Running self test">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone safety::::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Pseudostate"/>
-      </substitutions>
-    </matches>
-    <matches>
       <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone safety::::Running self test">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone safety::::Waiting for human intervention">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::Divergent">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Straight">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Actuator::::::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Pseudostate"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Actuator::::::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::Straight">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Divergent">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::Off">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
       </substitutions>
     </matches>
@@ -248,10 +29,10 @@
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Pseudostate"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Actuator::::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Straight">
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Actuator::::::">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
       </substitutions>
     </matches>
@@ -259,7 +40,39 @@
       <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone safety::::">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Pseudostate"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone safety::::Safe">
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone safety::::Running self test">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone safety::::Running self test">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone safety::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Pseudostate"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone safety::::Waiting for human intervention">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone safety::::Running self test">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
       </substitutions>
     </matches>
@@ -272,8 +85,120 @@
       </substitutions>
     </matches>
     <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::Off">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::Divergent">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Straight">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::Straight">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Divergent">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone safety::::Danger">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone safety::::Waiting for human intervention">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone safety::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Pseudostate"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone safety::::Safe">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone safety::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Pseudostate"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone safety::::Waiting for human intervention">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone safety::::Danger">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone safety::::Safe">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
       <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Pseudostate"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Straight">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Pseudostate"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Actuator::::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Pseudostate"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Actuator::::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Pseudostate"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
@@ -287,11 +212,86 @@
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
       </substitutions>
     </matches>
+    <filter/>
+  </matchSetRecords>
+  <matchSetRecords patternQualifiedName="com.incquerylabs.v4md.test.queries.reachableFromInitState">
     <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="sourceState" value="TestModel::5 - Behavior::Zone actuator::::On::::">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Pseudostate"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Actuator::::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="targetState" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::Off">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone safety::::Running self test">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Actuator::::::">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone safety::::Waiting for human intervention">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone safety::::Danger">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On::::Straight">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On::::Divergent">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone safety::::Safe">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On::::Disabled">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="state" value="TestModel::5 - Behavior::Zone actuator::::On::::Enabled">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//State"/>
       </substitutions>
     </matches>

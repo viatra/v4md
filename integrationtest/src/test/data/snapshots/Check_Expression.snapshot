@@ -2,17 +2,42 @@
 <vqSnapshot:QuerySnapshot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vqSnapshot="http://www.eclipse.org/viatra/query/snapshot" inputSpecification="EObject">
   <matchSetRecords patternQualifiedName="com.incquerylabs.v4md.test.queries.classesWithNameThatContainsID">
     <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="UML Standard Profile::Validation Profile::systemValidationSuite">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Stereotype"/>
-      </substitutions>
-    </matches>
-    <matches>
       <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="UML Standard Profile::MagicDraw Profile::DSL Customization::Metrics::ValidationBasedMetricDefinition">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Stereotype"/>
       </substitutions>
     </matches>
     <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::2 - Requirements::Safety::Prevent accidents">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
       <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Zone controller::Zone Accident Prevention Subsystem">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="UML Standard Profile::Validation Profile::_ValidationRuleCustomization">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="UML Standard Profile::Validation Profile::validationSuite">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Stereotype"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="UML Standard Profile::MagicDraw Profile::DSL Customization::Metrics::CustomizationOfValidationBasedMetricDefinition">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="UML Standard Profile::Validation Profile::validationRule">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Stereotype"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::2 - Requirements::Usability requirements::Usability of smart transportation::Provide feedback">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
       </substitutions>
     </matches>
@@ -22,18 +47,8 @@
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::2 - Requirements::Usability requirements::Usability of smart transportation::Provide feedback">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="TestModel::2 - Requirements::Safety::Prevent accidents">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="UML Standard Profile::MagicDraw Profile::DSL Customization::Metrics::CustomizationOfValidationBasedMetricDefinition">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="UML Standard Profile::Validation Profile::systemValidationSuite">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Stereotype"/>
       </substitutions>
     </matches>
     <matches>
@@ -43,21 +58,6 @@
     </matches>
     <matches>
       <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="MD Customization for SysML::sysphs_profile::SysPhSPlatformProfile::MultidimensionalElement">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Stereotype"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="UML Standard Profile::Validation Profile::validationSuite">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Stereotype"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="UML Standard Profile::Validation Profile::_ValidationRuleCustomization">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="class" value="UML Standard Profile::Validation Profile::validationRule">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Stereotype"/>
       </substitutions>
     </matches>

@@ -2,63 +2,7 @@
 <vqSnapshot:QuerySnapshot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vqSnapshot="http://www.eclipse.org/viatra/query/snapshot" inputSpecification="EObject">
   <matchSetRecords patternQualifiedName="com.incquerylabs.v4md.test.queries.RequirementRealization">
     <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="requirement" value="TestModel::2 - Requirements::Functionality::Transport cargo::Controllability of trains::Train direction">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="realizingElement" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Transporation Train Controller">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="requirement" value="TestModel::2 - Requirements::Functionality::Traceability::Logging infrastructure events">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="realizingElement" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::System Monitor">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="requirement" value="TestModel::2 - Requirements::Functionality::Health monitoring::Continuous monitoring">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="realizingElement" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::System Monitor">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="requirement" value="TestModel::2 - Requirements::Functionality::Transport cargo::Controllability of trains">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="realizingElement" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Transporation Train Controller">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="requirement" value="TestModel::2 - Requirements::Functionality::Transport cargo">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="realizingElement" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
-      </substitutions>
-    </matches>
-    <matches>
       <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="requirement" value="TestModel::2 - Requirements::Functionality::Health monitoring::Continuous monitoring::Observing trains">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="realizingElement" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::System Monitor">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="requirement" value="TestModel::2 - Requirements::Functionality::Transport cargo">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="realizingElement" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Transporation Train Controller">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
-      </substitutions>
-    </matches>
-    <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="requirement" value="TestModel::2 - Requirements::Functionality::Health monitoring::Continuous monitoring::Observing track">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="realizingElement" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::System Monitor">
@@ -74,6 +18,30 @@
       </substitutions>
     </matches>
     <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="requirement" value="TestModel::2 - Requirements::Functionality::Traceability">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="realizingElement" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Transporation Train Controller">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="requirement" value="TestModel::2 - Requirements::Functionality::Transport cargo::Controllability of trains::Train speed">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="realizingElement" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Transporation Train Controller">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="requirement" value="TestModel::2 - Requirements::Functionality::Transport cargo">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="realizingElement" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Transporation Train Controller">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
       <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="requirement" value="TestModel::2 - Requirements::Functionality::Transport cargo::Set start and destination of cargo">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
       </substitutions>
@@ -82,10 +50,10 @@
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="requirement" value="TestModel::2 - Requirements::Functionality::Traceability">
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="requirement" value="TestModel::2 - Requirements::Functionality::Traceability::Logging infrastructure events">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
       </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="realizingElement" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Transporation Train Controller">
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="realizingElement" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::System Monitor">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
       </substitutions>
     </matches>
@@ -98,10 +66,42 @@
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="requirement" value="TestModel::2 - Requirements::Functionality::Transport cargo::Controllability of trains::Train speed">
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="requirement" value="TestModel::2 - Requirements::Functionality::Transport cargo::Controllability of trains::Train direction">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="realizingElement" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Transporation Train Controller">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="requirement" value="TestModel::2 - Requirements::Functionality::Transport cargo">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="realizingElement" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="requirement" value="TestModel::2 - Requirements::Functionality::Transport cargo::Controllability of trains">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="realizingElement" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::Transporation Train Controller">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="requirement" value="TestModel::2 - Requirements::Functionality::Health monitoring::Continuous monitoring::Observing track">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="realizingElement" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::System Monitor">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="requirement" value="TestModel::2 - Requirements::Functionality::Health monitoring::Continuous monitoring">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="realizingElement" value="TestModel::4 - Functional architecture::4.1 Functional decomposition::Transportation::System Monitor">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
       </substitutions>
     </matches>
