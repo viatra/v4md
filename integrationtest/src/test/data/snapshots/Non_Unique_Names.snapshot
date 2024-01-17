@@ -2,7 +2,7 @@
 <vqSnapshot:QuerySnapshot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vqSnapshot="http://www.eclipse.org/viatra/query/snapshot" inputSpecification="EObject">
   <matchSetRecords patternQualifiedName="com.incquerylabs.v4md.test.queries.IDStringPropertyEqualityError">
     <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="elem" value="TestModel::2 - Requirements::Functionality::Transport cargo::Set start and destination of cargo">
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="elem" value="TestModel::2 - Requirements::Functionality::Operate railway infrastructure">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="property" value="SysML::Requirements::AbstractRequirement::Id : String">
@@ -18,7 +18,7 @@
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="elem" value="TestModel::2 - Requirements::Functionality::Operate railway infrastructure">
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="elem" value="TestModel::2 - Requirements::Functionality::Transport cargo::Set start and destination of cargo">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="property" value="SysML::Requirements::AbstractRequirement::Id : String">
@@ -48,17 +48,6 @@
       </substitutions>
     </matches>
     <matches>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="element" value="TestModel::2 - Requirements::Functionality::Transport cargo::Set start and destination of cargo::Reconfiguration">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="element2" value="TestModel::2 - Requirements::Functionality::Transport cargo::Set start and destination of cargo">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
-      </substitutions>
-      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="property" value="SysML::Requirements::AbstractRequirement::Id : String">
-        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Property"/>
-      </substitutions>
-    </matches>
-    <matches>
       <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="element" value="TestModel::2 - Requirements::Functionality::Operate railway infrastructure">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
       </substitutions>
@@ -74,6 +63,17 @@
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="element2" value="TestModel::2 - Requirements::Functionality::Transport cargo::Set start and destination of cargo::Reconfiguration">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="property" value="SysML::Requirements::AbstractRequirement::Id : String">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Property"/>
+      </substitutions>
+    </matches>
+    <matches>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="element" value="TestModel::2 - Requirements::Functionality::Transport cargo::Set start and destination of cargo::Reconfiguration">
+        <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
+      </substitutions>
+      <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="element2" value="TestModel::2 - Requirements::Functionality::Transport cargo::Set start and destination of cargo">
         <type href="http://www.nomagic.com/magicdraw/UML/2.5.1.1#//Class"/>
       </substitutions>
       <substitutions xsi:type="vqSnapshot:CustomEMFSubstitution" parameterName="property" value="SysML::Requirements::AbstractRequirement::Id : String">
