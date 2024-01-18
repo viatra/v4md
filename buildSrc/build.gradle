@@ -1,0 +1,11 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'groovy-gradle-plugin'
+}
+
+apply from: "${rootDir.parentFile}/properties.gradle"
+
+repositories {
+    mavenCentral()
+    gradlePluginPortal()
+}

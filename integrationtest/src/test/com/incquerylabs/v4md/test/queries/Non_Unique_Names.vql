@@ -1,0 +1,30 @@
+package com.incquerylabs.v4md.test.queries
+
+import "http://www.nomagic.com/magicdraw/UML/2.5.1.1"
+
+/**
+ * Pattern responsible for detecting duplicate ID Property tagged values 
+ */
+pattern IDStringPropertyEqualityError(elem : NamedElement, property : Property){
+	find PropertyStringValueEquals(elem, otherElement, property);
+	elem != otherElement;
+}
+
+/**
+ * Detects NamedElement pairs, where the values of the same STRING ID property are equal
+ */
+pattern PropertyStringValueEquals(element : NamedElement, element2 : NamedElement, property : Property){
+	element != element2;
+	Property.isID(property, true);
+	
+	NamedElement.taggedValue(element, taggedValue);
+	StringTaggedValue.value(taggedValue, val1);
+	
+	NamedElement.taggedValue(element2, taggedValue2);
+	StringTaggedValue.value(taggedValue2, val2);
+	
+	val1 == val2;
+	
+	TaggedValue.tagDefinition(taggedValue, property);
+	TaggedValue.tagDefinition(taggedValue2, property);
+}

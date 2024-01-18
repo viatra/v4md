@@ -1,0 +1,46 @@
+plugins {
+    id 'md-plugin.repository'
+    id 'java-library'
+    id 'jacoco'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+test {
+    useJUnitPlatform()
+
+    testLogging {
+        events "started", "failed", "skipped", "standard_out", "standard_error"
+
+        exceptionFormat "full"
+        showExceptions true
+        showCauses true
+        showStackTraces true
+    }
+
+    finalizedBy jacocoTestReport
+}
+
+jacocoTestReport {
+    dependsOn test
+
+    // Exclude irrelevant code from report
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: [
+                    // Class files from generated code:
+
+
+            ])
+        }))
+    }
+}
+
+dependencies {
+    compileOnly project(":v4md.md-dependencies")
+    testImplementation project(":v4md.md-dependencies")
+}

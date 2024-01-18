@@ -1,0 +1,12 @@
+package com.incquerylabs.v4md.test.queries
+
+import "http://www.nomagic.com/magicdraw/UML/2.5.1.1"
+
+//Classes that have attributes that have the same name
+pattern classesWithSameNamedProperty(class1 : Class, class2 : Class, name : java String){
+	//using the 'name' parameter in both places will ensure that the name is the same
+	Class.ownedAttribute.name(class1, name);
+	Class.ownedAttribute.name(class2, name);
+	//Ensure that they are not the same class
+	class1 != class2;
+}

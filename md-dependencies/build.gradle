@@ -1,0 +1,90 @@
+plugins {
+    id 'java-library'
+    id 'md-plugin.repository'
+    id 'org.cyclonedx.bom' version '1.7.3'
+}
+
+cyclonedxBom {
+    // includeConfigs is the list of configuration names to include when generating the BOM (leave empty to include every configuration)
+    includeConfigs = ["runtimeClasspath"]
+    // skipConfigs is a list of configuration names to exclude when generating the BOM
+    skipConfigs = ["compileClasspath", "testCompileClasspath"]
+}
+
+configurations {
+    dependency
+    magicDraw {
+        canBeResolved = false
+        canBeConsumed = true
+    }
+}
+
+def includedMagicDrawJars = [
+        'plugins/**/*.jar',
+        'lib/**/*.jar'
+]
+
+
+dependencies {
+    dependency group: 'com.nomagic', name: 'csm', version: mdVersion, classifier: 'no_install', ext: 'zip'
+
+    api fileTree(dir: "dependencies", include: includedMagicDrawJars)
+}
+
+/*
+ * When using this plugin with Magicdraw 2022x, the following scheme might be used to extract the plugins
+ * from the bundled rdzip files
+*/
+def builtInPluginsTempFolder = "built-in-plugins"
+def requiredPlugins = [
+        'Cameo_Collaborator_Publisher_Plugin_2022x_Refresh1.zip',
+        'Cameo_Safety_and_Reliability_Analyzer_Plugin_2022x_Refresh1.zip',
+        'Development_Tools_Plugin_2022x_Refresh1.zip'
+]
+
+task installRequiredPlugins (type: Sync) {
+
+    fileTree(dir: "dependencies", include: '**/core.rdzip').each {archive ->
+        copy {
+            from (zipTree(archive)) {
+                include  requiredPlugins
+            }
+            into builtInPluginsTempFolder
+        }
+    }
+
+     fileTree(dir: builtInPluginsTempFolder, include: requiredPlugins).forEach {archive ->
+         copy {
+             from zipTree(archive)
+             into "dependencies"
+        }
+     }
+
+    delete builtInPluginsTempFolder
+}
+
+task extractDependencies(type: Sync) {
+    configurations.dependency.resolvedConfiguration.resolvedArtifacts.each { artifact ->
+        from zipTree(artifact.file)
+
+        zipTree(artifact.file).matching {
+            include "*.zip"
+        }.visit { details ->
+            from zipTree(details.file)
+        }
+    }
+
+    exclude "**/*.zip"
+
+    duplicatesStrategy DuplicatesStrategy.EXCLUDE
+    into "dependencies"
+
+    finalizedBy installRequiredPlugins
+}
+extractDependencies.finalizedBy cyclonedxBom
+
+compileJava.dependsOn extractDependencies
+
+artifacts {
+    magicDraw extractDependencies.destinationDir
+}

@@ -1,0 +1,58 @@
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'md-plugin.launcher'
+}
+
+ext {
+    productVersion = version
+    distributionType = System.getenv('DISTRIBUTION_TYPE') ?: "dev"
+}
+
+dependencies {
+	// TODO was unable to get this from properties.gradle thus the duplication of project identifiers
+	runnablePlugin project(path: ':com.incquerylabs.v4md', configuration: 'installablePlugin')
+	testPlugin project(path: ':com.incquerylabs.v4md.integrationtest', configuration: 'installablePlugin')
+}
+
+eclipse {
+    project{
+        resourceFilter {
+            appliesTo = 'FOLDERS'
+            type = 'EXCLUDE_ALL'
+            recursive = false
+            matcher {
+                id = 'org.eclipse.ui.ide.multiFilter'
+                arguments = '1.0-name-matches-false-false-io.incquery.*'
+            }
+        }
+    }
+}
+
+apply from: "properties.gradle"
+
+def testResourceDir = "${project(':com.incquerylabs.v4md.integrationtest').projectDir}/src/test/data"
+
+task runIntegrationTest(type : MagicDrawExec) {
+    group = taskGroup
+    dependsOn installTestPlugins
+
+    cliApplication = 'com.incquerylabs.v4md.test.runner.TestRunner'
+    jvmArgs += "-Dtests.resources=$testResourceDir"
+
+    args += 'NOGUI'
+}
+
+task runSnapshotGeneration(type : MagicDrawExec) {
+    group = taskGroup
+    dependsOn installTestPlugins
+
+    cliApplication = 'com.incquerylabs.v4md.test.runner.TestRunner'
+    jvmArgs += "-Dtests.resources=$testResourceDir"
+
+    args "generateQuerySnapshots"
+    args "NOGUI"
+    args "DEVELOPER"
+    args "-verbose"
+}
+

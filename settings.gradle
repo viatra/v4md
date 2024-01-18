@@ -1,0 +1,10 @@
+apply from: "properties.gradle"
+
+rootProject.name = rootProjectName
+
+include ':v4md.md-dependencies'
+project(":v4md.md-dependencies").projectDir = file("md-dependencies")
+include mdPluginProjectName
+project(":$mdPluginProjectName").projectDir = file('com.incquerylabs.v4md')
+include mdIntegrationTestProjectName
+project(":$mdIntegrationTestProjectName").projectDir = file('integrationtest')

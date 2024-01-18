@@ -1,0 +1,22 @@
+package com.incquerylabs.v4md.test.queries
+
+import "http://www.nomagic.com/magicdraw/UML/2.5.1.1"
+
+pattern notReachableFromInit(state : State){
+    neg find reachableFromInitState(state);
+}
+
+
+pattern reachableFromInitState(state :State){
+	Pseudostate.kind(initnode, ::initial);
+	find reachableState+(initnode, state);	
+}
+
+pattern reachableState(sourceState : Vertex, targetState : Vertex) {
+    Transition.source(transition, sourceState);
+    Transition.target(transition, targetState);
+    sourceState != targetState;
+    
+    
+}
+
