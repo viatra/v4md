@@ -1,0 +1,165 @@
+plugins {
+    id "distribution"
+}
+
+ext {
+    taskGroup = "magicdraw"
+
+    pluginId                // ID of the MagicDraw plugin (set in each appropriate project)
+    pluginDescriptorName    // Name of the MagicDraw plugin descriptor file (set in each appropriate project, excluding the extension .xml)
+
+    humanVersion = version
+    internalVersion = version
+
+    distributionDirName = "generated-dist"
+    distributionDir = "${buildDir}/$distributionDirName"
+}
+
+def distributionTemplateDir = "$projectDir/src/main/distribution-template"
+
+configurations {
+    magicDrawRunnable {
+        canBeResolved = true
+        canBeConsumed = false
+    }
+    implementation.extendsFrom plugin {
+        canBeResolved = true
+        canBeConsumed = false
+    }
+    documentation {
+    	canBeResolved = true
+    	canBeConsumed = false
+    }
+    installablePlugin {
+        canBeResolved = false
+        canBeConsumed = true
+    }
+}
+
+dependencies {
+    magicDrawRunnable project(path: ":v4md.md-dependencies", configuration: 'magicDraw')
+}
+
+task preparePlugins(type: Sync) {
+    dependsOn jar
+    dependsOn configurations.plugin
+
+    from project.configurations.runtimeClasspath.files
+    from project.jar
+    into "$distributionDir/plugins/$pluginId"
+
+    preserve {
+        include "**/plugin.xml"
+    }
+}
+
+task prepareProfiles(type: Sync) {
+    from "$distributionTemplateDir/profiles"
+    into "$distributionDir/profiles"
+    exclude "*.mdzip.bak"
+}
+
+task prepareModelLibraries(type: Sync) {
+    from "$distributionTemplateDir/modelLibraries"
+    into "$distributionDir/modelLibraries"
+    exclude "*.mdzip.bak"
+}
+
+task prepareTemplates(type: Sync) {
+    from "$distributionTemplateDir/templates"
+    into "$distributionDir/templates"
+}
+
+task prepareDiagrams(type: Sync) {
+    from "$distributionTemplateDir/data/defaults/data/diagrams"
+    into "$distributionDir/data/defaults/data/diagrams"
+}
+
+task preparePluginDescription(type: Copy) {
+    dependsOn preparePlugins
+
+    String pluginFiles = ''
+
+    outputs.upToDateWhen { false }
+
+    doFirst {
+        fileTree(distributionDir).filter{file -> file.name.endsWith('.jar')}.each { file ->
+            pluginFiles += "\t\t<library name=\"${file.name}\"/>${System.lineSeparator()}"
+        }
+    }
+
+    from("$distributionTemplateDir/plugin.xml") {
+        filter { line -> line.replace('<!-- START AUTO-GENERATED -->', '<!-- START AUTO-GENERATED -->' + System.lineSeparator() + pluginFiles) }
+        filter { line -> line.replace('${pluginId}', pluginId) }
+        filter { line -> line.replace('${human.version}', humanVersion) }
+        filter { line -> line.replace('${internal.version}', internalVersion) }
+    }
+    into "$distributionDir/plugins/$pluginId"
+}
+
+
+task prepareDocumentation(type: Sync) {
+    from configurations.documentation
+    into "$distributionDir/manual"
+}
+
+task prepareResourceManager(type: Sync) {
+    dependsOn preparePlugins
+    dependsOn prepareProfiles
+    dependsOn prepareModelLibraries
+    dependsOn prepareTemplates
+    dependsOn prepareDocumentation
+    dependsOn preparePluginDescription
+
+    String descriptorFiles = ''
+
+    outputs.upToDateWhen { false }
+
+    doFirst {
+        def rootPathLength = (buildDir.absolutePath + "/generated-dist/").length()
+        fileTree(distributionDir).each { file ->
+            def relativePath = file.absolutePath.substring(rootPathLength)
+            descriptorFiles += "\t\t<file from=\"$relativePath\" to=\"$relativePath\"/> ${System.lineSeparator()}"
+        }
+    }
+
+    from("$distributionTemplateDir/${pluginDescriptorName}.xml") {
+        filter { line -> line.replace('<!-- START AUTO-GENERATED -->', '<!-- START AUTO-GENERATED -->' + System.lineSeparator() + descriptorFiles) }
+        filter { line -> line.replace('${human.version}', humanVersion) }
+        filter { line -> line.replace('${internal.version}', internalVersion) }
+        filter { line -> line.replace('${build.timestamp}', buildTimestamp) }
+    }
+    into "$distributionDir/data/resourcemanager"
+}
+
+task prepareDistribution {
+    group = taskGroup
+
+    dependsOn preparePlugins
+    dependsOn prepareProfiles
+    dependsOn prepareModelLibraries
+    dependsOn prepareTemplates
+    dependsOn prepareDiagrams
+    dependsOn preparePluginDescription
+    dependsOn prepareResourceManager
+
+    outputs.dir distributionDir
+}
+
+distributions {
+    main {
+        contents {
+            from prepareDistribution
+            includeEmptyDirs false
+            eachFile { file ->
+                file.path = path.substring(path.indexOf("/") + 1)
+            }
+        }
+    }
+}
+
+artifacts {
+    installablePlugin(file(distributionDir))  {
+    	builtBy(prepareDistribution)
+    }
+}

@@ -1,0 +1,22 @@
+plugins {
+    id 'base'
+}
+
+ext{
+	deployUser = hasProperty('deployUser') ? deployUser : System.getenv('DEPLOY_USER')
+	deployPassword = hasProperty('deployPassword') ? deployPassword : System.getenv('DEPLOY_PASSWORD')
+	magicdrawAccessUser = hasProperty('mdAccessUser') ? mdAccessUser : (System.getenv('MD_ACCESS_USER') ? System.getenv('MD_ACCESS_USER') : deployUser)
+	magicdrawAccessPassword = hasProperty('mdAccessPassword') ? mdAccessPassword : (System.getenv('MD_ACCESS_PASSWORD') ? System.getenv('MD_ACCESS_PASSWORD') : deployPassword)
+}
+
+repositories {
+    maven {
+        url "https://build.incquerylabs.com/nexus/repository/nomagic-binaries/"
+        credentials {
+            username = (System.getenv("nexusUsername") ?: magicdrawAccessUser) ?: nexusUsername
+            password = (System.getenv("nexusPassword") ?: magicdrawAccessPassword) ?: nexusPassword
+        }
+    }
+    maven { url 'https://repo.eclipse.org/content/groups/viatra/' }
+    mavenCentral()
+}

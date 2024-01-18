@@ -1,0 +1,8 @@
+ext {
+    groupName='com.incquerylabs'
+    rootProjectName='v4md'
+    pluginProjectName='v4md'
+    mdPluginProjectName=String.join('.', groupName, pluginProjectName)
+    mdIntegrationTestProjectName=String.join('.', groupName, pluginProjectName, 'integrationtest')
+    buildTimestamp=new Date().format('yyyyMMddHHmmssSSS')
+}

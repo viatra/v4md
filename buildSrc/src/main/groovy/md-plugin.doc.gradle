@@ -1,0 +1,37 @@
+plugins {
+    id 'md-plugin.repository'
+    id 'org.asciidoctor.jvm.convert'
+    id 'org.asciidoctor.jvm.pdf'
+}
+
+pdfThemes {
+    local 'iqlabs', {
+        themeDir = file('src/main/resources/themes')
+        themeName = 'iqlabs'
+    }
+}
+
+configurations {
+	generatedDocuments {
+        canBeResolved = false
+        canBeConsumed = true
+	}
+}
+
+asciidoctorPdf {
+    description 'Build PDF Output'
+
+    // without this the included files will be searched in the project root
+    baseDirFollowsSourceDir()
+
+    // without this we won't have a title page
+    attributes 'doctype': 'book'
+    theme 'iqlabs'
+    fontsDir 'src/main/resources/fonts'
+}
+
+artifacts {
+	generatedDocuments(file(asciidoctorPdf.outputDir))  {
+    	builtBy(asciidoctorPdf)
+    }
+}

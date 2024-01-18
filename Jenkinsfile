@@ -23,21 +23,17 @@ pipeline {
 		stage('Build Plug-in') { 
 			steps {
 				withCredentials([usernamePassword(credentialsId: 'nexus-buildserver-deploy', passwordVariable: 'DEPLOY_PASSWORD', usernameVariable: 'DEPLOY_USER')]) {
-					dir ('com.incquerylabs.v4md'){
-						sh './gradlew clean'
-						sh './gradlew ${VERSION_STRINGS} assemble'
-					}
+					sh './gradlew clean'
+					sh './gradlew ${VERSION_STRINGS} assemble'
 				}
 			}
 		}
 		stage('Running Plug-in Tests') { 
 			steps {
 				withCredentials([usernamePassword(credentialsId: 'nexus-buildserver-deploy', passwordVariable: 'DEPLOY_PASSWORD', usernameVariable: 'DEPLOY_USER')]) {
-					dir ('com.incquerylabs.v4md'){
-	    			    wrap([$class: 'Xvnc']) {
-	    					sh './gradlew ${VERSION_STRINGS} runTest'
-	    			    }
-					}
+    			    wrap([$class: 'Xvnc']) {
+    					sh './gradlew ${VERSION_STRINGS} runIntegrationTest'
+    			    }
 				}
 			}
 		}
@@ -58,7 +54,7 @@ pipeline {
 	post {
 		always {
 			archiveArtifacts artifacts: 'com.incquerylabs.v4md/build/distributions/*.zip', onlyIfSuccessful: true
-			junit testResults: 'com.incquerylabs.v4md/build/install/target/*.xml'
+			junit testResults: 'build/install/target/*.xml'
 		}
 		
 		success {
