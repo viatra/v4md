@@ -42,9 +42,7 @@ pipeline {
 			steps {
 				withCredentials([usernamePassword(credentialsId: 'nexus-buildserver-deploy', passwordVariable: 'DEPLOY_PASSWORD', usernameVariable: 'DEPLOY_USER')]) {
 					script{
-					    dir ('com.incquerylabs.v4md') {
-                    			        sh './gradlew ${VERSION_STRINGS} publish'
-					    }
+					    sh './gradlew ${VERSION_STRINGS} publish'
 					}
 				}
 			}
