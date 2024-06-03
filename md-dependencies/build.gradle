@@ -74,8 +74,6 @@ task extractDependencies(type: Sync) {
         }
     }
 
-    exclude "**/*.zip"
-
     duplicatesStrategy DuplicatesStrategy.EXCLUDE
     into "dependencies"
 
