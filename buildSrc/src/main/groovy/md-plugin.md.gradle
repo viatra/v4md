@@ -9,7 +9,7 @@ ext {
     pluginDescriptorName    // Name of the MagicDraw plugin descriptor file (set in each appropriate project, excluding the extension .xml)
 
     humanVersion = version
-    internalVersion = version.replace('.','')
+    internalVersion = buildNumber
 
     distributionDirName = "generated-dist"
     distributionDir = "${buildDir}/$distributionDirName"
