@@ -10,7 +10,7 @@
                     product="V4MD"
                     type="Plugin">
     <version human="${human.version}" resource="${internal.version}0" internal="${internal.version}"/>
-    <provider name="IncQuery Labs Ltd."/>
+    <provider name="IncQuery Labs cPlc."/>
     <edition>Reader</edition>
     <edition>Community</edition>
     <edition>Standard</edition>
