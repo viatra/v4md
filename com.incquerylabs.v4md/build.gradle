@@ -121,7 +121,7 @@ publishing {
 
     publications {
         mavenJava(MavenPublication) {
-            artifactId "${artifactId}-${mdVersion}"
+            artifactId "${artifactId}-${mdVersionMain}"
             version "$version"
             
             artifact(distZip) {
