@@ -6,7 +6,7 @@
 		name="V4MD"
 		internalVersion="${internal.version}"
 		version="${human.version}"
-		provider-name="IncQuery Labs Ltd.">
+		provider-name="IncQuery Labs cPlc.">
     
 	<requires>
 	</requires>
